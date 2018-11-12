@@ -25,8 +25,8 @@
 #+LATEX_HEADER:\usepackage{amsmath,amssymb}
 #+LATEX_HEADER:\usepackage{amsthm}
 # #+LATEX_HEADER:\theoremstyle{definition}
-#+setupfile: ~/ict.git/org/info/index-sos-header.setup
-#+include: ~/ict.git/org/info/common-header.org
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
 
 # #+LATEX_HEADER:\newtheorem{theorem}{定理}
 # #+LATEX_HEADER:\newtheorem{definition}{定義}

@@ -1,17 +1,3 @@
-#+TITLE: コンピュータと数式処理
-#+AUTHOR: 鈴木正幸，非常勤講師
-#+OPTIONS: H:3 toc:nil num:t ^:nil
-#+LATEX_CLASS: jarticle
-#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt,presentation]
-
-#+BIND: org-latex-image-default-width 0.80\linewidth
-
-#+LATEX_HEADER:\setlength{\textwidth}{20cm}
-#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
-#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
-#+LATEX_HEADER:\setlength{\topmargin}{-3cm}
-#+LATEX_HEADER:\setlength{\textheight}{28cm}
-
 * 概要
 
  #+CAPTION: コンピュータと数式処理 概要
@@ -19,15 +5,25 @@
  [[./map-images/01-computer_and_cal.png]]
 
 
-- コンピュータと人間の協調・補完
+- コンピュータと人間の協調・補完，
+  コンピュータとインターネットを使った，人間どうしの協調
 
-  - 計算論的思考
+  - Web進化論
+
+  - インターネットとデジタル・ツール
+
+ 
+- 計算論的思考
 
     - コンピュータ・サイエンス
 
-  - インターネットとデジタル・ツール
-  - 数学ソフトウェア
-  - 計算論的思考
+    - 計算，問題解決，システムデザイン
+
+- 数学ソフトウェア
+
+- 数式処理アルゴリズム
+
+    - 計算って何？
 
 * 過去の研究内容と興味
  #+CAPTION: 過去の研究内容と興味
@@ -38,6 +34,8 @@
 
  [[./map-images/04-Web_revolution.png]]
 
+- デジタルデータの共有がもたらす変革
+- 
 ** 人間とコンピュータとインターネット
  #+CAPTION: 如何にデジタル・ツールを使うのか？
  [[./map-images/03-how_to_use_computer_and_internet.png]]

@@ -1,0 +1,241 @@
+% Created 2018-11-12 月 12:01
+% Intended LaTeX compiler: pdflatex
+\documentclass[dvipdfmx,11pt]{jarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\setlength{\textwidth}{20cm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+\setlength{\topmargin}{-3cm}
+\setlength{\textheight}{28cm}
+\author{鈴木正幸，非常勤講師}
+\date{\today}
+\title{数学ソフトウェアとSagemath}
+\begin{document}
+
+\maketitle
+この文書のアドレスは，
+\url{https://github.com/masayuki054/comp\_and\_cal/blob/master/org/math-soft.org}
+です。リンクがほとんどなので，電子機器を利用してください。
+
+\section{MathLibre}
+\label{sec:org7a5f3fc}
+
+\href{https://www.geogebra.org/m/hShSTr6e}{KNOPPIX/Math->MathLibre} 
+
+\begin{itemize}
+\item DVD起動Linuxで，
+
+\item オープン・ソースで，
+
+\item フリーな数学ソフトウェアを収録
+\end{itemize}
+
+\href{https://www.geogebra.org/m/hShSTr6e}{数学ソフトウェア紹介 - GeoGebraBook}
+
+
+\section{\href{https://ja.wikipedia.org/wiki/\%E6\%95\%B0\%E5\%AD\%A6\%E3\%82\%BD\%E3\%83\%95\%E3\%83\%88\%E3\%82\%A6\%E3\%82\%A7\%E3\%82\%A2}{数学ソフトウェア - Wikipedia} より}
+\label{sec:org960c689}
+
+\begin{enumerate}
+\item ソフトウェア電卓  
+
+\href{http://ja.numberempire.com/}{数の帝国 - 数学ツール} 数の帝国は、強力な数学ツールと数について
+の知識のコレクションです。
+
+\item 数式処理システム
+
+\begin{itemize}
+\item \href{https://ja.wikipedia.org/wiki/Sage\_(\%E6\%95\%B0\%E5\%BC\%8F\%E5\%87\%A6\%E7\%90\%86\%E3\%82\%B7\%E3\%82\%B9\%E3\%83\%86\%E3\%83\%A0)}{Sage (数式処理システム) - Wikipedia}
+
+\item \href{https://www.math.nagoya-u.ac.jp/\~naito/lecture/2012\_SS.calc/software-1.pdf}{数学ソフトウェアの使い方} 名古屋大学医学部 数学通論I 
+
+大学での教養として，mathematica, sage を教えている
+
+\item \href{http://www.math.kobe-u.ac.jp/\~noro/subutsu05.pdf}{数物科学概論/計算代数入門} 神戸大学 野呂さん
+
+だいぶ専門的ですが
+\end{itemize}
+
+\item 数値解析
+
+\begin{itemize}
+\item \href{https://matome.naver.jp/odai/2136163231573327601}{MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ}
+
+\item \href{http://signalprocessor.blogspot.jp/2016/}{信号処理のお仕事メモ: 2016} (Octave)
+
+\item \href{http://www.inaba-lab.org/wiki/index.php/Octave\%E5\%85\%A5\%E9\%96\%80}{Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki}
+\end{itemize}
+\end{enumerate}
+
+
+\section{\href{http://www.sagemath.org}{Sagemath} とは}
+\label{sec:orgcea90fb}
+
+\href{http://www.gregorybard.com/Sage.html}{Gregory V. Bard} 曰く
+
+\begin{itemize}
+\item フリーでオープン・ソースで，
+\item Maple, Mathematica, Magma, and Matlab に並らぶ，
+\item 数学科の学生に最適な
+\item 「コンピュータ代数」システム
+\end{itemize}
+
+\subsection{クラウド・サーバ -- Sage on the Web}
+\label{sec:org92bfd0d}
+
+\begin{itemize}
+\item Webで動く，
+\item ノートやデスクトップPCへのインストールは必要ない。
+\end{itemize}
+
+\href{http://www.cocalc.com/}{CoCalc.com Sage クラウド・サーバ} 
+
+\begin{itemize}
+\item 長めの問題向き，
+\item プログラムの保存ができる
+\item 登録とログインが必要，
+\end{itemize}
+
+\subsection{セル・サーバ -- Sage on the Web}
+\label{sec:org45b7df8}
+
+\href{http://sagecell.sagemath.org/}{SageMathCell Server}
+
+\begin{itemize}
+\item 短かめの問題向き
+
+\item \href{http://www.gregorybard.com/videos/Sage\_part1.swf}{関数，微分，積分，2次元プロット} の例題動画
+
+\item \href{http://www.gregorybard.com/videos/Sage\_part2.swf}{因数分解，3次元プロット}
+\end{itemize}
+
+例題
+
+\begin{verbatim}
+x,y = var('x y')
+plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
+\end{verbatim}
+
+\subsection{Sagemath アプリ}
+\label{sec:org577b5e6}
+
+数式処理が，スマホで動くなんて，ほんとにビックリ
+
+\begin{itemize}
+\item \href{https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8}{Sage Mathを App Store で}
+
+\item \href{https://play.google.com/store/apps/details?id=org.sagemath.droid\&hl=ja}{Sage Math - Google Play の Android アプリ}
+\end{itemize}
+
+\subsection{入門}
+\label{sec:orgc814332}
+
+\begin{itemize}
+\item \href{http://doc.sagemath.org/html/ja/tutorial/index.html}{Sageチュートリアル.ja} すぐ後で，実行しながら，説明します
+
+\item \href{http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf}{Sage tutorial-jp.pdf}
+
+\item \href{http://www.pwv.co.jp/\%7Etake/TakeWiki/index.php?sage\%2Fsage\%E3\%81\%AE\%E7\%B4\%B9\%E4\%BB\%8B}{sage/sageの紹介 - PukiWiki} たけもとさん
+
+\begin{itemize}
+\item \href{http://www.pwv.co.jp/\~take/TakeWiki/index.php?sage\%2F\%E8\%A8\%88\%E7\%AE\%97\%E3\%81\%97\%E3\%81\%A6\%E3\%81\%BF\%E3\%82\%88\%E3\%81\%86}{sage/計算してみよう - PukiWiki}
+\end{itemize}
+
+\item \href{http://www.sagemath.org/help-video.html}{series of videos/screencasts}
+\end{itemize}
+
+\subsection{例題}
+\label{sec:org24e5634}
+
+\begin{itemize}
+\item \href{http://doc.sagemath.org/html/en/constructions/index.html}{プログラムの制作例}
+\begin{itemize}
+\item いろいろな例題と解答
+\end{itemize}
+
+\item \href{https://wiki.sagemath.org/interact}{対話的なデモリポジトリ} 
+\begin{itemize}
+\item interact / calculus / Taylor  を見てみよう
+\end{itemize}
+\end{itemize}
+
+\subsection{Sagemath に関する本 (フリー)}
+\label{sec:org3458201}
+
+\begin{itemize}
+\item \href{http://www.gregorybard.com/Sage.html}{Sage for undergraduates, free pdf}   このページ内に pdf へのリンクが
+
+\item \href{http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html}{Welcome to the SDSU Sage Tutorial}
+\end{itemize}
+
+\subsection{Sagemath に関するいろいろなページ}
+\label{sec:org7f7a160}
+
+\begin{itemize}
+\item \href{http://sk.sagepub.com/reference}{SAGE Knowledge - Reference} reference の検索
+
+\item \href{https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118}{Sageに関するリンク集}
+
+\item \href{http://wiki.sagemath.org/quickref}{large collection of quick-reference cards}
+
+\item \url{http://sagemath.org} \url{http://doc.sagemath.org}
+\end{itemize}
+
+
+\subsection{Octave との連携}
+\label{sec:org3942a67}
+
+\begin{itemize}
+\item \href{http://www.pwv.co.jp/\%7Etake/TakeWiki/index.php?sage\%2FSage\%E3\%81\%A7Octave\%E3\%82\%92\%E4\%BD\%BF\%E3\%81\%86}{sage/SageでOctaveを使う - PukiWiki}
+
+\item \href{http://www.inaba-lab.org/wiki/index.php/Octave\%E5\%85\%A5\%E9\%96\%80}{Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki}
+\end{itemize}
+
+\subsection{\LaTeX{}とSage}
+\label{sec:org1c0aeb9}
+
+\begin{itemize}
+\item オンライン\LaTeX{}サービス  \href{https://oku.edu.mie-u.ac.jp/\~okumura/texonweb/}{\TeX{} を使ってみよう}
+
+\item \href{https://mytexpert.osdn.jp/index.php?LaTeX\%A4\%CB\%A4\%E8\%A4\%EB\%CF\%C0\%CA\%B8\%BA\%EE\%C0\%AE\%A4\%CE\%BC\%EA\%B0\%FA\%A4\%AD}{\LaTeX{}による論文作成の手引き - MyTeXpert}
+
+\item \href{http://sage.math.gordon.edu/home/pub/51/}{Using \LaTeX{} in Sage -- Sage}
+\end{itemize}
+
+\subsection{\LaTeX{} 出力の例}
+\label{sec:org2f9514c}
+
+
+\begin{verbatim}
+integrate(sin(x^2)/e^(2^x^2),x)
+\end{verbatim}
+\begin{center}
+
+
+\begin{verbatim}
+integrate(e^(-2^(x^2))*sin(x^2), x)
+\end{verbatim}
+
+\begin{verbatim}
+latex(integrate(sin(x^2)/e^(2^x^2),x))
+
+\end{verbatim}
+
+
+
+
+\(\int e^{\left(-2^{\left(x^{2}\right)}\right)}\sin\left(x^{2}\right)\,{d x}\)
+\end{center}
+\end{document}

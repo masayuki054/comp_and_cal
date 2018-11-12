@@ -2,9 +2,9 @@
 #+AUTHOR: 鈴木正幸，非常勤講師
 #+OPTIONS: H:3 toc:nil num:t ^:nil
 #+LATEX_CLASS: jarticle
-#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt,presentation]
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt]
 
-#+BIND: org-latex-image-default-width 0.80\linewidth
+#+BIND: org-latex-image-default-width 0.8\linewidth
 
 #+LATEX_HEADER:\setlength{\textwidth}{20cm}
 #+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
@@ -13,46 +13,44 @@
 #+LATEX_HEADER:\setlength{\textheight}{28cm}
 
 * 概要
- #+CAPTION: コンピュータと数式処理 概要
  [[./map-images/01-computer_and_cal.png]]
 
 * 過去の研究内容と興味
- #+CAPTION: 過去の研究内容と興味
  [[./map-images/02-research_interests.png]]
+
+* 計算論的思考 (別紙)
+
+コンピュータ科学に基く概念とアプローチ法
+
+- [[./computational_thinking.org]]
+
 
 * デジタル・ツールとインターネット
 
 ** インターネットが起している変革
- #+CAPTION: Web進化論
-
  [[./map-images/04-Web_revolution.png]]
 
-** 人間とコンピュータとインターネット
- #+CAPTION: 如何にデジタル・ツールを使うのか？
+** 人とコンピュータとインターネット
  [[./map-images/03-how_to_use_computer_and_internet.png]]
 
 ** 思考とメモと文書のためのデジタル・ツール
-
-#+CAPTION: 思考とメモのためのデジタル・ツール
 [[./map-images/05-digital_tools_for_thinking.png]]
 
 * 数学ソフトウェア (別紙)
 
-  [[./math-soft.org]]
+- [[./math-soft.org]]
 
-** 数式処理システム Sage の紹介 (別紙)
+** 数式処理システム Sage の紹介 (別紙) 
 
-  [[./sage-stuff.org]]
+** グレブナー基底とは (別紙)  
 
-** グレブナー基底とは (別紙)
+数式処理アルゴリズムの紹介
+
+
+- [[./gbasis.org]]
    
-   数式処理アルゴリズムの紹介
 
-  [[./gbasis.org]]
 
-* 計算論的思考 (別紙)
-
-  [[./computationa_thinking.org]]
 
   
 
