@@ -5,7 +5,6 @@
   - [[https://github.com/masayuki054/comp_and_cal/][講義資料のサイト]]
 
 * コンピュータと数式処理のリンク集
-
 ** sage 
 
     [[https://cocalc.com/projects?session=default][Projects - CoCalc]]
@@ -45,8 +44,6 @@
     - [[http://konn-san.com/math/computational-algebra-seminar.html][計算機代数ゼミ発表資料 - konn-san.com]]
     
     - [[https://github.com/konn/computational-algebra][konn/computational-algebra: Library to calculate Gröbner basis written in Haskell.]]
-
-
 
 
 * Web 進化論/知の構造化 

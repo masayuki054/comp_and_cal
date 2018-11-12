@@ -26,31 +26,42 @@
        - グレブナー基底
        - (mod p) 因数分解と
 
-   - 思考とメモと文書のためのデジタル・ツール
-     - Web進化論
-       - 集合知
-
+   - Web進化論
+     - 集合知
      - 知識の構造化
 
+   - 思考とメモと文書のためのデジタル・ツール
+     - 知識は構造
      - HyperLink
      - MindMapping
      - Outliner
      - markup
      - 文芸的プログラミング
 
+   - 計算論的思考
+
+     - computer科学者のように考え，問題に取り組み，システムをデザイン
+       しよう
+* 自己紹介
+
+  - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/][講義情報]] (~2016)
+
+  - [[https://github.com/masayuki054/comp_and_cal/][講義資料のサイト]]
+
+     
 ** 科学と数学，計算，コンピュータ
 
 *** 自分と数理科学とコンピュータ
 
-**** 物理学と数学のつながり 数理科学 [2017-10-28 土 03:29]
+**** 物理学と数学のつながり 
 
-     [[http://www.saiensu.co.jp/preview/2017-4910054690576/201705.pdf][巻頭言201705.pdf]]
+     数理科学 [[http://www.saiensu.co.jp/preview/2017-4910054690576/201705.pdf][巻頭言201705.pdf]]
 
      [[http://www.saiensu.co.jp/?page=book_details&ISBN=4910054690576&YEAR=2017][株式会社サイエンス社 株式会社新世社 株式会社数理工学社]]
 
 *** 数学ソフトウェア 
 
-**** mathlibre
+**** MathLibre
 
      DVD起動Linuxで，オープン・ソースで，フリーな数学ソフトウェアを収録
 
@@ -83,10 +94,13 @@
 
 **** [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B ][sage/sageの紹介 - PukiWiki]]
 
+*** [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+
 
 ** 数式処理アルゴリズム
 
-*** 奈良女子大 Groebner_basis の話
+*** 奈良女子大で話した Groebner_basis の話
+
     [[file:/NFS/ufs/mac/masayuki/BSD/Cal/nara-wu/gbasis.tex]]
 
 *** 不定積分入門			      :algorithm:risch:integral:math:
@@ -96,44 +110,16 @@
 
     [2017-10-03 火 16:54]
 
+** Web 進化論/知の構造化 
+
+   http://wiki.cis.iwate-u.ac.jp/~suzuki/web_revolution/
 
 ** 情報科学 の立場から
 
-*** Web 進化論/知の構造化 
-
-
-*** 抽象化のための手続き
-
-    [[[[https://mitpress.mit.edu/sicp/full-text/sicp/book/node4.html][https://mitpress.mit.edu/sicp]]/full-text/sicp/book/node4.html][抽象化のための手続き]]
-
-    簡単な思い付きを越えて，その力を発揮する，心の働きは，次の三つのことか
-    らなる:
-
-   1. いくつかの簡単なアイディアを一つにまとめること。
-
-      複合的なアイディアが生まれる。
-
-   2. ふたつのアイディアをつなげ，一つにまとめることなしに二つのアイディ
-      アを一緒に見る。
-
-      *関係*というアイディアが生まれる。
-
-   3. それを，実在に伴なうすべての他のアイディアから切り離す。
-
-      これは *抽象* と呼ばれ，すべてのアイディアはこのように生まれる。
-
-*** org
-
-**** Org Babelで文芸的プログラミング · ops●tokyo
-
-   [[http://wallyqs.github.io/posts/2014/12/12/using-org-babel-for-lp-jp/][Org Babelで文芸的プログラミング · ops●tokyo]]
-   素晴しい!
-
-*** [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
-
 *** 情報科学の本質 抽象化のための手続き		
-suzuki@cis.iwate-u.ac.jp 抽象化のための手続き
-http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/commons/abstraction.html
+
+    [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/commons/abstraction.html][抽象化のための手続き]]
+
 
 *** 情報科学のための数学
 
@@ -147,9 +133,14 @@ http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/commons/abstraction.html
 
 **** outliner 
 
-    [[file:/NFS/ufs/mac/masayuki/public_html/lects/ict_and_outline.org]]
+    [[./outline-reading-writing.org]]
 
-    [[file:/NFS/ufs/mac/masayuki/public_html/lects/outline-reading-writing.org]]
+***** emacs org - アウトライナー
+
+****** Org Babelで文芸的プログラミング · ops●tokyo
+
+     [[http://wallyqs.github.io/posts/2014/12/12/using-org-babel-for-lp-jp/][Org Babelで文芸的プログラミング · ops●tokyo]]
+     素晴しい!
 
 **** LaTeX tikz
 
@@ -159,3 +150,64 @@ http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/commons/abstraction.html
 
 **** HyperLink
      - HTML origin
+* コンピュータと数式処理のリンク集
+
+** sage 
+
+    [[https://cocalc.com/projects?session=default][Projects - CoCalc]]
+
+    [[http://sagecell.sagemath.org/][Sage Cell Server]]
+
+    - [[http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf][Sage tutorial-jp.pdf]]
+
+    [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B][sage/sageの紹介 - PukiWiki]] たけもとさん
+
+    - [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2F%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86][sage/計算してみよう - PukiWiki]]
+
+    - [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2FSage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86][sage/SageでOctaveを使う - PukiWiki]] 
+
+** SageLink
+
+   [[http://sagemath.org]] 
+
+   [[http://sk.sagepub.com/reference][SAGE Knowledge - Reference]] reference の検索
+
+   [[https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118][Sageに関するリンク集]]
+
+   [[http://www.gregorybard.com/Sage.html][Sage for undergraduates, free pdf]]   このページ内に pdf へのリンクが
+   ある
+
+* 数式処理アルゴリズム
+
+*** 不定積分入門			      :algorithm:risch:integral:math:
+    [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+    
+*** Greobner基底に関するページ
+
+    - [[https://www.slideshare.net/konn/grbner][技術者が知るべき Gröbner 基底]]
+    
+    - [[http://sssslide.com/speakerdeck.com/konn/wakatutatumorininaru-grobner-ji-di][わかったつもりになる Gröbner 基底 - SSSSLIDE]]
+    
+    - [[http://konn-san.com/math/computational-algebra-seminar.html][計算機代数ゼミ発表資料 - konn-san.com]]
+    
+    - [[https://github.com/konn/computational-algebra][konn/computational-algebra: Library to calculate Gröbner basis written in Haskell.]]
+
+* Web 進化論/知の構造化 
+
+    「知識」について考え直す時なのでは？
+
+**** [[http://ocw.u-tokyo.ac.jp/lecture_files/gf_18/1/notes/ja/01yoshimimima.pdf][今，学問，大学，知識，について，何が起っているのか？]]
+
+    - 知の細分化と閉塞、全体を視る目の喪失
+
+    - 知識は「みんな」で作るものだという発想
+
+    - 構造性：要素を相互に結びつける構造こそ知識
+
+    - ネット検索で瞬時にして必要な情報を次々に手に入れることで、緩やか
+      に形成される知識を失っているのかもしれない？
+
+    - 学術俯瞰とタテとヨコをつなぐ学び，
+      新しいリベラルアーツと専門知の結合
+
+
