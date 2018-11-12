@@ -1,0 +1,95 @@
+% Created 2017-11-27 月 23:47
+\documentclass[a4j]{jarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Masayuki Suzuki}
+\date{\today}
+\title{groebner\_example}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Groebner基底と固有値法}
+\label{sec-1}
+
+有理数(QQ) を係数とする多変数($x_1, x_2$) の
+多項式環 $QQ[x_1, x_2]$ を生成し，
+不定元\$x$_{\text{1}}$, x$_{\text{2}}$\$を取り出す:
+
+\begin{verbatim}
+x_1, x_2 = QQ['x_1,x_2'].gens()
+\end{verbatim}
+
+
+\$x$_{\text{1}}$, x$_{\text{2}}$, x$_{\text{3}}$\$を使って多項式を定義する:
+\begin{verbatim}
+f_1 = 2 * x_1^3 * x_2 +6*x_1^3 - 2* x_1^2 - x_1* x_2 - 3* x_1 - x_2 +3
+f_2 = x_1^3*x_2 + 3*x_1^3 + x_1^2*x_2 + 2*x_1^2
+f_3 = 3*x_1^2*x_2 + 9*x_1^2 + 2*x_1*x_2 + 5*x_1 + x_2 -3
+f_1
+f_2
+f_3
+\end{verbatim}
+
+$f_1$, $f_2$, $f_3$ を基底とするイデアル $I$ を生成する:
+\begin{verbatim}
+I = ideal(f_1, f_2, f_3)
+\end{verbatim}
+
+$I$ のグレブナー基底を求める:
+
+\begin{verbatim}
+B = I.groebner_basis(); B
+\end{verbatim}
+
+\$QQ[x$_{\text{1}}$, x$_{\text{2]}}$/I\$は，$1, x_2, x_1$ が基底となることがわかる。
+
+\begin{verbatim}
+type(B)
+\end{verbatim}
+
+\$QQ[x$_{\text{1}}$, x$_{\text{2]}}$/I\$における，かけ算表を作成する:
+
+\begin{verbatim}
+bases = [1,x_1,x_2]
+x_1p = [I.reduce(x_1*a) for a in bases]; x_1p
+x_2p = [I.reduce(x_2*a) for a in bases]; x_2p
+\end{verbatim}
+
+\begin{verbatim}
+P1 = [ f.coefficient(b) for b in [{x_1:0, x_2:0}, {x_1:1, x_2:0}, {x_1:0, x_2:1}] for f in x_1p]; P1
+P2 = [ f.coefficient(b) for b in [{x_1:0, x_2:0}, {x_1:1, x_2:0}, {x_1:0, x_2:1}] for f in x_2p]; P2
+\end{verbatim}
+
+
+\begin{verbatim}
+M1 = matrix(QQ,3,3,P1); M1
+M2 = matrix(QQ,3,3,P2); M2
+\end{verbatim}
+
+\begin{verbatim}
+s1 = M1.eigenvalues(); s1
+s2 = M2.eigenvalues(); s2
+\end{verbatim}
+
+\begin{verbatim}
+[[i,j,yf_1.subs({x_1:s1[i], x_2:s2[j]}), f_2.subs({x_1:s1[i], x_2:s2[j]})] 
+  for i in range(3) for j in range(3)]
+\end{verbatim}
+% Emacs 25.1.1 (Org mode 8.2.10)
+\end{document}

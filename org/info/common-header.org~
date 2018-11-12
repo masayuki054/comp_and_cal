@@ -1,0 +1,5 @@
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 数理情報科学特論
+#+author: suzuki@iwate-u.ac.jp
+#+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"

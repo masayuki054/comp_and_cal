@@ -1,0 +1,252 @@
+/* 	$Id: wikky.css 179 2006-09-01 06:51:28Z toshiki $	 */
+/*** ボディ部分 ****/
+body {
+    background: snow;  
+    /** background: #eeeedd;  **/
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 8%;
+    font-size: 90%;
+    font-family: verdana, arial, helvetica, Sans-Serif;
+}
+
+/*** リンクの色、アクション ***/
+/*
+a:link {   
+    color:#0000FF;text-decoration:none;
+}
+a:visited {
+color:#800080;text-decoration:none;
+}
+
+a:hover{
+color:#FF0000;border-bottom:2px dotted #0000FF;
+}
+*/
+/*** 最近の更新部分 ***/
+.recent{
+cellspacing:7ex;
+cellpadding:3ex;
+}
+
+
+/*** ページタイトル部分 ***/
+.title { 
+width:600px;
+border-left: double 10px #444444;
+background-color:#F5F5F5;
+margin-top: 6%;
+text-align:center;
+/* color:#696969; */
+}
+
+
+h1 {
+    font-family: "comic sans ms", verdana, sans-serif; 
+    text-align: left;
+    padding-left: 0.5em;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: verdana, arial, helvetica, Sans-Serif;
+    
+}
+
+h2 {
+    /** color: #471B1B; **/
+    /** background: #A86363; **/
+}
+
+
+h3 {
+/**    color: #471B1B; **/
+/*  border-style:solid; */
+   padding-left: 0.3em;
+   border-color:#A86363;
+   border-left: solid 10px #A86363; 
+   border-bottom: medium dotted #A86363; 
+/*   background: #A8666B; */
+}
+
+h4 {
+    color: #471B1B;
+  border-bottom: medium dashed #A86363;
+}
+
+div.header p.status { text-align: right; }
+div.header p.last-modified { text-align: left; }
+
+/*
+li p {
+    margin-top: -1ex;
+}
+*/
+
+dt {
+    font-weight: bold;
+    margin-top: 2ex;
+    margin-left: 1em;
+}
+
+address {
+    color: gray;
+    background: #EEEEEE;
+    text-align: right;
+    font-family: Times, serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+pre {
+    background: white;
+    border: solid thin #A86363;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    white-space: pre;
+      color: MidNightBlue;
+
+}
+
+span.download {
+    font-weight: normal;
+    color: blue;
+    background: #EEEEEE;
+}
+
+.path {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navi {
+    text-align: right;
+}
+
+.headerURL {
+    text-align: right;
+    font-size: 80%;
+}
+
+blockquote {
+	border-left: solid thick #A86360; /* LightSteelBlue; */
+    padding-right: 0.5em;
+/*     padding-top: 0.5em; */
+    padding-left: 0.5em;
+/*    padding-bottom: 0.5em;  */
+
+}
+
+blockquote > blockquote {
+	border-left: solid thick #A86360; /* LightSteelBlue; *.
+}
+
+blockquote > blockquote > blockquote {
+	border-left: solid thick #A86360; /* LightSteelBlue; */
+}
+
+textarea.content
+{
+	width: 40em;
+	height: 30em;
+}
+
+textarea.logmsg
+{
+	width: 40em;
+	height: 2em;
+}
+
+
+/*** 上部のメニュー部分 ***/
+.menu_back{     /* メニューの背景色 */
+//background-color:#765C5C;
+background-color:#eeeedd;
+}
+
+.plate a {
+border-top :0px solid #F5F5F5;
+border-left :0px solid #F5F5F5;
+border-bottom :2px solid #FFFFFF;
+border-right :2px solid #FFFFFF;
+/* border-right :2px solid #A9A9A9;*/
+//background-color: #eeeedd;
+width:80px;
+padding:2px;
+color :#696969;
+font-size:80%;
+font-weight:bold;
+text-decoration : none ;
+text-align:center;
+float: left;
+} /*== 回り込み ==*/
+
+
+.plate a:hover {
+ border-top :1px solid #FFFFFF; 
+ border-left :1px solid #FFFFFF; 
+border-bottom :1px solid #FFFFFF;
+border-right :1px solid #FFFFFF;
+background-color:#765C5C;
+width:80px;
+padding:2px;
+color :#FFFFFF;
+font-size:80%;
+font-weight:bold;<
+text-decoration:none;
+text-align:center;
+float: left;
+} 
+
+/* サイドバー */
+div.main {
+	margin-left: 23%;
+           }
+
+div.sidebar{ 
+/*	background-color: #F0FFF0;*/
+        background-color: #eeeedd;
+             
+	color: #000;
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	width: 19%;
+	padding: 2px 2px 100% 2px;
+	border-style: solid;
+	border-color: #ddd;
+	border-width: 0px 2px 2px 0px;
+	padding-top: 0.5em;
+}
+
+div.sidebar p {
+	line-height: 120%;
+	text-align: center;
+	border-style: solid;
+	border-color: #aaa;
+	border-width: 0px 0px 1px 0px;
+	margin: 2px 4px 2px 4px;
+}
+
+pre {
+/* 	border-top:    #DDDDEE 1px solid; */
+/* 	border-bottom: #888899 2px solid; */
+/* 	border-left:   #DDDDEE 1px solid; */
+/* 	border-right:  #888899 2px solid; */
+	border-style: solid;
+	border-width: 1px;
+	padding: .5em;
+	font-size: 120%;
+	margin-left: 1em;
+	margin-right: 2em;
+	white-space: pre;
+/*	background-color: #F0F8FF; */
+/* 	background-color: #EEE; */
+	color: black;
+}

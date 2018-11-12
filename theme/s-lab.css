@@ -1,0 +1,311 @@
+/* 	$Id: wikky.css 179 2006-09-01 06:51:28Z toshiki $	 */
+/*** ボディ部分 ****/
+body {
+  /*  background: snow;   */
+  background: #ffffff;  
+  color: #000000;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%; 
+  margin-bottom: 15%; 
+  padding-bottom: 5%;
+  font-size: 90%;
+  font-family: verdana, arial, helvetica, Sans-Serif;
+}
+
+/*** リンクの色、アクション ***/
+a:link {   
+  color:#00637b;text-decoration:none;
+  /* background-color: #ffffff; */
+}
+
+a:visited {
+  color:#958466;text-decoration:none;
+  /* background-color: #ffffff; */
+}
+
+a:hover{ 
+  text-decoration:underline;
+  /* color:#FF0000;border-bottom:2px dotted #0000FF; */
+} 
+
+/*** 最近の更新部分 ***/
+.recent{
+  border-spacing:7ex;
+  padding:3ex;
+}
+
+
+/*** ページタイトル部分 ***/
+.title h1{ 
+  /*width:600px; */
+  /* height:50px; */
+  padding-right: 10px;
+  padding: 10px;
+
+  /* margin-top: 6%;*/
+  border-right: double 12px #7e9c96;
+  border-top: solid 1px #7e9c96;
+  /* background-color: #ffffff; */
+  /*background-color:#F5F5F5;*/
+  text-align: right;
+  color:#696969; 
+}
+
+.breakhr { 
+  background-color: #7e9c95;
+  color: #7e9c96;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: verdana, arial, helvetica, Sans-Serif;
+  
+}
+
+h2 {
+  border-left: solid 15px #7e9c96;
+  /* background-color: #ffffff; */
+  padding-left: 0.5em;     
+  color: #00475b
+  /* color: #471B1B;*/
+  /* background: #A86363;*/
+}
+
+h3 {
+  border-left: solid 10px #7e9c96;
+  /* background-color: #ffffff; */
+  color: #471B1B;
+  /*  border-style:solid; */
+  padding-left: 0.3em;
+  /*   background: #A8666B; */
+}
+
+h4 {
+  color: #471B1B;
+  /* background-color: #ffffff; */
+  border-bottom: medium dashed #7e9c96;
+}
+
+div.header p.status { text-align: right; }
+
+img {border: 0px;} 
+/*
+   li p {
+  margin-top: -1ex;
+}
+*/
+
+.toc li{ 
+  /*            margin-bottom: 1ex;*/ 
+  padding: 0.05ex;
+  margin: 0.05ex;
+}
+.toc ul{ 
+  padding-left: 2.5ex;
+  padding-top: 0.00em;         
+}
+
+.toc { 
+  margin-right: 10%;
+}
+
+.lastmodify{ 
+  margin-top: 0ex;
+  text-align: right;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 2ex;
+  margin-left: 1em;
+}
+
+address {
+  color: gray;
+  background: #EEEEEE;
+  text-align: right;
+  font-family: Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}
+
+pre {
+  color: #191970;
+  background: #daffd8;
+  border: solid thin #7e9c96;
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  padding: .5em;
+  font-size: 120%;
+  margin-left: 1em;
+  margin-right: 2em;
+  white-space: pre;
+}
+
+span.download {
+  font-weight: normal;
+  color: blue;
+  background: #EEEEEE;
+}
+
+.path {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navi {
+  text-align: right;
+}
+
+.headerURL {
+  text-align: right;
+  font-size: 80%;
+}
+
+blockquote {
+  border-left: solid thick #7e9c96; /* LightSteelBlue; */
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+
+
+}
+
+blockquote > blockquote {
+  border-left: solid medium #7e9c96; /* LightSteelBlue; */
+  padding-left: 0.5em;
+}
+
+blockquote > blockquote > blockquote {
+  border-left: solid thin #7e9c96; /* LightSteelBlue; */
+}
+
+textarea.content
+{
+  width: 40em;
+  height: 30em;
+}
+
+textarea.logmsg
+{
+  width: 40em;
+  height: 2em;
+}
+
+.menu_back{     /* メニューの背景色 */
+  /* background-color:#eeeedd;*/
+}
+
+.relink a:hover{ 
+  background-color:#56828e;
+  width:80px;
+  padding:2px;
+  color :#FFFFFF;
+}
+.relink a {
+  width:80px;
+  padding:2px;
+  color :#7e9c96;
+  background-color: #ffffff;
+}                  
+
+.plate a {
+  border-top :0px solid #F5F5F5;
+  border-left :1px solid #7e9c96;
+  border-bottom :0px solid #F5F5F5;
+  /* border-bottom :2px solid #FFFFFF;*/
+  border-right :1px solid #7e9c96;
+  /* border-right :2px solid #A9A9A9;*/
+  /* background-color: #eeeedd; */
+  /* background-color: #ffffff; */
+  background-color: transparent;
+  width:80px;
+  padding:2px;
+  color :#7e9c96;
+  font-size:80%;
+  font-weight:bold;
+  text-decoration : none ;
+  text-align:center;
+  float: left;
+} /*== 回り込み ==*/
+
+.plate a:hover {
+  border-top :0px solid #FFFFFF; 
+  border-left :1px solid #7e9c96;
+  border-bottom :0px solid #FFFFFF;
+  border-right :1px solid #7e9c96;
+  background-color:#56828e;
+  width:80px;
+  padding:2px;
+  color :#FFFFFF;
+  font-size:80%;
+  font-weight:bold;
+  text-decoration:none;
+  text-align:center;
+  float: left;
+} 
+
+.amazonmenu{ 
+  color: #00475b;
+  background-color: #ffffff;
+}
+
+.error{ 
+  color: red;
+  background-color: #ffffff;
+}
+
+/* サイドバー */
+div.main {
+  margin: auto;
+  margin-left: 15%;
+}
+
+div.sidebar{ 
+  /*	background-color: #F0FFF0;*/
+  background-color: #eeeedd;
+  
+  color: #000;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  width: 20%;
+  padding: 2px 2px 15em 2px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 0px 2px 2px 0px;
+  /* padding-top: 0.5em; */
+  margin: auto;
+  margin-right: 85%;
+  margin-left: 0%;
+}
+
+div.sidebar p {
+  line-height: 120%;
+  text-align: center;
+  /* border-style: solid; */
+  /* border-color: #aaa; */
+  /* border-width: 0px 0px 1px 0px; */
+  /* margin: 2px 4px 2px 4px;*/
+}
+
+/* amazonの検索結果ページ数の部分 */
+.this-page{ 
+  text-decoration: underline;
+}
+
+.other-page{ 
+  color :#7e9c96;
+  background-color: #ffffff;
+}
+.other-page a:hover{ 
+  background-color:#56828e;
+  color :#FFFFFF;
+}
+
+hr.amazon{ 
+  border-style: dotted none none none;
+  border-top-width: 2px;
+  border-top-color: #ff0000;
+  height: 2px;
+}

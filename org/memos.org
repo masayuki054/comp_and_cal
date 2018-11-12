@@ -1,0 +1,161 @@
+* コンピュータと数式処理
+
+** 今日の話の流れ
+
+   主に，ツールの話です。
+
+   少しだけ，仕組みの話もします。
+
+   - 自分と数学とコンピュータ
+
+   - 数学ソフトウェア
+
+     - スマホで使える数式処理
+
+   - 数式処理システム 
+     - sage入門
+     - sage Links
+     - octave / sage
+     - latex / sage
+     - graphics / sage
+
+   - 数式処理とは
+     - いいとこ悪いとこ
+     - 数値計算を補う
+     - 算法
+       - グレブナー基底
+       - (mod p) 因数分解と
+
+   - 思考とメモと文書のためのデジタル・ツール
+     - Web進化論
+       - 集合知
+
+     - 知識の構造化
+
+     - HyperLink
+     - MindMapping
+     - Outliner
+     - markup
+     - 文芸的プログラミング
+
+** 科学と数学，計算，コンピュータ
+
+*** 自分と数理科学とコンピュータ
+
+**** 物理学と数学のつながり 数理科学 [2017-10-28 土 03:29]
+
+     [[http://www.saiensu.co.jp/preview/2017-4910054690576/201705.pdf][巻頭言201705.pdf]]
+
+     [[http://www.saiensu.co.jp/?page=book_details&ISBN=4910054690576&YEAR=2017][株式会社サイエンス社 株式会社新世社 株式会社数理工学社]]
+
+*** 数学ソフトウェア 
+
+**** mathlibre
+
+     DVD起動Linuxで，オープン・ソースで，フリーな数学ソフトウェアを収録
+
+     - [[https://www.geogebra.org/m/hShSTr6e#material/eBgcxeXC][KNOPPIX/Math->MathLibre]] 
+
+       Free Mathmatical Softwares on DVD-bootable Linux
+
+     - [[https://www.geogebra.org/m/hShSTr6e#material/MEEJS9CK][数学ソフトウェア紹介 - GeoGebraBook]]
+
+    1) ソフトウェア電卓  
+
+       [[http://ja.numberempire.com/][数の帝国 - 数学ツール]] 数の帝国は、強力な数学ツールと数について
+       の知識のコレクションです。
+       
+    2) 数式処理システム
+
+       [[https://ja.wikipedia.org/wiki/Sage_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)][Sage (数式処理システム) - Wikipedia]]
+
+    3) 統計学
+    4) 最適化ソフトウェア
+    5) 幾何学ソフトウェア
+    6) 数値解析
+
+       [[https://matome.naver.jp/odai/2136163231573327601][MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ]]
+
+** Sage
+**** [[https://www.math.nagoya-u.ac.jp/~naito/lecture/2012_SS.calc/software-1.pdf][数学ソフトウェアの使い方]] 名古屋大学医学部 数学通論I 
+     - mathematic, sage の概要
+     - Sageの簡単な利用法
+
+**** [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B ][sage/sageの紹介 - PukiWiki]]
+
+
+** 数式処理アルゴリズム
+
+*** 奈良女子大 Groebner_basis の話
+    [[file:/NFS/ufs/mac/masayuki/BSD/Cal/nara-wu/gbasis.tex]]
+
+*** 不定積分入門			      :algorithm:risch:integral:math:
+    [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+
+    wikipedia の参考文献にあった
+
+    [2017-10-03 火 16:54]
+
+
+** 情報科学 の立場から
+
+*** Web 進化論/知の構造化 
+
+
+*** 抽象化のための手続き
+
+    [[[[https://mitpress.mit.edu/sicp/full-text/sicp/book/node4.html][https://mitpress.mit.edu/sicp]]/full-text/sicp/book/node4.html][抽象化のための手続き]]
+
+    簡単な思い付きを越えて，その力を発揮する，心の働きは，次の三つのことか
+    らなる:
+
+   1. いくつかの簡単なアイディアを一つにまとめること。
+
+      複合的なアイディアが生まれる。
+
+   2. ふたつのアイディアをつなげ，一つにまとめることなしに二つのアイディ
+      アを一緒に見る。
+
+      *関係*というアイディアが生まれる。
+
+   3. それを，実在に伴なうすべての他のアイディアから切り離す。
+
+      これは *抽象* と呼ばれ，すべてのアイディアはこのように生まれる。
+
+*** org
+
+**** Org Babelで文芸的プログラミング · ops●tokyo
+
+   [[http://wallyqs.github.io/posts/2014/12/12/using-org-babel-for-lp-jp/][Org Babelで文芸的プログラミング · ops●tokyo]]
+   素晴しい!
+
+*** [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+
+*** 情報科学の本質 抽象化のための手続き		
+suzuki@cis.iwate-u.ac.jp 抽象化のための手続き
+http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/commons/abstraction.html
+
+*** 情報科学のための数学
+
+**** プログラム可能な証明
+
+**** 機械証明 -- 証明から計算へ
+
+*** 思考とメモと文書作成のためのデジタル・ツール
+
+**** MindMapping
+
+**** outliner 
+
+    [[file:/NFS/ufs/mac/masayuki/public_html/lects/ict_and_outline.org]]
+
+    [[file:/NFS/ufs/mac/masayuki/public_html/lects/outline-reading-writing.org]]
+
+**** LaTeX tikz
+
+**** markup 
+     - simplenote
+     - Emacs org-mode
+
+**** HyperLink
+     - HTML origin

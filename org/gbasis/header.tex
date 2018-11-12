@@ -1,0 +1,39 @@
+%%%% 和文用 %%%%%
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}%和文用
+\renewcommand{\kanjifamilydefault}{\gtdefault}%和文用
+
+%%%% スライドの見た目 %%%%%
+%%\usetheme{Madrid}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}%好みに応じてどうぞ）
+\setbeamertemplate{footline}[page number]
+\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamercolor{footline}{fg=black,bg=black}
+%%%%
+
+%%%% 定義環境 %%%%%
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定義}
+\newtheorem{proposition}{命題}
+\newtheorem{lemma}{補題}
+\newtheorem{corollary}{系}
+\newtheorem{conjecture}{予想}
+\newtheorem*{remark}{Remark}
+\renewcommand{\proofname}{}
+%%%%%%%%%
+
+%%%%% フォント基本設定 %%%%%
+\usepackage[T1]{fontenc}%8bit フォント
+\usepackage{textcomp}%欧文フォントの追加
+\usepackage[utf8]{inputenc}%文字コードをUTF-8
+\usepackage{otf}%otfパッケージ
+\usepackage{lxfonts}%数式・英文ローマン体を Lxfont にする
+\usepackage{bm}%数式太字
+%%%%%%%%%%
