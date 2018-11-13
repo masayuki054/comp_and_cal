@@ -3,12 +3,12 @@
 "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-13 火 10:15 -->
+<!-- 2018-11-13 火 10:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>数理情報科学特論</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="suzuki@iwate-u.ac.jp" />
+<meta name="author" content="suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -248,39 +248,32 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdc720c3">1. 計算論的思考 <span class="timestamp-wrapper"><span class="timestamp">[2017-11-27 月 10:32]</span></span></a>
+<li><a href="#org2f2ede7">1. このエッセイの目的</a></li>
+<li><a href="#org7a74c61">2. 計算論的思考</a></li>
+<li><a href="#orge4779ae">3. 計算手法と計算モデル</a></li>
+<li><a href="#org5299046">4. 計算論的思考は機械知能の謎に挑む：</a></li>
+<li><a href="#org8d6bf18">5. 計算論的思考は，すべての人にとって基本的な技術である．</a></li>
+<li><a href="#org15418dd">6. 計算論的思考は</a></li>
+<li><a href="#org0f14f85">7. 計算論的思考は一見難しそうな問題を我々がすでに解き方を知っている問題に変換する．</a></li>
+<li><a href="#org9f4e949">8. 計算論的思考とは</a></li>
+<li><a href="#org4a74212">9. 計算論的思考とは抽象化と分割統治を用いることである．</a></li>
+<li><a href="#org68470d5">10. 計算論的思考とは予防，防御，そして最悪のシナリオからの復帰という観点を持ち，</a></li>
+<li><a href="#org6ec257e">11. 計算論的思考はヒューリスティックな推論により解を発見することである．</a></li>
+<li><a href="#org53333cb">12. 計算論的思考は超大量のデータを使って計算を高速化することである．</a></li>
+<li><a href="#org87722a0">13. 私たちは計算論的思考が他の研究領域に与える影響を目撃してきた．</a>
 <ul>
-<li><a href="#orgf43410d">1.1. このエッセイの目的</a></li>
-<li><a href="#orgeda3a88">1.2. 計算論的思考</a></li>
-<li><a href="#org9ae93cc">1.3. 計算手法と計算モデル</a></li>
-<li><a href="#org7bc251f">1.4. 計算論的思考は機械知能の謎に挑む：</a></li>
-<li><a href="#orgfc045f2">1.5. 計算論的思考は，すべての人にとって基本的な技術である．</a></li>
-<li><a href="#org192f061">1.6. 計算論的思考は</a></li>
-<li><a href="#orgc86b41d">1.7. 計算論的思考は一見難しそうな問題を我々がすでに解き方を知っている問題に変換する．</a></li>
-<li><a href="#org78ddc9f">1.8. 計算論的思考とは</a></li>
-<li><a href="#org3fa046f">1.9. 計算論的思考とは抽象化と分割統治を用いることである．</a></li>
-<li><a href="#org3ddc55e">1.10. 計算論的思考とは予防，防御，そして最悪のシナリオからの復帰という観点を持ち，</a></li>
-<li><a href="#orgae949a7">1.11. 計算論的思考はヒューリスティックな推論により解を発見することである．</a></li>
-<li><a href="#org37c26a0">1.12. 計算論的思考は超大量のデータを使って計算を高速化することである．</a></li>
-<li><a href="#org99f0ae5">1.13. 私たちは計算論的思考が他の研究領域に与える影響を目撃してきた．</a>
-<ul>
-<li><a href="#orgdbbc1a0">1.13.1. たとえば，機械学習は統計学を変えた．</a></li>
-<li><a href="#org753f25a">1.13.2. 計算生物学は生物学者の思考法を変えつつある．</a></li>
-<li><a href="#orgaab2cf4">1.13.3. 計算ゲーム理論は経済学者の思考法を，</a></li>
-<li><a href="#org6d18485">1.13.4. ナノコンピューティングは化学者の思考法を，</a></li>
-<li><a href="#orgf44b1df">1.13.5. そして量子計算は物理学者の思考法をそれぞれ変えつつある</a></li>
+<li><a href="#orge9a7b7e">13.1. たとえば，機械学習は統計学を変えた．</a></li>
+<li><a href="#org1ba56de">13.2. 計算生物学は生物学者の思考法を変えつつある．</a></li>
+<li><a href="#org652fc63">13.3. 計算ゲーム理論は経済学者の思考法を，</a></li>
+<li><a href="#orgac5bb7e">13.4. ナノコンピューティングは化学者の思考法を，</a></li>
+<li><a href="#orgc75b8ff">13.5. そして量子計算は物理学者の思考法をそれぞれ変えつつある</a></li>
 </ul>
 </li>
-<li><a href="#org3d6c195">1.14. それは何であり，何でないか</a></li>
-<li><a href="#orgac74b96">1.15. 計算論的思考は誰のために</a></li>
-</ul>
-</li>
+<li><a href="#orgd25810c">14. それは何であり，何でないか</a></li>
+<li><a href="#org267c6fb">15. 計算論的思考は誰のために</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdc720c3" class="outline-2">
-<h2 id="orgdc720c3"><span class="section-number-2">1</span> <a href="https://www.cs.cmu.edu/afs/cs/usr/wing/www/ct-japanese.pdf">計算論的思考</a> <span class="timestamp-wrapper"><span class="timestamp">[2017-11-27 月 10:32]</span></span></h2>
-<div class="outline-text-2" id="text-1">
 <p>
 Jeannette M.Wing: COmputational Thinking,
 COMM.ACM, Vol.49,No.3,pp33-35
@@ -296,12 +289,11 @@ Computational Thinking
 <p>
 にゅあんすとしては，「情報処理的思考」が近いとの，訳者の弁。
 </p>
-</div>
 
 
-<div id="outline-container-orgf43410d" class="outline-3">
-<h3 id="orgf43410d"><span class="section-number-3">1.1</span> このエッセイの目的</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org2f2ede7" class="outline-2">
+<h2 id="org2f2ede7"><span class="section-number-2">1</span> このエッセイの目的</h2>
+<div class="outline-text-2" id="text-1">
 <p>
 すべての人が学びたい，そして使いたい，と考えるに違いない
 一般的な態度とスキルに関するものである．
@@ -309,9 +301,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgeda3a88" class="outline-3">
-<h3 id="orgeda3a88"><span class="section-number-3">1.2</span> 計算論的思考</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org7a74c61" class="outline-2">
+<h2 id="org7a74c61"><span class="section-number-2">2</span> 計算論的思考</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 は計算プロセスの能力と限界の上に成立しているもので，
 </p>
@@ -322,9 +314,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org9ae93cc" class="outline-3">
-<h3 id="org9ae93cc"><span class="section-number-3">1.3</span> 計算手法と計算モデル</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orge4779ae" class="outline-2">
+<h2 id="orge4779ae"><span class="section-number-2">3</span> 計算手法と計算モデル</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 は，我々個人が単独では決して達成できないであろう問題を解決したリ，
 </p>
@@ -335,9 +327,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org7bc251f" class="outline-3">
-<h3 id="org7bc251f"><span class="section-number-3">1.4</span> 計算論的思考は機械知能の謎に挑む：</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org5299046" class="outline-2">
+<h2 id="org5299046"><span class="section-number-2">4</span> 計算論的思考は機械知能の謎に挑む：</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>人間がコンピュータより優れているのは何か？</li>
 
@@ -353,9 +345,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgfc045f2" class="outline-3">
-<h3 id="orgfc045f2"><span class="section-number-3">1.5</span> 計算論的思考は，すべての人にとって基本的な技術である．</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org8d6bf18" class="outline-2">
+<h2 id="org8d6bf18"><span class="section-number-2">5</span> 計算論的思考は，すべての人にとって基本的な技術である．</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 コンピュータ科学者だけではなく，すべての子供の分析的思考能力として，
 「読み，書き，そろばん」のほかに計算論的思考を加えるべき
@@ -369,9 +361,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org192f061" class="outline-3">
-<h3 id="org192f061"><span class="section-number-3">1.6</span> 計算論的思考は</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-org15418dd" class="outline-2">
+<h2 id="org15418dd"><span class="section-number-2">6</span> 計算論的思考は</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 基本的なコンピュータ科学の概念に基づく
 </p>
@@ -421,18 +413,18 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgc86b41d" class="outline-3">
-<h3 id="orgc86b41d"><span class="section-number-3">1.7</span> 計算論的思考は一見難しそうな問題を我々がすでに解き方を知っている問題に変換する．</h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-org0f14f85" class="outline-2">
+<h2 id="org0f14f85"><span class="section-number-2">7</span> 計算論的思考は一見難しそうな問題を我々がすでに解き方を知っている問題に変換する．</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 これには簡略化，埋込，変換，シミュレーションなどが使えるだろう．
 </p>
 </div>
 </div>
 
-<div id="outline-container-org78ddc9f" class="outline-3">
-<h3 id="org78ddc9f"><span class="section-number-3">1.8</span> 計算論的思考とは</h3>
-<div class="outline-text-3" id="text-1-8">
+<div id="outline-container-org9f4e949" class="outline-2">
+<h2 id="org9f4e949"><span class="section-number-2">8</span> 計算論的思考とは</h2>
+<div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>再帰的に考えることであり，</li>
 <li>並列処理であり，</li>
@@ -447,9 +439,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org3fa046f" class="outline-3">
-<h3 id="org3fa046f"><span class="section-number-3">1.9</span> 計算論的思考とは抽象化と分割統治を用いることである．</h3>
-<div class="outline-text-3" id="text-1-9">
+<div id="outline-container-org4a74212" class="outline-2">
+<h2 id="org4a74212"><span class="section-number-2">9</span> 計算論的思考とは抽象化と分割統治を用いることである．</h2>
+<div class="outline-text-2" id="text-9">
 <p>
 問題点の分割である．
 </p>
@@ -485,9 +477,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org3ddc55e" class="outline-3">
-<h3 id="org3ddc55e"><span class="section-number-3">1.10</span> 計算論的思考とは予防，防御，そして最悪のシナリオからの復帰という観点を持ち，</h3>
-<div class="outline-text-3" id="text-1-10">
+<div id="outline-container-org68470d5" class="outline-2">
+<h2 id="org68470d5"><span class="section-number-2">10</span> 計算論的思考とは予防，防御，そして最悪のシナリオからの復帰という観点を持ち，</h2>
+<div class="outline-text-2" id="text-10">
 <p>
 そのために冗長性，故障封じ込め，誤り訂正などを用いることである．
 </p>
@@ -503,9 +495,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgae949a7" class="outline-3">
-<h3 id="orgae949a7"><span class="section-number-3">1.11</span> 計算論的思考はヒューリスティックな推論により解を発見することである．</h3>
-<div class="outline-text-3" id="text-1-11">
+<div id="outline-container-org6ec257e" class="outline-2">
+<h2 id="org6ec257e"><span class="section-number-2">11</span> 計算論的思考はヒューリスティックな推論により解を発見することである．</h2>
+<div class="outline-text-2" id="text-11">
 <ul class="org-ul">
 <li>それは不確定な状況でのプランニング，学習，スケジューリングのことである．</li>
 <li>それは探索して，探索して，そしてさらに探索してWebページのリストや，
@@ -514,9 +506,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org37c26a0" class="outline-3">
-<h3 id="org37c26a0"><span class="section-number-3">1.12</span> 計算論的思考は超大量のデータを使って計算を高速化することである．</h3>
-<div class="outline-text-3" id="text-1-12">
+<div id="outline-container-org53333cb" class="outline-2">
+<h2 id="org53333cb"><span class="section-number-2">12</span> 計算論的思考は超大量のデータを使って計算を高速化することである．</h2>
+<div class="outline-text-2" id="text-12">
 <ul class="org-ul">
 <li>それは時間と空間のトレードオフ，あるいは計算パワーと記憶容量のト
 レードオフをすることである．</li>
@@ -524,13 +516,13 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org99f0ae5" class="outline-3">
-<h3 id="org99f0ae5"><span class="section-number-3">1.13</span> 私たちは計算論的思考が他の研究領域に与える影響を目撃してきた．</h3>
-<div class="outline-text-3" id="text-1-13">
+<div id="outline-container-org87722a0" class="outline-2">
+<h2 id="org87722a0"><span class="section-number-2">13</span> 私たちは計算論的思考が他の研究領域に与える影響を目撃してきた．</h2>
+<div class="outline-text-2" id="text-13">
 </div>
-<div id="outline-container-orgdbbc1a0" class="outline-4">
-<h4 id="orgdbbc1a0"><span class="section-number-4">1.13.1</span> たとえば，機械学習は統計学を変えた．</h4>
-<div class="outline-text-4" id="text-1-13-1">
+<div id="outline-container-orge9a7b7e" class="outline-3">
+<h3 id="orge9a7b7e"><span class="section-number-3">13.1</span> たとえば，機械学習は統計学を変えた．</h3>
+<div class="outline-text-3" id="text-13-1">
 <p>
  統計的学習は，ほんの数年前には
 考えられなかったような，データ量と次元の巨大な問題に適用された．す
@@ -541,9 +533,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org753f25a" class="outline-4">
-<h4 id="org753f25a"><span class="section-number-4">1.13.2</span> 計算生物学は生物学者の思考法を変えつつある．</h4>
-<div class="outline-text-4" id="text-1-13-2">
+<div id="outline-container-org1ba56de" class="outline-3">
+<h3 id="org1ba56de"><span class="section-number-3">13.2</span> 計算生物学は生物学者の思考法を変えつつある．</h3>
+<div class="outline-text-3" id="text-13-2">
 <p>
 コンピュータ科学者の生物学に対する貢献は，単に大量のゲノムシーケン
 スデータから特定のパターンを見つけ出すことにとどまらない．
@@ -557,15 +549,15 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgaab2cf4" class="outline-4">
-<h4 id="orgaab2cf4"><span class="section-number-4">1.13.3</span> 計算ゲーム理論は経済学者の思考法を，</h4>
+<div id="outline-container-org652fc63" class="outline-3">
+<h3 id="org652fc63"><span class="section-number-3">13.3</span> 計算ゲーム理論は経済学者の思考法を，</h3>
 </div>
-<div id="outline-container-org6d18485" class="outline-4">
-<h4 id="org6d18485"><span class="section-number-4">1.13.4</span> ナノコンピューティングは化学者の思考法を，</h4>
+<div id="outline-container-orgac5bb7e" class="outline-3">
+<h3 id="orgac5bb7e"><span class="section-number-3">13.4</span> ナノコンピューティングは化学者の思考法を，</h3>
 </div>
-<div id="outline-container-orgf44b1df" class="outline-4">
-<h4 id="orgf44b1df"><span class="section-number-4">1.13.5</span> そして量子計算は物理学者の思考法をそれぞれ変えつつある</h4>
-<div class="outline-text-4" id="text-1-13-5">
+<div id="outline-container-orgc75b8ff" class="outline-3">
+<h3 id="orgc75b8ff"><span class="section-number-3">13.5</span> そして量子計算は物理学者の思考法をそれぞれ変えつつある</h3>
+<div class="outline-text-3" id="text-13-5">
 <p>
 このような思考法は他分野の科学者だけでなくすべての人に必要な技量の1
 つである．ユビキタスコンピューティングが今日にもたらした影響と同様
@@ -583,9 +575,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-org3d6c195" class="outline-3">
-<h3 id="org3d6c195"><span class="section-number-3">1.14</span> それは何であり，何でないか</h3>
-<div class="outline-text-3" id="text-1-14">
+<div id="outline-container-orgd25810c" class="outline-2">
+<h2 id="orgd25810c"><span class="section-number-2">14</span> それは何であり，何でないか</h2>
+<div class="outline-text-2" id="text-14">
 <p>
 コンピュータ科学とは
 </p>
@@ -700,9 +692,9 @@ Computational Thinking
 </div>
 </div>
 
-<div id="outline-container-orgac74b96" class="outline-3">
-<h3 id="orgac74b96"><span class="section-number-3">1.15</span> 計算論的思考は誰のために</h3>
-<div class="outline-text-3" id="text-1-15">
+<div id="outline-container-org267c6fb" class="outline-2">
+<h2 id="org267c6fb"><span class="section-number-2">15</span> 計算論的思考は誰のために</h2>
+<div class="outline-text-2" id="text-15">
 <p>
 コンピュータ科学の教授は「コンピュータ科学者のように考える方法」と名付
 けた科目を，大学の新入生に教えるべきである．
@@ -730,10 +722,9 @@ Computational Thinking
 </div>
 </div>
 </div>
-</div>
 <div id="postamble" class="status">
-<p class="author">Author: suzuki@iwate-u.ac.jp</p>
-<p class="date">Created: 2018-11-13 火 10:15</p>
+<p class="author">Author: suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師</p>
+<p class="date">Created: 2018-11-13 火 10:19</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
