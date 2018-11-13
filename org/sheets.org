@@ -1,3 +1,5 @@
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
 #+TITLE: コンピュータと数式処理
 #+AUTHOR: 鈴木正幸，非常勤講師
 #+OPTIONS: H:3 toc:nil num:t ^:nil

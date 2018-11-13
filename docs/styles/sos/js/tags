@@ -1,0 +1,46 @@
+!_TAG_FILE_ENCODING	utf-8	//
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_JP_AUTHOR	HIGASHI Hirohito	/Twitter: @h_east/
+!_TAG_PROGRAM_JP_URL	http://hp.vector.co.jp/authors/VA025040/	//
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8J2	//
+clickNextTab	bigblow.js	/^function clickNextTab() {$/;"	f
+clickNextTab	sos.js	/^function clickNextTab() {$/;"	f
+clickPreviousTab	bigblow.js	/^function clickPreviousTab() {$/;"	f
+clickPreviousTab	sos.js	/^function clickPreviousTab() {$/;"	f
+copyToClipboard	bigblow.js	/^function copyToClipboard(text)$/;"	f
+copyToClipboard	sos.js	/^function copyToClipboard(text)$/;"	f
+generateMiniToc	bigblow.js	/^function generateMiniToc(divId) {$/;"	f
+generateMiniToc	sos.js	/^function generateMiniToc(divId) {$/;"	f
+hsAddReviewPanels	hideshow.js	/^function hsAddReviewPanels() {$/;"	f
+hsAddReviewingPanels	hideshow.js	/^function hsAddReviewingPanels() {$/;"	f
+hsCollapse	hideshow.js	/^function hsCollapse(header) {$/;"	f
+hsCollapseAll	hideshow.js	/^function hsCollapseAll() {$/;"	f
+hsCollapseAllVisible	hideshow.js	/^function hsCollapseAllVisible() {$/;"	f
+hsCollapseParents	hideshow.js	/^function hsCollapseParents(header) {$/;"	f
+hsExpand	hideshow.js	/^function hsExpand(header) {$/;"	f
+hsExpand2	hideshow.js	/^function hsExpand2(header, expandDoneHeader) {$/;"	f
+hsExpandAll	hideshow.js	/^function hsExpandAll() {$/;"	f
+hsExpandAnchor	hideshow.js	/^function hsExpandAnchor(id) {$/;"	f
+hsExpandParents	hideshow.js	/^function hsExpandParents(header) {$/;"	f
+hsHideTodoKeyword	hideshow.js	/^function hsHideTodoKeyword(kw) {$/;"	f
+hsInit	hideshow.js	/^function hsInit() {$/;"	f
+hsIsDoneHeader	hideshow.js	/^function hsIsDoneHeader(header) {$/;"	f
+hsReviewTaskNext	hideshow.js	/^function hsReviewTaskNext(backward) {$/;"	f
+hsReviewTaskPrev	hideshow.js	/^function hsReviewTaskPrev() {$/;"	f
+hsReviewTaskQuit	hideshow.js	/^function hsReviewTaskQuit() {$/;"	f
+hsSetDefaultVisibility	hideshow.js	/^function hsSetDefaultVisibility(header) {$/;"	f
+hsShowTodoKeyword	hideshow.js	/^function hsShowTodoKeyword(kw) {$/;"	f
+hsToggleCollapsing	hideshow.js	/^function hsToggleCollapsing(header) {$/;"	f
+nbReviewTotalTasks	hideshow.js	/^var nbReviewTotalTasks;$/;"	v
+orgDefkey	bigblow.js	/^function orgDefkey(e) {$/;"	f
+orgDefkey	sos.js	/^function orgDefkey(e) {$/;"	f
+selectTabAndScroll	bigblow.js	/^function selectTabAndScroll(href) {$/;"	f
+selectTabAndScroll	sos.js	/^function selectTabAndScroll(href) {$/;"	f
+tabifySections	bigblow.js	/^function tabifySections() {$/;"	f
+tabifySections	sos.js	/^function tabifySections() {$/;"	f
+togglePanel	bigblow.js	/^function togglePanel(e) {$/;"	f
+togglePanel	sos.js	/^function togglePanel(e) {$/;"	f
