@@ -1,4 +1,5 @@
-#+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
 #+TITLE: 数学ソフトウェアの紹介
 #+author: suzuki@iwate-u.ac.jp
 #+OPTIONS: H:3 toc:nil num:t ^:nil

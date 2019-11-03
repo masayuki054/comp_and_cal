@@ -8,7 +8,7 @@ ORGS = [
   "math-soft.org",
   "memos.org",
   "sheets.org",
-  "computational_thinkng.org",
+  "computational_thinking.org",
   "gtd.org"
   
 ]

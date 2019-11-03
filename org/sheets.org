@@ -2,7 +2,7 @@
 #+include: info/common-header.org
 #+TITLE: コンピュータと数式処理
 #+AUTHOR: 鈴木正幸，非常勤講師
-#+OPTIONS: H:3 toc:nil num:t ^:nil
+
 #+LATEX_CLASS: jarticle
 #+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt]
 

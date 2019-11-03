@@ -1,3 +1,17 @@
+* 数理情報科学特論用の Groener基底
+
+** Makefile
+
+   - body.tex を include すると，page number/total number の表示の
+     total number が常に1になってしまうので，
+
+   - *-pre.tex と body.tex cat して，結合することとした
+
+
+     
+
+#+BEGIN_SRC make :tangle Makefile
+
 .PHONY: all clean
 
 all: presen.pdf print.pdf
@@ -20,3 +34,5 @@ print-nup.pdf: print.pdf
 
 clean: 
 	rm -f *~ *.aux *.log *.dvi *.nav *.snm *.toc *.out ._*
+
+#+END_SRC
