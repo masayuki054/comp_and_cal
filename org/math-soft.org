@@ -41,6 +41,8 @@
 
        - mathematic, sage の概要
 
+     - [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+
 6) 数値解析
 
      - [[https://matome.naver.jp/odai/2136163231573327601][MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ]]
@@ -70,8 +72,6 @@
    - 長めの問題向き，
    - プログラムの保存ができる
    - 登録とログインが必要，
-
-** Sage on the Web (2)
 
 *** セル・サーバ
 
@@ -151,28 +151,10 @@ plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 
    - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
 
-** LaTeX 出力の例
+** 数式処理アルゴリズム
 
-    
-#+BEGIN_SRC sage :exports both
-integrate(sin(x^2)/e^(2^x^2),x)
-#+END_SRC
-#+BEGIN_CENTER
+*** 不定積分入門			      :algorithm:risch:integral:math:
+    [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
 
-#+RESULTS:
-: integrate(e^(-2^(x^2))*sin(x^2), x)
-
-#+BEGIN_SRC sage :exports both
-latex(integrate(sin(x^2)/e^(2^x^2),x))
-
-#+END_SRC
-
-
-
-
-#+RESULTS:
-$\int e^{\left(-2^{\left(x^{2}\right)}\right)}\sin\left(x^{2}\right)\,{d x}$
-
-
-#+END_CENTER
+    wikipedia の参考文献にあった
 
