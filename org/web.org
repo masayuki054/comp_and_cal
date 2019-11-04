@@ -21,3 +21,7 @@
   - 学術俯瞰とタテとヨコをつなぐ学び，
     新しいリベラルアーツと専門知の結合
 
+
+#+caption: インターネットが起している変革
+#+ATTR_LATEX: :width 14cm
+ [[./map-images/04-Web_revolution.png]]
