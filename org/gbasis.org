@@ -1,5 +1,0 @@
-#+setupfile: info/index-sos-header.setup
-#+include: info/common-header.org
-#+title: グレブナー基底
-#+include: gbasis/gbasis.org
-

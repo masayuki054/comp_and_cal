@@ -1,0 +1,35 @@
+* メモと思考とデジタル技術
+
+  2018.12 月の放送大学面接講義の内容です。
+
+  コンピュータとインターネットを利用して，
+  考え，メモを作成することについて，考えてみる
+
+  - 講義 [[https://github.com/masayuki054/tools_for_thinking_and_memo  ][GitHub - masayuki054/tools_for_thinking_and_memo]]
+
+  - 内容 [[https://masayuki054.github.io/tools_for_thinking_and_memo/talk.html  ][メモと思考とデジタルツール]] 
+
+
+
+*** 思考とメモと文書作成のためのデジタル・ツール
+
+**** MindMapping
+
+**** outliner 
+
+    [[./outline-reading-writing.org]]
+
+***** emacs org - アウトライナー
+
+****** Org Babelで文芸的プログラミング · ops●tokyo
+
+     [[http://wallyqs.github.io/posts/2014/12/12/using-org-babel-for-lp-jp/][Org Babelで文芸的プログラミング · ops●tokyo]]
+     素晴しい!
+
+**** markup 
+
+     - simplenote
+     - Emacs org-mode
+
+**** HyperLink
+
