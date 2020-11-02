@@ -26,20 +26,24 @@
   知り，考え，記憶し，検索し，思い出せるようにしましょう。
 
    - [[./org/digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
+
      - 知識は構造
      - アウトライナー
      - マインドマップ
      - 文芸的プログラミング
 
    - [[./org/web.org][Web進化論]]
+
      - 集合知
      - 知識の構造化
 
    - [[./org/comp_thinking.org][計算論的思考]]
+
      - computer科学者のように考え，問題に取り組み，システムをデザイン
        しよう
 
    - [[./org/math-soft.org][数学ソフトウェア]]
+
      - フリーソフトウェアを利用しよう
      - 数式処理システムと計算機代数アルゴリズム
 
@@ -56,22 +60,22 @@
 
 #+caption: 概要
 #+ATTR_LATEX: :width 18cm 
- [[./map-images/01-computer_and_cal.png]]
+ [[./org/map-images/01-computer_and_cal.png]]
 
 #+caption: 人とコンピュータとインターネット
 #+ATTR_LATEX: :width 18cm
- [[./map-images/03-how_to_use_computer_and_internet.png]]
+ [[./org/map-images/03-how_to_use_computer_and_internet.png]]
 
 
 \vspace{3cm}
 
 #+caption: インターネットが起している変革
 #+ATTR_LATEX: :width 18cm
- [[./map-images/04-Web_revolution.png]]
+ [[./org/map-images/04-Web_revolution.png]]
 
 \vspace{3cm}
 
 #+caption: 思考とメモと文書のためのデジタル・ツール
 #+ATTR_LATEX: :width 18cm
-[[./map-images/05-digital_tools_for_thinking.png]]
+[[./org/map-images/05-digital_tools_for_thinking.png]]
 
