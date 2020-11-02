@@ -1,15 +1,12 @@
 * メモと思考とデジタル技術
 
-  2018.12 月の放送大学面接講義の内容です。
+  2018.12月の放送大学面接講義の内容です。
 
   コンピュータとインターネットを利用して，
-  考え，メモを作成することについて，考えてみる
+  考え，メモを作成することについて，考えてみます。
 
-  - 講義 [[https://github.com/masayuki054/tools_for_thinking_and_memo  ][GitHub - masayuki054/tools_for_thinking_and_memo]]
-
-  - 内容 [[https://masayuki054.github.io/tools_for_thinking_and_memo/talk.html  ][メモと思考とデジタルツール]] 
-
-
+  - 講義 [[https://github.com/masayuki054/tools_for_thinking_and_memo][GitHub - masayuki054/tools_for_thinking_and_memo]]
+  - 内容 [[https://masayuki054.github.io/tools_for_thinking_and_memo/talk.html][メモと思考とデジタルツール]]
 
 *** 思考とメモと文書作成のためのデジタル・ツール
 
@@ -32,4 +29,89 @@
      - Emacs org-mode
 
 **** HyperLink
+
+
+* クラウドと情報リテラシー
+
+  2019.12月の放送大学面接講義の内容です。
+
+  クラウド時代の知的情報リテラシーについて考えてみる
+
+  - 講義 [[https://github.com/masayuki054/cloud_and_information_literacy][GitHub - masayuki054/cloud_and_information_literacy]]
+  - 内容 [[https://masayuki054.github.io/cloud_and_information_literacy/talk.html][クラウドと情報リテラシー]]
+
+
+* メモ，思考，情報リテラシのまとめ
+
+** 理解を外化するためにコンピュータとインターネットを使おう
+
+   小さな理解のくりかえしを，構造的に記録する
+
+** 内化しやすい外化
+
+*** 理解しやすい外化
+
+    outline 
+
+*** イメージしやすい外化
+
+    mindmap
+
+** 外化の意味付
+
+   - 情報を外に出すことは二つの意味がある
+
+     - 内的情報を外部記憶に置くこと
+
+       こっちが外化, これがメモ
+
+     - 自分の情報を他者が理解できる形にすること
+
+       第三者への情報 客観化，文書化
+
+*** 理解と知識と外化
+      
+    - 小さな理解と大きな理解，整合性の問題
+    - 理解の再帰性
+     
+** コンピュータとインターネットの意味
+
+   - 検索
+
+   - 可視化
+
+   - 編集と保存 
+
+   - 補完と拡張
+
+** 思考方法
+
+   - 抽象化と詳細化，
+
+   - 論理的思考
+
+   - 水平思考，放射思考
+
+   - 発想法
+
+** 知的思考の7段階
+     - 目的探索
+     - 観察
+     - 発想
+     - 分析
+     - 構造化
+     - 意志決定
+     - 表現
+** 情報処理
+   - 情報の収集
+   - 情報の加工
+   - 情報の分析
+   - 情報の獲得 (自分の情報にする)
+   - 情報の生成 (第三者にわかる情報にする)
+   - 情報の発信
+
+
+
+
+
 
