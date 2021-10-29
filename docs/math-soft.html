@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-01 木 11:14 -->
+<!-- 2021-10-29 金 16:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>微分ゼミ 数学ソフトウェアの紹介 情報処理演習2018 数学ソフトウェア</title>
+<title>数理情報科学特論 数学ソフトウェアの紹介</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="suzuki@iwate-u.ac.jp masayuki masayuki" />
+<meta name="author" content="suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -181,25 +194,25 @@
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/css/sos.css">
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./styles/sos/css/sos.css">
+<link rel="stylesheet" type="text/css" href="./styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="./styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="./styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="./styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="./styles/bigblow/js/jquery.zclip.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/hideshow.js"></script>
-<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/sos.js"></script>
+<script type="text/javascript" src="./styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="./styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="./styles/sos/js/hideshow.js"></script>
+<script type="text/javascript" src="./styles/sos/js/sos.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -240,88 +253,14 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">微分ゼミ 数学ソフトウェアの紹介 情報処理演習2018 数学ソフトウェア</h1>
-<div id="table-of-contents">
-<h2>&#30446;&#27425;</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org8f90932">1. mathlibre</a>
-<ul>
-<li><a href="#org25cff14">1.1. mathlibre</a></li>
-</ul>
-</li>
-<li><a href="#orgcbc0981">2. 数学ソフトウェア - Wikipedia (1)</a>
-<ul>
-<li><a href="#orgef59c6d">2.1. 1) ソフトウェア電卓</a></li>
-<li><a href="#org33e541b">2.2. 2) 数式処理システム</a></li>
-</ul>
-</li>
-<li><a href="#org754db9c">3. 数学ソフトウェア - Wikipedia (2)</a>
-<ul>
-<li><a href="#org4ffc541">3.1. 6) 数値解析</a></li>
-</ul>
-</li>
-<li><a href="#orgd328199">4. Sage とは</a></li>
-<li><a href="#orgd7fa647">5. Sage on the Web(1)</a>
-<ul>
-<li><a href="#org97b642c">5.1. クラウド・サーバ</a></li>
-</ul>
-</li>
-<li><a href="#org75e64d3">6. Sage on the Web (2)</a>
-<ul>
-<li><a href="#org06b292b">6.1. セル・サーバ</a></li>
-<li><a href="#orgdedecdd">6.2. 例題</a></li>
-</ul>
-</li>
-<li><a href="#org96c531f">7. Sagemath アプリ</a></li>
-<li><a href="#org54eb314">8. 入門</a></li>
-<li><a href="#org67e7fc0">9. 例題</a></li>
-<li><a href="#orgb97f20e">10. Sagemath に関する本 (フリー)</a></li>
-<li><a href="#org9b1aa00">11. Sagemath に関するいろいろなページ</a></li>
-<li><a href="#org5c1fdd6">12. Octave との連携</a></li>
-<li><a href="#org838b0f4">13. LaTeXとSage</a></li>
-<li><a href="#org12a734e">14. LaTeX 出力の例</a></li>
-</ul>
-</div>
-</div>
-<p>
-<a href="http://masayuki054.hatenablog.com/entry/2018/03/29/190949">はてなのページ</a> /
-<a href="http://masayuki054.github.io/morioka_u_ict">今日の講義</a> / 
-<a href="https://sites.google.com/view/morioka-u-ict-2018/">グーグルサイト</a> /
-<a href="https://drive.google.com/drive/folders/1HVFAjgdjsykN1zx7GOwzjutdeMFBva5C?usp=sharing">講義用グーグルドライブ</a>
-</p>
-<div id="outline-container-org8f90932" class="outline-2">
-<h2 id="org8f90932"><span class="section-number-2">1</span> mathlibre</h2>
+<h1 class="title">数理情報科学特論 数学ソフトウェアの紹介</h1>
+
+<div id="outline-container-orgfa76f58" class="outline-2">
+<h2 id="orgfa76f58"><span class="section-number-2">1</span> MathLibre</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org25cff14" class="outline-3">
-<h3 id="org25cff14"><span class="section-number-3">1.1</span> mathlibre</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
 <a href="https://www.geogebra.org/m/hShSTr6e">KNOPPIX/Math-&gt;MathLibre</a> 
 </p>
@@ -333,32 +272,28 @@ for the JavaScript code in this tag.
 
 <li>フリーな数学ソフトウェアを収録</li>
 </ul>
-</div>
-</div>
-</div>
 
-
-<div id="outline-container-orgcbc0981" class="outline-2">
-<h2 id="orgcbc0981"><span class="section-number-2">2</span> <a href="https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">数学ソフトウェア - Wikipedia</a> (1)</h2>
-<div class="outline-text-2" id="text-2">
 <p>
 <a href="https://www.geogebra.org/m/hShSTr6e">数学ソフトウェア紹介 - GeoGebraBook</a>
 </p>
 </div>
+</div>
 
-<div id="outline-container-orgef59c6d" class="outline-3">
-<h3 id="orgef59c6d"><span class="section-number-3">2.1</span> 1) ソフトウェア電卓</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-<a href="http://ja.numberempire.com/">数の帝国 - 数学ツール</a> 数の帝国は、強力な数学ツールと数について
-の知識のコレクションです。
+<div id="outline-container-orgf34c422" class="outline-2">
+<h2 id="orgf34c422"><span class="section-number-2">2</span> <a href="https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">数学ソフトウェアとは - Wikipedia</a></h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><p>
+ソフトウェア電卓  
 </p>
-</div>
-</div>
 
-<div id="outline-container-org33e541b" class="outline-3">
-<h3 id="org33e541b"><span class="section-number-3">2.2</span> 2) 数式処理システム</h3>
-<div class="outline-text-3" id="text-2-2">
+<p>
+<a href="https://ja.numberempire.com/">数の帝国 - 数学ツール</a> 数の帝国は、強力な数学ツールと数について
+の知識のコレクションです。
+</p></li>
+
+<li>数式処理システム
+
 <ul class="org-ul">
 <li><a href="https://ja.wikipedia.org/wiki/Sage_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)">Sage (数式処理システム) - Wikipedia</a></li>
 
@@ -367,34 +302,28 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>mathematic, sage の概要</li>
 </ul></li>
-</ul>
-</div>
-</div>
-</div>
 
-<div id="outline-container-org754db9c" class="outline-2">
-<h2 id="org754db9c"><span class="section-number-2">3</span> <a href="https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">数学ソフトウェア - Wikipedia</a> (2)</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org4ffc541" class="outline-3">
-<h3 id="org4ffc541"><span class="section-number-3">3.1</span> 6) 数値解析</h3>
-<div class="outline-text-3" id="text-3-1">
+<li><a href="https://www.wolframalpha.com/">Wolfram|Alpha: Computational Knowledge Engine</a></li>
+</ul></li>
+
+<li>数値解析
+
 <ul class="org-ul">
 <li><a href="https://matome.naver.jp/odai/2136163231573327601">MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ</a></li>
 
-<li><a href="http://signalprocessor.blogspot.jp/2016/">信号処理のお仕事メモ: 2016</a> (Octave)</li>
+<li><a href="https://signalprocessor.blogspot.jp/2016/">信号処理のお仕事メモ: 2016</a> (Octave)</li>
 
-<li><a href="http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80">Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki</a></li>
-</ul>
-</div>
+<li><a href="https://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80">Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki</a></li>
+</ul></li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-orgd328199" class="outline-2">
-<h2 id="orgd328199"><span class="section-number-2">4</span> <a href="http://www.sagemath.org">Sage</a> とは</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org6e9ac40" class="outline-2">
+<h2 id="org6e9ac40"><span class="section-number-2">3</span> <a href="https://www.sagemath.org">Sage</a> とは</h2>
+<div class="outline-text-2" id="text-3">
 <p>
-<a href="http://www.gregorybard.com/Sage.html">Gregory V. Bard</a> 曰く
+<a href="https://www.gregorybard.com/Sage.html">Gregory V. Bard</a> 曰く
 </p>
 
 <ul class="org-ul">
@@ -404,22 +333,21 @@ for the JavaScript code in this tag.
 <li>「コンピュータ代数」システム</li>
 </ul>
 </div>
-</div>
 
-<div id="outline-container-orgd7fa647" class="outline-2">
-<h2 id="orgd7fa647"><span class="section-number-2">5</span> Sage on the Web(1)</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgf1e717c" class="outline-3">
+<h3 id="orgf1e717c"><span class="section-number-3">3.1</span> Sage on the Web(1)</h3>
+<div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Webで動く，</li>
 <li>ノートやデスクトップPCへのインストールは必要ない。</li>
 </ul>
 </div>
 
-<div id="outline-container-org97b642c" class="outline-3">
-<h3 id="org97b642c"><span class="section-number-3">5.1</span> クラウド・サーバ</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org4835234" class="outline-4">
+<h4 id="org4835234"><span class="section-number-4">3.1.1</span> クラウド・サーバ</h4>
+<div class="outline-text-4" id="text-3-1-1">
 <p>
-<a href="http://www.cocalc.com/">CoCalc.com Sage クラウド・サーバ</a> 
+<a href="https://www.cocalc.com/">CoCalc.com Sage クラウド・サーバ</a> 
 </p>
 
 <ul class="org-ul">
@@ -429,50 +357,40 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org75e64d3" class="outline-2">
-<h2 id="org75e64d3"><span class="section-number-2">6</span> Sage on the Web (2)</h2>
-<div class="outline-text-2" id="text-6">
-</div>
-<div id="outline-container-org06b292b" class="outline-3">
-<h3 id="org06b292b"><span class="section-number-3">6.1</span> セル・サーバ</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-orgc5d7d9f" class="outline-4">
+<h4 id="orgc5d7d9f"><span class="section-number-4">3.1.2</span> セル・サーバ</h4>
+<div class="outline-text-4" id="text-3-1-2">
 <p>
-<a href="http://sagecell.sagemath.org/">SageMathCell Server</a>
+<a href="https://sagecell.sagemath.org/">SageMathCell Server</a>
 </p>
 
 <ul class="org-ul">
 <li>短かめの問題向き</li>
 
-<li><a href="http://www.gregorybard.com/videos/Sage_part1.swf">関数，微分，積分，2次元プロット</a> の例題動画</li>
+<li><a href="https://www.gregorybard.com/videos/Sage_part1.swf">関数，微分，積分，2次元プロット</a> の例題動画</li>
 
-<li><a href="http://www.gregorybard.com/videos/Sage_part2.swf">因数分解，3次元プロット</a></li>
+<li><a href="https://www.gregorybard.com/videos/Sage_part2.swf">因数分解，3次元プロット</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdedecdd" class="outline-3">
-<h3 id="orgdedecdd"><span class="section-number-3">6.2</span> 例題</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-org764e76e" class="outline-4">
+<h4 id="org764e76e"><span class="section-number-4">3.1.3</span> 例題</h4>
+<div class="outline-text-4" id="text-3-1-3">
 <div class="org-src-container">
-<pre class="src src-sage"><span style="color: #cae682;">x</span>,<span style="color: #cae682;">y</span> = var(<span style="color: #95e454;">'x y'</span>)
+<pre class="src src-sage">x,y = var('x y')
 plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 </pre>
 </div>
-
-<pre class="example">
-Launched jmol viewer for Graphics3d Object
-
-</pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org96c531f" class="outline-2">
-<h2 id="org96c531f"><span class="section-number-2">7</span> Sagemath アプリ</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org4d4681c" class="outline-3">
+<h3 id="org4d4681c"><span class="section-number-3">3.2</span> Sagemath アプリ</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 数式処理が，スマホで動くなんて，ほんとにビックリ
 </p>
@@ -485,30 +403,30 @@ Launched jmol viewer for Graphics3d Object
 </div>
 </div>
 
-<div id="outline-container-org54eb314" class="outline-2">
-<h2 id="org54eb314"><span class="section-number-2">8</span> 入門</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org68a5520" class="outline-3">
+<h3 id="org68a5520"><span class="section-number-3">3.3</span> 入門</h3>
+<div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
-<li><a href="http://doc.sagemath.org/html/ja/tutorial/index.html">Sageチュートリアル.ja</a> すぐ後で，実行しながら，説明します</li>
+<li><a href="https://doc.sagemath.org/html/ja/tutorial/index.html">Sageチュートリアル.ja</a> すぐ後で，実行しながら，説明します</li>
 
-<li><a href="http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf">Sage tutorial-jp.pdf</a></li>
+<li><a href="https://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf">Sage tutorial-jp.pdf</a></li>
 
-<li><a href="http://www.pwv.co.jp/~take/TakeWiki/index.php?sage/sage%E3%81%AE%E7%B4%B9%E4%BB%8B">sage/sageの紹介 - PukiWiki</a> たけもとさん
+<li><a href="https://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B">sage/sageの紹介 - PukiWiki</a> たけもとさん
 
 <ul class="org-ul">
-<li><a href="http://www.pwv.co.jp/~take/TakeWiki/index.php?sage/%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">sage/計算してみよう - PukiWiki</a></li>
+<li><a href="https://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2F%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">sage/計算してみよう - PukiWiki</a></li>
 </ul></li>
 
-<li><a href="http://www.sagemath.org/help-video.html">series of videos/screencasts</a></li>
+<li><a href="https://www.sagemath.org/help-video.html">series of videos/screencasts</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org67e7fc0" class="outline-2">
-<h2 id="org67e7fc0"><span class="section-number-2">9</span> 例題</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orgb279d87" class="outline-3">
+<h3 id="orgb279d87"><span class="section-number-3">3.4</span> 例題</h3>
+<div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
-<li><a href="http://doc.sagemath.org/html/en/constructions/index.html">プログラムの制作例</a>
+<li><a href="https://doc.sagemath.org/html/en/constructions/index.html">プログラムの制作例</a>
 <ul class="org-ul">
 <li>いろいろな例題と解答</li>
 </ul></li>
@@ -521,22 +439,22 @@ Launched jmol viewer for Graphics3d Object
 </div>
 </div>
 
-<div id="outline-container-orgb97f20e" class="outline-2">
-<h2 id="orgb97f20e"><span class="section-number-2">10</span> Sagemath に関する本 (フリー)</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-orgf59c5ef" class="outline-3">
+<h3 id="orgf59c5ef"><span class="section-number-3">3.5</span> Sagemath に関する本 (フリー)</h3>
+<div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
-<li><a href="http://www.gregorybard.com/Sage.html">Sage for undergraduates, free pdf</a>   このページ内に pdf へのリンクが</li>
+<li><a href="https://www.gregorybard.com/Sage.html">Sage for undergraduates, free pdf</a>   このページ内に pdf へのリンクが</li>
 
-<li><a href="http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html">Welcome to the SDSU Sage Tutorial</a></li>
+<li><a href="https://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html">Welcome to the SDSU Sage Tutorial</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9b1aa00" class="outline-2">
-<h2 id="org9b1aa00"><span class="section-number-2">11</span> Sagemath に関するいろいろなページ</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org18f9bda" class="outline-3">
+<h3 id="org18f9bda"><span class="section-number-3">3.6</span> Sagemath に関するいろいろなページ</h3>
+<div class="outline-text-3" id="text-3-6">
 <p>
-<a href="http://sk.sagepub.com/reference">SAGE Knowledge - Reference</a> reference の検索
+<a href="https://sk.sagepub.com/reference">SAGE Knowledge - Reference</a> reference の検索
 </p>
 
 <p>
@@ -544,79 +462,64 @@ Launched jmol viewer for Graphics3d Object
 </p>
 
 <p>
-<a href="http://wiki.sagemath.org/quickref">large collection of quick-reference cards</a> 
+<a href="https://wiki.sagemath.org/quickref">large collection of quick-reference cards</a> 
 </p>
 
 <p>
-<a href="http://sagemath.org">http://sagemath.org</a> <a href="http://doc.sagemath.org">http://doc.sagemath.org</a> 
+<a href="https://sagemath.org">https://sagemath.org</a> <a href="https://doc.sagemath.org">https://doc.sagemath.org</a> 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5c1fdd6" class="outline-2">
-<h2 id="org5c1fdd6"><span class="section-number-2">12</span> Octave との連携</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org84de479" class="outline-3">
+<h3 id="org84de479"><span class="section-number-3">3.7</span> Octave との連携</h3>
+<div class="outline-text-3" id="text-3-7">
 <p>
-<a href="http://www.pwv.co.jp/~take/TakeWiki/index.php?sage/Sage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86">sage/SageでOctaveを使う - PukiWiki</a> 
+<a href="https://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2FSage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86">sage/SageでOctaveを使う - PukiWiki</a> 
 </p>
 
 <p>
-<a href="http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80">Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki</a>
+<a href="https://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80">Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki</a>
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org838b0f4" class="outline-2">
-<h2 id="org838b0f4"><span class="section-number-2">13</span> LaTeXとSage</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org1e74cb9" class="outline-3">
+<h3 id="org1e74cb9"><span class="section-number-3">3.8</span> LaTeXとSage</h3>
+<div class="outline-text-3" id="text-3-8">
 <ul class="org-ul">
 <li>オンラインLaTeXサービス  <a href="https://oku.edu.mie-u.ac.jp/~okumura/texonweb/">TeX を使ってみよう</a></li>
 
-<li><a href="https://mytexpert.osdn.jp/index.php?LaTeX%C2%A4%C3%8B%C2%A4%C3%A8%C2%A4%C3%AB%C3%8F%C3%80%C3%8A%C2%B8%C2%BA%C3%AE%C3%80%C2%AE%C2%A4%C3%8E%C2%BC%C3%AA%C2%B0%C3%BA%C2%A4%C2%AD">LaTeXによる論文作成の手引き - MyTeXpert</a></li>
+<li><a href="https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD">LaTeXによる論文作成の手引き - MyTeXpert</a></li>
 
-<li><a href="http://sage.math.gordon.edu/home/pub/51/">Using LaTeX in Sage &#x2013; Sage</a></li>
+<li><a href="https://sage.math.gordon.edu/home/pub/51/">Using LaTeX in Sage &#x2013; Sage</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org12a734e" class="outline-2">
-<h2 id="org12a734e"><span class="section-number-2">14</span> LaTeX 出力の例</h2>
-<div class="outline-text-2" id="text-14">
-<div class="org-src-container">
-<pre class="src src-sage">integrate(sin(x^2)/e^(2^x^2),x)
-</pre>
+<div id="outline-container-org86e42c8" class="outline-3">
+<h3 id="org86e42c8"><span class="section-number-3">3.9</span> 数式処理アルゴリズム</h3>
+<div class="outline-text-3" id="text-3-9">
 </div>
-<div class="org-center">
+<div id="outline-container-org6705e07" class="outline-4">
+<h4 id="org6705e07"><span class="section-number-4">3.9.1</span> 不定積分入門&#xa0;&#xa0;&#xa0;<span class="tag"><span class="algorithm">algorithm</span>&#xa0;<span class="risch">risch</span>&#xa0;<span class="integral">integral</span>&#xa0;<span class="math">math</span></span></h4>
+<div class="outline-text-4" id="text-3-9-1">
 <p>
-
+<a href="https://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf">symbolic integration tutorial&#x2013;issac98.pdf</a>
 </p>
 
-<pre class="example">
-integrate(e^(-2^(x^2))*sin(x^2), x)
-
-</pre>
-
-<div class="org-src-container">
-<pre class="src src-sage">latex(integrate(sin(x^2)/e^(2^x^2),x))
-
-</pre>
-</div>
-
-
-
-
 <p>
-\(\int e^{\left(-2^{\left(x^{2}\right)}\right)}\sin\left(x^{2}\right)\,{d x}\)
+wikipedia の参考文献にあった
 </p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">&#33879;&#32773;: suzuki@iwate-u.ac.jp masayuki masayuki</p>
-<p class="date">Created: 2018-11-01 木 11:14</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp</p>
+<p class="date">Created: 2021-10-29 金 16:21</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
