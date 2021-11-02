@@ -1,5 +1,5 @@
 #+OPTIONS: ^:{}
 #+PROPERTY:  header-args :padline no
-#+title: 数理情報科学特論
++title: 計算機と数式処理
 #+author: suzuki@iwate-u.ac.jp
-#+HTML_MATHJAX:  path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"
+#+HTML_MATHJAX:  path:"http://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
