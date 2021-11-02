@@ -1,3 +1,22 @@
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
+#+TITLE: デジタルツール (コンピュータと数式処理)
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
+
+
 * メモと思考とデジタル技術
 
   2018.12月の放送大学面接講義の内容です。
@@ -30,7 +49,7 @@
 
 **** HyperLink
 
-
+     
 * クラウドと情報リテラシー
 
   2019.12月の放送大学面接講義の内容です。
@@ -42,6 +61,8 @@
 
 
 * メモ，思考，情報リテラシのまとめ
+   - 講義  [[https://github.com/masayuki054/ict_literacy_for_thinking_and_memo][GitHub - masayuki054/ict_literacy_for_thinking_and_memo]]
+   - 内容  [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][メモと思考のためのICTの活用]]
 
 ** 理解を外化するためにコンピュータとインターネットを使おう
 

@@ -1,0 +1,272 @@
+* ガウス消去
+
+** 連立一次方程式
+
+  \begin{eqnarray}
+  x+y+z & = & 3 \\
+  x-y-z & = & -1 \\
+  x-y+z & = & 1 \\
+  \end{eqnarray}
+  
+** 行列による表現
+   
+   \begin{array}{rrrr|l}
+   x & y & z & c & \\\hline
+   1 & 1 & 1 & -3 & x+y+z-3=0 \\
+   1 & -1 & -1 & 1 & x -y -z + 1 = 0\\
+   1 & -1 & 1 & -1  & x - y +z - 1 =0\\
+   \end{array}
+
+\( x \) を \(-y-z+3 \) で置き換える. 順序の高変数を，順序の低い変数か
+成る等式で置き換える。
+
+行列操作でいうと，1行目の横ベクトル定数倍して，他の行から引いたベクト
+ルで置き換える:
+
+   \begin{array}{rrrr|l}
+   x & y & z & c   \\ \hline
+   1 & 1 & 1 & -3    & x+y+z-3=0 \\
+   0 & -2 & -2 & 4 & -2y-2z+4=0\\
+   0 & -2 & 0 &  2 & -2y+2=0  \\
+   \end{array}
+
+
+2行目を -2で割って，3行目を-2 で割っても解は変らないので，
+ 
+   \begin{array}{rrrr|l}
+   x & y & z & c   \\ \hline
+   1 & 1 & 1 & -3    & x+y+z-3=0 \\
+   0 & 1 & 1 & -2 & y+z-2=0\\
+   0 & 1 & 0 & -1 & y-1=0  \\
+   \end{array}
+
+3行目を \( y = -z+2 \) で置き換える
+   
+   \begin{array}{rrrr|l}
+   x & y & z & c & 意味  \\ \hline
+   1 & 1 & 1 & -3 & x + y+ z -3 = 0  \\
+   0 & 1 & 1 & 2 & y + z - 2 =0 \\
+   0 & 0 & -1 & -1 & -z = -1 \\
+   \end{array}
+
+3行目を-1で割って，3角行列ができる。
+
+   \begin{array}{rrrr|l}
+   x & y & z & c &  \\ \hline
+   1 & 1 & 1 & -3 & x+y+z=3  \\
+   0 & 1 & 1 & -2 & y+z=2\\
+   0 & 0 & 1 & -1 & z= 1\\
+   \end{array}
+
+ 後退消去して，
+
+   \begin{array}{rrrr|l}
+   x & y & z & c &  \\ \hline
+   1 & 0 & 0 & 1 & x = 1  \\
+   0 & 1 & 0 & 1 & y = 1\\
+   0 & 0 & 1 & 1 & z= 1\\
+   \end{array}
+
+   
+
+* グレブナー基底計算と行列   
+   
+
+ \begin{eqnarray}
+ f1: x^3 - 3 x^2 -y + 1 = 0\\
+ f2: -x^2 + y^2 - 1 =0
+ \end{eqnarray}
+
+ の解を求めたい。
+ 
+
+   \begin{array}{rrrrrr|l}
+   x^3 & x^2 & x & y^2 & y  & c & 意味  \\ \hline
+   1   & -3  & 0 & 0   & -1 & 1 &  x^3 - 3 x^2 -y + 1 = 0\\
+   0   & -1  & 0 & 1   & 0  & -1 & -x^2 + y^2 - 1 =0 \\
+   \end{array}
+
+
+   \begin{array}{rrrrrr|l}
+   x^3 & x^2 & x & y^2 & y  & c & 意味  \\ \hline
+   1   & -3  & 0 & 0   & -1 & 1 &  f1: x^3 - 3 x^2 -y + 1 = 0\\
+   0   & -1  & 0 & 1   & 0  & -1 & f2: -x^2 + y^2 - 1 =0 \\
+   \end{array}
+
+
+\(f2:  x^2 = y^2 - 1 \)  の関係を用いて，
+ \(f1:  x^3 = 3 x^2 + y - 1  \) の関係を簡約する。
+
+ \(f1-f2:  (x^3 = 3 x^2 + y -1) - (x^3 = x y^2 - x) \)
+
+ \(f3: 0 = 3 x^2 - x y^2 + x + y -1 \)
+
+ \[
+   \begin{array}{rrrrrrr|l}
+   x^3 & x^2 &  x y^2 & x  & y^2 & y  & c & 意味  \\ \hline
+   1   & -3  &     0  & 0  & 0   & -1 & 1 & f1: x^3 - 3 x^2 -y + 1 = 0\\
+   0   & -1  &     0  & 0  & 1   & 0  & -1& f2: -x^2 + y^2 - 1 =0 \\
+   0   & 3   &    -1  & 1  & 0   & 1  & -1& f3: 0 = 3 x^2 - x y^2 + x + y -1\\
+   \end{array}
+ \]
+
+ f3の式は，f2でそのまま簡約できる \(f4 = f3+3 f2\)
+ \(f4: (3x^2 -xy^2 + x + y -1) -3(x^2 -y^2+1) \)
+ \(f4: -xy2+x+y2
+
+ \[
+   \begin{array}{rrrrrrr|l}
+   x^3 & x^2 &  x y^2 & x  & y^2 & y  & c & 意味  \\ \hline
+   1   & -3  &     0  & 0  & 0   & -1 & 1 & f1: x^3 - 3 x^2 -y + 1 = 0\\
+   0   & -1  &     0  & 0  & 1   & 0  & -1& f2: -x^2 + y^2 - 1 =0 \\
+   0   & 3   &    -1  & 1  & 0   & 1  & -1& f3: 0 = 3 x^2 - x y^2 + x + y -1\\
+  
+   \end{array}
+ \]
+
+
+ \[
+   \begin{array}{rrrrrrrrr|l}
+   x^2 &  xy &  x  & y^5 & y^4 & y^3  & y^2 & y & c   & 意味  \\ \hline
+   1   &   0 &  0  & 0   & 0   & 0    & -1  & 0 &  1  & f2: x^2 - y^2+1 =0 \\
+   0   &   1 &  -1 & 0   & -1  & 0    & 11  & 3 & -13 & f7: xy - x -y^4 +11y^2 +3y -13\\
+   0   &   0 &  0  & 1   & 1   & -11  & -17 & 9 & 17  & f8: y^5 + y^4 -11y^3 -17y^2+9y+17\\
+  
+   \end{array}
+ \]
+
+
+
+
+
+* Groebner基底による高次方程式の解法
+
+有理数(QQ) を係数とする多変数($x, y$) の
+多項式環 $QQ[x, y]$ を生成し，
+不定元$x, y$を取り出す:
+
+#+BEGIN_SRC sage
+x, y = QQ['x,y'].gens()
+#+END_SRC
+
+#+RESULTS:
+
+
+$x_1, x_2, x_3$を使って多項式を定義する:
+#+BEGIN_SRC sage
+f_1 = x^3 -3*x^2 - y + 1
+f_2 = x^2 -y^2 +1
+f_3 = f_1 - x*f_2
+f_3
+f_4 = -f_3-3*f_2
+f_4
+f_5 = f_3+f_4
+f_5
+f_6 = f_2*y^2 -x*f_3
+f_6
+f_7 = f_6 - 3*f_1 -10*f_2
+f_7
+f_7*x-y*f_2
+
+#+END_SRC
+
+#+RESULTS:
+: x*y^2 - 3*x^2 - x - y + 1
+: -x*y^2 + 3*y^2 + x + y - 4
+: -3*x^2 + 3*y^2 - 3
+: -y^4 + 3*x^3 + x^2 + x*y + y^2 - x
+: -y^4 + x*y + 11*y^2 - x + 3*y - 13
+: -x*y^4 + 11*x*y^2 + y^3 - x^2 + 3*x*y - 13*x - y
+
+
+
+
+
+$f_1$, $f_2$, $f_3$ を基底とするイデアル $I$ を生成する:
+#+BEGIN_SRC sage
+I = ideal(f_1, f_2, f_3)
+I
+#+END_SRC
+
+#+RESULTS:
+: Ideal (x^3 - 3*x^2 - y + 1, x^2 - y^2 + 1, x*y^2 - 3*x^2 - x - y + 1) of Multivariate Polynomial Ring in x, y over Rational Field
+
+$I$ のグレブナー基底を求める:
+
+#+BEGIN_SRC sage
+B = I.groebner_basis(); B
+#+END_SRC
+
+$QQ[x_1, x_2]/I$は，$1, x_2, x_1$ が基底となることがわかる。
+
+#+BEGIN_SRC sage
+type(B)
+#+END_SRC
+
+$QQ[x_1, x_2]/I$における，かけ算表を作成する:
+
+#+BEGIN_SRC sage
+bases = [1,x_1,x_2]
+x_1p = [I.reduce(x_1*a) for a in bases]; x_1p
+x_2p = [I.reduce(x_2*a) for a in bases]; x_2p
+
+#+END_SRC
+
+#+RESULTS:
+: [x_1, 3/2*x_1 - x_2 + 3, -x_1 + x_2 - 3]
+: [x_2, -x_1 + x_2 - 3, 4*x_1 + 5/2*x_2 + 3/2]
+
+#+BEGIN_SRC sage
+P1 = [ f.coefficient(b) for b in [{x_1:0, x_2:0}, {x_1:1, x_2:0}, {x_1:0, x_2:1}] for f in x_1p]; P1
+P2 = [ f.coefficient(b) for b in [{x_1:0, x_2:0}, {x_1:1, x_2:0}, {x_1:0, x_2:1}] for f in x_2p]; P2
+#+END_SRC
+
+
+#+RESULTS:
+: [0, 3, -3, 1, 3/2, -1, 0, -1, 1]
+: [0, -3, 3/2, 0, -1, 4, 1, 1, 5/2]
+
+#+BEGIN_SRC sage
+M1 = matrix(QQ,3,3,P1); M1
+M2 = matrix(QQ,3,3,P2); M2
+
+#+END_SRC
+
+#+RESULTS:
+: 
+: [  0   3  -3]
+: [  1 3/2  -1]
+: [  0  -1   1]
+: 
+: [  0  -3 3/2]
+: [  0  -1   4]
+: [  1   1 5/2]
+
+#+BEGIN_SRC sage
+s1 = M1.eigenvalues(); s1
+s2 = M2.eigenvalues(); s2
+
+#+END_SRC
+
+#+RESULTS:
+: [0, -0.765564437074638?, 3.265564437074638?]
+: [3, -2.765564437074638?, 1.265564437074638?]
+
+#+BEGIN_SRC sage
+[[i,j,yf_1.subs({x_1:s1[i], x_2:s2[j]}), f_2.subs({x_1:s1[i], x_2:s2[j]})] 
+  for i in range(3) for j in range(3)]
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+[[0, 0, 0, 0],
+ [0, 1, 5.765564437074638?, 0],
+ [0, 2, 1.734435562925363?, 0],
+ [1, 0, -1.963057085015917?, 0.2383115901485682?],
+ [1, 1, 4.562484917954546?, -0.5538774415303320?],
+ [1, 2, 0.?e-17, 0.?e-17],
+ [2, 0, 376.9630570850159?, 262.2616884098514?],
+ [2, 1, 0.?e-15, 0.?e-16],
+ [2, 2, 263.5625150820455?, 183.3663774415304?]]
+#+end_example

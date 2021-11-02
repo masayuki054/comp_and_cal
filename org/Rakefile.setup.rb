@@ -4,12 +4,13 @@ EXCLUDES = [
 ]
 
 ORGS = [
-  "gbasis.org",
+  "groebner.org",
   "math-soft.org",
-  "memos.org",
+#  "memos.org",
   "sheets.org",
   "computational_thinking.org",
-  "gtd.org"
+  "gtd.org",
+  "web.org"
   
 ]
 
