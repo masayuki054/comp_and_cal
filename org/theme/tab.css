@@ -1,0 +1,20 @@
+.tabview {
+  margin: 0;
+  padding: 0;
+}
+button.tab {
+    border: 1px solid #dddddd;
+    color: #888888;
+}
+button.tabhere {
+    border: 1px solid #dddddd;
+    border-bottom: 1px solid #ffffff;
+    background-color: #ffffff;
+}
+.tabviewcontents {
+  border-top: 0; 
+  clear: both;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}

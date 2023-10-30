@@ -2,25 +2,6 @@
 
   [[https://www.google.co.jp/search?q=%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95&sxsrf=ACYBGNRX4PLYGUhbnm1PTgAjbRUoqy0goQ:1572745279029&tbm=isch&source=iu&ictx=1&fir=flOfUQRFTFuoHM%253A%252CpDRMDV5s-N5PiM%252C%252Fm%252F01_0w0&vet=1&usg=AI4_-kRLF9t2NFih7gjfbDKV5EX6xP26pw&sa=X&ved=2ahUKEwjgu7bd9MzlAhUKEqYKHdvNCKoQ_B0wDXoECAsQAw#imgrc=flOfUQRFTFuoHM:][グレブナー基底 - Google 検索]]
 
-** 数学と諸分野の協働による ブレークスルーの探索 より
 
-   [[https://www.jst.go.jp/crest/math/ja/scientists/teamhibi/project/page1.html][現代の産業社会とグレブナー基底の調和（日比チーム） ]]top
 
-   [[https://www.jst.go.jp/crest/math/ja/scientists/teamhibi/project/page2.html  ][現代の産業社会とグレブナー基底の調和（日比チーム）]] 2
-
-   [[https://www.jst.go.jp/crest/math/ja/scientists/teamhibi/project/page5.html][＜計算系グループ＞（日比チーム）]]
-
-   次世代の数学ソフトウエアシステムは、ソフトウエア、解説文書、作業思
-   考環境、書籍などを一体化させた“環境”である。
-
-   加えて、その環境に一芸に秀でたソフトウエア群をうまく統合して行くの
-   が、健全な開発方向である。
-
-   KNOPPIX/Math はそのような方向性を持つ“desktop 環境”であるが、
-   解説文書や書籍との統合、一芸に秀でたソフトウエア群との統合について
-   は全く未完成である。
-
-   今後、様々な特色を持つグレブナー基底ソフトウエア群の性能増強ととも
-   に、これらを統合した次世代システムのプロトタイプを試験的に提供する。
-
-** [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
+ [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 

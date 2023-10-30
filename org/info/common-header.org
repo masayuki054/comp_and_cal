@@ -1,5 +1,6 @@
 #+OPTIONS: ^:{}
 #+PROPERTY:  header-args :padline no
-+title: 計算機と数式処理
-#+author: suzuki@iwate-u.ac.jp
 #+HTML_MATHJAX:  path:"http://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+#+TITLE: コンピュータと数式処理
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+#+author: suzuki@iwate-u.ac.jp

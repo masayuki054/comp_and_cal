@@ -3,7 +3,7 @@
 all: sheets.pdf
 	make clean
 
-sheets.pdf: sheets.tex body.tex
+sheets.pdf: sheets.tex # body.tex
 	platex sheets.tex
 	platex sheets.tex
 	dvipdfmx sheets

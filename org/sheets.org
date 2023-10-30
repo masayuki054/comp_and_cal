@@ -1,65 +1,360 @@
-#+setupfile: info/index-sos-header.setup
+#+startup: indent
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-びow-header.setup
 #+include: info/common-header.org
-#+TITLE: コンピュータと数式処理
-#+AUTHOR: 鈴木正幸，非常勤講師
 
 #+LATEX_CLASS: jarticle
-#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt]
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
 
 #+BIND: org-latex-image-default-width 0.8\linewidth
 
-#+LATEX_HEADER:\setlength{\textwidth}{20cm}
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
 #+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
 #+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
-#+LATEX_HEADER:\setlength{\topmargin}{-3cm}
-#+LATEX_HEADER:\setlength{\textheight}{28cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-* 概要
+URL: https://github.com/masayuki054/comp_and_cal/
+
+
+* 数理科学研究のための情報計算リテラシ
+情報計算リテラシという言葉で，コンピュータやインターネットを用いた，情
+報や文書の読み書き共有，多大なデータの計算や表示など，を行なう際の，考
+え方とツールの使い方を意味することにします。
+
+本講では，理工学研究分野での情報計算リテラシとして，
+大きく次の3点についてお話しします。
+
+- 数理科学的に考えること書くことを支援するデジタルツールについて，思考
+  法などを含めてお話しします。
+
+- 数理科学的な計算道具については，計算科学とは何か，どんなプログラムが
+  あるのかについてお話しします。特に，重要な，偏微分方程式を解くための
+  有限要素法を例にお話しします。数式処理との関連についても。
+
+- 計算，検索，探索，数理とはについて考えるために，数式処理における重要
+  なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
+  いて概観します。
+
+* 私的研究興味の内容 [[./interests.org]] 参照
+  
+* 研究のための情報リテラシー
+
+[[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][
+メモと思考のためのICTの活用]]
+
+[[https://masayuki054.github.io/cloud_and_information_literacy/talk.html][クラウドと情報リテラシー]]
+
+- 思考し実験し記録し理解し文書を作成するためのリテラシ
+- 基本技術は思考法, 文書作成も思考法
+- 思考は情報処理プロセス
+
+** 知的思考の技術
+- 思考過程の見える化
+- 発想法，水平思考，放射思考
+- 論理的思考法，批判的思考
+  
+** プロセス管理法
+- 計算論的思考
+- GTD (Getting Things Done)
+- ストレスフリー
+  
+** 思考のためのデジタルツール
+考えることをサポートするデジタルツールがある
+
+*** 考える，記憶する，こととは？
+
+- 思考の基本 抽象化と詳細化 , So What, Why so, MECE
+- 思考の記録 MECE, 構造化，GTD
+
+**** いろいろな思考法
+     - 論理的思考
+     - 批判的思考
+     - 発想法
+     - 水平思考
+     - 計算論的思考
+    
+**** 知的思考の技術
+- 思考の見える化
+  目的探索，観察，発想，分類，構造化，意志決定，表現
+
+*** 情報リテラシーは思考法である
+- 生のデータを意味付けして情報になる
+- 知的情報リテラシーの技術
+  - 情報の収集，加工，分析，蓄積，生成
+
+*** 理解の記録(外化，メモや文書)
+- 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
+- 内化しやすい外化
+  - 論理的に理解しやすい外化はアウトライン構造
+  - イメージしやすい外化は，マインドマップ構造
+- 外化の意味付
+  - 情報を外に出すことは二つの意味がある
+    - 内的情報を外部記憶に置くこと
+      こっちが外化, これがメモ
+    - 自分の情報を他者が理解できる形にすること
+      第三者への情報 客観化，文書化
+
+- 理解と知識と外化
+  - 小さな理解と大きな理解，整合性の問題
+  - 理解の再帰性
+     
+**** コンピュータとインターネットの意味
+思考と記憶を補助し，外化を促すこと
+- 情報を保存し共有すること
+- 検索できるようにすること
+- 人と計算機の共同作業の実現，互いに補完と拡張
+
+* 計算リテラシ
+- 計算科学と数学ソフトウェア
+- プログラミングによる計算プロセス管理
+- 計算のための数学
+  - 微分から差分へ
+  - 方程式の解法，連立一次方程式
+
+** 計算科学とは
+
+[[https://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6][計算科学 - Wikipedia]] とは
+
+数学的モデルとその定量的評価により、計算機を用いて問題を解決する
+様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指す。
+
+
+数値解析は，数式ではなく，実際の数を対象とし，物理現象など現実の対象をモデル化した
+ものである。
+
+対象領域をモデル化したプログラムやアプリケーションソフトウェアを開発し、
+それに様々なパラメータを与えて実行する。
+
+*** 数値解析
+- 精度保証付き数値計算
+- 数値線形代数
+- 常微分方程式の数値解法、偏微分方程式の数値解法、数値積分
+
+*** 数値シミュレーション
+**** 目的
+- 既知の事象を再構築して理解する（例えば、地震、津波などの自然災害）。
+- 既知のシナリオを最適化する（例えば、工学的プロセスや産業プロセス）。
+- 未来または未知の状況を予測する（例えば、気象、原子レベル以下の粒子の振る舞い）。
+- 気象、飛行機の周辺の気流、自動車衝突時の車体の状況、銀河系の星々の動き、爆発物など
+
+**** 数値シミュレーションプログラムの実行
+- コンピュータのメモリ内に論理的メッシュ（網目）を形成し、個々の領域が実世界
+  のモデルの空間的な一部分を表すようになっている。
+- 気象の場合、ひとつの点が数キロ平方の領域に対応し、その下の地
+  理状態、風向き、湿度、温度、気圧といったパラメータが与えられる。
+- プログラムはシミュレートする時間間隔に従って、現在の状態を基に次の状
+  態を計算する。
+- この計算はモデル化された方程式を解くことで行われる。そのような計算を
+  次々に行っていくのである。
+
+*** 科学的方法
+計算科学は科学の第三の形態で、実験/観測と理論の間を補間するもの、とい
+う主張もある。
+
+*** 有限要素法（FEM）
+偏微分方程式ソルバ (PDE)の 最も一般的な数値的解法
+
+- 有限要素法 （FEM）とは、偏微分方程式 （PDE）の定義域 （W）の近似解を
+  求めるときに使用する数値的解法です。PDEを解くときの最大の難関は、解
+  を近似的に表す基底関数を作る工程です。基底関数の作り方は数多くありま
+  すが、どれを使用するかは選択した定式化によって決まります。
+  
+- 線形 / 非線形 / 座屈 / 熱 / 動的 / 疲労解析で使用できます。
+
+** 数学ソフトウェア
+*** MathLibre  [[https://www.geogebra.org/m/hShSTr6e][KNOPPIX/Math->MathLibre]] 
+- DVD起動Linuxで，
+
+- オープン・ソースで，
+
+- フリーな数学ソフトウェアを収録 
+
+  [[https://www.geogebra.org/m/hShSTr6e][数学ソフトウェア紹介 - GeoGebraBook]]
+
+**** [[https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2][数学ソフトウェアとは - Wikipedia]] 
+
+1) ソフトウェア電卓  
+
+     [[http://ja.numberempire.com/][数の帝国 - 数学ツール]] 数の帝国は、強力な数学ツールと数について
+     の知識のコレクションです。
+       
+2) 数式処理システム
+
+     - [[https://ja.wikipedia.org/wiki/Sage_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)][Sage (数式処理システム) - Wikipedia]]
+
+     - [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+
+6) 数値解析
+     - [[https://matome.naver.jp/odai/2136163231573327601][MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ]]
+     - [[http://signalprocessor.blogspot.jp/2016/][信号処理のお仕事メモ: 2016]] (Octave)
+     - [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+*** [[http://www.sagemath.org][Sage]] とは
+
+  [[http://www.gregorybard.com/Sage.html][Gregory V. Bard]] 曰く
+
+  - フリーでオープン・ソースで，
+  - Maple, Mathematica, Magma, and Matlab に並らぶ，
+  - 数学科の学生に最適な
+  - 「コンピュータ代数」システム
+
+**** Sage on the Web(1)
+
+  - Webで動く，
+  - ノートやデスクトップPCへのインストールは必要ない。
+
+***** クラウド・サーバ
+
+   [[http://www.cocalc.com/][CoCalc.com Sage クラウド・サーバ]] 
+
+   - 長めの問題向き，
+   - プログラムの保存ができる
+   - 登録とログインが必要，
+
+***** セル・サーバ
+
+   [[http://sagecell.sagemath.org/][SageMathCell Server]]
+    
+   - 短かめの問題向き
+
+   - [[http://www.gregorybard.com/videos/Sage_part1.swf][関数，微分，積分，2次元プロット]] の例題動画
+
+   - [[http://www.gregorybard.com/videos/Sage_part2.swf][因数分解，3次元プロット]]
+
+***** 例題
+#+BEGIN_SRC sage
+x,y = var('x y')
+plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
+ #+END_SRC
+
+ #+RESULTS:
+ : Launched jmol viewer for Graphics3d Object
+
+
+**** Sagemath アプリ
+
+    数式処理が，スマホで動くなんて，ほんとにビックリ
+
+    - [[https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8][Sage Mathを App Store で]]
+
+    - [[https://play.google.com/store/apps/details?id=org.sagemath.droid&hl=ja][Sage Math - Google Play の Android アプリ]]
+
+**** 入門
+
+    - [[http://doc.sagemath.org/html/ja/tutorial/index.html][Sageチュートリアル.ja]] すぐ後で，実行しながら，説明します
+
+    - [[http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf][Sage tutorial-jp.pdf]]
+
+    - [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B][sage/sageの紹介 - PukiWiki]] たけもとさん
+
+      - [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2F%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86][sage/計算してみよう - PukiWiki]]
+
+    - [[http://www.sagemath.org/help-video.html][series of videos/screencasts]] 
+   
+**** 例題
+
+  - [[http://doc.sagemath.org/html/en/constructions/index.html][プログラムの制作例]]
+    - いろいろな例題と解答
+
+  - [[https://wiki.sagemath.org/interact][対話的なデモリポジトリ]] 
+    - interact / calculus / Taylor  を見てみよう
+
+**** Sagemath に関する本 (フリー)
+
+   - [[http://www.gregorybard.com/Sage.html][Sage for undergraduates, free pdf]]   このページ内に pdf へのリンクが
+
+   - [[http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html][Welcome to the SDSU Sage Tutorial]]
+
+**** Sagemath に関するいろいろなページ
+
+   [[http://sk.sagepub.com/reference][SAGE Knowledge - Reference]] reference の検索
+
+   [[https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118][Sageに関するリンク集]]
+
+   [[http://wiki.sagemath.org/quickref][large collection of quick-reference cards]] 
+
+   [[http://sagemath.org]] http://doc.sagemath.org 
+
+**** Octave との連携
+
+   [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2FSage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86][sage/SageでOctaveを使う - PukiWiki]] 
+
+   [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+**** LaTeXとSage
+    
+   - オンラインLaTeXサービス  [[https://oku.edu.mie-u.ac.jp/~okumura/texonweb/][TeX を使ってみよう]] 
+
+   - [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
+
+   - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
+
+** 数式処理アルゴリズム
+
+*** 不定積分入門
+[[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+wikipedia の参考文献にあった
+
+*** 規則と簡約化と検索のための計算機代数
+
+高次多変数代数方程式の解法として別途，資料[[./gbasis/gbasis.org]]を配
+布します。
+
+グレブナー基底に関する用語とブッフバーガー算法については，[[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
+を参照します。
+
+数学と検索と簡約のつながりについて，考えます。人は理論を考え，コン
+ピュータに検索してもらいましょう。
+
+多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
+の概念と計算に帰着します。見通しと効率が良くなります。
+
+
+* まとめ
+本講では，理工学研究分野での情報計算リテラシとして，
+以下の点についてお話ししたつもりです:
+
+- 思考について紹介し，知的思考の7つのステップ，
+  わかるとはどういうことか，が重要だと考えます。
+
+- 思考法について，論理的思考，批判的思考，発想，抽象化と詳細化，
+  を紹介し，それらを支援してくれる，デジタルツール，マインドマップとア
+  ウトライナーを紹介しました。
+
+- 計算科学のためのフリーソフトウェアについて，どんな分野がありどんなア
+  プリがあるかについて紹介しました。
+
+- 数値解析において，微分と線形代数の意味を理解することが非常に大事であること
+
+- 代数的計算を行ってくれる言語とシステムがあること
+
+- 代数的アルゴリズムの例として，グレブナー基底計算と多変数代数方程式の解法について概観しました。
+  - 多項式のイデアルを，頭項，項順序，簡約規則により，構造化することで，
+  - イデアルの要素を0に簡約できるグレブナー基底が計算できる
+  - その意味付けにおいて線形代数が有効であり，
+  - 正規形，順序，置き換え規則の完備化により，無限集合の中の検索を，
+    有限集合の中での簡約で計算できる
+  - ユークリッドの互除法，ガウスの消去法，グレブナー基底による簡約の間
+    に共通な考え方が存在する
+
+#+ATTR_LATEX: :width 18cm 
  [[./map-images/01-computer_and_cal.png]]
 
-* 過去の研究内容と興味
- [[./map-images/02-research_interests.png]]
-
-* 計算論的思考 (別紙)
-
-コンピュータ科学に基く概念とアプローチ法
-
-- [[./computational_thinking.org]]
-
-
-* デジタル・ツールとインターネット
-
-** インターネットが起している変革
- [[./map-images/04-Web_revolution.png]]
-
-** 人とコンピュータとインターネット
+#+caption: 人とコンピュータとインターネット
+#+ATTR_LATEX: :width 18cm
  [[./map-images/03-how_to_use_computer_and_internet.png]]
 
-** 思考とメモと文書のためのデジタル・ツール
+
+\vspace{3cm}
+
+#+caption: インターネットが起している変革
+#+ATTR_LATEX: :width 18cm
+ [[./map-images/04-Web_revolution.png]]
+
+
+#+caption: 思考とメモと文書のためのデジタル・ツール
+#+ATTR_LATEX: :width 18cm
 [[./map-images/05-digital_tools_for_thinking.png]]
-
-* 数学ソフトウェア (別紙)
-
-- [[./math-soft.org]]
-
-** 数式処理システム Sage の紹介 (別紙) 
-
-** グレブナー基底とは (別紙)  
-
-数式処理アルゴリズムの紹介
-
-
-- [[./gbasis.org]]
-   
-
-
-
-  
-
-
-
-
-
-
-
 
