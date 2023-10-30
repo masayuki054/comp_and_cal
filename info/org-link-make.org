@@ -1,0 +1,137 @@
+** home
+** lects
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects 講義記録
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects][講義記録]] (([[file+emacs:~suzuki/lects/meta-ruby/site/lects][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects][@s.org]]))
+
+
+** org-docs
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/meta-ruby メタプログラミングRubyのまとめ
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/meta-ruby][メタプログラミングRubyのまとめ]] (([[file+emacs:~suzuki/lects/meta-ruby/site/org-docs/meta-ruby][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/meta-ruby][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/oo.html OOへ至る道
+#+END_SRC
+
+
+#+RESULTS:
+- [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/oo.html][OOへ至る道]] (([[file+emacs:~suzuki/lects/meta-ruby/site/org-docs/oo.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/oo.org][@s.org]]))
+
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/matz matzのプログラミング直伝
+
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/matz][matzのプログラミング直伝]] (([[file+emacs:~suzuki/lects/meta-ruby/site/org-docs/matz][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/matz][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/ruby_begin.html ruby入門
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/ruby_begin.html][ruby入門]] (([[file+emacs:~suzuki/lects/meta-ruby/org-docs/ruby_begin.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/ruby_begin.org][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/ 講義資料
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/][講義資料]] (([[file+emacs:~suzuki/lects/meta-ruby/org-docs/][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/][@s.org]]))
+
+** lects
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/03 03回目
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/03][03回目]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/03][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/03][@s.org]]))
+
+** note
+   
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/ruby-note.html rubyノート
+#+END_SRC
+
+#+RESULTS:
+
+ - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/note/ruby-note.html][rubyノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/note/ruby-note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/note/ruby-note.org][@s.org]]))
+
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/poker/index.html pokerのテスト駆動開発
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/poker/index.html][pokerのテスト駆動開発]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/poker/index.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/poker/index.org][@s.org]]))
+
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/oo-note.html オブジェクト指向に至る軌跡ノート
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/note/oo-note.html][オブジェクト指向に至る軌跡ノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/note/oo-note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/note/oo-note.org][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/emacs-note.html emacsノート
+#+END_SRC
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/org-note.html org-modeノート
+#+END_SRC
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/ruby-note.html rubyノート
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/ruby-note.html][rubyノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/ruby-note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/ruby-note.org][@s.org]]))
+
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/ruby-begin-note.html ruby入門ノート
+#+END_SRC
+
+#+RESULTS:
+ - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/ruby-begin-note.html][ruby入門ノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/ruby-begin-note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/ruby-begin-note.org][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/note.html meta-ruby関連ノート
+#+END_SRC
+
+#+RESULTS:
+ - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/note/note.html][meta-ruby関連ノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/note/note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/note/note.org][@s.org]]))
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby lects/note/ruby-note.html meta-rubyノート
+#+END_SRC
+
+#+RESULTS:
+- [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/note/ruby-note.html][meta-rubyノート]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/note/ruby-note.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/note/ruby-note.org][@s.org]]))
+
+
+
+#+BEGIN_SRC sh :results output example
+sh ~/COMM/Lects/bin/org_link_make.sh meta-ruby org-docs/emacs-setup.html emacsの設定
+#+END_SRC
+
+#+RESULTS:
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/emacs-setup.html][emacsの設定]] (([[file+emacs:~suzuki/lects/meta-ruby/org-docs/emacs-setup.org][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/emacs-setup.org][@s.org]]))
+
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/org-docs/rubymisc/][rubymisc]] (([[file+emacs:~suzuki/lects/meta-ruby/org-docs/rubymisc][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/org-docs/rubymisc][@s.org]]))
+
+
+: - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/lects/poker/][poker]] (([[file+emacs:~suzuki/lects/meta-ruby/lects/poker][@cis.org]] [[file+emacs:~/COMM/Lects/meta-ruby/site/lects/poker][@s.org]]))
+
+http://wiki.cis.iwate-u.ac.jp

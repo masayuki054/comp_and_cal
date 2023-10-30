@@ -1,0 +1,5 @@
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 
+#+author: suzuki@iwate-u.ac.jp
+#+HTML_MATHJAX:  path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"

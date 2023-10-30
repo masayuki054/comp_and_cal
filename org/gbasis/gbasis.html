@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-01 木 16:38 -->
+<!-- 2023-10-25 水 20:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Masayuki Suzuki" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="author" content="sss" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -161,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -177,113 +191,76 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf55f116">1. 方程式を解くとは？</a>
+<li><a href="#org2df0d37">1. 方程式を解くとは？</a>
 <ul>
-<li><a href="#org2359d76">1.1. 基底とは</a></li>
-<li><a href="#org3d6e199">1.2. 多変数方程式 をどう解くか?</a></li>
+<li><a href="#orge22e504">1.1. 基底とは</a></li>
+<li><a href="#org54b29d5">1.2. 多変数方程式 をどう解くか?</a></li>
 </ul>
 </li>
-<li><a href="#orgc6e64f1">2. パズルと基底</a></li>
-<li><a href="#org42e41ee">3. グレブナー基底</a>
+<li><a href="#org2424e1c">2. パズルと基底</a></li>
+<li><a href="#org8982b77">3. グレブナー基底</a>
 <ul>
-<li><a href="#org57a65fd">3.1. 項の間の順序</a></li>
-<li><a href="#orgc01221e">3.2. 簡約</a></li>
-<li><a href="#org73cd44f">3.3. S多項式</a></li>
-<li><a href="#org5701255">3.4. グレブナー基底の定義</a></li>
+<li><a href="#org8aa27ec">3.1. 項の間の順序</a></li>
+<li><a href="#org76e70b0">3.2. 簡約</a></li>
+<li><a href="#org38337ad">3.3. S多項式</a></li>
+<li><a href="#orgfdc493c">3.4. グレブナー基底の定義</a></li>
 </ul>
 </li>
-<li><a href="#org4d59f10">4. グレブナー基底から方程式の根を求める方法</a></li>
-<li><a href="#org1232e1f">5. Buchberger算法と並列化</a>
+<li><a href="#orgc07b472">4. グレブナー基底から方程式の根を求める方法</a></li>
+<li><a href="#orgba66bfd">5. Buchberger算法と並列化</a>
 <ul>
-<li><a href="#org78a3ec3">5.1. Buchberger算法の並列性</a></li>
+<li><a href="#org11a78bf">5.1. Buchberger算法の並列性</a></li>
 </ul>
 </li>
-<li><a href="#orgaa3d3ca">6. 並列算法の組合わせによる並列度の向上</a></li>
-<li><a href="#orgd711521">7. $\mathbf{d}$-Gröbner 基底によるペア並列度の向上</a>
+<li><a href="#orgf922a04">6. 並列算法の組合わせによる並列度の向上</a></li>
+<li><a href="#org9d6ded6">7. $\mathbf{d}$-Gröbner 基底によるペア並列度の向上</a>
 <ul>
-<li><a href="#orgc1a35d7">7.1. $\mathbf{d}$-グレブナー基底</a></li>
-<li><a href="#org8fd84fe">7.2. $\mathbf{d}$-グレブナー基底の並列性</a></li>
+<li><a href="#org1caeadf">7.1. $\mathbf{d}$-グレブナー基底</a></li>
+<li><a href="#orga047d83">7.2. $\mathbf{d}$-グレブナー基底の並列性</a></li>
 </ul>
 </li>
-<li><a href="#org58ec836">8. 実装と性能(予測)</a></li>
+<li><a href="#orga205521">8. 実装と性能(予測)</a></li>
 </ul>
 </div>
 </div>
@@ -323,8 +300,8 @@ for the JavaScript code in this tag.
 </ul></li>
 </ul>
 
-<div id="outline-container-orgf55f116" class="outline-2">
-<h2 id="orgf55f116"><span class="section-number-2">1</span> 方程式を解くとは？</h2>
+<div id="outline-container-org2df0d37" class="outline-2">
+<h2 id="org2df0d37"><span class="section-number-2">1.</span> 方程式を解くとは？</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><p>
@@ -351,7 +328,7 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>線形代数, ガウスの消去法</li>
 
-<li>一次方程式, $a x = b $ に帰着させる</li>
+<li>一次方程式, \(a x = b\) に帰着させる</li>
 </ul>
 </blockquote></li>
 
@@ -365,7 +342,7 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>根の公式, $x<sup>n</sup> = c $ に帰着させる.</li>
+<li>根の公式, \(x^n = c\) に帰着させる.</li>
 
 <li>帰着できない時, 数値計算 (ニュートン法) で近似的に求める.</li>
 </ul>
@@ -390,16 +367,16 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 
-<div id="outline-container-org2359d76" class="outline-3">
-<h3 id="org2359d76"><span class="section-number-3">1.1</span> 基底とは</h3>
+<div id="outline-container-orge22e504" class="outline-3">
+<h3 id="orge22e504"><span class="section-number-3">1.1.</span> 基底とは</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org0c8fea5"></a>問題<br />
+<li><a id="orga4258f6"></a>問題<br />
 <div class="outline-text-5" id="text-1-1-0-1">
 <blockquote>
 <p>
-天秤秤と, $a$グラムの重りと $b$グラムの重りが無数にあるとします.
+天秤秤と, \(a\) グラムの重りと \(b\) グラムの重りが無数にあるとします.
 どんな重さが測れるでしょう？
 </p>
 
@@ -409,7 +386,7 @@ for the JavaScript code in this tag.
 </blockquote>
 
 <ul class="org-ul">
-<li>この問題は，不定方程式 hoge \(ax+by=c\) を満たす，整数 \(x\), \(y\) を求
+<li>この問題は，不定方程式 \(ax+by=c\) を満たす，整数 \(x\), \(y\) を求
 める問題となる．</li>
 
 <li>この解は，\(a\) と \(b\) の最大公約数を求める問題に帰着さ れます．</li>
@@ -427,7 +404,7 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="orgdfbd6cb"></a>問題<br />
+<li><a id="org5b0eab6"></a>問題<br />
 <div class="outline-text-5" id="text-1-1-0-2">
 <blockquote>
 <p>
@@ -452,8 +429,8 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 
-<div id="outline-container-org3d6e199" class="outline-3">
-<h3 id="org3d6e199"><span class="section-number-3">1.2</span> 多変数方程式 をどう解くか?</h3>
+<div id="outline-container-org54b29d5" class="outline-3">
+<h3 id="org54b29d5"><span class="section-number-3">1.2.</span> 多変数方程式 をどう解くか?</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 \[(f_1(x, \ldots, z) =0, \cdots, f_n(x, \ldots, z) =0)\]
@@ -473,12 +450,12 @@ f_n(x, \ldots, z)\]
 </p>
 
 <p>
-この集合を$(f<sub>1</sub>, &#x2026; , f<sub>n</sub>)$と表し，$f<sub>1</sub>$から\(f_n\) が作る
-*イデアル*${\cal I}$と呼ぶ．
+この集合を \((f_1, ... , f_n)\) と表し，\(f_1\) から \(f_n\) が作る
+<b>イデアル</b> \({\cal I}\) と呼ぶ．
 </p>
 
 <p>
-${\cal I}$を作ることのできる多項式の組をイデアルの基底と呼びます．
+\({\cal I}\) を作ることのできる多項式の組をイデアルの基底と呼びます．
 </p>
 
 <p>
@@ -507,12 +484,12 @@ ${\cal I}$を作ることのできる多項式の組をイデアルの基底と�
 </div>
 </div>
 
-<div id="outline-container-orgc6e64f1" class="outline-2">
-<h2 id="orgc6e64f1"><span class="section-number-2">2</span> パズルと基底</h2>
+<div id="outline-container-org2424e1c" class="outline-2">
+<h2 id="org2424e1c"><span class="section-number-2">2.</span> パズルと基底</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 <ol class="org-ol">
-<li><a id="orgc48e303"></a>グラス置き換えパズル<br />
+<li><a id="org804bc69"></a>グラス置き換えパズル<br />
 <div class="outline-text-5" id="text-2-0-0-1">
 <p>
 ウィスキーのグラス \(W\), ビールのグラス \(B\), お酒のグラス \(S\) が
@@ -533,7 +510,7 @@ BS& \leftarrow\rightarrow   & W  \\
 </div>
 </li>
 
-<li><a id="org805a8ec"></a>問題<br />
+<li><a id="orgf8656a8"></a>問題<br />
 <div class="outline-text-5" id="text-2-0-0-2">
 <ol class="org-ol">
 <li>\(BSBS\) は \(WWWB\) に置き換えできるか？</li>
@@ -543,7 +520,7 @@ BS& \leftarrow\rightarrow   & W  \\
 </div>
 </li>
 
-<li><a id="org4abd5bd"></a>問題の難しい点<br />
+<li><a id="org8b5059e"></a>問題の難しい点<br />
 <div class="outline-text-5" id="text-2-0-0-3">
 <ul class="org-ul">
 <li>できる場合はその置き換えを示せば良いが,</li>
@@ -553,7 +530,7 @@ BS& \leftarrow\rightarrow   & W  \\
 </div>
 </li>
 
-<li><a id="org2eeae60"></a>パズル解法への道<br />
+<li><a id="orga1468eb"></a>パズル解法への道<br />
 <div class="outline-text-5" id="text-2-0-0-4">
 <ul class="org-ul">
 <li>簡単な方へ置き換える (簡約化)ことにする.
@@ -635,7 +612,7 @@ BS& \leftarrow\rightarrow   & W  \\
 </div>
 </li>
 
-<li><a id="org89c2c36"></a>パズルの答え<br />
+<li><a id="orgdf1e878"></a>パズルの答え<br />
 <div class="outline-text-5" id="text-2-0-0-5">
 <p>
 簡約規則 \(R\) を完備化すると,
@@ -668,8 +645,8 @@ WW & \rightarrow   & W  \\
 </ol>
 </div>
 
-<div id="outline-container-org42e41ee" class="outline-2">
-<h2 id="org42e41ee"><span class="section-number-2">3</span> グレブナー基底</h2>
+<div id="outline-container-org8982b77" class="outline-2">
+<h2 id="org8982b77"><span class="section-number-2">3.</span> グレブナー基底</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 与えられた方程式\(f_i\) の最高順位項を \(head(f_i)\) 、残りの項を
@@ -683,8 +660,8 @@ WW & \rightarrow   & W  \\
 </p>
 </div>
 
-<div id="outline-container-org57a65fd" class="outline-3">
-<h3 id="org57a65fd"><span class="section-number-3">3.1</span> 項の間の順序</h3>
+<div id="outline-container-org8aa27ec" class="outline-3">
+<h3 id="org8aa27ec"><span class="section-number-3">3.1.</span> 項の間の順序</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 いくつの順序が考えられ, 順序によって完備な簡約系が異る.
@@ -698,25 +675,27 @@ WW & \rightarrow   & W  \\
 </div>
 </div>
 
-<div id="outline-container-orgc01221e" class="outline-3">
-<h3 id="orgc01221e"><span class="section-number-3">3.2</span> 簡約</h3>
+<div id="outline-container-org76e70b0" class="outline-3">
+<h3 id="org76e70b0"><span class="section-number-3">3.2.</span> 簡約</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 基底の先頭項を残りの項で置き換える簡約規則と見て，
 項をより低順位項で置き換える操作．
 </p>
 
-<p>
-*例２.１:*　\(g_1\) を \(g_2\) でM簡約
+<ul class="org-ul">
+<li><p>
+例２.１:: \(g_1\) を \(g_2\) でM簡約
 </p>
 
 <p>
-$g<sub>1</sub> = x<sup>4yz</sup> - xyz<sup>2</sup>~~~(<code>head(g_1) = x^4yz~</code>,~~rest(g<sub>1</sub>) = xyz<sup>2</sup>~)~ $
+\(g_1 = x^4yz - xyz^2~~~(~head(g_1) = x^4yz~~,~~rest(g_1) = xyz^2~)~\)
 </p>
 
 <p>
-$g<sub>2</sub> = x<sup>3yz</sup> - xz<sup>2</sup>~~~(<code>head(g_2) = x^3yz~</code>,~~rest(g<sub>2</sub>) = xz<sup>2</sup>)~ $
-</p>
+\(g_2 = x^3yz - xz^2~~~(~head(g_2) = x^3yz~~,~~rest(g_2) = xz^2)~\)
+</p></li>
+</ul>
 
 <p>
 \[\begin{array}{ll}
@@ -728,23 +707,24 @@ g' & = g_1 - ( head(g_1) / head(g_2) ) g_2 \\
 </div>
 </div>
 
-<div id="outline-container-org73cd44f" class="outline-3">
-<h3 id="org73cd44f"><span class="section-number-3">3.3</span> S多項式</h3>
+<div id="outline-container-org38337ad" class="outline-3">
+<h3 id="org38337ad"><span class="section-number-3">3.3.</span> S多項式</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 新たな簡約規則を得るための計算．
 </p>
 
 <p>
-２つの多項式$f<sub>1,f</sub><sub>2</sub>$のS多項式を$Sp(f<sub>1,f</sub><sub>2</sub>)$と書き、以下のように計算する。
+２つの多項式 \(f_1,f_2\) のS多項式を \(Sp(f_1,f_2)\) と書き、以下のように計算する。
 </p>
 
 <p>
 \[Sp(f_1,f_2)= \frac{lcm}{head(f_1)}f_1 - \frac{lcm}{head(f_2)}f_2\]
 </p>
 
-<p>
-*例２.２:*　$g<sub>1</sub>$と$g<sub>2</sub>$のS多項式
+<ul class="org-ul">
+<li><p>
+例２.２:: \(g_1\) と \(g_2\) のS多項式
 </p>
 
 <p>
@@ -761,23 +741,24 @@ g' & = g_1 - ( head(g_1) / head(g_2) ) g_2 \\
 
 <p>
 \[\begin{array}{ll} 
-Sp(g_1,g_2) &= ( lcm / head(g_1) ) g_1 - ( lcm / head(g_1)) g_2 \\
+  Sp(g_1,g_2) &= ( lcm / head(g_1) ) g_1 - ( lcm / head(g_1)) g_2 \\
             &= ( x^3y^2z / x^3yz ) g_1 - ( x^3y^2z / x^2y^2 ) g_2 \\
             &= -xyz^2 + xz^3
-\end{array}\]
-</p>
+  \end{array}\]
+</p></li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-org5701255" class="outline-3">
-<h3 id="org5701255"><span class="section-number-3">3.4</span> グレブナー基底の定義</h3>
+<div id="outline-container-orgfdc493c" class="outline-3">
+<h3 id="orgfdc493c"><span class="section-number-3">3.4.</span> グレブナー基底の定義</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
-イデアル${\cal I}\(の基底を\) G = \{ f<sub>1,&ctdot;,f</sub><sub>n</sub> \} $とする。
+イデアル \({\cal I}\) の基底を \(G={f_1,\cdots,f_n}\) とする。
 </p>
 
 <p>
-$F$を可能な限りM簡約した結果を$F'$とし，
+\(F\) を可能な限りM簡約した結果を \(F'\) とし，
 </p>
 
 <p>
@@ -785,22 +766,22 @@ $F$を可能な限りM簡約した結果を$F'$とし，
 </p>
 
 <p>
-${\cal I}$の任意の要素 $f$に対し，
+\({\cal I}\) の任意の要素 $f$に対し，
 </p>
 
 <p>
 \[f \stackrel{G}{\longmapsto} 0\]
-という性質を持つとき，$ G $をグレブナー基底と呼ぶ。
+という性質を持つとき，\(G\) をグレブナー基底と呼ぶ。
 </p>
 
 <p>
-$ G $がグレブナー基底の時，$f \stackrel{\psi}{\longmapsto} f' $を計算
-し，$f'=0$を調べることで、$f &isin; {\cal I}$であるかを簡単に決定できる.
+\(G\) がグレブナー基底の時，\(f \stackrel{\psi}{\longmapsto} f'\) を計算
+し，\(f'=0\) を調べることで、\(f \in {\cal I}\) であるかを簡単に決定できる.
 </p>
 
-<p>
-<b>例２.３: \(f_1,f_2,f_3\) のグレブナー基底を求める。(全次数辞書式順序）</b>
-</p>
+<dl class="org-dl">
+<dt>例２.３</dt><dd>\(f_1,f_2,f_3\) のグレブナー基底を求める。(全次数辞書式順序）*</dd>
+</dl>
 
 <p>
 $$\left\{
@@ -839,15 +820,36 @@ f'_4 & \stackrel{f_3}{\longmapsto} & f'_4 - (-2x_1^2 x_2 /{head(f_3)})f_3 \\
 
 <p>
 ＜\(f_1,f_2,f_3\) のグレブナー基底＞
-\[G = [x_1 x_2 + x_1- x_2 + 3, 2{x_1}^2 - 3 x_1 + 2 x_2 - 6, 
+\[G = [2{x_1}^2 - 3 x_1 + 2 x_2 - 6, x_1 x_2 + x_1- x_2 + 3, 
     2{x_2}^2 - 8 x_1 - 5 x_2 -3]\]
 </p>
+
+<p>
+＜Groebner基底の行列表現＞
+</p>
+
+<p>
+\[\begin{array}{c||ccc|ccc|}
+    &  x_1^2 & x_1 x_2 & x_2^2 & x_1 & x_2 & 1 \cr
+    \hline\hline
+    g_1 &  1 & 0 & 0 & 3/2 & -1 &  3 \cr
+    g_2 & 0  & 1 & 0 &  -1 & 1  & 3\cr
+    g_3 &  0 & 0 & 1 & 4   & 5/2 & 3/2 \cr
+\end{array}\]
+</p>
+
+<ul class="org-ul">
+<li>各基底 (\(g_i, i=1:3\))は，2次の頭項を持ち，2次の項は，1次の項の和に簡約される</li>
+
+<li>剰余空間 $QQ[x<sub>1</sub>, x<sub>2</sub>]/I$の基底は，\(x_1, x_2, 1\) となることがわかる。</li>
+</ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4d59f10" class="outline-2">
-<h2 id="org4d59f10"><span class="section-number-2">4</span> グレブナー基底から方程式の根を求める方法</h2>
+
+<div id="outline-container-orgc07b472" class="outline-2">
+<h2 id="orgc07b472"><span class="section-number-2">4.</span> グレブナー基底から方程式の根を求める方法</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 辞書式順序で基底計算を行うと、連立方程式の解が求めやすいが、
@@ -865,9 +867,9 @@ f'_4 & \stackrel{f_3}{\longmapsto} & f'_4 - (-2x_1^2 x_2 /{head(f_3)})f_3 \\
 <li>グレブナー基底の最高順位項で割り切れない全ての項の集合を Normal
 setといい、 \({\cal P}^s /{\cal I}\) ベクトル空間の基底となる。</li>
 
-<li>Normal set により $x<sub>i</sub> &times; $ を行列で表す事ができる.</li>
+<li>Normal set により \(x_i \times\) を行列で表す事ができる.</li>
 
-<li>その行列の固有値は, \({\cal I}\) の\(x_i\) に関する根となる．</li>
+<li>その行列の固有値は, \({\cal I}\) の \(x_i\) に関する根となる．</li>
 </ol>
 
 <p>
@@ -888,11 +890,11 @@ setといい、 \({\cal P}^s /{\cal I}\) ベクトル空間の基底となる。
 </p>
 
 <p>
-$$\left\{
+$$\left{
 </p>
 \begin{array}{rl}
-x_1x_2 & \rightarrow  -x_1+x_2-3\vspace{.15in}\\
-{x_1}^2 & \rightarrow  \frac{3}{2}x_1-x_2+3\vspace{.15in}\\
+x_1x_2 & \rightarrow  -x_1+x_2-3\\
+{x_1}^2 & \rightarrow  \frac{3}{2}x_1-x_2+3\\
 {x_2}^2 & \rightarrow  4x_1+\frac{5}{2}x_2+\frac{3}{2}
 \end{array}
 <p>
@@ -904,29 +906,31 @@ x_1x_2 & \rightarrow  -x_1+x_2-3\vspace{.15in}\\
 </p>
 
 <p>
-＜$x<sub>1</sub> &times; $ の行列＞
+＜\(x_1 \times\) の行列＞
 </p>
 
 <p>
-\[\bordermatrix{
+\[\begin{array}{c|ccc}
     &  1 & x_2 & x_1\cr
+    \hline
     1   &  0 &  0 &  1 \cr
     x_2 & -3 &  1 & -1 \cr
     x_1 &  3 & -1 & 3/2 \cr
-}\]
+\end{array}\]
 </p>
 
 <p>
-＜$x<sub>2</sub> &times; $ の行列＞
+＜ \(x_2 \times\) の行列＞
 </p>
 
 <p>
-\[\bordermatrix{
+\[\begin{array}{c|c c c}
     &  1 & x_2 & x_1\cr
+    \hline
     1   &  0  &  1  &  0 \cr
     x_2 & 3/2 & 5/2 &  4 \cr
     x_1 & -3  &  1  & -1 \cr
-}\]
+\end{array}\]
 </p>
 
 <p>
@@ -953,8 +957,8 @@ x_1x_2 & \rightarrow  -x_1+x_2-3\vspace{.15in}\\
 </div>
 </div>
 
-<div id="outline-container-org1232e1f" class="outline-2">
-<h2 id="org1232e1f"><span class="section-number-2">5</span> Buchberger算法と並列化</h2>
+<div id="outline-container-orgba66bfd" class="outline-2">
+<h2 id="orgba66bfd"><span class="section-number-2">5.</span> Buchberger算法と並列化</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 以下に，\(f_1, \ldots, f_l\) が作るイデアルの Gröbner基底を計算する
@@ -963,7 +967,7 @@ Buchberger算法を示す．
 </div>
 
 <ol class="org-ol">
-<li><a id="orgc91af09"></a>Buchberger算法<br />
+<li><a id="org1319c47"></a>Buchberger算法<br />
 <div class="outline-text-5" id="text-5-0-0-1">
 <blockquote>
 <p>
@@ -1027,7 +1031,7 @@ Output: Gröbner基底 \(G\) of \(Ideal(F)\)
 </div>
 </li>
 
-<li><a id="org527314d"></a>算法の概要と戦術<br />
+<li><a id="org79266aa"></a>算法の概要と戦術<br />
 <div class="outline-text-5" id="text-5-0-0-2">
 <ul class="org-ul">
 <li>$G$は中間的な基底の集合，\(PairQ\) は新たな基底を構成可能な
@@ -1056,8 +1060,8 @@ Output: Gröbner基底 \(G\) of \(Ideal(F)\)
 </li>
 </ol>
 
-<div id="outline-container-org78a3ec3" class="outline-3">
-<h3 id="org78a3ec3"><span class="section-number-3">5.1</span> Buchberger算法の並列性</h3>
+<div id="outline-container-org11a78bf" class="outline-3">
+<h3 id="org11a78bf"><span class="section-number-3">5.1.</span> Buchberger算法の並列性</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Buchberger算法の計算上の問題点は，ペアの個数の組み合わせ的な膨張と，中
@@ -1117,8 +1121,8 @@ Buchberger算法の計算上の問題点は，ペアの個数の組み合わせ�
 </div>
 </div>
 
-<div id="outline-container-orgaa3d3ca" class="outline-2">
-<h2 id="orgaa3d3ca"><span class="section-number-2">6</span> 並列算法の組合わせによる並列度の向上</h2>
+<div id="outline-container-orgf922a04" class="outline-2">
+<h2 id="orgf922a04"><span class="section-number-2">6.</span> 並列算法の組合わせによる並列度の向上</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 前章の二つの並列化算法はそれぞれ性能限界を持つ．
@@ -1156,8 +1160,8 @@ Buchberger算法の計算上の問題点は，ペアの個数の組み合わせ�
 </div>
 </div>
 
-<div id="outline-container-orgd711521" class="outline-2">
-<h2 id="orgd711521"><span class="section-number-2">7</span> $\mathbf{d}$-Gröbner 基底によるペア並列度の向上</h2>
+<div id="outline-container-org9d6ded6" class="outline-2">
+<h2 id="org9d6ded6"><span class="section-number-2">7.</span> $\mathbf{d}$-Gröbner 基底によるペア並列度の向上</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 選択戦術として斉次化あるいはsugar を用いる場合には，
@@ -1165,8 +1169,8 @@ Buchberger算法の計算上の問題点は，ペアの個数の組み合わせ�
 </p>
 </div>
 
-<div id="outline-container-orgc1a35d7" class="outline-3">
-<h3 id="orgc1a35d7"><span class="section-number-3">7.1</span> $\mathbf{d}$-グレブナー基底</h3>
+<div id="outline-container-org1caeadf" class="outline-3">
+<h3 id="org1caeadf"><span class="section-number-3">7.1.</span> $\mathbf{d}$-グレブナー基底</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 S多項式の全次数(またはsugar次数) \(d\) で打ち切った Buchberger
@@ -1221,8 +1225,8 @@ G_{d_\infty} = \cdots\]
 </div>
 </div>
 
-<div id="outline-container-org8fd84fe" class="outline-3">
-<h3 id="org8fd84fe"><span class="section-number-3">7.2</span> $\mathbf{d}$-グレブナー基底の並列性</h3>
+<div id="outline-container-orga047d83" class="outline-3">
+<h3 id="orga047d83"><span class="section-number-3">7.2.</span> $\mathbf{d}$-グレブナー基底の並列性</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 前節の定理より，$G<sub>d-1</sub>$が求まっていて，$G<sub>d</sub>$を求める場合は，
@@ -1249,8 +1253,8 @@ $d$-次基底の相互簡約には基底間の依存性が存在するが，
 </div>
 </div>
 
-<div id="outline-container-org58ec836" class="outline-2">
-<h2 id="org58ec836"><span class="section-number-2">8</span> 実装と性能(予測)</h2>
+<div id="outline-container-orga205521" class="outline-2">
+<h2 id="orga205521"><span class="section-number-2">8.</span> 実装と性能(予測)</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 前章により，斉次あるいはsugar を用いた並列算法は，
@@ -1402,9 +1406,9 @@ Noro, M., Mckay, J.: Computation of replicable functions on Risa/Asir,
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Masayuki Suzuki</p>
-<p class="date">Created: 2018-11-01 木 16:38</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: sss</p>
+<p class="date">Created: 2023-10-25 水 20:46</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

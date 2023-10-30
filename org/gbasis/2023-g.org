@@ -1,19 +1,16 @@
-
 * Groebner基底と固有値法
 
 有理数(QQ) を係数とする多変数($x_1, x_2$) の
 多項式環 $QQ[x_1, x_2]$ を生成し，
 不定元$x_1, x_2$を取り出す:
 
-#+BEGIN_SRC sage
+#+BEGIN_SRC sage :session sage
 x_1, x_2 = QQ['x_1,x_2'].gens()
 #+END_SRC
 
 #+RESULTS:
-
-
 $x_1, x_2, x_3$を使って多項式を定義する:
-#+BEGIN_SRC sage
+#+BEGIN_SRC sage :session sage
 f_1 = 2 * x_1^3 * x_2 +6*x_1^3 - 2* x_1^2 - x_1* x_2 - 3* x_1 - x_2 +3
 f_2 = x_1^3*x_2 + 3*x_1^3 + x_1^2*x_2 + 2*x_1^2
 f_3 = 3*x_1^2*x_2 + 9*x_1^2 + 2*x_1*x_2 + 5*x_1 + x_2 -3
@@ -27,20 +24,92 @@ f_3
 : x_1^3*x_2 + 3*x_1^3 + x_1^2*x_2 + 2*x_1^2
 : 3*x_1^2*x_2 + 9*x_1^2 + 2*x_1*x_2 + 5*x_1 + x_2 - 3
 
+#+begin_src sage :session sage
+f_1.lm()
+f_2.lm()
+#+end_src
+
+#+RESULTS:
+: x_1^3*x_2
+: x_1^3*x_2
+
+
+#+BEGIN_SRC sage :session sage 
+f_4 = f_1 - 2*f_2
+f_4
+#+END_SRC
+
+#+RESULTS:
+: -2*x_1^2*x_2 - 6*x_1^2 - x_1*x_2 - 3*x_1 - x_2 + 3
+
+#+BEGIN_SRC sage :session sage 
+f_5 = 2*f_3 + 3*f_4
+f_5
+#+END_SRC
+
+#+RESULTS:
+: x_1*x_2 + x_1 - x_2 + 3
+
+#+BEGIN_SRC sage :session sage 
+f_1 % f_5
+f_2 % f_5
+f_3 % f_5
+f_4 % f_5
+#+END_SRC
+
+
+#+RESULTS:
+: 4*x_1^3 - 10*x_1^2 - 10*x_1
+: 2*x_1^3 - 3*x_1^2 - 8*x_1 + 2*x_2 - 6
+: 6*x_1^2 - 9*x_1 + 6*x_2 - 18
+: -4*x_1^2 + 6*x_1 - 4*x_2 + 12
+
+
+#+BEGIN_SRC sage :session sage 
+S = [f_1, f_2, f_3, f_4, f_5]
+
+f_4
+#+END_SRC
+
+
 
 $f_1$, $f_2$, $f_3$ を基底とするイデアル $I$ を生成する:
-#+BEGIN_SRC sage
-I = ideal(f_1, f_2, f_3)
+#+BEGIN_SRC sage :session sage 
+I = ideal(f_1, f_2, f_3, f_4, f_5)
+I
 #+END_SRC
+
+#+RESULTS:
+: Ideal (2*x_1^3*x_2 + 6*x_1^3 - 2*x_1^2 - x_1*x_2 - 3*x_1 - x_2 + 3,
+    x_1^3*x_2 + 3*x_1^3 + x_1^2*x_2 + 2*x_1^2,
+    3*x_1^2*x_2 + 9*x_1^2 + 2*x_1*x_2 + 5*x_1 + x_2 - 3,
+    -2*x_1^2*x_2 - 6*x_1^2 - x_1*x_2 - 3*x_1 - x_2 + 3,
+    x_1*x_2 + x_1 - x_2 + 3) of Multivariate Polynomial Ring in x_1, x_2 over Rational Field
 
 $I$ のグレブナー基底を求める:
 
-#+BEGIN_SRC sage
+#+BEGIN_SRC sage :session sage
 B = I.groebner_basis(); B
 #+END_SRC
 
-$QQ[x_1, x_2]/I$は，$1, x_2, x_1$ が基底となることがわかる。
+#+RESULTS:
+: [x_1^2 - 3/2*x_1 + x_2 - 3, x_1*x_2 + x_1 - x_2 + 3, x_2^2 - 4*x_1 - 5/2*x_2 - 3/2]
 
+＜Groebner基底の行列表現＞
+
+$$\begin{array}{c||cccccc|}
+    &  x_1^2 & x_1 x_2 & x_2^2 & x_1 & x_2 & 1 \cr
+    \hline\hline
+    g_1 &  1 & 0 & 0 & 3/2 & -1 &  3 \cr
+    g_2 & 0  & 1 & 0 &  -1 & 1  & 3\cr
+    g_3 &  0 & 0 & 1 & 4   & 5/2 & 3/2 \cr
+\end{array}$$
+
+- 各基底 ($g_i, i=1:3$)は，2次の頭項を持ち，2次の項は，1次の項の和に簡約される
+
+- 剰余空間 $QQ[x_1, x_2]/I$の基底は，$x_1, x_2, 1$ となることがわかる。
+
+  
 #+BEGIN_SRC sage
 type(B)
 #+END_SRC
