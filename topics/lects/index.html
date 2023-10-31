@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<title>講義情報 suzuki@cis.iwate-u.ac.jp</title>
+<!-- 2015-10-04 日 20:32 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="masayuki" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">講義情報 suzuki@cis.iwate-u.ac.jp</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#27425;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 2015年 講義</a>
+<ul>
+<li><a href="#sec-1-1">1.1. ソフトウェア構成論 2015年後期 ２年生対象</a></li>
+<li><a href="#sec-1-2">1.2. メタプログラミング Ruby (コンピュータ科学特論 I) 2015</a></li>
+<li><a href="#sec-1-3">1.3. 学修支援相談員</a></li>
+<li><a href="#sec-1-4">1.4. 基礎数学 2015前期 1年生 対象</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. 2015年</a>
+<ul>
+<li><a href="#sec-2-1">2.1. すずきのこと</a>
+<ul>
+<li><a href="#sec-2-1-1">自己紹介</a></li>
+<li><a href="#sec-2-1-2">専門分野</a></li>
+<li><a href="#sec-2-1-3">趣味</a></li>
+<li><a href="#sec-2-1-4">抱負</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2. org-feature.org emacs-org を使って講義</a>
+<ul>
+<li><a href="#sec-2-2-1">org-modeの紹介</a>
+<ul>
+<li><a href="#sec-2-2-1-1">本家サイトの紹介 Org mode for Emacs – Org-modeでできること のまとめ</a>
+<ul>
+<li><a href="#sec-2-2-1-1-1">文書編集機能</a></li>
+<li><a href="#sec-2-2-1-1-2">プロジェクトの計画機能</a></li>
+<li><a href="#sec-2-2-1-1-3">時間の計測</a></li>
+<li><a href="#sec-2-2-1-1-4">アジェンダ</a></li>
+<li><a href="#sec-2-2-1-1-5">キャプチャ</a></li>
+<li><a href="#sec-2-2-1-1-6">テーブル</a></li>
+<li><a href="#sec-2-2-1-1-7">エクスポート</a></li>
+<li><a href="#sec-2-2-1-1-8">ソースコードとの連携</a></li>
+<li><a href="#sec-2-2-1-1-9">モバイル端末との連携</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. teaching-care.org 講義するときに気をつけること</a>
+<ul>
+<li><a href="#sec-2-3-1">人に教えるときに気をつけている10のこと</a>
+<ul>
+<li><a href="#sec-2-3-1-1">相手が話を聞くタイミングかを確認する</a></li>
+<li><a href="#sec-2-3-1-2">自分が伝えたいことか、本人が聞きたいことかを考える</a></li>
+<li><a href="#sec-2-3-1-3">本人の立ち位置を確認する</a></li>
+<li><a href="#sec-2-3-1-4">これを学ぶと良いメリットを伝える</a></li>
+<li><a href="#sec-2-3-1-5">まず全体像を説明する</a></li>
+<li><a href="#sec-2-3-1-6">適度に抽象化、具体化する（例示する）</a></li>
+<li><a href="#sec-2-3-1-7">口で説明するだけではなく図解を厭わない</a></li>
+<li><a href="#sec-2-3-1-8">分かってないことを定期的に確認</a></li>
+<li><a href="#sec-2-3-1-9">質問を誉め質問しやすい空気を作る</a></li>
+<li><a href="#sec-2-3-1-10">繰り返しを面倒くさがらない</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-3">3. の講義情報 2014</a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-3-0-1">ソフトウェア構成論 2014年後期 ２年生対象</a></li>
+<li><a href="#sec-3-0-2">コンピュータネットワーク 2014</a></li>
+<li><a href="#sec-3-0-3">ソフトウェア構成論</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-1">3.1. 岩大教員の時の講義</a>
+<ul>
+<li><a href="#sec-3-1-1">メタプログラミング Ruby (コンピュータ科学特論III) 2011~2012</a></li>
+<li><a href="#sec-3-1-2">RHG - Ruby ソースコード解説 2010</a></li>
+<li><a href="#sec-3-1-3">ソフトウェア工学特論 2005~2009 SICP</a></li>
+<li><a href="#sec-3-1-4">ソフトウェア工学特論 2003~2004 Eiffle</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. からのひと言</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 2015年 講義</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> ソフトウェア構成論 2015年後期 ２年生対象</h3>
+<div class="outline-text-3" id="text-1-1">
+<dl class="org-dl">
+<dt> サイト </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/prog/">http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/prog/</a>
+</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> メタプログラミング Ruby (コンピュータ科学特論 I) 2015</h3>
+<div class="outline-text-3" id="text-1-2">
+<dl class="org-dl">
+<dt> サイト </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/">http://wiki.cis.iwate-u.ac.jp/~suzuki/lects/meta-ruby/</a>
+</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 学修支援相談員</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<a href="http://ict.iuic.iwate-u.ac.jp/moodle/mod/page/view.php?id=16635">学修支援室のページ</a>
+</p>
+
+<p>
+個別に質問や学修相談に応えます。
+</p>
+
+<p>
+気軽に来てください。
+</p>
+
+<dl class="org-dl">
+<dt> 期間 </dt><dd>4/8~8/4, 9/28~2/16
+</dd>
+<dt> 時間 </dt><dd>16:30~19:00
+</dd>
+<dt> 場所 </dt><dd>岩手大学 図書館 2階 学修支援室
+</dd>
+<dt> 担当 </dt><dd>数学，コンピュータ
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 基礎数学 2015前期 1年生 対象</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>シラバス <a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/matrix/syllabus.html">http://wiki.cis.iwate-u.ac.jp/~suzuki/matrix/syllabus.html</a>
+</li>
+<li>講義内容 <a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/matrix/lecture.html">http://wiki.cis.iwate-u.ac.jp/~suzuki/matrix/lecture.html</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 2015年</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> すずきのこと</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">自己紹介</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+北海道帯広市生まれ，62歳
+</p>
+
+<p>
+学び
+− 東北大・工・応用物理学科，
+− 東北大学大学院 工・応用物理，
+− 東大大学院 理・物理, 3年中退
+</p>
+
+<p>
+働き
+</p>
+<ul class="org-ul">
+<li>東大・理・情報科学科 助手
+</li>
+<li>理化学研究所 情報科学研究室 研究員
+</li>
+<li>岩手大学工学部 情報工学科 助教授 
+</li>
+<li>2013年退職。現在は，岩大・工，盛大・栄養で非常勤講師
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2">専門分野</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+情報技術インフラに関する分野
+</p>
+<ul class="org-ul">
+<li>コンピュータ・システム
+</li>
+<li>コンピュータ・ネットワーク
+</li>
+<li>プログラミング
+</li>
+</ul>
+
+<p>
+コンピュータのための数学
+</p>
+<ul class="org-ul">
+<li>計算機代数
+</li>
+<li>数式処理
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3">趣味</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+− シニアサッカー（岩手６０），野菜作り＠市民農園，自転車
+− プログラミングと数学
+</p>
+
+<p>
+お昼休みサッカー＠岩大グラウンド，是非一緒にやりましょう。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1-4" class="outline-4">
+<h4 id="sec-2-1-4">抱負</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+一緒に考えること，教えること，わかってもらえること，自分もまたわかり
+直すこと，みんな好きです。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> org-feature.org emacs-org を使って講義</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">org-modeの紹介</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div><div id="outline-container-sec-2-2-1-1" class="outline-5">
+<h5 id="sec-2-2-1-1">本家サイトの紹介 <a href="http://orgmode.org/ja/features.html">Org mode for Emacs – Org-modeでできること</a> のまとめ</h5>
+<div class="outline-text-5" id="text-2-2-1-1">
+<p>
+Little by little org-mode will take over my life. &#x2013; Mehul Sanghvi
+</p>
+
+<p>
+Org-mode は、ノートの保存、TODOリストの管理、プロジェクト計画のため
+のモードです。高速で効率的なプレーンテキストのシステムを使ってファイ
+ルを編集します。
+</p>
+</div>
+
+<div id="outline-container-sec-2-2-1-1-1" class="outline-6">
+<h6 id="sec-2-2-1-1-1">文書編集機能</h6>
+<div class="outline-text-6" id="text-2-2-1-1-1">
+<p>
+Org-modeは、 outline.el をベースに作られています。
+</p>
+
+<p>
+簡単にヘッドラインを検索でき、Orgファイルののセクションやその子要素
+を表示したり非表示にできます。
+</p>
+
+<p>
+Org-modeは、より素早い操作で扱えるようなキーバインドで outline.el
+を拡張していて、より多くの編集機能が実装しています。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-2" class="outline-6">
+<h6 id="sec-2-2-1-1-2">プロジェクトの計画機能</h6>
+<div class="outline-text-6" id="text-2-2-1-1-2">
+<p>
+planning.jpg
+</p>
+
+<p>
+Org-modeは、TODOリストの管理ツールやプランナーとして使うことができ
+ます。
+</p>
+
+<p>
+各ヘッドラインを一つのタスクとして扱います。
+</p>
+
+<p>
+TODOキーワードから別のステータスに切り替えるには、 C-c C-t もしくは
+S-&lt;left/right&gt; とするだけです。
+</p>
+
+<p>
+各アイテムはプランナーのメタデータも扱えます。例えば、予定されてい
+るかのフラグ、、ヘッドラインクッキー、タグ、プロパティなどです。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-3" class="outline-6">
+<h6 id="sec-2-2-1-1-3">時間の計測</h6>
+<div class="outline-text-6" id="text-2-2-1-1-3">
+<p>
+C-c C-x C-i で時間を測り始めて、 C-c C-x C-o で止めます。
+</p>
+
+<p>
+アジェンダからは、 I と O で同じことができます。
+</p>
+
+<p>
+計測結果のログは、ドロワーに保存されます。
+</p>
+
+<p>
+Org-modeは、ナイスなレポートを作成するために、簡単に時間を計測でき
+ます。また、あなたのボスの要求にピッタリ合うようにカスタマイズでき
+ます。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-4" class="outline-6">
+<h6 id="sec-2-2-1-1-4">アジェンダ</h6>
+<div class="outline-text-6" id="text-2-2-1-1-4">
+<p>
+Even with large .org files and thousands of tasks, it is easy to
+focus on what you need to do for each context.
+</p>
+
+<p>
+The built-in agenda views display the scheduled and deadline task
+for the week, TODO lists and stuck projects.
+</p>
+
+<p>
+The notion of agenda view can be customized to display what you
+need: a view for the day/month, restricted to a set of TODO
+keywords, using specific tag, etc.
+</p>
+
+<p>
+This is one of the key aspect of Org: you can adapt Org to your
+workflow while stabilizing it.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-5" class="outline-6">
+<h6 id="sec-2-2-1-1-5">キャプチャ</h6>
+<div class="outline-text-6" id="text-2-2-1-1-5">
+<p>
+.org ファイルにTODOアイテムを追加することを、キャプチャと呼びます。
+</p>
+
+<p>
+キャプチャはどこからでも実行できます。Emacsの中からだけでなく、その
+他の、ウェブブラウザやPDFビューアなどのアプリケーションからも可能で
+す。
+</p>
+
+<p>
+キャプチャのテンプレートを利用すると、様々な条件からどの情報をキャ
+プチャするのかを指定できるようになります。ファイル名や日付、領域な
+どです。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-6" class="outline-6">
+<h6 id="sec-2-2-1-1-6">テーブル</h6>
+<div class="outline-text-6" id="text-2-2-1-1-6">
+<p>
+Org-modeは、プレーンテキストを用いた素晴らしい表計算ができます。
+</p>
+
+<p>
+.csv と .tsv のファイルからテーブルをインポートできます。もしくは、
+カレントバッファから直接読み込むこともできます。テーブルは、
+Org-mode がサポートするすべてのファイル形式において出力可能です。
+</p>
+
+<p>
+つまり、Org-mode は、表計算ソフトとして使うこともできるのです。
+</p>
+
+<p>
+Calc Emacs package もしくはEmacs Lispコードを用いて数式を追加できます。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-7" class="outline-6">
+<h6 id="sec-2-2-1-1-7">エクスポート</h6>
+<div class="outline-text-6" id="text-2-2-1-1-7">
+<p>
+Org-modeは、オーサリングツールであり、文書の公開ツールでもあります。
+</p>
+
+<p>
+直感的なマークアップを使って、 HTML=、 $\LaTeX{}$、=ODT などに変換できます。
+</p>
+
+<p>
+開発者の場合は、好みの形式の新しいバックエンドを簡単に作れます。reference documentationを読んでください。
+</p>
+
+<p>
+また、一つ以上の .org ファイルを用いて、 公開プロジェクト を定義す
+ることもできます。一つ以上の公開バックエンドについても同様です。
+</p>
+
+<p>
+詳しくは、次の情報を参照してください。
+</p>
+
+<p>
+マニュアルの markup、exporting、publishing。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-8" class="outline-6">
+<h6 id="sec-2-2-1-1-8">ソースコードとの連携</h6>
+<div class="outline-text-6" id="text-2-2-1-1-8">
+<p>
+Org-modeは、文芸的プログラミングをソースコードを扱うための便利かつ自然な扱い方にします。
+</p>
+
+<p>
+コード断片を挿入し、Orgバッファでフォントを変え、同じバッファで結果
+を演算します。また、ソースコードのファイルを作るためにorgファイルか
+らコードを抽出します。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-1-1-9" class="outline-6">
+<h6 id="sec-2-2-1-1-9">モバイル端末との連携</h6>
+<div class="outline-text-6" id="text-2-2-1-1-9">
+<p>
+/Richard Moreland/氏が、iOS向けのフリーソフトウェア、MobileOrgを開発し
+ています。アイテムのソート、検索、閲覧、そして Orgファイルの編集が可能
+です。
+</p>
+
+<p>
+Matt Jones 氏が、MobileOrgと同等のAndroid向けアプリケーションを開発
+しています。githubにあるソースコードをみてください。
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> teaching-care.org 講義するときに気をつけること</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1">人に教えるときに気をつけている10のこと</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+<a href="http://topisyu.hatenablog.com/entry/teaching">斗比主閲子の姑日記</a>
+</p>
+</div>
+
+<div id="outline-container-sec-2-3-1-1" class="outline-5">
+<h5 id="sec-2-3-1-1">相手が話を聞くタイミングかを確認する</h5>
+<div class="outline-text-5" id="text-2-3-1-1">
+<p>
+相手が聞くタイミングでないときに話しても効果が薄いです。相手が精神的
+に、肉体的に話を聞ける状態でない時はぐっと我慢します。また、その人が
+失敗してからすぐならまだしも、あまり期間を空けすぎると「なぜそんな昔
+の話を」と思われるので、鉄は熱いうちに打つようにしたいですね。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-2" class="outline-5">
+<h5 id="sec-2-3-1-2">自分が伝えたいことか、本人が聞きたいことかを考える</h5>
+<div class="outline-text-5" id="text-2-3-1-2">
+<p>
+教えようとする前に、今自分が教えたいことは本人のニーズがあるものかを
+考えます。本人のニーズはないけれど、自分がどうしても伝えたいことを教
+えるのは、自分のエゴなので、「これはどうしても聞いて欲しいのだけれど」
+と枕をつけます。教える方が偉いわけではないですから。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-3" class="outline-5">
+<h5 id="sec-2-3-1-3">本人の立ち位置を確認する</h5>
+<div class="outline-text-5" id="text-2-3-1-3">
+<p>
+この話を聞くのは初めてか、日本人か外国人か、高等教育を受けているか、
+特定の主義・信仰があるかなど、どこから話をスタートするかを検討するた
+めに必要であれば確認します。ある程度関係性があるならまだしも、不特定
+多数への講演を依頼された時には、「○○という言葉はご存知ですか？」とい
+うようにキーワードについて知っているか知らないかを何回か質問してみて、
+聞き手の水準を把握します。
+</p>
+
+<p>
+ここまではどちらかというと教える前の準備段階のようなものでしょうか。
+ここからが、教える段になってからの話。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-4" class="outline-5">
+<h5 id="sec-2-3-1-4">これを学ぶと良いメリットを伝える</h5>
+<div class="outline-text-5" id="text-2-3-1-4">
+<p>
+その人が実現したいことにこの学びがどう繋がるかをできるのであれば説明
+する。実利があれば意欲が湧きやすいですし、教えている方も軸がぶれませ
+ん。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-5" class="outline-5">
+<h5 id="sec-2-3-1-5">まず全体像を説明する</h5>
+<div class="outline-text-5" id="text-2-3-1-5">
+<p>
+各論から入ってしまうと、聞き手の頭の中に地図ができず、断片的な知識を
+植え付けることになってしまいがちです。（そういう知識は忘れやすい。）
+可能であれば、全体像からブレークダウンして各論に入るような流れにした
+いですよね。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-6" class="outline-5">
+<h5 id="sec-2-3-1-6">適度に抽象化、具体化する（例示する）</h5>
+<div class="outline-text-5" id="text-2-3-1-6">
+<p>
+理論を説明してすぐに理解できる人もいれば、事例を繰り返し聞いて腹落ち
+する人もいます。相手の能力に合わせて、例示の分量を加減します。
+</p>
+
+<p>
+本筋は上のようなもので、後は以下のようなことも気を付けます。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-7" class="outline-5">
+<h5 id="sec-2-3-1-7">口で説明するだけではなく図解を厭わない</h5>
+<div class="outline-text-5" id="text-2-3-1-7">
+<p>
+口で話すのが一番楽ですが、相手の理解度を高めるためには、紙に書いたり、図にすることを面倒くさがらないようにします。口で言って理解しなければ結局時間の無駄ですから、相手が理解できるための方法は何でも検討します。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-3-1-8" class="outline-5">
+<h5 id="sec-2-3-1-8">分かってないことを定期的に確認</h5>
+<div class="outline-text-5" id="text-2-3-1-8">
+<p>
+聞き手が分かっていないのに、次々と話を進めるのはお互いにとって時間の
+無駄であり、大変不幸なことなので、細かなタイミングで習熟状況を確認し
+ます。
+</p>
+
+<p>
+「分かっていますか？」という質問は分かっていないことを確認する
+方法としては不適切なので（相手が誤解して理解しているかもしれませんし、
+相手が分かっていないことを恥として「分かっている」と言ってしまうこと
+がある）、
+</p>
+
+<p>
+「では、ここまでの知識を使うと、このケースはどのように考え
+られますか？」というように、内容に関して理解しているかを質問します。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-1-9" class="outline-5">
+<h5 id="sec-2-3-1-9">質問を誉め質問しやすい空気を作る</h5>
+<div class="outline-text-5" id="text-2-3-1-9">
+<p>
+質問しようと考えること、質問の回答を受け取ることで飛躍的に理解は進むの
+で、質問しやすい空気を作ることは大切です。
+</p>
+
+<p>
+質問をしてもらえることで、8をわざわざすることもないですし。ですので、
+質問してきたら、「それ、いいポイントですね」などと一言誉めてから回答
+をするようにします。質問することの喜びを感じてもらうようにします。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-3-1-10" class="outline-5">
+<h5 id="sec-2-3-1-10">繰り返しを面倒くさがらない</h5>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <i>s-:</i> の講義情報 2014</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+このページのアドレスは下記です。
+</p>
+
+<dl class="org-dl">
+<dt> emacs-org </dt><dd><a href="file:///mnt/mini/s/lects/index.html">file:///mnt/mini/s/lects/index.html</a> 
+(HTML化された時，拡張子の .org が消えていますが，file 名は index.org です）
+</dd>
+
+<dt> html </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/">http://wiki.cis.iwate-u.ac.jp/~suzuki/</a>
+</dd>
+</dl>
+</div>
+
+<div id="outline-container-sec-3-0-1" class="outline-4">
+<h4 id="sec-3-0-1">ソフトウェア構成論 2014年後期 ２年生対象</h4>
+<div class="outline-text-4" id="text-3-0-1">
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/prog.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/prog.cgi</a> 
+</dd>
+
+<dt> 学生ノートWiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/prog-note-05.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/prog-note-05.cgi</a>
+</dd>
+
+<dt> 講義メモ </dt><dd><a href="file:///mnt/mini/s/prog">file:///mnt/mini/s/prog</a> の下にドキュメントがあります。
+
+<dl class="org-dl">
+<dt> 三角関数モジュール </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/prog/trigo.html">HTML</a> <a href="file:///mnt/mini/s/lects/prog/trigo.html">file:///mnt/mini/s/lects/prog/trigo.html</a>
+</dd>
+<dt> emacs </dt><dd><a href="file:///mnt/mini/s/lects/prog/emacs.html">file:///mnt/mini/s/lects/prog/emacs.html</a>
+</dd>
+<dt> 環境 </dt><dd><a href="file:///mnt/mini/s/lects/prog/env.html">file:///mnt/mini/s/lects/prog/env.html</a>
+</dd>
+<dt> サブバージョン </dt><dd><a href="file:///mnt/mini/s/lects/prog/svn.html">file:///mnt/mini/s/lects/prog/svn.html</a>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-3-0-2" class="outline-4">
+<h4 id="sec-3-0-2">コンピュータネットワーク 2014</h4>
+<div class="outline-text-4" id="text-3-0-2">
+<p>
+講義は主に下記Wikiを使って説明します。
+</p>
+
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/network.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/network.cgi</a>
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-3-0-3" class="outline-4">
+<h4 id="sec-3-0-3">ソフトウェア構成論</h4>
+<div class="outline-text-4" id="text-3-0-3">
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/prog.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/prog.cgi</a> 
+</dd>
+
+<dt> 学生ノートWiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/prog-note-05.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/prog-note-05.cgi</a>
+</dd>
+
+<dt> 講義メモ </dt><dd><a href="file:///mnt/mini/s/prog">file:///mnt/mini/s/prog</a> の下にドキュメントがあります。
+
+<dl class="org-dl">
+<dt> 三角関数モジュール </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/prog/trigo.html">HTML</a> <a href="file:///mnt/mini/s/lects/prog/trigo.html">file:///mnt/mini/s/lects/prog/trigo.html</a>
+</dd>
+<dt> emacs </dt><dd><a href="file:///mnt/mini/s/lects/prog/emacs.html">file:///mnt/mini/s/lects/prog/emacs.html</a>
+</dd>
+<dt> 環境 </dt><dd><a href="file:///mnt/mini/s/lects/prog/env.html">file:///mnt/mini/s/lects/prog/env.html</a>
+</dd>
+<dt> サブバージョン </dt><dd><a href="file:///mnt/mini/s/lects/prog/svn.html">file:///mnt/mini/s/lects/prog/svn.html</a>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 岩大教員の時の講義</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1">メタプログラミング Ruby (コンピュータ科学特論III) 2011~2012</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<dl class="org-dl">
+<dt> サイト </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/meta-ruby/">http://wiki.cis.iwate-u.ac.jp/~suzuki/meta-ruby/</a>
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2">RHG - Ruby ソースコード解説 2010</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/rhg.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/rhg.cgi</a>
+</dd>
+<dt> ソースコード </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~suzuki/rhg/">http://wiki.cis.iwate-u.ac.jp/~suzuki/rhg/</a>
+</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-sec-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3">ソフトウェア工学特論 2005~2009 SICP</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/sicp.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/sicp.cgi</a>
+</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-sec-3-1-4" class="outline-4">
+<h4 id="sec-3-1-4">ソフトウェア工学特論 2003~2004 Eiffle</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<dl class="org-dl">
+<dt> Wiki </dt><dd><a href="http://wiki.cis.iwate-u.ac.jp/~wiki/eiffel.cgi">http://wiki.cis.iwate-u.ac.jp/~wiki/eiffel.cgi</a>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <i>s-:</i> からのひと言</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>プログラム開発には emacs を使いましょう。
+</li>
+
+<li>メモや文章を書くために，emacs と org-mode を使いましょう。
+</li>
+
+<li>ruby を覚えましょう。
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">&#33879;&#32773;: masayuki</p>
+<p class="date">Created: 2015-10-04 日 20:32</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.5h)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
