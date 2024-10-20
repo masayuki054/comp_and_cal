@@ -149,6 +149,7 @@ plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 
    - [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
 
+     
    - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
 
 ** 数式処理アルゴリズム
