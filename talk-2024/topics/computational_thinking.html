@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-10-29 金 16:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>数理情報科学特論</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/css/sos.css">
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/hideshow.js"></script>
+<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/sos.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">数理情報科学特論</h1>
+<p>
+Jeannette M.Wing: COmputational Thinking,
+COMM.ACM, Vol.49,No.3,pp33-35
+</p>
+
+<p>
+computer scientist
+Computational Thinking
+情報処理 Vol.56 No.6 June 2015
+翻訳
+</p>
+
+<p>
+にゅあんすとしては，「情報処理的思考」が近いとの，訳者の弁。
+</p>
+
+<div id="outline-container-orgbea3548" class="outline-2">
+<h2 id="orgbea3548">このエッセイの目的</h2>
+<div class="outline-text-2" id="text-orgbea3548">
+<p>
+すべての人が学びたい，そして使いたい，と考えるに違いない
+一般的な態度とスキルに関するものである．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c8b4d4" class="outline-2">
+<h2 id="org6c8b4d4">計算論的思考</h2>
+<div class="outline-text-2" id="text-org6c8b4d4">
+<p>
+は計算プロセスの能力と限界の上に成立しているもので，
+</p>
+
+<p>
+計算の主体が人間であるか機械であるかは問わない．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72ffce8" class="outline-2">
+<h2 id="org72ffce8">計算手法と計算モデル</h2>
+<div class="outline-text-2" id="text-org72ffce8">
+<p>
+は，我々個人が単独では決して達成できないであろう問題を解決したリ，
+</p>
+
+<p>
+システムをデザインしたりする勇気を与えてくれる．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ac26eb" class="outline-2">
+<h2 id="org2ac26eb">計算論的思考は機械知能の謎に挑む：</h2>
+<div class="outline-text-2" id="text-org2ac26eb">
+<ul class="org-ul">
+<li>人間がコンピュータより優れているのは何か？</li>
+
+<li>コンピュータが人間より優れているのは何か？</li>
+
+<li>何が計算可能か？ 
+さらに最も根本的な問題</li>
+</ul>
+
+<p>
+これらの問いに対して，我々はまだ部分的な回答しか知らない．
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb384c21" class="outline-2">
+<h2 id="orgb384c21">計算論的思考は，すべての人にとって基本的な技術である．</h2>
+<div class="outline-text-2" id="text-orgb384c21">
+<p>
+コンピュータ科学者だけではなく，すべての子供の分析的思考能力として，
+「読み，書き，そろばん」のほかに計算論的思考を加えるべき
+である．
+</p>
+
+<p>
+コンピュータ科学と計算装置が計算論的思考を普及させることを忘れては
+ならない．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33672ad" class="outline-2">
+<h2 id="org33672ad">計算論的思考は</h2>
+<div class="outline-text-2" id="text-org33672ad">
+<p>
+基本的なコンピュータ科学の概念に基づく
+</p>
+
+<ul class="org-ul">
+<li>問題解決，</li>
+<li>システムのデザイン，</li>
+<li>そして人間の理解,などを必要とする．</li>
+</ul>
+
+<p>
+特定の問題を解くときに私たちは，
+</p>
+
+<ul class="org-ul">
+<li>どれくらい難しいか？</li>
+<li>最善の解決の道筋は何か？, などを考える．</li>
+</ul>
+
+<p>
+コンピュータ科学はこれらの問いに正確に答えるための確固とした理論
+の上に構築されている．
+</p>
+
+<p>
+問題の難しさを述べるためには
+</p>
+
+<ul class="org-ul">
+<li>その土台となる機械̶問題の解決策を探る計算装置─の能力を知らねばならない．</li>
+
+<li>機械の命令セット，計算資源の制約，動作環境などを考慮しなければな
+らない．</li>
+</ul>
+
+<p>
+問題を効率良く解くためにはさらに次のことを考慮せねばならない．
+</p>
+
+<ul class="org-ul">
+<li>近似解で良いのか，</li>
+
+<li>乱数化をうまく利用できるのか，</li>
+
+<li>また解の判定に偽陽性や偽陰性が許されるのか，</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbc5f792" class="outline-2">
+<h2 id="orgbc5f792">計算論的思考は一見難しそうな問題を我々がすでに解き方を知っている問題に変換する．</h2>
+<div class="outline-text-2" id="text-orgbc5f792">
+<p>
+これには簡略化，埋込，変換，シミュレーションなどが使えるだろう．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org578e66f" class="outline-2">
+<h2 id="org578e66f">計算論的思考とは</h2>
+<div class="outline-text-2" id="text-org578e66f">
+<ul class="org-ul">
+<li>再帰的に考えることであり，</li>
+<li>並列処理であり，</li>
+<li>命令をデータとし，</li>
+<li>データを命令とする, ことである．</li>
+</ul>
+
+<p>
+それはプログラムを正しさと効率からだけではなく，美学的基準や，シス
+テムデザインの単純さと洗練度からも判断することである．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org610d300" class="outline-2">
+<h2 id="org610d300">計算論的思考とは抽象化と分割統治を用いることである．</h2>
+<div class="outline-text-2" id="text-org610d300">
+<p>
+問題点の分割である．
+</p>
+
+<ul class="org-ul">
+<li>巨大で複雑なタスクに挑戦したり，</li>
+<li>巨大で複雑なシステムをデザインしたりするときに，</li>
+</ul>
+
+<p>
+問題の適切な表現法を選ぶことであり，問題を解きやすくするため
+に問題の適切な側面だけをモデル化することである．
+</p>
+
+<p>
+不変項を見つけてシステムの振舞いを簡潔かつ宣言的に記述することであ
+る．
+</p>
+
+<p>
+すべての細部にわたり理解することなく巨大複雑系を使いこなし，変更し，
+影響を与えることが自信を持ってできることである．
+</p>
+
+<p>
+複数のユーザに備えてサブシステムをモジュール化したり，
+</p>
+
+<p>
+将来の利用に備えてデータをプリフェッチしたりキャッシュしたりするこ
+とである．
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c44b47" class="outline-2">
+<h2 id="org0c44b47">計算論的思考とは予防，防御，そして最悪のシナリオからの復帰という観点を持ち，</h2>
+<div class="outline-text-2" id="text-org0c44b47">
+<p>
+そのために冗長性，故障封じ込め，誤り訂正などを用いることである．
+</p>
+
+<p>
+それはグリッドロック（超渋滞），デッドロックを判定し，コントラクトインタフェースを
+起動することである．
+</p>
+
+<p>
+それは会議を設定するときに競合条件の回避を行うことを学ぶことである．
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge44766a" class="outline-2">
+<h2 id="orge44766a">計算論的思考はヒューリスティックな推論により解を発見することである．</h2>
+<div class="outline-text-2" id="text-orge44766a">
+<ul class="org-ul">
+<li>それは不確定な状況でのプランニング，学習，スケジューリングのことである．</li>
+<li>それは探索して，探索して，そしてさらに探索してWebページのリストや，
+ゲームに勝つ戦略や，あるいは反例を見つけることである．</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1975af4" class="outline-2">
+<h2 id="org1975af4">計算論的思考は超大量のデータを使って計算を高速化することである．</h2>
+<div class="outline-text-2" id="text-org1975af4">
+<ul class="org-ul">
+<li>それは時間と空間のトレードオフ，あるいは計算パワーと記憶容量のト
+レードオフをすることである．</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbc82584" class="outline-2">
+<h2 id="orgbc82584">私たちは計算論的思考が他の研究領域に与える影響を目撃してきた．</h2>
+<div class="outline-text-2" id="text-orgbc82584">
+</div>
+<div id="outline-container-orgc9ec03c" class="outline-3">
+<h3 id="orgc9ec03c">たとえば，機械学習は統計学を変えた．</h3>
+<div class="outline-text-3" id="text-orgc9ec03c">
+<p>
+ 統計的学習は，ほんの数年前には
+考えられなかったような，データ量と次元の巨大な問題に適用された．す
+べての組織の統計部門はコンピュータ科学者を採用し始めた．コンピュー
+タ科学の学部では統計学科をすでに擁立していない場合には，新しく設立
+している．
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb954a5" class="outline-3">
+<h3 id="orgcb954a5">計算生物学は生物学者の思考法を変えつつある．</h3>
+<div class="outline-text-3" id="text-orgcb954a5">
+<p>
+コンピュータ科学者の生物学に対する貢献は，単に大量のゲノムシーケン
+スデータから特定のパターンを見つけ出すことにとどまらない．
+</p>
+
+<p>
+データ構造とアルゴリズムという，我々の持つ計算的抽象化と方法論が，
+タンパク質の構造を，構造から機能が明らかになるような形で表現できる
+ことが期待されている．
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd0801c" class="outline-3">
+<h3 id="orgdd0801c">計算ゲーム理論は経済学者の思考法を，</h3>
+</div>
+<div id="outline-container-org41c645c" class="outline-3">
+<h3 id="org41c645c">ナノコンピューティングは化学者の思考法を，</h3>
+</div>
+<div id="outline-container-org9848b07" class="outline-3">
+<h3 id="org9848b07">そして量子計算は物理学者の思考法をそれぞれ変えつつある</h3>
+<div class="outline-text-3" id="text-org9848b07">
+<p>
+このような思考法は他分野の科学者だけでなくすべての人に必要な技量の1
+つである．ユビキタスコンピューティングが今日にもたらした影響と同様
+のものを，計算論的思考が明日にもたらす．ユビキタスコンピューティン
+グは昨日の夢が今日の現実となったものであり，計算論的思考は明日の現
+実である．
+</p>
+
+<p>
+コンピュータ科学者のように考えるということは，コンピュータをプログ
+ラムできるということ以上の意味を持つ．複数のレベルの抽象思考が必要
+である
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org337eee1" class="outline-2">
+<h2 id="org337eee1">それは何であり，何でないか</h2>
+<div class="outline-text-2" id="text-org337eee1">
+<p>
+コンピュータ科学とは
+</p>
+
+<ul class="org-ul">
+<li>計算可能性と,</li>
+<li>計算方式の，学問である．</li>
+</ul>
+
+<p>
+したがって計算論的思考は以下の特徴を持つ：
+</p>
+
+<p>
+─ 概念化のことであり，プログラミングではない．
+</p>
+
+<p>
+それは複数の抽象レベルで考えることを要求する．
+</p>
+
+<p>
+─ 基礎的な技能であり，機械的なものではない．
+</p>
+
+<p>
+この基礎的な技能は，現代社会で活動するためにすべての人が知らねば
+ならないものである．機械的というのはルーチンワークのことである．
+皮肉なことに，コンピュータが人間のように考えるというAIのグランド
+チャレンジをコンピュータ科学が解決するまでは，思考は機械的である．
+</p>
+
+<p>
+─ 人間の思考法のことであり，コンピュータのそれではない．
+</p>
+
+<p>
+計算論的思考は人間の問題解決法であり，人間がコンピュータのように
+考えることを目指すものではない．コンピュータは単調で退屈であるが，
+人間は賢くて想像力豊かである．人間がコンピュータを刺激的なものに
+する．コンピュータという計算装置を持つことにより，我々は計算の時
+代以前には挑戦できなかったような問題を解くのに自らの叡智を使うこ
+とができ，新しいシステムを構築することができる．限界は我々の想像
+力だけである．
+</p>
+
+<p>
+─ 数学的思考と工学的思考を組み合わせ，補完することである．
+</p>
+
+<p>
+コンピュータ科学は本質的に数学的思考の上に成立している．
+</p>
+
+<p>
+そのため，すべての科学同様，コンピュータ科学の形式的基礎は数学に
+ある．
+</p>
+
+<p>
+コンピュータ科学は，実世界と相互作用するシステムを構築する場合，
+本質的に工学的思考の上に成立している．
+</p>
+
+<p>
+それらを司る計算装置の制約が，コンピュータ科学者に数学的だけでは
+なく計算論的な思考を要求する．仮想世界を自由に構築できるため，物
+理世界の制約を超えたシステムの構成が可能である．
+</p>
+
+<ul class="org-ul">
+<li><p>
+概念であり，モノではない．
+</p>
+
+<p>
+我々が創造するものは単なるソフトウェアやハードウェアという，物理
+的にどこにでも存在し，いつでも触れることのできるモノではなく，問
+題に迫り解決するための計算論的な概念で，我々の日常生活を助け，他
+の人々とコミュニケーションをとり交流するためのものである；そして
+</p></li>
+
+<li>それは，すべての人にどこでも．計算論的思考は，人間の努力と一体化
+してしたときに現実となり，明示的に哲学する必要性は消えてしまう．</li>
+</ul>
+
+<p>
+計算論的思考は，この分野に対する社会通念を変えようとするコンピュータ科
+学の教育者，研究者，そして実務家を導く主要な観点である．
+</p>
+
+<p>
+特に，大学入学前の学生とその教師や親たちを含む人々に対し，以下の2つの
+メッセージを送る必要がある：
+</p>
+
+<p>
+─ 知的に挑戦的で魅力的な科学的問題が多く残されている．問題領域と解決
+  策領域を限定しているのは我々の好奇心と創造性だけである；そして
+</p>
+
+<p>
+─ コンピュータ科学を専攻した学生は何を専門にしてもよい．英語や数学を
+  専攻した学生は異なる分野で複数のキャリアを追求しているではないか．
+</p>
+
+<p>
+コンピュータ科学もしかり．コンピュータ科学を専攻した後に医学，法律，
+経営，政治，そしてあらゆる種類の科学や工学，さらには芸術の分野に進
+むことができる．
+</p>
+
+<p>
+*
+計算論的思考は誰のために
+</p>
+
+<p>
+コンピュータ科学の教授は「コンピュータ科学者のように考える方法」と名付
+けた科目を，大学の新入生に教えるべきである．
+</p>
+
+<p>
+そしてそれはコンピュータ科学専門の学生だけでなく他学科の学生たちにも開
+放すべきである．
+</p>
+
+<p>
+大学以前の学生にも計算手法やモデルに触れる機会を作るべきである．
+</p>
+
+<p>
+コンピュータ科学に不満を述べたり，それに対する興味を否定するのではなく，
+あるいはコンピュータ科学の研究費を却下したりしないで，一般の人々の興味
+をこの分野の知的冒険へと導くべきである．
+</p>
+
+<p>
+そのようにしてコンピュータ科学の喜び，恐怖，威力を広め，計算論的思考を
+一般的なものにしたい．
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: suzuki@iwate-u.ac.jp suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師</p>
+<p class="date">Created: 2021-10-29 金 16:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

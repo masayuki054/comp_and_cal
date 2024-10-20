@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-11-02 火 09:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>数理情報科学特論</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/css/sos.css">
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/hideshow.js"></script>
+<script type="text/javascript" src="http://wiki.cis.iwate-u.ac.jp/~suzuki/org-html-theme/styles/sos/js/sos.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">数理情報科学特論</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgbdaf49a">1. 情報元</a></li>
+<li><a href="#orgb0209f9">2. 生産性アップの金字塔｢GTD｣の理念をおさらい</a>
+<ul>
+<li><a href="#orgb26759d">2.1. Getting Things Done、あるいは｢GTD｣とは、</a></li>
+<li><a href="#orga38ba1c">2.2. 簡単に言えば、GTDとは&#x2026;</a></li>
+<li><a href="#orgcd46b53">2.3. GTDの5つのステップ</a>
+<ul>
+<li><a href="#org6d28c3f">2.3.1. 収集</a></li>
+<li><a href="#org0f426fc">2.3.2. 明確化</a></li>
+<li><a href="#orgc5e8ddc">2.3.3. 整理</a></li>
+<li><a href="#org5f009d2">2.3.4. 見直し</a></li>
+<li><a href="#org1a1fed5">2.3.5. 実行</a></li>
+</ul>
+</li>
+<li><a href="#orgc02b226">2.4. どうやってGTDを始めるか？</a>
+<ul>
+<li><a href="#org1fe5835">2.4.1. ツールの選択</a></li>
+<li><a href="#orgb903b40">2.4.2. 定期的に見直す</a></li>
+<li><a href="#orgdad5ef9">2.4.3. ｢整理しすぎない｣ように気を配る</a>
+<ul>
+<li><a href="#org1e8177c">2.4.3.1. 私はこうやっています</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org28b387c">2.5. GTDは基本理念のひとつにすぎない</a></li>
+</ul>
+</li>
+<li><a href="#org77a1f24">3. Getting Things Done Wikipedia</a>
+<ul>
+<li><a href="#org5bc44b5">3.1. GTDの特徴</a></li>
+<li><a href="#org9ee01b4">3.2. システム</a>
+<ul>
+<li><a href="#org7b842af">3.2.1. 収集</a>
+<ul>
+<li><a href="#orgeb88859">3.2.1.1. バケットの中に集める</a></li>
+<li><a href="#orgf9f3ef8">3.2.1.2. バケット</a></li>
+<li><a href="#orgb6a7304">3.2.1.3. バケットの整理</a></li>
+</ul>
+</li>
+<li><a href="#org8ad0b14">3.2.2. 処理</a></li>
+<li><a href="#org313c669">3.2.3. 整理</a></li>
+<li><a href="#orge562d8f">3.2.4. 見直し</a></li>
+<li><a href="#org42d0e3a">3.2.5. 実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8edd815">4. アメリカ人が選ぶ！ 生産性アップのテクニック・ベスト5</a>
+<ul>
+<li><a href="#org25ed918">4.1. Pomodoroテクニック</a></li>
+<li><a href="#orgb565c4a">4.2. Getting Things Done</a></li>
+<li><a href="#orge35cd87">4.3. Don't Break the Chain</a></li>
+<li><a href="#org7341c7a">4.4. アクション・メソッド</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbdaf49a" class="outline-2">
+<h2 id="orgbdaf49a"><span class="section-number-2">1</span> 情報元</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Getting Things Done - Wikipedia
+<a href="https://ja.wikipedia.org/wiki/Getting_Things_Done">https://ja.wikipedia.org/wiki/Getting_Things_Done</a></li>
+
+<li><p>
+タスク整理の基本は、頭の中を書き出すこと！ 「GTD」を簡単図解｜＠人事
+ONLINE
+<a href="https://at-jinji.jp/blog/11001/">https://at-jinji.jp/blog/11001/</a>
+</p>
+
+<p>
+GTD処理の流れ図 ーー 分りやすいかも
+<img src="https://cdn-atjinji.freetls.fastly.net/wp/wp-content/uploads/2017/10/0f6d84c32f5da39987d6923a9aed1c24.jpg" alt="0f6d84c32f5da39987d6923a9aed1c24.jpg" />
+</p></li>
+
+<li>GTD®とは - 日本唯一のGTD公式サイト。GTD Japan
+<a href="http://gtd-japan.jp/about">http://gtd-japan.jp/about</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgb0209f9" class="outline-2">
+<h2 id="orgb0209f9"><span class="section-number-2">2</span> 生産性アップの金字塔｢GTD｣の理念をおさらい</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+2014.04.29
+</p>
+</div>
+
+<div id="outline-container-orgb26759d" class="outline-3">
+<h3 id="orgb26759d"><span class="section-number-3">2.1</span> Getting Things Done、あるいは｢GTD｣とは、</h3>
+<div class="outline-text-3" id="text-2-1">
+<dl class="org-dl">
+<dt>what</dt><dd>物事を効率よく処理し、生産性を上げるためのシステムです。</dd>
+
+<dt>(no term)</dt><dd>｢しなければならないこと｣をする時間を短縮し、</dd>
+<dt>(no term)</dt><dd>｢やりたいこと｣をする時間を増やすことです。</dd>
+
+<dt>(no term)</dt><dd>生産性コンサルタントであるデビッド・アレン氏のベストセラー本のタイトルです。</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orga38ba1c" class="outline-3">
+<h3 id="orga38ba1c"><span class="section-number-3">2.2</span> 簡単に言えば、GTDとは&#x2026;</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>｢しなければならなこと｣の全体像がわかり、</li>
+<li>｢次に何をするか｣を選びやすくなることです。</li>
+
+<li>すべてのToDoタスクを頭の外へ追い出し、</li>
+<li>システムへ移し入れる</li>
+</ul>
+
+<p>
+｢GTDは複雑だ｣という評判もあるが
+</p>
+<ul class="org-ul">
+<li>適切なやり方を知らないから</li>
+</ul>
+
+<p>
+この記事では、GTDの基本理念を入門者にもわかりやすく解説します。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd46b53" class="outline-3">
+<h3 id="orgcd46b53"><span class="section-number-3">2.3</span> GTDの5つのステップ</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+GTDはひとつの整理体系です。
+</p>
+
+<p>
+厳密なルールがあるわけではありません。
+</p>
+
+<p>
+GTDは｢しなければならないこと｣を収集、整理し、その中から重要なものを選
+びだすメソッドを提供します。
+GTDには基本となる｢5つステップ｣があります。
+</p>
+</div>
+
+<div id="outline-container-org6d28c3f" class="outline-4">
+<h4 id="org6d28c3f"><span class="section-number-4">2.3.1</span> 収集</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+ToDoリスト、アイデア、日課などすべてを収集し、ノートに書き出します。
+</p>
+
+<p>
+そのタスクを実際にやる時がくるまで頭の中から追い出しておきます。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f426fc" class="outline-4">
+<h4 id="org0f426fc"><span class="section-number-4">2.3.2</span> 明確化</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+しなければならないことを明らかにします。
+</p>
+
+<ul class="org-ul">
+<li>実行可能なタスクに分解</li>
+
+<li>その場で片付けられるタスクがあったら、その場で片付けてください。</li>
+
+<li>誰かに任せられるタスクは、誰かに任せます。</li>
+</ul>
+
+<p>
+この作業をすることで、何をすべきか考える時間を減らし、実行する時
+間を増やせます。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc5e8ddc" class="outline-4">
+<h4 id="orgc5e8ddc"><span class="section-number-4">2.3.3</span> 整理</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+タスクをカテゴリーと優先度で整理します。
+</p>
+
+<ul class="org-ul">
+<li>タスクごとに締め切り日を決め、リマインダーをセットします。</li>
+
+<li>タスクの優先度は必ず決めておくこと。</li>
+
+<li>この段階では、まだタスクの実行はしません。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5f009d2" class="outline-4">
+<h4 id="org5f009d2"><span class="section-number-4">2.3.4</span> 見直し</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+ToDoリストを見直します。
+</p>
+
+<ul class="org-ul">
+<li>ToDoタスクを見渡して、 ｢次にやるタスク｣を決めます。</li>
+
+<li><p>
+どのタスクを選べばいいか悩むときは、タスクの分解が不十分なのか
+もしれません。もう一度｢明確化｣の手順を行ってください。
+</p>
+
+<p>
+すべてのタスクが実行可能なサイズに分解されていきます。
+</p></li>
+</ul>
+
+<p>
+また、定期的にToDoリストを見直し、どれだけ進捗したか、優先度に変
+更がないかをチェック、システムがうまく機能しているか判断してくだ
+さい。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a1fed5" class="outline-4">
+<h4 id="org1a1fed5"><span class="section-number-4">2.3.5</span> 実行</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<p>
+選んだタスクを実行します。
+</p>
+
+<ul class="org-ul">
+<li>すべてのToDoタスクは優先度とカテゴリーで整理されており、どのタ
+スクをいつやるべきかわかっているはず。</li>
+
+<li>また、タスクはすべて実行可能なサイズに分解されています。あとは
+実行するだけです。</li>
+</ul>
+
+<p>
+以上がGTDの基本原則です。
+</p>
+
+<p>
+まとめると、
+</p>
+
+<ul class="org-ul">
+<li>GTDは｢覚えておかねばならない｣ことすべてを頭の中から取り出し、</li>
+<li>システムへと移し替え、</li>
+<li>整理し、</li>
+<li>実行可能なタスクに分解する仕組みです。</li>
+</ul>
+
+<p>
+ここまでしておけば、こんどToDoリストを見た時に、重要なタスクはどれか、
+いまできるタスクはどれかがすぐに判断できます。つまり、｢何をすべきか｣や
+｢どうやればいいか｣について考える時間を減らし、｢実行する｣時間を増やせる
+わけです。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc02b226" class="outline-3">
+<h3 id="orgc02b226"><span class="section-number-3">2.4</span> どうやってGTDを始めるか？</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org1fe5835" class="outline-4">
+<h4 id="org1fe5835"><span class="section-number-4">2.4.1</span> ツールの選択</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+アイデアやToDoタスク、そのほか覚えておくべきことのすべてを収集・整理で
+きるツールが必要です。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb903b40" class="outline-4">
+<h4 id="orgb903b40"><span class="section-number-4">2.4.2</span> 定期的に見直す</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+やるべきことの全体像を常に把握しておくのが重要。
+</p>
+
+<ul class="org-ul">
+<li>毎週、少し時間をとってToDoリスト全体を見直します。</li>
+<li>最初は毎日やるとよいでしょう。</li>
+</ul>
+
+<p>
+また、優先度を決めておけば、次にどのタスクをやるべきかで悩む必要もあり
+ません。
+</p>
+
+<p>
+基本的に、あるタスクが完了したら、ToDoリストをすばやくチェックし、重要
+なタスクかつ今すぐできるタスクはどれかを調べ、とりかかるタスクを瞬時に
+選び出すのが理想です。そしてそれを繰り返すのです。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdad5ef9" class="outline-4">
+<h4 id="orgdad5ef9"><span class="section-number-4">2.4.3</span> ｢整理しすぎない｣ように気を配る</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<p>
+ToDoタスクをどう整理するかはあなた次第です。
+</p>
+
+<p>
+ただし、整理のし過ぎは逆効果です。
+</p>
+
+<ul class="org-ul">
+<li>ToDoのカテゴリーが多すぎたり、</li>
+<li>優先度が細かく分かれすぎていたり、</li>
+<li>ラベルやフラグが増えすぎていたら、</li>
+</ul>
+
+<p>
+物事をシンプルにしてください。
+</p>
+</div>
+
+<div id="outline-container-org1e8177c" class="outline-5">
+<h5 id="org1e8177c"><span class="section-number-5">2.4.3.1</span> 私はこうやっています</h5>
+<div class="outline-text-5" id="text-2-4-3-1">
+<ul class="org-ul">
+<li>毎朝5分間を使って、
+<ul class="org-ul">
+<li>ToDoリストにその日にやるべきことすべてが書き込まれているかをチェッ
+クします。</li>
+<li>また、すべてのタスクが大きすぎたり曖昧すぎたりせず、実行可能なステッ
+プに分解されているかを確認します。</li>
+</ul></li>
+
+<li>週に一度、30分か1時間を使って、
+<ul class="org-ul">
+<li>ウィークリー・レビューを行います。</li>
+<li>やる予定だったのにできなかったタスクをフォローしたり、</li>
+<li>漠然としていたアイデアをToDoリストに加えたり、</li>
+<li>人に任せられるタスクを誰かに任せたり、</li>
+<li>小さなブレインストーミングを行ったり、</li>
+<li>優先度を見直します。</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28b387c" class="outline-3">
+<h3 id="org28b387c"><span class="section-number-3">2.5</span> GTDは基本理念のひとつにすぎない</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+GTDは素晴らしいメソッドですが、｢基本理念のひとつ｣に過ぎないことを忘れ
+ないでください。
+</p>
+
+<p>
+あなたとってベストな生産性システムではない可能性もあります。
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org77a1f24" class="outline-2">
+<h2 id="org77a1f24"><span class="section-number-2">3</span> Getting Things Done Wikipedia</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="file:///wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC">ワークフロー</a> 管理手法
+<a href="file:///wiki/%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC%E6%96%87%E5%8C%96">ハッカー文化</a>の一つで、*<a href="file:///wiki/LifeHack">LifeHack</a>*（ライフハック）の中でも代表的なものである。
+</p>
+</div>
+
+<div id="outline-container-org5bc44b5" class="outline-3">
+<h3 id="org5bc44b5"><span class="section-number-3">3.1</span> GTDの特徴</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>仕事の優先順位をつけることを強調しない。</li>
+
+<li>状況に応じたタスクリストを作る</li>
+
+<li>新しい仕事が飛び込んできた場合、2分以内でできるようなものならばすぐ済
+ませるべきだとも説いている。</li>
+
+<li>仕事すべてがリストに書き出され把握できているのでない状態で考えた優先
+順位はむしろ不正確であまり役に立たない。</li>
+</ul>
+
+<p>
+GTDは、やらなければならない仕事に関する情報を蓄え、追跡し、思い出すこ
+とを、簡単にするにはどうすればよいかという心理学的基礎に基づいている。
+</p>
+
+<p>
+アレンは、ある活動を行う際にわれわれがぶつかる「心理的障害」の多くは、
+非効率な「<a href="file:///wiki/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89">フロント＝エンド</a>」式計画（例えば、どんなプロジェクトでも、何
+を達成すべきか、そのためには何をすべきかを、情報収集してまず最初に明ら
+かにしなければならない）のために引き起こされるという。彼によればもっと
+も実際的な方法は、まず何をしてどこまで達成すべきかを全部考え、そのあと
+一連の行動を計画なしで自動的に行うことだという。
+</p>
+
+<p>
+またアレンは、われわれの頭や心理にある「思い出すシステム」は非効率で、
+その時その場所ですべきことを思い出すことはめったにないという。よって、
+「信頼できるシステム」の文脈にしたがって、すべき仕事を紙や電子機器に書
+き出して蓄積した「次の行動リスト」はわれわれの心を外側から支援する役割
+を果たし、われわれが正しいときに正しいことを思い出すことを確実にしてく
+れる。アレンによって説明されるGTDには、仕事の流れを円滑にする助けとな
+る個人の仕事管理のコツや方法が詳述されている。
+</p>
+
+<p>
+何よりGTDで求められるのは、<a href="file:///wiki/%E4%BB%95%E4%BA%8B">仕事</a>・<a href="file:///wiki/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9">ビジネス</a>を遂行する上で行わなければな
+らない作業を明確化し、それを逐次処理で貫徹することにある。例えば途中経
+過で失敗した場合、その後のスケジュールが総崩れを起こすのは良くない傾向
+である。これを予防する上で、先回りしてリカバリーポイント（失地回復の場）
+を要所要所に設け、スケジュール管理することなどが挙げられる。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ee01b4" class="outline-3">
+<h3 id="org9ee01b4"><span class="section-number-3">3.2</span> システム</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+GTDは次の5つのステップで構成され、これを1週間など一区切りごとに繰り返す
+</p>
+
+<ol class="org-ol">
+<li><p>
+収集 :: 
+</p>
+
+<p>
+頭の中にある「やらなければならないこと」「気になっていること（問題）」
+	を紙などに書き出す。作業中のメモ書きなども参照して、問題点
+	を出していく。
+</p></li>
+<li><p>
+処理 ::
+</p>
+
+<p>
+書き出した内容を、手順に添って、分類しリスト化する。
+</p></li>
+
+<li><p>
+整理:: 
+</p>
+
+<p>
+リストを自身がスケジュール管理に使っている<a href="file:///wiki/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>（<a href="file:///wiki/%E6%90%BA%E5%B8%AF%E6%83%85%E5%A0%B1%E7%AB%AF%E6%9C%AB">PDA</a>や<a href="file:///wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%89%8B%E5%B8%B3">シス
+テム手帳</a>など）に入れ込む。
+</p></li>
+
+<li><p>
+見直し :: 
+</p>
+
+<p>
+自分の状況や状態でそれらが可能かどうか見直し、検討する。
+</p></li>
+
+<li><p>
+実行 :: 
+</p>
+
+<p>
+リストアップした「出来ること」を順次片付ける。
+</p></li>
+</ol>
+
+<p>
+こういった作業を行うための手順の見直しをステップを追って行うことで、
+「あれもしなくちゃいけないし、これもやらなきゃいけないし&#x2026;」といった
+混乱した状況から脱して、着実に作業を進めて行くのがGTDである。こういっ
+た手法は、一見仕事が連続した作業の繰り返しで「ここからここまでが1単位」
+という見通しがなかなか立て難い状況で役立つとされている。
+</p>
+</div>
+
+<div id="outline-container-org7b842af" class="outline-4">
+<h4 id="org7b842af"><span class="section-number-4">3.2.1</span> 収集</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<div id="outline-container-orgeb88859" class="outline-5">
+<h5 id="orgeb88859"><span class="section-number-5">3.2.1.1</span> バケットの中に集める</h5>
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>追いかけなければならない仕事</li>
+<li>覚えておくべき仕事</li>
+<li>取り掛かっている途中の仕事（公私問わず）</li>
+</ul>
+
+<p>
+をすべて残らず書き出し、集める。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9f3ef8" class="outline-5">
+<h5 id="orgf9f3ef8"><span class="section-number-5">3.2.1.2</span> バケット</h5>
+<div class="outline-text-5" id="text-3-2-1-2">
+<p>
+紙、メモ帳、PDA、パソコン、現実の整理箱やパソコン画面上の電子メー
+ルの整理箱
+</p>
+
+<p>
+すべき仕事に関する雑然とした想念を頭から全部追い出す
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6a7304" class="outline-5">
+<h5 id="orgb6a7304"><span class="section-number-5">3.2.1.3</span> バケットの整理</h5>
+<div class="outline-text-5" id="text-3-2-1-3">
+<p>
+中身は、週に最低一度は整理して空にする必要がある。
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8ad0b14" class="outline-4">
+<h4 id="org8ad0b14"><span class="section-number-4">3.2.2</span> 処理</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+書き出してバケットに投げ込んだ仕事を分類し、厳密な<a href="file:///wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC">ワークフロー</a>によっ
+て各リストへと分ける作業である。
+</p>
+
+<ul class="org-ul">
+<li>まず整理箱のトップやメモ用紙などの最初にある仕事から「処理」をはじめる。</li>
+<li>処理する仕事は一度に一個だけ。</li>
+<li>整理箱には絶対にどんな仕事も戻さない。</li>
+<li>処理の開始。整理箱にあるその仕事は、行動をおこすべきものかどうか、
+考えることが処理の内容である。
+
+<ul class="org-ul">
+<li><b>YES。行動すべき</b>
+<ul class="org-ul">
+<li>すぐやる。（2分以内でできる場合）</li>
+<li>複雑なものは、計画を立てて行うことにし、計画は定期的に見直す。
+*プロジェクト*のリストへ。</li>
+<li>複雑でないもので、自分でしなくてもいいものは人に任せる。任せ
+たら <b>連絡待ち</b> のリストへ。</li>
+<li>複雑ではないが今すぐしなくてもよいものは後でする。*カレンダー*のリストへ。</li>
+<li>複雑ではなく今すぐしたほうがよいものは、今やっている仕事の次に着手する。
+*次のアクション*のリストへ。</li>
+</ul></li>
+
+<li><b>NO。今行動しなくてよい</b>
+<ul class="org-ul">
+<li>資料としてファイルにしまうものは、*資料*リストへ。</li>
+<li>いつかやる仕事としてあたためておくものは、*いつかする*リストへ。</li>
+<li>不要なものは捨てて忘れる。ゴミ箱へ。</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+この処理の際に、「するのに2分とかからない仕事は、今すぐ行う」とい
+う「*2分ルール*」がある。「2分」とは目安で、その仕事を後へ延ばすた
+めにリストやメモを書いたりするのにかかる時間くらいのことである。2
+分くらいでできそうな細かい仕事は、いまこの場でリストから早めに消し
+てすっきりさせる必要がある。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org313c669" class="outline-4">
+<h4 id="org313c669"><span class="section-number-4">3.2.3</span> 整理</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+残っている仕事に常に注意を払うために使う「リスト」には、以下のよう
+なものがある。バケットにある仕事は処理によってこの「リスト」へ仕分
+けされ、このリストを常時追跡しながら仕事をこなしてゆく。
+</p>
+
+<dl class="org-dl">
+<dt>次のアクション</dt><dd><p>
+注意をしなければならない仕事それぞれについて、
+取るべき次のアクション（その仕事の最初の一歩）
+は何かを決める。
+</p>
+
+<p>
+たとえば、もし仕事が「プロジェクトレポートを書く」ならば、次
+のアクションは「Aさんにミーティングの時間について電子メールを
+打つ」か、「Bさんに電話してレポートに必要な内容を聞く」などと
+なる。仕事完了までにこなすステップや行動はいろいろあるが、そ
+の最初にすべきことは必ずあるはずで、これを「次のアクション」
+リストに入れ、今やっている仕事の次から次へと行う。さらにこれ
+らは起こす行動の状況に応じて分類したほうがよい。例えば、「オ
+フィスでする」「電話する」「店でする」など。
+</p></dd>
+
+<dt>プロジェクト</dt><dd>プライベートや仕事での「オープン・ループ」の中
+で、一回以上の物理的動作が必要な、複雑な仕事は「プロジェクト」
+になる。これらは常に追跡し、定期的に見直す。プロジェクトに関
+する「次のアクション」は後回しになり、随時進めていく。</dd>
+
+<dt>連絡待ち</dt><dd>誰かに仕事や「次のアクション」を任せる場合、あるい
+はプロジェクトを進めるにあたり何か外部の出来事が起こるのを待
+たねばならない場合、これらは追跡できる状態にし、随時任せた仕
+事が終わったか、外部で出来事が起きたか、見直すこととする。</dd>
+
+<dt>いつかやる</dt><dd>いつかやりたいが今しなくていいものはここに入れる。
+「将来に備え中国語を勉強」「ダイビングのために休暇をとる」な
+ど。</dd>
+
+<dt>カレンダー</dt><dd>カレンダーも約束や仕事の追跡のために重要である。
+しかし、アレンは、カレンダーは「ハード・ランドスケープ」と彼
+が名づけた仕事のためにとっておくべきだと勧めている。ハード・
+ランドスケープは、ある決まった締め切りまでに絶対にすべき仕事
+や、時間や場所が決まってしまった会議や約束のことである。すべ
+き仕事はカレンダーではなく、次のアクションリストに書かれるべ
+きである。</dd>
+</dl>
+
+<p>
+GTDの鍵になるものはファイリングシステムである。ファイリングは簡単
+で、単純で、楽しく苦痛にならないシステムでなければならない。紙1枚
+に書いたものでも、見直すために必要なら、これまで作ったフォルダに属
+さないものならば新しいフォルダを作る必要がある。アレンの推薦するも
+のはアルファベット順の単純なファイリングシステムであるが、情報の貯
+蔵や見直しができるだけ簡単で早く済むものならどういったものでもよい。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orge562d8f" class="outline-4">
+<h4 id="orge562d8f"><span class="section-number-4">3.2.4</span> 見直し</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+「43Folders」の例
+</p>
+
+<p>
+アクションや覚えておくべきもののリストは、毎日や毎週あるいは随時な
+ど、見直すことがなければ役に立たない。リストを見直して、やり忘れて
+いるものがあればすぐ着手したほうがよい。またある特定の時点で十分な
+時間とエネルギーがある場合、リストの中から何が今もっともすべきこと
+かを決定し、すぐやるほうがよい。ただし、ぐずぐず先延ばししがちな人
+ならば、リストの中の簡単なものから手をつけて後に大変なものが残りが
+ちである。この解決のためには、リストの上から機械的に順番に着手する
+ようにしたほうがいい。
+</p>
+
+<p>
+GTDでは、最低週に一度、残っているアクションやプロジェクト、連絡待
+ちなどの仕事の進捗や要不要を評価し、新しく入った仕事や次に来る出来
+事などを次々収集・処理・整理してリストに加え、常に新しい状態にしな
+ければならない。
+</p>
+
+<p>
+アレンは「備忘録」をつくり、毎週頭の中から仕事やプロジェクトの記憶
+をすっきり整理してしまうことを勧めている。これは12か月分と31日分の
+43個のフォルダからなるもので、毎日その日の日付のフォルダを開けて仕
+事をこなして空にし、空になったフォルダは次の月のフォルダの中に入れ
+るというものである。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org42d0e3a" class="outline-4">
+<h4 id="org42d0e3a"><span class="section-number-4">3.2.5</span> 実行</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<p>
+どのようなリストやシステムも、それを作ることばかりに時間をかけ、実
+際の仕事を行わないようでは意味がない。以上の方法で頭をすっきりさせ、
+とらなければならないアクションをとることを、簡単に、単純に、楽しい
+ものにできた場合、先伸ばししがちな傾向は少なくなり、「オープン・ルー
+プ」のあまりの多さに圧倒されてげんなりすることも少なくなるであろう。
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8edd815" class="outline-2">
+<h2 id="org8edd815"><span class="section-number-2">4</span> アメリカ人が選ぶ！ 生産性アップのテクニック・ベスト5</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="http://www.lifehacker.jp/2012/05/120514productivityfive.html">http://www.lifehacker.jp/2012/05/120514productivityfive.html</a>
+</p>
+</div>
+
+<div id="outline-container-org25ed918" class="outline-3">
+<h3 id="org25ed918"><span class="section-number-3">4.1</span> Pomodoroテクニック</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+25分にセットしたタイマーを動かすと同時に仕事を始めます。そしてこの25分
+間は仕事に集中し、その間は途中で仕事を止めてはいけません。
+</p>
+
+<p>
+そしてタイマーが鳴ったら5分間の休憩をとります。
+</p>
+
+<p>
+このセットを繰り返し、4セット目ごとに15分から30分の長めに休憩します。
+</p>
+
+<p>
+より短時間で効果的に集中することができるでしょう。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb565c4a" class="outline-3">
+<h3 id="orgb565c4a"><span class="section-number-3">4.2</span> <a href="http://www.lifehacker.jp/cat3/gtd/">Getting Things Done</a></h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+GTDの本質は、*あなたのタスクやアイデアを頭の中から出してすぐに整理して、
+把握や管理をしやすくすることです*。
+</p>
+
+<p>
+GTDが勧めるのは、タスクを優先順位順
+に従い「*すぐに片付けられるものはすぐに終わらせ、手間のかかるものは分
+けて早く終わるものから先に処理する*」こと。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge35cd87" class="outline-3">
+<h3 id="orge35cd87"><span class="section-number-3">4.3</span> Don't Break the Chain</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+<a href="http://lifehacker.com/5886128/how-seinfelds-productivity-secret-fixed-my-procrastination-problem">Seinfeldの生産性をアップするテクニック（Don'tBreak the Chain）</a>大切なこ
+とを続けるため」や「目標を達成するため」に、自然の流れに沿って簡単に実
+行できる方法です。
+</p>
+
+<p>
+<a href="http://dontbreakthechain.com/">実践したいことをカレンダーに記入して色をつけていくだけ</a>。
+そうすれば、そのことを持続するモチベーションが上がります。この一
+連の流れを崩してはいけません。このテクニックを始めるのに必要なものは*
+カレンダーとペンのみ*です。カレンダーを見れば、どれだけ続けてそれを行っ
+ているかが一目瞭然です。Adam氏が<a href="http://lifehacker.com/5886128/how-seinfelds-productivity-secret-fixed-my-procrastination-proble">彼自身の記事</a>で「このテクニックは休みの
+日の計画を立てる要領でモチベーションを上げることができる方法なのだ」と
+語っています。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7341c7a" class="outline-3">
+<h3 id="org7341c7a"><span class="section-number-3">4.4</span> <a href="http://www.actionmethod.com/">アクション・メソッド</a></h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+<a href="http://www.actionmethod.com/">http://www.actionmethod.com/</a>
+</p>
+
+<p>
+このテクニックの目的は、
+</p>
+
+<p>
+「あなたのタスクを完了するために必要なすべての作業（アクション・ステッ
+プ）」を会議やアイデア提案の場などでまとまった形にして示すことです*。
+</p>
+
+<p>
+すべてのアクションステップにはタスクが付帯します。そしてそれらは「リファ
+レンス」や「アクション・ステップ」とは区別します。なかには、このように
+タスクをすべてまとめてしまうことやカテゴリを取り払ってしまう方法が嫌い
+な方もいるでしょう。しかし、この方法によりタスクがスッキリし、いつでも
+実行できる「アクション・アイテム」を小分けすることができます。Action
+Methodは、Behance/iOS/Androidなど向けのアプリ、もしくは紙ベースの
+『<a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=Action+Journal">Action Journal</a>』や『<a href="http://www.amazon.com/Action-Runner-Blue-by-Behance/dp/B001C0W7RG/ref=sr_1_1?ie=UTF8&amp;qid=1337062044&amp;sr=8-1">ActionRunner</a>』
+でも実践できます。
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: suzuki@iwate-u.ac.jp 鈴木正幸，非常勤講師</p>
+<p class="date">Created: 2021-11-02 火 09:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

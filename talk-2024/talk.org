@@ -1,0 +1,85 @@
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
+#+TITLE: index コンピュータと数式処理
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
+
+* 資料
+
+** 知的思考の7つのステップ
+
+** わかる
+- [[file:/Volumes/mini2-local/mini2-share/myDocuments/00-読書ノート/わかるとはー読書map.pdf]]
+- [[file:/Volumes/mini2-local/mini2-share/myDocuments/00-読書ノート/わかるとは-めも.pdf]]
+
+  
+** 思考の数学的理解
+数学は言葉である
+- 集合と構造 情報
+- 集合と関数 手続きと抽象化
+- 集合と関係 分類と構造
+- 数理論理学 文章と論理
+  - 命題 (関数，述語，論理式)
+  - 推論規則
+  - 定義，前提，証明，定理
+- グラフ 構造の可視化
+
+** 思考の可視化
+- グラフで考える
+
+- マインドマップ
+  - 放射的思考 発想
+  - アウトライン構造 論理的繋り
+
+** 連続な数学を離散的に捉える
+- 意味を捉えるために可算的な捉え方が必要
+- 計算は点を用いて行なわれる
+- 数値も有限値，記憶も有限個
+
+*** 連続関数の微分を折れ線グラフでの差分へ
+
+
+* [[./digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
+  - 知識は構造, 知的作業は構造化されたプロセス
+       - アウトライナー
+       - マインドマップ
+
+     - [[./org/comp_thinking.org][計算論的思考]]
+       - GTD Getting Things Done
+       - 文芸的プログラミング
+       - 知的作業を見える化し，
+       - 作業の流れを手続き化し，
+       - コストを見積り，
+       - 作業全体をデザインしよう
+ 
+     - [[./org/web.org][Web進化論]]
+       - 集合知
+       - 知識の構造化
+
+* [[./org/math-soft.org][数学ソフトウェア]]
+
+     - フリーソフトウェアを利用しよう
+     - 数式処理システムと計算機代数アルゴリズム
+
+* 規則と簡約化と検索のための計算機代数
+
+   - [[./groebner.org][グレブナー基底] 計算機代数アルゴリズムの紹介]]
+
+
+
+
+   
+   
+
