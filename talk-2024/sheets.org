@@ -15,7 +15,8 @@
 #+LATEX_HEADER:\setlength{\topmargin}{-2cm}
 #+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-本文書URL: https://github.com/masayuki054/comp_and_cal/talk-2024/sheet.org
+本文書URL: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/talk-2024 at master · masayuki054/comp_and_cal · GitHub]]
+
 #+title コンピュータと数式処理
 
 * あらすじ -- 数理情報科学研究のための情報計算リテラシ
@@ -28,6 +29,8 @@
 大きく次の点についてお話しします。
 
 - ICTリテラシと思考技術
+
+  ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) します。
 
   情報処理は，結局，思考過程であり思考技術です。
   知的な思考技術について紹介します。
@@ -93,7 +96,7 @@
        - コストを見積り，
        - 作業全体をデザインしよう
  
-     - [[./org/web.org][Web進化論]]
+     - [[./web.org][Web進化論]]
        - 集合知
        - 知識の構造化
   
