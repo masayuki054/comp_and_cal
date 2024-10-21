@@ -1,8 +1,8 @@
 #+startup: indent
 #+options: ^:{}
 #+options: toc:nil
-#+setupfile: info/index-びow-header.setup
-#+include: info/common-header.org
+#+setupfile: ../info/index-びow-header.setup
+#+include: ../info/common-header.org
 
 #+LATEX_CLASS: jarticle
 #+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
@@ -15,9 +15,9 @@
 #+LATEX_HEADER:\setlength{\topmargin}{-2cm}
 #+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-本文書URL: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/talk-2024 at master · masayuki054/comp_and_cal · GitHub]]
 
-#+title コンピュータと数式処理
+
+#+title: コンピュータと数式処理 [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/talk-2024at master · masayuki054/comp_and_cal · GitHub]]
 
 * あらすじ -- 数理情報科学研究のための情報計算リテラシ
 
@@ -38,7 +38,7 @@
   考えること書くことを支援するデジタルツールについて，思考法などを含め
   てお話しします。
 
-- 離散的な計算の原理 (理解とプログラミングのために)
+- 離散的な計算の原理 (数学的理解とプログラミングのために)
   
   微分を例に，連続関数を離散的に捉え，コンピュータで計算可能にするとと
   もに，直観的・図的に計算を表現することを考えます。
@@ -80,8 +80,8 @@
 7. 表現の思考
 
 ** わかるとはについての手書きメモ
-- [[file:/Volumes/mini2-local/mini2-share/myDocuments/00-読書ノート/わかるとはー読書map.pdf]]
-- [[file:/Volumes/mini2-local/mini2-share/myDocuments/00-読書ノート/わかるとは-めも.pdf]]
+- [[./map-images/]] の中の understanding-imap.pdf
+- [[./map-images/]] の中の understanding-memo.pdf
 
 * [[./digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
   - 知識は構造, 知的作業は構造化されたプロセス
@@ -119,14 +119,13 @@
     
 **** 知的思考の技術
 - 思考の見える化
-  目的探索，観察，発想，分類，構造化，意志決定，表現
 
+  目的探索，観察，発想，分類，構造化，意志決定，表現
 
 *** 情報リテラシーは思考法である
 - 生のデータを意味付けして情報になる
 - 知的情報リテラシーの技術
   - 情報の収集，加工，分析，蓄積，生成
-
 
 *** 理解の記録(外化，メモや文書)
 
@@ -204,7 +203,8 @@
 
 *** 連続関数の微分を折れ線グラフでの差分へ
 
-[[./関連文書/微分-連続から離散へ.pdf]]
+[[./dovs/]] フォルダの中の diff-descrete.pdf に手書きの資料があります。
+
 - 微分の意味(図)とインタフェース式
 - 二階微分の図的解釈とインタフェース式
 - 多階微分の図的解釈とインタフェース式
@@ -212,7 +212,9 @@
 - 関数の変化とテイラー展開
 - 二変数関数の微分の意味とインタフェース式
 - 二変数関数の二階微分の意味とインタフェース式
+- 微積分学の基本定理の図的理解
 
+合成関数の描画法・微分の意味，逆関数の微分，関係の微分と微分方程式など
 
 ** 計算科学とは
 
@@ -268,12 +270,11 @@
 *** MathLibre  [[https://www.geogebra.org/m/hShSTr6e][KNOPPIX/Math->MathLibre]] 
 - DVD起動Linuxで，
 - オープン・ソースで，
-
 - フリーな数学ソフトウェアを収録 
 
   [[https://www.geogebra.org/m/hShSTr6e][数学ソフトウェア紹介 - GeoGebraBook]]
 
-**** [[https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2][数学ソフトウェアとは - Wikipedia]] 
+*** [[https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2][数学ソフトウェアとは - Wikipedia]] 
 1) ソフトウェア電卓  
      [[http://ja.numberempire.com/][数の帝国 - 数学ツール]] 数の帝国は、強力な数学ツールと数について
      の知識のコレクションです。
@@ -347,6 +348,17 @@ plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 - [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
 - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
 
+
+** python と sympy による数式計算の例
+
+
+
+- Google Colabを使った，
+- python プログラミング言語による記号・数式計算
+- 文書作成とプログラミングが同一文書で行なえる (文芸的プログラミング)
+
+[[https://colab.research.google.com/drive/13-xrzx125aD3L4mzB5BhOHAUyLeV6kCX][python-calc.ipynb - Colab]] 
+
 ** 数式処理アルゴリズム
 *** 不定積分入門
 [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
@@ -377,7 +389,7 @@ wikipedia の参考文献にあった
 - 思考法について，論理的思考，批判的思考，発想，抽象化と詳細化，
   を紹介し，それらを支援してくれる，デジタルツール，マインドマップとア
   ウトライナーを紹介しました。
-
+  
 - 計算科学のためのフリーソフトウェアについて，どんな分野がありどんなア
   プリがあるかについて紹介しました。
 
