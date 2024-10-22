@@ -17,7 +17,8 @@
 
 
 
-#+title: コンピュータと数式処理 [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/talk-2024at master · masayuki054/comp_and_cal · GitHub]]
+#+title: 数理情報科学: コンピュータと数式処理
+#+title: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/talk-2024at master · masayuki054/comp_and_cal · GitHub]]
 
 * あらすじ -- 数理情報科学研究のための情報計算リテラシ
 
@@ -28,9 +29,9 @@
 本講では，理工学研究分野での情報計算リテラシとして，
 大きく次の点についてお話しします。
 
-- ICTリテラシと思考技術
+- 情報計算リテラシと思考技術
 
-  ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) します。
+  情報計算の基盤について概観 (添付の mindmap 図) します。
 
   情報処理は，結局，思考過程であり思考技術です。
   知的な思考技術について紹介します。
@@ -49,6 +50,8 @@
 
 - 数学的計算を支援するソフトウェアについて紹介します。
 
+- python, Google colab を利用した，微積分計算ノートを紹介します。
+
 - 計算，検索，探索，数理とはについて考えるために，数式処理における重要
   なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
   いて概観します。
@@ -65,6 +68,7 @@
   
 ** 関連する数学の講義など
 - 数理のひろがり [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
+  - [[./maps/数理のひろかり.xmind]]
 - [[https://masayuki054.hatenablog.com/entry/2024/04/09/225336#orgfce19b2][微分積分準備講座 2024 - masayuki054's diary]]
   - [[https://drive.google.com/drive/folders/1fYNIqpHaGYXFeuLxqppoT9cEUCEcmbXp][2024-微分積分補助講義 - Google ドライブ]]
 - 微分に関する [[https://drive.google.com/drive/folders/1lY6qb2Z02iAD_WdesHNMpmsGecY3ynDa][図 - Google ドライブ]]
@@ -82,13 +86,14 @@
 ** わかるとはについての手書きメモ
 - [[./map-images/]] の中の understanding-imap.pdf
 - [[./map-images/]] の中の understanding-memo.pdf
+- [[./maps/わかるとは章立て.xmind]]
 
 * [[./digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
   - 知識は構造, 知的作業は構造化されたプロセス
        - アウトライナー
        - マインドマップ
 
-     - [[./org/comp_thinking.org][計算論的思考]]
+     - [[./comp_thinking.org][計算論的思考]]
        - GTD Getting Things Done
        - 文芸的プログラミング
        - 知的作業を見える化し，
@@ -96,7 +101,7 @@
        - コストを見積り，
        - 作業全体をデザインしよう
  
-     - [[./web.org][Web進化論]]
+     - [[./web.org][Web進化論]]  [[./maps/Web進化論.xmind]]
        - 集合知
        - 知識の構造化
   
@@ -105,30 +110,30 @@
 - 基本技術は思考法, 文書作成も思考法
 - 思考は情報処理プロセス
 
-*** 考える，記憶する，こととは？
+** 考える，記憶する，理解する，こととは？
 
 - 思考の基本 抽象化と詳細化 , So What, Why so, MECE
 - 思考の記録 MECE, 構造化，GTD
 
-**** いろいろな思考法
+*** いろいろな思考法がる
+
 - 論理的思考
 - 批判的思考
 - 発想法
 - 水平思考
 - 計算論的思考
     
-**** 知的思考の技術
-- 思考の見える化
+*** 知的思考の技術がある
+- 思考プロセスの見える化
 
   目的探索，観察，発想，分類，構造化，意志決定，表現
 
-*** 情報リテラシーは思考法である
+*** 情報リテラシーは思考法である 
 - 生のデータを意味付けして情報になる
 - 知的情報リテラシーの技術
   - 情報の収集，加工，分析，蓄積，生成
 
 *** 理解の記録(外化，メモや文書)
-
 思考の目的は理解すること
 - わかるとは [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/#outline-container-orgeb1c772][メモと思考のためのICTの活用]] 
 
@@ -143,7 +148,6 @@
       こっちが外化, これがメモ
     - 自分の情報を他者が理解できる形にすること
       第三者への情報 客観化，文書化
-
 - 理解と知識と外化
   - 小さな理解と大きな理解，整合性の問題
   - 理解の再帰性
@@ -155,7 +159,6 @@
 - 人と計算機の共同作業の実現，互いに補完と拡張
 
 ** 知的思考の技術
-
 - 思考過程の見える化 [[https://masayuki054.github.io/tools_for_thinking_and_memo/i_maps/%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E5%8B%89%E5%BC%B7_imap.pdf][知的思考の技術勉強_imap.pdf]]
 - 発想法，水平思考，放射思考
 - 論理的思考法，批判的思考
@@ -166,11 +169,12 @@
 - 計算論的思考 [[https://masayuki054.github.io/cloud_and_information_literacy/docs/computational_thinking.html][クラウドと情報リテラシー 計算論的思考]]
 - GTD (Getting Things Done)
   - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%83%95%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AEGTD_imap.pdf][僕にとってのGTD_imap.pdf]]
-    
 - ストレスフリー
 
 ** 思考の数学的理解
-数学は言葉である
+[[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
+
+数学は言葉である [[./maps/数理のひろがり.xmind]] 
 - 集合と構造 情報
 - 集合と関数 手続きと抽象化
 - 集合と関係 分類と構造
@@ -179,12 +183,13 @@
   - 推論規則
   - 定義，前提，証明，定理
 - グラフ 構造の可視化
+  - [[https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org][mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub]]
 
 ** 思考のためのデジタルツール
-考えることをサポートするデジタルツールがある
+考えることをサポートするデジタルツールがある [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][メモと思考のためのICTの活用]]
 **** 思考の可視化
 - グラフで考える
-
+  - [[https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org][mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub]]
 - マインドマップ
   - 放射的思考 発想
   - アウトライン構造 論理的繋り
@@ -203,7 +208,7 @@
 
 *** 連続関数の微分を折れ線グラフでの差分へ
 
-[[./dovs/]] フォルダの中の diff-descrete.pdf に手書きの資料があります。
+[[./docs/]] フォルダの中の diff-descrete.pdf に手書きの資料があります。
 
 - 微分の意味(図)とインタフェース式
 - 二階微分の図的解釈とインタフェース式

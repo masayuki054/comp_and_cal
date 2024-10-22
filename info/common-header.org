@@ -1,5 +1,5 @@
 #+OPTIONS: ^:{}
 #+PROPERTY:  header-args :padline no
 #+title: 
-#+author: suzuki@iwate-u.ac.jp
+#+author: 鈴木正幸 suzuki@iwate-u.ac.jp (学修支援担当@図書館)
 #+HTML_MATHJAX:  path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"

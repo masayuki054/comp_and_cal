@@ -1,4 +1,4 @@
-% Created 2024-10-21 月 21:09
+% Created 2024-10-22 火 10:19
 % Intended LaTeX compiler: pdflatex
 \documentclass[dvipdfmx,11pat]{jarticle}
 \usepackage[utf8]{inputenc}
@@ -17,14 +17,14 @@
 \setlength{\evensidemargin}{-1cm}
 \setlength{\topmargin}{-2cm}
 \setlength{\textheight}{26cm}
-\author{suzuki@iwate-u.ac.jp}
+\author{鈴木正幸 suzuki@iwate-u.ac.jp (学修支援担当@図書館)}
 \date{\today}
-\title{ コンピュータと数式処理 \href{https://github.com/masayuki054/comp\_and\_cal/tree/master/talk-2024}{comp\_and\_cal/talk-2024at master · masayuki054/comp\_and\_cal · GitHub}}
+\title{ 数理情報科学: コンピュータと数式処理 \href{https://github.com/masayuki054/comp\_and\_cal/tree/master/talk-2024}{comp\_and\_cal/talk-2024at master · masayuki054/comp\_and\_cal · GitHub}}
 \begin{document}
 
 \maketitle
 \section{あらすじ -- 数理情報科学研究のための情報計算リテラシ}
-\label{sec:org7687947}
+\label{sec:orgcf4795f}
 
 情報計算リテラシという言葉で，コンピュータやインターネットを用いた，情
 報や文書の読み書き共有，多大なデータの計算や表示など，を行なう際の，考
@@ -34,9 +34,9 @@
 大きく次の点についてお話しします。
 
 \begin{itemize}
-\item ICTリテラシと思考技術
+\item 情報計算リテラシと思考技術
 
-ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) します。
+情報計算の基盤について概観 (添付の mindmap 図) します。
 
 情報処理は，結局，思考過程であり思考技術です。
 知的な思考技術について紹介します。
@@ -55,18 +55,20 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 
 \item 数学的計算を支援するソフトウェアについて紹介します。
 
+\item python, Google colab を利用した，微積分計算ノートを紹介します。
+
 \item 計算，検索，探索，数理とはについて考えるために，数式処理における重要
 なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
 いて概観します。
 \end{itemize}
 \section{参考資料}
-\label{sec:org1caa3eb}
+\label{sec:orgddf3c49}
 
 \subsection{私的研究興味の内容 \url{./interests.org} 参照}
-\label{sec:org6a36a4d}
+\label{sec:orgec66225}
 
 \subsection{思考と情報処理についての講義}
-\label{sec:org633edc9}
+\label{sec:org61f8ba0}
 \href{https://masayuki054.hatenablog.com/entry/2019/12/09/102219}{放送大学 面接講義 (岩手 2020, 2019, 2018) - masayuki054's diary}
 \begin{itemize}
 \item \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/}{メモと思考のためのICTの活用}
@@ -74,9 +76,12 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item \href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/talk.html}{メモと思考とデジタルツール}
 \end{itemize}
 \subsection{関連する数学の講義など}
-\label{sec:org01f8230}
+\label{sec:orgf995c1a}
 \begin{itemize}
 \item 数理のひろがり \href{https://github.com/masayuki054/mathematics/tree/main}{GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ}
+\begin{itemize}
+\item \url{./maps/数理のひろかり.xmind}
+\end{itemize}
 \item \href{https://masayuki054.hatenablog.com/entry/2024/04/09/225336\#orgfce19b2}{微分積分準備講座 2024 - masayuki054's diary}
 \begin{itemize}
 \item \href{https://drive.google.com/drive/folders/1fYNIqpHaGYXFeuLxqppoT9cEUCEcmbXp}{2024-微分積分補助講義 - Google ドライブ}
@@ -84,7 +89,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 微分に関する \href{https://drive.google.com/drive/folders/1lY6qb2Z02iAD\_WdesHNMpmsGecY3ynDa}{図 - Google ドライブ}
 \end{itemize}
 \subsection{知的思考の7つのステップ}
-\label{sec:org6ea9e28}
+\label{sec:org515d555}
 \href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/i\_maps/\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E5\%8B\%89\%E5\%BC\%B7\_imap.pdf}{知的思考の技術勉強\_imap.pdf}
 \begin{enumerate}
 \item 目的探索の思考
@@ -96,13 +101,14 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 表現の思考
 \end{enumerate}
 \subsection{わかるとはについての手書きメモ}
-\label{sec:org62bd302}
+\label{sec:orga60ce41}
 \begin{itemize}
 \item \url{./map-images/} の中の understanding-imap.pdf
 \item \url{./map-images/} の中の understanding-memo.pdf
+\item \url{./maps/わかるとは章立て.xmind}
 \end{itemize}
 \section{\href{./digital\_tools.org}{思考とメモと文書のためのデジタル・ツール}}
-\label{sec:org9537c6e}
+\label{sec:orge01927d}
 \begin{itemize}
 \item 知識は構造, 知的作業は構造化されたプロセス
 \begin{itemize}
@@ -111,7 +117,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 
 \begin{itemize}
-\item \href{./org/comp\_thinking.org}{計算論的思考}
+\item \href{./comp\_thinking.org}{計算論的思考}
 \begin{itemize}
 \item GTD Getting Things Done
 \item 文芸的プログラミング
@@ -121,7 +127,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 作業全体をデザインしよう
 \end{itemize}
 
-\item \href{./web.org}{Web進化論}
+\item \href{./web.org}{Web進化論}  \url{./maps/Web進化論.xmind}
 \begin{itemize}
 \item 集合知
 \item 知識の構造化
@@ -129,22 +135,22 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{itemize}
 \section{研究のための情報リテラシー}
-\label{sec:orgfdf26dc}
+\label{sec:org42021c8}
 \begin{itemize}
 \item 思考し実験し記録し理解し文書を作成するためのリテラシ
 \item 基本技術は思考法, 文書作成も思考法
 \item 思考は情報処理プロセス
 \end{itemize}
-\subsubsection{考える，記憶する，こととは？}
-\label{sec:org504bb51}
+\subsection{考える，記憶する，理解する，こととは？}
+\label{sec:orge7d9629}
 
 \begin{itemize}
 \item 思考の基本 抽象化と詳細化 , So What, Why so, MECE
 \item 思考の記録 MECE, 構造化，GTD
 \end{itemize}
-\begin{enumerate}
-\item いろいろな思考法
-\label{sec:org4c1b371}
+\subsubsection{いろいろな思考法がる}
+\label{sec:orgf815f95}
+
 \begin{itemize}
 \item 論理的思考
 \item 批判的思考
@@ -152,16 +158,15 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 水平思考
 \item 計算論的思考
 \end{itemize}
-\item 知的思考の技術
-\label{sec:orgbae3721}
+\subsubsection{知的思考の技術がある}
+\label{sec:org9cde7bc}
 \begin{itemize}
-\item 思考の見える化
+\item 思考プロセスの見える化
 
 目的探索，観察，発想，分類，構造化，意志決定，表現
 \end{itemize}
-\end{enumerate}
 \subsubsection{情報リテラシーは思考法である}
-\label{sec:org96105f5}
+\label{sec:orgf319902}
 \begin{itemize}
 \item 生のデータを意味付けして情報になる
 \item 知的情報リテラシーの技術
@@ -170,8 +175,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{itemize}
 \subsubsection{理解の記録(外化，メモや文書)}
-\label{sec:org123ec4f}
-
+\label{sec:orgaa9fa78}
 思考の目的は理解すること
 \begin{itemize}
 \item わかるとは \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/\#outline-container-orgeb1c772}{メモと思考のためのICTの活用}
@@ -195,7 +199,6 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 第三者への情報 客観化，文書化
 \end{itemize}
 \end{itemize}
-
 \item 理解と知識と外化
 \begin{itemize}
 \item 小さな理解と大きな理解，整合性の問題
@@ -203,7 +206,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{itemize}
 \subsubsection{コンピュータとインターネットの意味}
-\label{sec:orgb95ed1c}
+\label{sec:orgcec3255}
 思考と記憶を補助し，外化を促すこと
 \begin{itemize}
 \item 情報を保存し共有すること
@@ -211,8 +214,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 人と計算機の共同作業の実現，互いに補完と拡張
 \end{itemize}
 \subsection{知的思考の技術}
-\label{sec:orgfa144d9}
-
+\label{sec:org2caa65f}
 \begin{itemize}
 \item 思考過程の見える化 \href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/i\_maps/\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E5\%8B\%89\%E5\%BC\%B7\_imap.pdf}{知的思考の技術勉強\_imap.pdf}
 \item 発想法，水平思考，放射思考
@@ -223,19 +225,20 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{itemize}
 \subsection{プロセス管理法}
-\label{sec:orgc9a7688}
+\label{sec:orga55be64}
 \begin{itemize}
 \item 計算論的思考 \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/docs/computational\_thinking.html}{クラウドと情報リテラシー 計算論的思考}
 \item GTD (Getting Things Done)
 \begin{itemize}
 \item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/i\_maps/\%E5\%83\%95\%E3\%81\%AB\%E3\%81\%A8\%E3\%81\%A3\%E3\%81\%A6\%E3\%81\%AEGTD\_imap.pdf}{僕にとってのGTD\_imap.pdf}
 \end{itemize}
-
 \item ストレスフリー
 \end{itemize}
 \subsection{思考の数学的理解}
-\label{sec:org0a681c1}
-数学は言葉である
+\label{sec:orgcba00ed}
+\href{https://github.com/masayuki054/mathematics/tree/main}{GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ}
+
+数学は言葉である \url{./maps/数理のひろがり.xmind} 
 \begin{itemize}
 \item 集合と構造 情報
 \item 集合と関数 手続きと抽象化
@@ -247,16 +250,21 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 定義，前提，証明，定理
 \end{itemize}
 \item グラフ 構造の可視化
+\begin{itemize}
+\item \href{https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org}{mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub}
+\end{itemize}
 \end{itemize}
 \subsection{思考のためのデジタルツール}
-\label{sec:orgcfbb24c}
-考えることをサポートするデジタルツールがある
+\label{sec:org6339e07}
+考えることをサポートするデジタルツールがある \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/}{メモと思考のためのICTの活用}
 \begin{enumerate}
 \item 思考の可視化
-\label{sec:orgc8133fa}
+\label{sec:orga5a0eaf}
 \begin{itemize}
 \item グラフで考える
-
+\begin{itemize}
+\item \href{https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org}{mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub}
+\end{itemize}
 \item マインドマップ
 \begin{itemize}
 \item 放射的思考 発想
@@ -265,7 +273,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{enumerate}
 \section{計算リテラシ}
-\label{sec:org20be9bc}
+\label{sec:orgc595b4c}
 \begin{itemize}
 \item 計算科学と数学ソフトウェア
 \item プログラミングによる計算プロセス管理
@@ -276,16 +284,16 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{itemize}
 \subsection{連続な数学を離散的に捉える}
-\label{sec:org69d922f}
+\label{sec:org5758170}
 \begin{itemize}
 \item 意味を捉えるために可算的な捉え方が必要
 \item 計算は点を用いて行なわれる
 \item 数値も有限値，記憶も有限個
 \end{itemize}
 \subsubsection{連続関数の微分を折れ線グラフでの差分へ}
-\label{sec:org565145a}
+\label{sec:org921988a}
 
-\url{./dovs/} フォルダの中の diff-descrete.pdf に手書きの資料があります。
+\url{./docs/} フォルダの中の diff-descrete.pdf に手書きの資料があります。
 
 \begin{itemize}
 \item 微分の意味(図)とインタフェース式
@@ -300,7 +308,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 
 合成関数の描画法・微分の意味，逆関数の微分，関係の微分と微分方程式など
 \subsection{計算科学とは}
-\label{sec:org7c2279d}
+\label{sec:org3491d8d}
 
 \href{https://ja.wikipedia.org/wiki/\%E8\%A8\%88\%E7\%AE\%97\%E7\%A7\%91\%E5\%AD\%A6}{計算科学 - Wikipedia} とは
 
@@ -314,17 +322,17 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 対象領域をモデル化したプログラムやアプリケーションソフトウェアを開発し、
 それに様々なパラメータを与えて実行する。
 \subsubsection{数値解析}
-\label{sec:org893b5e7}
+\label{sec:orgd15f756}
 \begin{itemize}
 \item 精度保証付き数値計算
 \item 数値線形代数
 \item 常微分方程式の数値解法、偏微分方程式の数値解法、数値積分
 \end{itemize}
 \subsubsection{数値シミュレーション}
-\label{sec:org7277051}
+\label{sec:org34f3c1b}
 \begin{enumerate}
 \item 目的
-\label{sec:org98a68df}
+\label{sec:org0a38529}
 \begin{itemize}
 \item 既知の事象を再構築して理解する（例えば、地震、津波などの自然災害）。
 \item 既知のシナリオを最適化する（例えば、工学的プロセスや産業プロセス）。
@@ -332,7 +340,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 気象、飛行機の周辺の気流、自動車衝突時の車体の状況、銀河系の星々の動き、爆発物など
 \end{itemize}
 \item 数値シミュレーションプログラムの実行
-\label{sec:orgb39077f}
+\label{sec:org2afaf0a}
 \begin{itemize}
 \item コンピュータのメモリ内に論理的メッシュ（網目）を形成し、個々の領域が実世界
 のモデルの空間的な一部分を表すようになっている。
@@ -345,11 +353,11 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{enumerate}
 \subsubsection{科学的方法}
-\label{sec:org2dcdba0}
+\label{sec:org413a944}
 計算科学は科学の第三の形態で、実験/観測と理論の間を補間するもの、とい
 う主張もある。
 \subsubsection{有限要素法（FEM）}
-\label{sec:org65a02c2}
+\label{sec:org22a0082}
 偏微分方程式ソルバ (PDE)の 最も一般的な数値的解法
 
 \begin{itemize}
@@ -361,9 +369,9 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 線形 / 非線形 / 座屈 / 熱 / 動的 / 疲労解析で使用できます。
 \end{itemize}
 \subsection{数学ソフトウェア}
-\label{sec:org46fdd24}
+\label{sec:orgc25e67e}
 \subsubsection{MathLibre  \href{https://www.geogebra.org/m/hShSTr6e}{KNOPPIX/Math->MathLibre}}
-\label{sec:org3c2c359}
+\label{sec:org4133cf6}
 \begin{itemize}
 \item DVD起動Linuxで，
 \item オープン・ソースで，
@@ -372,7 +380,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \href{https://www.geogebra.org/m/hShSTr6e}{数学ソフトウェア紹介 - GeoGebraBook}
 \end{itemize}
 \subsubsection{\href{https://ja.wikipedia.org/wiki/\%E6\%95\%B0\%E5\%AD\%A6\%E3\%82\%BD\%E3\%83\%95\%E3\%83\%88\%E3\%82\%A6\%E3\%82\%A7\%E3\%82\%A2}{数学ソフトウェアとは - Wikipedia}}
-\label{sec:orgb0ed0ba}
+\label{sec:orge64042d}
 \begin{enumerate}
 \item ソフトウェア電卓  
 \href{http://ja.numberempire.com/}{数の帝国 - 数学ツール} 数の帝国は、強力な数学ツールと数について
@@ -390,7 +398,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \end{enumerate}
 \subsubsection{数式処理システム \href{http://www.sagemath.org}{Sage} とは}
-\label{sec:orgf4ed4fb}
+\label{sec:orgbf17906}
 \href{http://www.gregorybard.com/Sage.html}{Gregory V. Bard} 曰く
 \begin{itemize}
 \item フリーでオープン・ソースで，
@@ -400,14 +408,14 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \end{itemize}
 \begin{enumerate}
 \item Sage on the Web(1)
-\label{sec:org4736839}
+\label{sec:org1b32611}
 \begin{itemize}
 \item Webで動く，
 \item ノートやデスクトップPCへのインストールは必要ない。
 \end{itemize}
 \begin{enumerate}
 \item クラウド・サーバ
-\label{sec:orgfed64a7}
+\label{sec:orgdf9c8cb}
 \href{http://www.cocalc.com/}{CoCalc.com Sage クラウド・サーバ} 
 \begin{itemize}
 \item 長めの問題向き，
@@ -415,7 +423,7 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item 登録とログインが必要，
 \end{itemize}
 \item セル・サーバ
-\label{sec:org68e97bd}
+\label{sec:orgea49f48}
 \href{http://sagecell.sagemath.org/}{SageMathCell Server}
 \begin{itemize}
 \item 短かめの問題向き
@@ -423,27 +431,27 @@ ICT (情報通信技術) の基盤について概観 (添付の mindmap 図) し
 \item \href{http://www.gregorybard.com/videos/Sage\_part2.swf}{因数分解，3次元プロット}
 \end{itemize}
 \item 例題
-\label{sec:org43e40f8}
+\label{sec:org28f63a5}
 \begin{verbatim}
 x,y = var('x y')
 plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 \end{verbatim}
 
 \phantomsection
-\label{org8df3d32}
+\label{org102810d}
 \begin{verbatim}
 Launched jmol viewer for Graphics3d Object
 \end{verbatim}
 \end{enumerate}
 \item Sagemath アプリ
-\label{sec:orgb3343d7}
+\label{sec:orgea3933e}
 数式処理が，スマホで動くなんて，ほんとにビックリ
 \begin{itemize}
 \item \href{https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8}{Sage Mathを App Store で}
 \item \href{https://play.google.com/store/apps/details?id=org.sagemath.droid\&hl=ja}{Sage Math - Google Play の Android アプリ}
 \end{itemize}
 \item 入門
-\label{sec:orgc7e4a24}
+\label{sec:org794941a}
 \begin{itemize}
 \item \href{http://doc.sagemath.org/html/ja/tutorial/index.html}{Sageチュートリアル.ja} すぐ後で，実行しながら，説明します
 \item \href{http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf}{Sage tutorial-jp.pdf}
@@ -452,7 +460,7 @@ Launched jmol viewer for Graphics3d Object
 \item \href{http://www.sagemath.org/help-video.html}{series of videos/screencasts}
 \end{itemize}
 \item 例題
-\label{sec:orge71a0e7}
+\label{sec:org5867796}
 \begin{itemize}
 \item \href{http://doc.sagemath.org/html/en/constructions/index.html}{プログラムの制作例}
 \item \href{https://wiki.sagemath.org/interact}{対話的なデモリポジトリ} 
@@ -461,13 +469,13 @@ Launched jmol viewer for Graphics3d Object
 \end{itemize}
 \end{itemize}
 \item Sagemath に関する本 (フリー)
-\label{sec:orgb9138a8}
+\label{sec:org359735e}
 \begin{itemize}
 \item \href{http://www.gregorybard.com/Sage.html}{Sage for undergraduates, free pdf}   このページ内に pdf へのリンクが
 \item \href{http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html}{Welcome to the SDSU Sage Tutorial}
 \end{itemize}
 \item Sagemath に関するいろいろなページ
-\label{sec:org4b42fdd}
+\label{sec:org4121477}
 \begin{itemize}
 \item \href{http://sk.sagepub.com/reference}{SAGE Knowledge - Reference} reference の検索
 \item \href{https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118}{Sageに関するリンク集}
@@ -475,13 +483,13 @@ Launched jmol viewer for Graphics3d Object
 \item \url{http://sagemath.org} \url{http://doc.sagemath.org}
 \end{itemize}
 \item Octave との連携
-\label{sec:orgd053694}
+\label{sec:org363e4f6}
 \begin{itemize}
 \item \href{http://www.pwv.co.jp/\%7Etake/TakeWiki/index.php?sage\%2FSage\%E3\%81\%A7Octave\%E3\%82\%92\%E4\%BD\%BF\%E3\%81\%86}{sage/SageでOctaveを使う - PukiWiki}
 \item \href{http://www.inaba-lab.org/wiki/index.php/Octave\%E5\%85\%A5\%E9\%96\%80}{Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki}
 \end{itemize}
 \item \LaTeX{}とSage
-\label{sec:orgae43b3f}
+\label{sec:orgf2d030f}
 \begin{itemize}
 \item オンライン\LaTeX{}サービス  \href{https://oku.edu.mie-u.ac.jp/\~okumura/texonweb/}{\TeX{} を使ってみよう}
 \item \href{https://mytexpert.osdn.jp/index.php?LaTeX\%A4\%CB\%A4\%E8\%A4\%EB\%CF\%C0\%CA\%B8\%BA\%EE\%C0\%AE\%A4\%CE\%BC\%EA\%B0\%FA\%A4\%AD}{\LaTeX{}による論文作成の手引き - MyTeXpert}
@@ -489,7 +497,7 @@ Launched jmol viewer for Graphics3d Object
 \end{itemize}
 \end{enumerate}
 \subsection{python と sympy による数式計算の例}
-\label{sec:org47897eb}
+\label{sec:orgd13946a}
 
 
 
@@ -501,13 +509,13 @@ Launched jmol viewer for Graphics3d Object
 
 \href{https://colab.research.google.com/drive/13-xrzx125aD3L4mzB5BhOHAUyLeV6kCX}{python-calc.ipynb - Colab} 
 \subsection{数式処理アルゴリズム}
-\label{sec:org9209abe}
+\label{sec:org8893fc9}
 \subsubsection{不定積分入門}
-\label{sec:org6d2e4ce}
+\label{sec:org923c2df}
 \href{http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf}{symbolic integration tutorial--issac98.pdf}
 wikipedia の参考文献にあった
 \subsubsection{規則と簡約化と検索のための計算機代数}
-\label{sec:orge453cd0}
+\label{sec:orgf8d5208}
 
 高次多変数代数方程式の解法として別途，資料\url{./gbasis/gbasis.org}を配
 布します。
@@ -521,7 +529,7 @@ wikipedia の参考文献にあった
 多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
 の概念と計算に帰着します。見通しと効率が良くなります。
 \section{まとめ}
-\label{sec:org1641741}
+\label{sec:orgeb7cd2a}
 本講では，理工学研究分野での情報計算リテラシとして，
 以下の点についてお話ししたつもりです:
 
