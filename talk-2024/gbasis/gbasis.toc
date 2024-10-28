@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}方程式を解くとは？}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}基底とは}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}多変数方程式 をどう解くか?}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}パズルと基底}{3}{section.2}%
+\contentsline {section}{\numberline {3}グレブナー基底}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}項の間の順序}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}簡約}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}S多項式}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}グレブナー基底の定義}{5}{subsection.3.4}%
+\contentsline {section}{\numberline {4}グレブナー基底から方程式の根を求める方法}{6}{section.4}%
+\contentsline {section}{\numberline {5}Buchberger算法と並列化}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Buchberger算法の並列性}{8}{subsection.5.1}%
+\contentsline {section}{\numberline {6}並列算法の組合わせによる並列度の向上}{9}{section.6}%
+\contentsline {section}{\numberline {7}\$\mathbf {d}\$-Gr旦bner 基底によるペア並列度の向上}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}\$\mathbf {d}\$-グレブナー基底}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}\$\mathbf {d}\$-グレブナー基底の並列性}{10}{subsection.7.2}%
+\contentsline {section}{\numberline {8}実装と性能(予測)}{10}{section.8}%

@@ -1,0 +1,630 @@
+\documentclass[dvipdfmx,12pt,notheorems]{beamer}
+%%%% 和文用 %%%%%
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}%和文用
+\renewcommand{\kanjifamilydefault}{\gtdefault}%和文用
+
+%%%% スライドの見た目 %%%%%
+%%\usetheme{Madrid}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}%好みに応じてどうぞ）
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamercolor{footline}{fg=black,bg=black}
+%%%%
+
+%%%% 定義環境 %%%%%
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定義}
+\newtheorem{proposition}{命題}
+\newtheorem{lemma}{補題}
+\newtheorem{corollary}{系}
+
+\newtheorem{conjecture}{予想}
+\newtheorem*{remark}{Remark}
+\renewcommand{\proofname}{}
+%%%%%%%%%
+
+%%%%% フォント基本設定 %%%%%
+\usepackage[T1]{fontenc}%8bit フォント
+\usepackage{textcomp}%欧文フォントの追加
+\usepackage[utf8]{inputenc}%文字コードをUTF-8
+\usepackage{otf}%otfパッケージ
+%%\usepackage{lxfonts}%数式・英文ローマン体を Lxfont にする
+\usepackage{bm}%数式太字
+%%%%%%%%%%
+
+%%\include{body}
+\title[略タイトル]{グレブナー基底と高次多変数方程式の解法}%[略タイトル]{タイトル}
+\author[まさゆき]{鈴木 正幸}%[略名前]{名前}
+\institute{岩大・非常勤講師}%[略所属]{所属}
+\date{\today}%日付
+\begin{document}
+
+\begin{frame}[plain]\frametitle{}
+\titlepage %表紙
+
+
+\begin{center}
+{\large 
+変数が多く，\\
+次数が高い，\\
+方程式の解を, \\
+求めるアルゴリズム}
+\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{Contents}
+  \tableofcontents %目次
+\end{frame}
+
+
+\section{方程式を解くとは？} 
+\begin{frame}\frametitle{一次方程式}
+
+ \[a x = b \] 
+  
+\begin{center}
+両辺に，$a^{-1}$ を，左から掛ける:
+\end{center}
+
+ \[ x = a^{-1} b \]
+
+\end{frame}
+
+\begin{frame}\frametitle{連立一次方程式 (系)}
+\[
+    \begin{array}{rcl}
+      a_{11} x_1 + a_{12} x_2 + \ldots & = & b_1,\\
+      &  \cdots &  \\
+      a_{n1} x_1 + a_{n2} x_2 + \ldots & = & b_n
+    \end{array}
+    \]
+\begin{itemize}
+	\item 線形代数, ガウスの消去法
+	\item 一次方程式, $a x = b $ に帰着させる
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{一変数方程式}
+  \[
+  a_n x^n + \cdots + a_0 = b
+  \]
+  
+  \begin{itemize}
+  \item 解の公式, $x^n = c $ に帰着させる.
+  \item 帰着できない時, 数値計算 (ニュートン法) で近似的に求める.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{多変数(代数)方程式(系)}
+  \[
+  \begin{array}{rcl}
+    f_1(x, y, \ldots, z) & = & 0, \\
+    &\cdots&, \\
+    f_n(x, y, \ldots, z) & = & 0
+  \end{array}
+  \]
+  
+\begin{itemize}
+\item 変数消去, 因数分解
+\item 必ず解ける方法を知っていますか？
+\end{itemize}
+\end{frame}
+
+\subsection{数の集合と基底と最大公約数}
+
+\begin{frame}\frametitle{天秤秤の問題}
+\begin{quote}
+天秤秤と, $a$グラムの重りと $b$グラムの重りが無数にあるとします.
+どんな重さが測れるでしょう？
+
+\ \\
+
+あるいは, $c$ グラムを測る事ができますか？
+\end{quote}
+\end{frame}
+
+\begin{frame}\frametitle{数の集合と基底}
+
+\begin{block}{$ P = \left\{ a x + b y | x, y \in {\cal Z} \right\} $}
+
+$a$の倍数と$b$の倍数を加えてできる整数の集合$P$を考えます。
+
+$a$ と $b$ は，$P$ を生成する基底です。
+
+\end{block}
+
+$ c \in P $ ならば問題は解決です。
+
+\begin{block}{$ \left\{ g z | z \in {\cal Z}, g \in P \right\} = P$ となる，$g$ があるか？}
+
+\begin{itemize}
+\item $a$ と $b$ の組合わせで作れる最小の数は，最大公約数 $g$ であ
+り，それの倍数しか$a$ と $b$ の組合わせでは作れません．
+
+\item $ a x + b y = g $となるの$x$と$y$は，ユークリッドの互除法によって求められます．
+
+\item 最大公約数$g$は, $a$ と $b$ の組合わせでできる数の集合の
+{\bf もっとも簡単な基底} となります．
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{
+二つの方程式  $f_1(x)=0, f_2(x)=0$ の共通解は？}
+
+  それぞれの方程式の解を求めて, 共通な解を求めてもいいですが,
+
+  前の議論から，
+
+\begin{itemize}
+\item 二つの式 $f_1(x), f_2(x)$ の組み合わせで
+  できる, 多項式全ての集合を考える:
+
+    \[
+\left\{A(x) f_1(x) + B(x) f_2(x) | A(x), B(x) \mbox{は任意の$x$の多項式}\right\}
+\]
+
+
+\item 最も簡単な(次数の低い)式 (基底) を求め,
+\item その解を求める.
+\end{itemize}  
+\end{frame}
+
+\begin{frame}\frametitle{最大公約多項式}
+\begin{itemize}
+\item この基底は，$f_1(x)$と$f_2(x)$の最大公約多項式($g(x)$)となり,
+  \[
+  \begin{array}{lcr}
+    a(x) f_1(x) + b(x) f_2(x) & = & g(x),\\
+    \deg(a(x)) < \deg(f_2(x)),\\
+    \deg(b(x)) < \deg(f_1(x)) 
+  \end{array}
+  \]
+
+\item $g(x)$, $a(x)$, $b(x)$ はユークリッドの互助法で求められる
+  
+\end{itemize}
+\end{frame}
+
+\subsection{多変数方程式をどう解くか?}
+
+\begin{frame}\frametitle{多変数で高次な方程式をどう解くか?}
+\[
+  \begin{array}{rcl}
+    f_1(x, y, \ldots, z) & = & 0, \\
+    &\cdots&, \\
+    f_n(x, y, \ldots, z) & = & 0
+  \end{array}
+\]
+
+$f_1, \ldots, f_n$ を組合わせでできる任意の多項式の集合を考える:
+
+\[ 
+\left\{ A_1(x, \ldots, z) f_1(x, \ldots, z) + \cdots + A_n(x, \ldots, z)
+ f_n(x, \ldots, z) \right\}
+\]
+
+この集合を$(f_1, ... , f_n)$と表し，$f_1$から$f_n$ が作る
+{\bf イデアル}${\cal I}$と呼ぶ．
+
+${\cal I}$を作ることのできる多項式の組をイデアルの基底と呼びます．
+
+\end{frame}
+
+\begin{frame}\frametitle{都合の良い基底}
+
+方程式を解くのに都合の良い基底を求めることは，
+
+\ \\
+
+同じ解を持つ，より簡単な方程式系への変換となる．
+この基底が例えば，
+
+\[
+(g_1(x, z) =0, g_2(y,z) = 0, \cdots, g_m(z) =0)
+\]
+
+という形で求まれば，
+
+多変数方程式の問題は， 一変数方程式の
+問題に帰着される．
+
+\begin{itemize}
+\item 「このような変形はできるのか」，
+\item 「変形する方針は」，
+\item 「必ず求まるのか」
+\end{itemize}
+
+などが問題となる．
+\end{frame}
+
+\section{パズルと基底と簡約}
+
+\begin{frame}\frametitle{グラス置き換えパズル}
+
+ウィスキーのグラス $W$, ビールのグラス $B$, お酒のグラス $S$ が
+一列に並んでいる.
+
+グラスは次の置き換え規則で, 置き換えて良いとする.
+
+\[
+\mbox{置き換え規則} G \left\{ 
+ \begin{array}{rll}
+B &  \leftarrow\rightarrow  &  W B\\
+BS& \leftarrow\rightarrow   & W  \\
+ \end{array}
+\right.
+\]
+
+\begin{block}{問題}
+\begin{enumerate}
+\item $BSBS$ は $WWWB$ に置き換えできるか？
+\item $BSBBS$ は $BWW$ に置き換えできるか？
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{問題の難しい点}
+\begin{itemize}
+\item できる場合はその置き換えを示せば良いが,
+\item できない事を示す事.
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{パズル解法への道}
+\begin{block}{簡単な方へ置き換える (簡約化)ことにする}
+\[
+\mbox{簡約規則} R \left\{ \begin{array}{rll}
+WB & \rightarrow  &  B\\
+BS & \rightarrow   & W  \\
+	  \end{array}
+\right.
+\]
+\end{block}
+
+\begin{block}{正規形}
+\begin{itemize}
+\item これ以上簡約できないものを{\bf 正規形}と言う
+
+\item 置き換え規則 $G$ で置き換え可能な列の要素は
+      簡約規則 $R$ で同じ正規系を持つか？
+
+\item この性質が成り立てば, 簡約系で正規形が同じであれば, 
+      置き換え系で, 置き換え可能となる.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{簡約規則の追加}
+
+置き換え可能なのに, 同じ正規形を持たない場合は,
+そのような簡約規則を追加すればよい.
+
+例えば, $WBS$ は二つの置き換えが可能:
+
+\[
+\left\{ \begin{array}{rllll}
+WBS & \rightarrow  &  WW\\
+WBS & \rightarrow   & BS & \rightarrow  & W\\
+	  \end{array}
+\right.
+\]
+
+置き換え系では, $WW$ と $W$ は, $WBS$ を通して置き換え可能である
+から, 簡約系で
+
+\[
+WW  \rightarrow   W
+\]
+
+を新しい簡約規則として採用すればいい事になる.
+
+この追加される簡約規則をどうやって見付けるかが問題となる.
+\end{frame}
+
+\begin{frame}\frametitle{新しい規則を見つける}
+\begin{itemize}
+\item 簡約規則の左項中で, 重なりが生ずるような二つの規則を探す.
+
+(この二つの簡約規則を{\bf 危険対}と呼ぶ).
+
+今の場合, $BS$ と $WB$ は 重なりを持つ項, $WBS$ を別の正規形に簡
+約する可能性を持つ.
+
+\item この操作を次々に繰り返し, 危険対が全て同じ簡約形を持つよう
+になった時, 置き換え可能である物は, 全て同じ正規形を持つ事になる.
+\end{itemize}
+
+これを，簡約系の{\bf 完備化}という.
+\end{frame}
+
+\begin{frame}\frametitle{完備な系}
+\begin{itemize}
+\item 正規形は有限ステップで求まる. 
+({\bf 停止性})
+\item ある項の正規形は, 簡約順序によらず同じになる.({\bf 合流性})
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{パズルの答え}
+
+簡約規則 $R$ を完備化すると:
+
+\[
+\mbox{簡約規則} R' \left\{ \begin{array}{rll}
+WB & \rightarrow  &  B\\
+BS & \rightarrow   & W  \\
+WW & \rightarrow   & W  \\
+	  \end{array}
+\right.
+\]
+
+\begin{block}{これでパズルの問題が解ける:}
+\begin{itemize}
+\item $BSBS \rightarrow^* W$, 
+$WWWB \rightarrow^* B$, なので, 置き換え不可
+
+\item $BSBBS \rightarrow^* BW$, 
+$BWWW \rightarrow^* BW$, なので, 置き換え可
+\end{itemize} 
+\end{block}
+\ \\
+\begin{alertblock}{これがどう方程式と関係しているのでしょう？}
+\end{alertblock}
+\end{frame}
+
+\section{グレブナー基底}
+\begin{frame}\frametitle{グレブナー基底}
+
+与えられた方程式$f_i$ の最高順位項を $head(f_i)$ 、残りの項を 
+$rest(f_i)$ とすると, 
+\[ f_i = head(g_i) + rest(g_i)  = 0 \]
+から
+\[ head(g_i) \rightarrow - rest(g_i) \]
+という簡約規則を作る事ができる.
+
+このような簡約系を作るには, 項間の順序, 簡約, 危険対の求め方を,
+方程式用に決める必要がある.
+\end{frame}
+
+\subsection{項の間の順序と簡約}
+\begin{frame}\frametitle{項の間の順序と簡約}
+
+いくつの順序が考えられ, 順序によって完備な簡約系が異る.
+
+\begin{description}
+\item [辞書式順序:]：   $xyz > yz^3 > z^5$ 
+\item [全次数辞書式順序:]  $x^5 > x^4y > x^3yz$ 
+\end{description}
+\end{frame}
+
+\begin{frame}{簡約}
+\begin{block}{簡約}
+ 
+基底の先頭項を残りの項で置き換える簡約規則と見て，
+項をより低順位項で置き換える操作．
+\end{block}
+
+\begin{exampleblock}{$g_1$ を $g_2$ で簡約}
+\begin{itemize}
+
+\item $g_1 = x^4yz - xyz^2~~~(~head(g_1) = x^4yz~~,~~rest(g_1) = xyz^2~)~ $
+
+\item $g_2 = x^3yz - xz^2~~~(~head(g_2) = x^3yz~~,~~rest(g_2) = xz^2)~ $
+
+\[
+\begin{array}{ll}
+g' & = g_1 - ( head(g_1) / head(g_2) ) g_2 \\
+   & = g_1 - ( x^4yz / x^3yz ) g_2 \\
+   & = x^2z^2 - xyz^2
+\end{array}
+\]
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\begin{block}{S多項式}
+
+新たな簡約規則を得るための計算．
+
+２つの多項式$f_1,f_2$のS多項式を$Sp(f_1,f_2)$と書き、以下のように計算する。
+\[
+Sp(f_1,f_2)= \frac{lcm}{head(f_1)} f_1 - \frac{lcm}{head(f_2)}f_2 
+\]
+\end{block}
+%%\end{frame}
+
+%%\begin{frame}
+\begin{exampleblock}{}
+ \[
+ \begin{array}{lcrr}
+ g_1 & = & x^3yz - xz^2, & head(g_1) = x^3yz,\\
+ g_2 & = & x^2y^2 - z^2, & head(g_2) = x^2y^2
+ \end{array}
+ \]
+ \[
+ lcm(head(g_1), head(g_2)) = x^3y^2z
+ \]
+ \[
+ \begin{array}{lcr} 
+  Sp(g_1,g_2) & = & ( lcm / head(g_1) ) g_1 - ( lcm / head(g_1)) g_2 \\
+  & = & ( x^3y^2z / x^3yz ) g_1 - ( x^3y^2z / x^2y^2 ) g_2 \\
+  & = & -xyz^2 + xz^3
+ \end{array}
+\]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}\frametitle{グレブナー基底の定義}
+
+イデアル${\cal I}$の基底を$ G = \{ f_1,\cdots,f_n \} $とする。
+
+$F$を可能な限りM簡約した結果を$F'$とし，
+
+\[F \stackrel{G}{\longmapsto} F' \] と表す.
+
+\begin{block}{グレブナー基底$ G $l}
+
+${\cal I}$の任意の要素 $f$に対し，
+
+\[
+	f \stackrel{G}{\longmapsto} 0 
+\]
+\end{block}
+\ \\
+$ G $がグレブナー基底の時，$f \stackrel{\psi}{\longmapsto} f' $を計算
+し，$f'=0$を調べることで、$f \in {\cal I}$であるかを簡単に決定できる.
+\end{frame}
+
+\begin{frame}
+\begin{exampleblock}{$f_1,f_2,f_3$ のグレブナー基底計算(全次数辞書式順序)}
+
+\[ \left\{
+\begin{array}{l}
+f_1 = 2{x_1}^3x_2 +6{x_1}^3-2{x_1}^2-x_1x_2-3x_1-x_2+3\vspace{.2in}\\
+f_2 = {x_1}^3x_2 + 3{x_1}^3 + {x_1}^2x_2 + 2{x_1}^2\vspace{.2in}\\
+f_3 = 3{x_1}^2x_2 + 9{x_1}^2 + 2x_1x_2 + 5x_1 + x_2 -3
+\end{array}
+\right. \]
+\end{exampleblock}
+%%\end{frame}
+
+%%\begin{frame}
+\begin{exampleblock}{s-多項式}
+\[
+\begin{array}{ll} 
+Sp(f_1,f_2) &= ( lcm / head(f_1) ) f_1 - ( lcm / head(f_1)) f_2 \\
+            &= ( 2{x_1}^3x_2 / 2{x_1}^3x_2 ) f_1 - ( 2{x_1}^3x_2 / {x_1}^3x_2 ) f_2 \\
+	    &= -2x_1^2 x_2 -6x_1^2 -x_1 x_2 - 3x_1 -x_2 +3 \\
+	    &= f'_4
+\end{array}
+\]
+\end{exampleblock}
+
+\begin{exampleblock}{簡約}
+
+\[
+\begin{array}{lll}
+f'_4 & \stackrel{f_3}{\longmapsto} & f'_4 - (-2x_1^2 x_2 /{head(f_3)})f_3 \\
+     & = & x_1 x_2+ x_1 -x_2 +3
+\end{array}
+\]
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\begin{exampleblock}{グレブナー基底}
+$f_1,f_2,f_3$ のグレブナー基底
+\[ 
+	G = \{
+ \begin{array}{l}
+  x_1 x_2 + x_1- x_2 + 3, \\
+  2{x_1}^2 - 3 x_1 + 2 x_2 - 6, \\
+  2{x_2}^2 - 8 x_1 - 5 x_2 -3 \}
+ \end{array} 
+\]
+\end{exampleblock}
+\end{frame}
+
+\section{グレブナー基底から方程式の解を求める方法}
+\begin{frame}\frametitle{グレブナー基底から方程式の解を求める方法}
+辞書式順序で基底計算を行うと、連立方程式の解が求めやすいが、
+基底計算に時間がかかる上に計算量が多くなる．
+
+簡単に求まる基底から，解を求める手法として固有値法がある.
+
+\begin{block}{固有値法}
+\begin{enumerate}
+\item 任意の多項式を, グレブナー基底 $G$ で簡約した多項式の集合 
+${\cal P}^s /{\cal I}$ は, ベクトル空間をなす．
+
+\item グレブナー基底の最高順位項で割り切れない全ての項の集合を
+Normal setといい、 ${\cal P}^s /{\cal I}$ ベクトル空間の基底となる。
+
+\item Normal set により $x_i \times $ を行列で表す事ができる.
+
+\item その行列の固有値は, ${\cal I}$ の$x_i$ に関する解となる．
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{$f_1,f_2,f_3$ のグレブナー基底}
+\[ G = [x_1 x_2 + x_1 - x_2 + 3, 2{x_1}^2-3x_1+2x_2-6,2{x_2}^2-8x_1-5x_2-3] \]
+
+\[Normal \; Set =  \{1,x_2,x_1\}\]
+\end{block}
+
+\begin{block}{書き換え規則}
+
+\[ \left\{
+\begin{array}{rl}
+x_1x_2 & \rightarrow  -x_1+x_2-3\vspace{.15in}\\
+{x_1}^2 & \rightarrow  \frac{3}{2}x_1-x_2+3\vspace{.15in}\\
+{x_2}^2 & \rightarrow  4x_1+\frac{5}{2}x_2+\frac{3}{2}
+\end{array}
+\right. \]
+\end{block}
+\end{frame}
+
+\begin{frame}
+$P=c_1\vec{x_1} + c_2\vec{x_2} + c_3$ 
+
+\begin{block}{$x_1 \times $ の行列(かけ算表)}
+
+\[
+\bordermatrix{
+ &  1 & x_2 & x_1\cr
+ x_1\times 1   &  0 &  0 &  1 \cr
+ x_1\times x_2 & -3 &  1 & -1 \cr
+ x_1\times x_1 &  3 & -1 & 3/2 \cr
+}
+\]
+\end{block}
+
+\begin{block}{$x_1 \times$ の固有値}
+
+\[ \left[ 0, \; \frac{5}{4}+\frac{1}{4}\sqrt{65},
+\; \frac{5}{4}-\frac{1}{4}\sqrt{65}\right] \]
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\begin{block}{$x_2 \times $ の行列(かけ算表)}
+
+\[
+\bordermatrix{
+ &  1 & x_2 & x_1\cr
+ x_2\times 1   &  0  &  1  &  0 \cr
+ x_2\times x_2 & 3/2 & 5/2 &  4 \cr
+ x_2\times x_1 & -3  &  1  & -1 \cr
+}
+\]
+\end{block}
+\begin{block}{$x_2 \times$ の固有値}
+
+\[ \left[ 3, \; -\frac{3}{4}+\frac{1}{4}\sqrt{65},
+\; -\frac{3}{4}-\frac{1}{4}\sqrt{65}\right] \]
+
+
+\end{block}
+
+これらの固有値が $f_1,f_2,f_3$ の解である。
+\end{frame}
+
+\end{document}
+
+
+
+

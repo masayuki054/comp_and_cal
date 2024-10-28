@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{方程式を解くとは？}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{基底とは}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{多変数方程式 をどう解くか?}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{パズルと基底}{}% 4
+\BOOKMARK [1][-]{section.3}{グレブナー基底}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{項の間の順序}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{簡約}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{S多項式}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{グレブナー基底の定義}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{グレブナー基底から方程式の根を求める方法}{}% 10
+\BOOKMARK [1][-]{section.5}{Buchberger算法と並列化}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Buchberger算法の並列性}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{並列算法の組合わせによる並列度の向上}{}% 13
+\BOOKMARK [1][-]{section.7}{\044d\044-Gr\366bner 基底によるペア並列度の向上}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{\044d\044-グレブナー基底}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{\044d\044-グレブナー基底の並列性}{section.7}% 16
+\BOOKMARK [1][-]{section.8}{実装と性能\(予測\)}{}% 17
