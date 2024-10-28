@@ -1,7 +1,7 @@
 #+options: ^:{}
 #+options: toc:nil
 #+setupfile: ../info/index-bigblow-header.setup
-#+TITLE: 簡約と行列
+#+TITLE: グレブナー基底と線形代数
 #+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
 
 #+LATEX_CLASS: jarticle
@@ -19,15 +19,13 @@
 
 ** 連立一次方程式と行列表現
 連立一次方程式:
-
-  \begin{eqnarray}
+\begin{eqnarray}
   x+y+z & = & 3 \\
   x-y-z & = & -1 \\
   x-y+z & = & 1 \\
   \end{eqnarray}
   
 の行列による表現:
-
 \begin{center}
    \begin{array}{rrrr|l}
    x & y & z & c & \\\hline
@@ -37,7 +35,7 @@
    \end{array}
 \end{center}
 
-
+** ガウスの消去法
 
 簡約: \( x \) を \(-y-z+3 \) で置き換える. 順序の高変数を，順序の低い変数か
 成る等式で置き換える。
@@ -65,32 +63,35 @@
    \end{array}
 \end{center}
 
-3行目を \( y = -z+2 \) で置き換える: \\
-
+3行目を \( y = -z+2 \) で置き換える: 
+\begin{center}
    \begin{array}{rrrr|l}
    x & y & z & c & 意味  \\ \hline
    1 & 1 & 1 & -3 & x + y+ z -3 = 0  \\
    0 & 1 & 1 & 2 & y + z - 2 =0 \\
    0 & 0 & -1 & -1 & -z = -1 \\
    \end{array}
+\end{center}   
 
-3行目を-1で割って，3角行列ができる:\\
-
+3行目を-1で割って，3角行列ができる:
+\begin{center}
    \begin{array}{rrrr|l}
    x & y & z & c &  \\ \hline
    1 & 1 & 1 & -3 & x+y+z=3  \\
    0 & 1 & 1 & -2 & y+z=2\\
    0 & 0 & 1 & -1 & z= 1\\
-   \end{array}\\
+   \end{array}
+\end{center}   
 
-後退消去して，\\
-
+後退消去して，
+\begin{center}
 \begin{array}{rrrr|l}
    x & y & z & c &  \\ \hline
    1 & 0 & 0 & 1 & x = 1  \\
    0 & 1 & 0 & 1 & y = 1\\
    0 & 0 & 1 & 1 & z= 1\\
    \end{array}
+\end{center}   
 
 * グレブナー基底計算と行列表現とガウスの消去法   
    
@@ -101,6 +102,11 @@
 
  の解を求めたい。
 
+** 多変数方程式の行列表現
+\(f1\) と \(f2\)に含まれる単項式を元とし，元間の順序を決め(ここでは全
+順序辞書式)，加法に関して，数係数を並べたものを，ベクトルと考える。
+
+多変数方程式系は，下記のような行列で表現できる：
 \begin{center}
    \begin{array}{rrrrrr|l}
    x^3 & x^2 & x & y^2 & y  & c & 意味  \\ \hline
@@ -109,18 +115,12 @@
    \end{array}
 \end{center}
 
-\begin{center}
-   \begin{array}{rrrrrr|l}
-   x^3 & x^2 & x & y^2 & y  & c & 意味  \\ \hline
-   1   & -3  & 0 & 0   & -1 & 1 &  f1: x^3 - 3 x^2 -y + 1 = 0\\
-   0   & -1  & 0 & 1   & 0  & -1 & f2: -x^2 + y^2 - 1 =0 \\
-   \end{array}
-\end{center}
+** 簡約
 
 - \(f2:  x^2 = y^2 - 1 \)  の関係を用いて，
 - \(f1:  x^3 = 3 x^2 + y - 1  \) の関係を簡約する。
 
-簡約に必要な \(x * f2 \) は，新たな基底ベクトルとなる。
+簡約に必要な s-多項式 \( f1 - x \times f2 \) は，新たな基底ベクトルとなる。
 
 -  \(f1- x \times f2:  (x^3 = 3 x^2 + y -1) - (x^3 = x y^2 - x) \)
 
