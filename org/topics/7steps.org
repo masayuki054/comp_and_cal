@@ -1,4 +1,5 @@
 #+begin_src dot :file dot_example3.png
+
 digraph {
   graph [fontname="MS Gothic"];
   label = "clusterで始まっているものは外枠で囲われる";
@@ -13,8 +14,8 @@ digraph {
 
   subgraph sub2 {
     label = "sub2";
-    H--I;
-    H--J;
+    H -- I;
+    H -- J;
   }
 }
 #+end_src

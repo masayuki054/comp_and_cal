@@ -1,9 +1,53 @@
 * 自己紹介
 
   - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/][講義情報]] (~2016)
-
   - [[https://github.com/masayuki054/comp_and_cal/][講義資料のサイト]]
 
+* 関連する数学の講義など
+- 数理のひろがり [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
+  - [[./maps/数理のひろがり.xmind]]
+- [[https://masayuki054.hatenablog.com/entry/2024/04/09/225336#orgfce19b2][微分積分準備講座 2024 - masayuki054's diary]]
+  - [[https://drive.google.com/drive/folders/1fYNIqpHaGYXFeuLxqppoT9cEUCEcmbXp][2024-微分積分補助講義 - Google ドライブ]]
+- 微分に関する [[https://drive.google.com/drive/folders/1lY6qb2Z02iAD_WdesHNMpmsGecY3ynDa][図 - Google ドライブ]]
+    
+* デジタルツール
+
+[[https://masayuki054.hatenablog.com/entry/2019/12/09/102219][放送大学 面接講義 (岩手 2020, 2019, 2018) - masayuki054's diary]]
+- [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][メモと思考のためのICTの活用]]
+  - わかるとは，
+  - 関係を見るつくる(抽象化，詳細化，マインドマップ，アウトライナ)，
+  - 情報リテラシと思考とメモ
+    - わかる，メモ，思考法，思考技術，知的情報リテラシ
+  - 批判的思考とアウトライナ
+    - 批判的思考
+    - xmind のアウトライン機能
+  - 思考を継続するための思考とメモの技術
+    - ストレス対処法
+    - [[https://gtd-japan.jp/about][GTD®とは - ストレスフリーの仕事術「GTD®」]]
+      
+    
+- [[https://masayuki054.github.io/cloud_and_information_literacy/talk.html][クラウドと情報リテラシー]]
+- [[https://masayuki054.github.io/tools_for_thinking_and_memo/talk.html][メモと思考とデジタルツール]]
+
+* Web 進化論/知の構造化 
+
+    「知識」について考え直す時なのでは？
+
+**** [[http://ocw.u-tokyo.ac.jp/lecture_files/gf_18/1/notes/ja/01yoshimimima.pdf][今，学問，大学，知識，について，何が起っているのか？]]
+
+    - 知の細分化と閉塞、全体を視る目の喪失
+
+    - 知識は「みんな」で作るものだという発想
+
+    - 構造性：要素を相互に結びつける構造こそ知識
+
+    - ネット検索で瞬時にして必要な情報を次々に手に入れることで、緩やか
+      に形成される知識を失っているのかもしれない？
+
+    - 学術俯瞰とタテとヨコをつなぐ学び，
+      新しいリベラルアーツと専門知の結合
+
+    
 * コンピュータと数式処理のリンク集
 ** sage 
 
@@ -46,20 +90,3 @@
     - [[https://github.com/konn/computational-algebra][konn/computational-algebra: Library to calculate Gröbner basis written in Haskell.]]
 
 
-* Web 進化論/知の構造化 
-
-    「知識」について考え直す時なのでは？
-
-**** [[http://ocw.u-tokyo.ac.jp/lecture_files/gf_18/1/notes/ja/01yoshimimima.pdf][今，学問，大学，知識，について，何が起っているのか？]]
-
-    - 知の細分化と閉塞、全体を視る目の喪失
-
-    - 知識は「みんな」で作るものだという発想
-
-    - 構造性：要素を相互に結びつける構造こそ知識
-
-    - ネット検索で瞬時にして必要な情報を次々に手に入れることで、緩やか
-      に形成される知識を失っているのかもしれない？
-
-    - 学術俯瞰とタテとヨコをつなぐ学び，
-      新しいリベラルアーツと専門知の結合
