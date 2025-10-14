@@ -1,0 +1,33 @@
+#+startup: indent show2levels
+#+title:
+#+author masayuki
+
+understandings = ["わかる"，"理解"]
+thinks = ["思考"]
+#+begin_src ruby :tangle documents-index.rb
+topic_dirs = ['topics','maps','map-images','refers']
+
+File.open("topics-index.org","w") { |out|
+  out.write(
+"#+startup: indent show2levels
+#+title:
+#+author masayuki
+")
+
+  topic_dirs.each { |dir|
+    Dir.chdir(dir) {        
+       out.write("* #{dir}\n")
+       `ls`.split("\n").each { |f|
+         next if f.include?("~")
+         next if f.include?("\#")
+         next if f.include?("00-")
+         out.write "- [[./#{dir}/#{f}][#{f}]]\n"
+       }
+    }
+  }
+}
+
+#+end_src
+
+#+RESULTS:
+| topics | maps | map-images | refers |

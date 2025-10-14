@@ -1,0 +1,18 @@
+#+startup: indent show2levels
+#+title:
+#+author masayuki
+
+#+begin_src ruby
+File.open("00INDEX.org","w") { |io|
+  io.write("Dir: #{io.path}\n")
+  `ls`.split("\s").each { |f|
+    next if f.include?("~")
+    next if f.include?("#")
+    next if f.include?("00-")
+    io.write "[[./#{f}][#{{f}}]]\n"
+  }
+}
+#+end_src
+
+#+RESULTS:
+| #00-index.org# | #index.org# | 00-index.odt | 00-index.org | 00-index.org~ | 00INDEX.org | 17eqs.org | Computational | Thinking.xmind | computational_thinking.html | computational_thinking.org | ComputationalThinker.jpg | dot_example3.png | gtd.html | gtd.org | MindMapping.xmind | nara-wu-gbasis.org | outline-reading-writing.org | pde.org | Web進化論.xmind | コンピュータとインターネットの利用目的.xmind | コンピュータと数式処理.xmind | メモと思考のためのICTの活用.xmind | わかるとは-めも.pdf | わかるとは.xmind | わかるとはー読書map.pdf | わかるとは章立て.xmind | 宇宙がわかる17の方程式.pdf | 科学とコンピュータ.xmind | 思考とメモと情報処理とICT.xmind | 思考とメモと文書のためのデジタル・ツール.xmind | 数理のひろがり.xmind | 数理情報科学.xmind | 微分-連続から離散へ.pdf |
