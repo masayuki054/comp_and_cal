@@ -15,25 +15,25 @@
 #+LATEX_HEADER:\setlength{\topmargin}{-2cm}
 #+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-#+title: 数理情報科学: コンピュータと数式処理
+#+title: 数理情報科学: 数理情報リテラシ
 #+title: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/org/talk- master · masayuki054/comp_and_cal · GitHub]]
 
-* あらすじ -- 数理情報科学研究のための情報計算リテラシ
+* あらすじ -- 数理情報科学研究のための数理情報リテラシ
 
-情報計算リテラシという言葉で，コンピュータやインターネットを用いた，情
-報や文書の読み書き共有，多大なデータの計算や表示など，を行なう際の，考
-え方とツールの使い方を意味することにします。
+数理情報リテラシという言葉で，コンピュータやインターネットを用いた，情
+報，文書，計算，プログラムなどの理解・作成・保存と共有，多大なデータの
+計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
+ます。
 
-本講では，理工学研究分野での情報計算リテラシとして，
+本講では，理工学研究分野での数理情報リテラシとして，
 大きく次の点についてお話しします。
 
-- 情報計算リテラシと思考技術
+- 数理情報処理リテラシと思考技術
 
   情報計算の基盤について概観 (添付の mindmap 図) します。
 
-  情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
+  数理情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
   知的な思考技術について紹介し，支援するソフトウェアについて紹介します。
-
   知的思考技術について，集合，関数，関係，グラフ，数理論理学，など分野
   からその数理を考えてみます。その数理は，思考の方向を定め，迷ったり，
   ゆきづまったりした際の拠り所となると思います。
@@ -57,26 +57,18 @@
 
 * 参照資料
 
-** 私的な研究への興味 [[./interests.org]] 参照
 
-** 思考と情報処理についての講義
-[[https://masayuki054.hatenablog.com/entry/2019/12/09/102219][放送大学 面接講義 (岩手 2020, 2019, 2018) - masayuki054's diary]]
-- [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][メモと思考のためのICTの活用]]
-- [[https://masayuki054.github.io/cloud_and_information_literacy/talk.html][クラウドと情報リテラシー]]
-- [[https://masayuki054.github.io/tools_for_thinking_and_memo/talk.html][メモと思考とデジタルツール]]
-  
-** 関連する数学の講義など
-- 数理のひろがり [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
-  - [[./maps/数理のひろかり.xmind]]
-- [[https://masayuki054.hatenablog.com/entry/2024/04/09/225336#orgfce19b2][微分積分準備講座 2024 - masayuki054's diary]]
-  - [[https://drive.google.com/drive/folders/1fYNIqpHaGYXFeuLxqppoT9cEUCEcmbXp][2024-微分積分補助講義 - Google ドライブ]]
-- 微分積分 [[https://drive.google.com/drive/folders/1lY6qb2Z02iAD_WdesHNMpmsGecY3ynDa][図 - Google ドライブ]]
+- [[./maps/わかるとは.xmind]]
+- [[./docs/understanding.org]]
 
-* 基礎知識
+* [[./digital_tools.org][思考とメモと文書のための(デジタル・)ツール]]
+
+** 思考の基本
+- 抽象化 (帰納)
+- 詳細化
 
 ** 知的思考の7つのステップ
-[[- ./docs/thinking-7steps.org]]
-[[https://masayuki054.github.io/tools_for_thinking_and_memo/i_maps/%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E5%8B%89%E5%BC%B7_imap.pdf][- 知的思考の技術勉強_imap.pdf]]
+- [[./docs/thinking-7steps.org]]
 - [[./map-images/知的思考の7段階.xmind][知的思考の7段階.xmind]]
 
 1. 目的探索の思考
@@ -89,18 +81,15 @@
 
 ** わかるとは
 
-- [[./maps/わかるとは.xmind]]
-- [[./docs/understanding.org]]
-
-* [[./digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
 ** 知識や理解は構造を持った情報
+
 構造を読み書けるソフトウェアが必要
 - アウトライナー
 - マインドマップ
 - グラフ的文書作成
 
 ** 知的作業は構造化されたプロセス
-知的作業
+知的作業の
 - プロセスを見える化し，
 - 作業の流れを手続き化し，
 - コストを見積り，
@@ -110,21 +99,23 @@
 - GTD Getting Things Done 
 - [[./comp_thinking.org][計算論的思考]]
 
-プログラムと文書を
-- 文芸的プログラミング
 
-知識の共有方法として
-- [[./web.org][Web進化論]]  [[./maps/Web進化論.xmind]]
-  - 集合知
-  - 知識の共有と構造化
-  
-* 研究のための情報リテラシー
+文芸的プログラミング
+- プログラムと文書を統合し作成する (google colab)
+- Emacs org-mode
+- 
+
+* 研究のための数理情報リテラシ
 
 思考し実験しプログラムし計算し理解し記録し文書を作成するためのコンピュー
 タと情報のリテラシ
 
-- 基本技術は思考法, 文書作成も思考法
+- 基本技術は思考法, 文書作成も思考法,プログラミングも思考法
 - 思考は情報処理プロセス
+
+- メタ思考
+- 思考プロセスの見える化
+- 知的思考の技術がある
 
 ** 考える，記憶する，理解する，こととは？
 
@@ -137,19 +128,21 @@
 - 発想法
 - 水平思考
 - 計算論的思考
-    
-*** 知的思考の技術がある
-- メタ思考
-- 思考プロセスの見える化
 
-*** 情報リテラシーとは思考法である 
+*** 情報リテラシーは思考法
 - 生のデータを意味付けして情報になる
 - 知的情報リテラシーの技術
-  - 情報の収集，加工，分析，蓄積，生成
+  - 情報の収集
+  - 情報の加工
+  - 情報の分析
+  - 情報の蓄積
+  - 情報の生成
+- 知的思考技術と対応している
 
 *** 理解の記録(外化，メモや文書)
 思考の目的は理解すること
 - わかるとは [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/#outline-container-orgeb1c772][メモと思考のためのICTの活用]] 
+
 
 理解と外化(メモ)  
 - 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
@@ -166,18 +159,16 @@
   - 小さな理解と大きな理解，整合性の問題
   - 理解の再帰性
      
-*** コンピュータとインターネットの意味
+*** コンピュータとインターネットを用いる意味
 思考と記憶を補助し，外化を促すこと
 - 情報を保存し共有すること
 - 検索できるようにすること
 - 人と計算機の共同作業の実現，互いに補完と拡張
 
-** 知的思考の技術
-- 思考過程の見える化 [[https://masayuki054.github.io/tools_for_thinking_and_memo/i_maps/%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E5%8B%89%E5%BC%B7_imap.pdf][知的思考の技術勉強_imap.pdf]]
+** 思考の技術
+
 - 発想法，水平思考，放射思考
 - 論理的思考法，批判的思考
-  - [[https://masayuki054.github.io/cloud_and_information_literacy/docs/logical-thinking.html][クラウドと情報リテラシー 論理的思考]]
-  - [[https://masayuki054.github.io/cloud_and_information_literacy/docs/critical_thinking.html][クラウドと情報リテラシー 批判的思考]]
   
 ** プロセス管理法
 - 計算論的思考 [[https://masayuki054.github.io/cloud_and_information_literacy/docs/computational_thinking.html][クラウドと情報リテラシー 計算論的思考]]
@@ -208,7 +199,7 @@
   - 放射的思考 発想
   - アウトライン構造 論理的繋り
 
-* 数学学ト計算リテラシ
+* 数学と計算リテラシ
 - 計算科学と数学ソフトウェア
 - プログラミングによる計算プロセス管理
 - 計算のための数学

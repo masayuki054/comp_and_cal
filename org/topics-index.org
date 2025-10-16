@@ -4,7 +4,17 @@
 * talk 順
 
 - [[./map-images/知的思考の7段階.xmind][知的思考の7段階.xmind]]
-  
+
+** わかるとは
+あることがらについて，理解したい (what,why,how)
+
+- [[./map-images/understanding-imap.pdf][understanding-imap.pdf]]
+- [[./map-images/understanding-memo.pdf][understanding-memo.pdf]]
+- [[./topics/わかるとは-めも.pdf][わかるとは-めも.pdf]]
+- [[./topics/わかるとは.xmind][わかるとは.xmind]]
+- [[./topics/わかるとはー読書map.pdf][わかるとはー読書map.pdf]]
+- [[./topics/わかるとは章立て.xmind][わかるとは章立て.xmind]]
+
 * topics
 - [[./topics/00INDEX.org][00INDEX.org]]
 - [[./topics/17eqs.org][17eqs.org]]
