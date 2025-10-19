@@ -1,0 +1,28 @@
+#+startup: indent show2levels
+#+title:
+#+author masayuki
+
+*  make symbolic-link 
+
+latex の問題:: 日本語ファイル名の画像ファイルが include できない
+#+begin_src ruby :tangle 00GTD-symlink.rb
+to_dir = "../Maps/"
+from_dir = "../Figs"
+files = {
+  "数理情報科学のための情報計算リテラシー.png"=>"infocalc-literacy-for-mathinfosci.png",
+  "ICTの利用目的.png" => "usingICT.png",
+  "Web進化論.png" => "Web-revolution.png",
+  "思考とメモと文書のためのICTツール.png"=>"ict-tools-for-thinking-and-memo.png"
+}
+
+files.each {|to,from|
+  puts "ln -s #{to_dir}/#{to} #{from_dir}/#{from}"
+  `rm -f #{from_dir}/#{from}`
+  `ln -s #{to_dir}/#{to} #{from_dir}/#{from}`
+  `cd #{from_dir}; extractbb #{from}`
+}
+
+#+end_src
+
+#+RESULTS:
+| 数理情報科学のための情報計算リテラシー.png | => | infocalc-literacy-for-mathinfosci.png | ICTの利用目的.png | => | usingICT.png | Web進化論.png | => | Web-revolution.png | 思考とメモと文書のためのICTツール.png | => | ict-tools-for-thinking-and-memo.png |
