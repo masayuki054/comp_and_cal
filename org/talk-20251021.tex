@@ -1,4 +1,4 @@
-% Created 2025-10-13 月 17:24
+% Created 2025-10-19 日 20:43
 % Intended LaTeX compiler: pdflatex
 \documentclass[dvipdfmx,11pat]{jarticle}
 \usepackage[utf8]{inputenc}
@@ -20,30 +20,40 @@
 \setcounter{secnumdepth}{6}
 \author{鈴木正幸 suzuki@iwate-u.ac.jp (学修支援担当@図書館)}
 \date{\today}
-\title{ 数理情報科学: コンピュータと数式処理 \href{https://github.com/masayuki054/comp\_and\_cal/tree/master/talk-2024}{comp\_and\_cal/talk-2024at master · masayuki054/comp\_and\_cal · GitHub}}
+\title{ 数理情報科学: 数理情報リテラシ \href{https://github.com/masayuki054/comp\_and\_cal/tree/master/talk-2024}{comp\_and\_cal/org/talk- master · masayuki054/comp\_and\_cal · GitHub}}
 \begin{document}
 
 \maketitle
 \tableofcontents
 
-\section{あらすじ -- 数理情報科学研究のための情報計算リテラシ}
-\label{sec:orgb6204f6}
+\section{あらすじ -- 数理情報科学研究のための数理情報リテラシー \href{../Maps/数理情報科学のための情報計算リテラシー.xmind}{link} \href{shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind}{cmd}}
+\label{sec:orgd4c5880}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=18cm]{../Figs/infocalc-literacy-for-mathinfosci.png}
+\caption{数理情報科学研究のための情報計算リテラシー}
+\end{figure}
 
-情報計算リテラシという言葉で，コンピュータやインターネットを用いた，情
-報や文書の読み書き共有，多大なデータの計算や表示など，を行なう際の，考
-え方とツールの使い方を意味することにします。
-
-本講では，理工学研究分野での情報計算リテラシとして，
-大きく次の点についてお話しします。
-
-\begin{itemize}
-\item 情報計算リテラシと思考技術
+数理情報リテラシという言葉で，コンピュータやインターネットを用いた，情
+報，文書，計算，プログラムなどの理解・作成・保存と共有，多大なデータの
+計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
+ます。
 
 情報計算の基盤について概観 (添付の mindmap 図) します。
+\url{file:///Users/sss/COMM/Lects/science\_and\_computation/comp\_and\_cal/Maps/ICTの利用目的.xmind}
 
-情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
+
+本講では，理工学研究分野での数理情報リテラシとして，
+大きく次の点についてお話しします。
+
+\url{../Maps/数理情報科学のための情報計算リテラシー.xmind}
+\url{shell:xmind :../Maps/数理情報科学のための情報計算リテラシー.xmind}
+
+\begin{itemize}
+\item 数理情報処理リテラシと思考技術
+
+数理情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
 知的な思考技術について紹介し，支援するソフトウェアについて紹介します。
-
 知的思考技術について，集合，関数，関係，グラフ，数理論理学，など分野
 からその数理を考えてみます。その数理は，思考の方向を定め，迷ったり，
 ゆきづまったりした際の拠り所となると思います。
@@ -65,69 +75,81 @@
 なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
 いて概観します。
 \end{itemize}
-\section{参照資料}
-\label{sec:orgb5c8a14}
+\section{知的思考の技術}
+\label{sec:orgc698686}
+\subsection{思考の基本}
+\label{sec:org210ef07}
+\begin{itemize}
+\item 抽象化 [googling AIモード 思考 抽象化 帰納]
+ある関係性で複数の事柄をまとめ，適切な名前を付けること
 
-\subsection{私的な研究への興味 \url{./interests.org} 参照}
-\label{sec:orgb79d8e7}
+\item 詳細化 [googling AIモード 思考 詳細化  具体化]
+抽象化の逆。記号の意味を示すこと。
 
-\subsection{思考と情報処理についての講義}
-\label{sec:orgd1b9ddc}
-\href{https://masayuki054.hatenablog.com/entry/2019/12/09/102219}{放送大学 面接講義 (岩手 2020, 2019, 2018) - masayuki054's diary}
-\begin{itemize}
-\item \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/}{メモと思考のためのICTの活用}
-\item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/talk.html}{クラウドと情報リテラシー}
-\item \href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/talk.html}{メモと思考とデジタルツール}
+\item 分類 [googling AIモード 思考 分類 抽象化]
 \end{itemize}
-\subsection{関連する数学の講義など}
-\label{sec:orge3db023}
-\begin{itemize}
-\item 数理のひろがり \href{https://github.com/masayuki054/mathematics/tree/main}{GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ}
-\begin{itemize}
-\item \url{./maps/数理のひろかり.xmind}
-\end{itemize}
-\item \href{https://masayuki054.hatenablog.com/entry/2024/04/09/225336\#orgfce19b2}{微分積分準備講座 2024 - masayuki054's diary}
-\begin{itemize}
-\item \href{https://drive.google.com/drive/folders/1fYNIqpHaGYXFeuLxqppoT9cEUCEcmbXp}{2024-微分積分補助講義 - Google ドライブ}
-\end{itemize}
-\item 微分積分 \href{https://drive.google.com/drive/folders/1lY6qb2Z02iAD\_WdesHNMpmsGecY3ynDa}{図 - Google ドライブ}
-\end{itemize}
-\section{基礎知識}
-\label{sec:org447466e}
+\subsection{わかるとは}
+\label{sec:org993c7ec}
+\href{../Maps/わかるとは.xmind}{わかるとは(file)} または
+\href{shell:xmind ../Maps/わかるとは.xmind}{わかるとは (xmind-open)}
+参照
+\subsection{知的思考の技術の7つのステップ}
+\label{sec:orgd6f19a4}
+思考することについて思考するのが知的思考(メタ思考ともいう)。
+思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
+すると思考プロセスは，思考の対象にすることができる。
 
-\subsection{知的思考の7つのステップ}
-\label{sec:org0921561}
-\url{./docs/thinking-7steps.org}
-\href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/i\_maps/\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E5\%8B\%89\%E5\%BC\%B7\_imap.pdf}{- 知的思考の技術勉強\_imap.pdf}
+\href{../Maps/知的思考の7段階.xmind}{知的思考の7段階(file)} \href{shell:xmind ../Maps/知的思考の7段階.xmind}{xmind\_open}
+
 \begin{enumerate}
 \item 目的探索の思考
-\item 観察の思考
-\item 発想の思考
-\item 分類の思考
-\item 構造化の思考
-\item 意志決定の思考
-\item 表現の思考
-\end{enumerate}
-\subsection{わかるとはに}
-\label{sec:org505c6b7}
-
 \begin{itemize}
-\item \url{./maps/わかるとは.xmind}
-\item \url{./docs/understanding.org}
+\item 妥当か
+\item 適度か
+\item 本質的か
 \end{itemize}
-\section{\href{./digital\_tools.org}{思考とメモと文書のためのデジタル・ツール}}
-\label{sec:org824522f}
+\item 観察の思考
+\begin{itemize}
+\item 関連項目の列挙
+\end{itemize}
+\item 発想の思考
+\begin{itemize}
+\item 項目リストから思い付く新たなことの列挙
+\end{itemize}
+\item 分類の思考
+\begin{itemize}
+\item 項目間の関係によって分類，グループ化
+\end{itemize}
+\item 構造化の思考
+\begin{itemize}
+\item グループ間の関係
+\begin{itemize}
+\item 依存関係
+\item 順序関係
+\end{itemize}
+\end{itemize}
+\item 意志決定の思考
+\begin{itemize}
+\item 理解は既存の知識に整合するか
+\end{itemize}
+\item 表現の思考
+\begin{itemize}
+\item 理解から知識へ，
+\item 客観的な外化
+\end{itemize}
+\end{enumerate}
 \subsection{知識や理解は構造を持った情報}
-\label{sec:orgce92dfb}
-構造を読み書けるソフトウェアが必要
+\label{sec:orgdbe5e5a}
+
+理解や知識の構造を読み書けるソフトウェアが必要
 \begin{itemize}
 \item アウトライナー
 \item マインドマップ
 \item グラフ的文書作成
 \end{itemize}
 \subsection{知的作業は構造化されたプロセス}
-\label{sec:org3675896}
-知的作業
+\label{sec:org6371429}
+知的作業の
 \begin{itemize}
 \item プロセスを見える化し，
 \item 作業の流れを手続き化し，
@@ -138,68 +160,70 @@
 プロセス管理手法として
 \begin{itemize}
 \item GTD Getting Things Done
-\item \href{./comp\_thinking.org}{計算論的思考}
+\item \href{./comp\_tinking.org}{計算論的思考}
 \end{itemize}
 
-プログラムと文書を
-\begin{itemize}
-\item 文芸的プログラミング
-\end{itemize}
 
-知識の共有方法として
+文芸的プログラミング
 \begin{itemize}
-\item \href{./web.org}{Web進化論}  \url{./maps/Web進化論.xmind}
-\begin{itemize}
-\item 集合知
-\item 知識の共有と構造化
+\item プログラムと文書を統合し作成する (google colab)
+\item Emacs org-mode
 \end{itemize}
-\end{itemize}
-\section{研究のための情報リテラシー}
-\label{sec:org037a56a}
+\section{研究のための数理情報リテラシ}
+\label{sec:org84d29c2}
 
 思考し実験しプログラムし計算し理解し記録し文書を作成するためのコンピュー
 タと情報のリテラシ
 
 \begin{itemize}
-\item 基本技術は思考法, 文書作成も思考法
+\item 基本技術は思考法, 文書作成も思考法,プログラミングも思考法
 \item 思考は情報処理プロセス
+\item メタ思考が重要 (思考する自分を客観視すること)
+\begin{itemize}
+\item 思考プロセスの見える化
+\item 知的思考の \textbf{技術} がある
+\end{itemize}
 \end{itemize}
 \subsection{考える，記憶する，理解する，こととは？}
-\label{sec:org328c4c0}
+\label{sec:org6f0d542}
 
 \begin{itemize}
-\item 思考の基本 抽象化と詳細化 , So What, Why so, MECE
+\item 思考の基本 抽象化と詳細化, So What, Why so, MECE (mutually
+exclusive collectively exhaustive)
+{[}googling AIモード 思考 So What, Why so] (AIの思考ステップがでてきた)
 \item 思考の記録 MECE, 構造化，GTD
+{[}googling AIモード 思考 MECE 構造化 GTD]
 \end{itemize}
 \subsubsection{いろいろな思考法がある}
-\label{sec:org9318be1}
+\label{sec:org9b817dd}
 \begin{itemize}
-\item 論理的思考
-\item 批判的思考
-\item 発想法
-\item 水平思考
-\item 計算論的思考
+\item 論理的思考  [googling AIモード 思考 論理的思考] へんな回答がかえって
+きた
+{[}googling 思考 論理的思考]
+\item 批判的思考 [googling 思考 批判的思考]
+\item 発想法 [googling 思考 発想法]
+\item 水平思考 [googling 思考 水平思考]
+\item 計算論的思考[googling 思考 計算論的思考]
 \end{itemize}
-\subsubsection{知的思考の技術がある}
-\label{sec:org6f28320}
+\subsubsection{情報リテラシーは思考法}
+\label{sec:org5fe8f2e}
 \begin{itemize}
-\item メタ思考
-\item 思考プロセスの見える化
+\item 生のデータに意味付けして情報になる
+\item 知的情報リテラシーの技術がある
+\begin{itemize}
+\item 情報の収集
+\item 情報の加工
+\item 情報の分析
+\item 情報の蓄積
+\item 情報の生成
 \end{itemize}
-\subsubsection{情報リテラシーとは思考法である}
-\label{sec:orgb4749de}
-\begin{itemize}
-\item 生のデータを意味付けして情報になる
-\item 知的情報リテラシーの技術
-\begin{itemize}
-\item 情報の収集，加工，分析，蓄積，生成
-\end{itemize}
+\item 知的思考技術と対応している
 \end{itemize}
 \subsubsection{理解の記録(外化，メモや文書)}
-\label{sec:org8743818}
+\label{sec:orgb2dc1b3}
 思考の目的は理解すること
 \begin{itemize}
-\item わかるとは \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/\#outline-container-orgeb1c772}{メモと思考のためのICTの活用}
+\item わかるとは \url{../Maps/わかるとは.xmind}{[}わかるとは.xmind]]  \href{shell:xmind ../Maps/わかるとは.xmind}{xmind-open}
 \end{itemize}
 
 理解と外化(メモ)  
@@ -226,41 +250,33 @@
 \item 理解の再帰性
 \end{itemize}
 \end{itemize}
-\subsubsection{コンピュータとインターネットの意味}
-\label{sec:org85cb32c}
+\subsubsection{コンピュータとインターネットを用いる意味}
+\label{sec:orgca35644}
 思考と記憶を補助し，外化を促すこと
 \begin{itemize}
 \item 情報を保存し共有すること
 \item 検索できるようにすること
 \item 人と計算機の共同作業の実現，互いに補完と拡張
 \end{itemize}
-\subsection{知的思考の技術}
-\label{sec:orge5ab39f}
-\begin{itemize}
-\item 思考過程の見える化 \href{https://masayuki054.github.io/tools\_for\_thinking\_and\_memo/i\_maps/\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E5\%8B\%89\%E5\%BC\%B7\_imap.pdf}{知的思考の技術勉強\_imap.pdf}
-\item 発想法，水平思考，放射思考
-\item 論理的思考法，批判的思考
-\begin{itemize}
-\item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/docs/logical-thinking.html}{クラウドと情報リテラシー 論理的思考}
-\item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/docs/critical\_thinking.html}{クラウドと情報リテラシー 批判的思考}
-\end{itemize}
-\end{itemize}
 \subsection{プロセス管理法}
-\label{sec:org514a864}
+\label{sec:org1939588}
 \begin{itemize}
 \item 計算論的思考 \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/docs/computational\_thinking.html}{クラウドと情報リテラシー 計算論的思考}
-\item GTD (Getting Things Done)
+\item {[}GTD (Getting Things Done) プロセス管理法] googling 
 \begin{itemize}
+\item Todo リストの作り方と管理方法
 \item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/i\_maps/\%E5\%83\%95\%E3\%81\%AB\%E3\%81\%A8\%E3\%81\%A3\%E3\%81\%A6\%E3\%81\%AEGTD\_imap.pdf}{僕にとってのGTD\_imap.pdf}
 \end{itemize}
-\item ストレスフリー
+\item ストレスフリーなプロセス管理 すべて忘れても思い出せる
+9のストレス解消法
 \end{itemize}
-\subsection{思考の数学的理解}
-\label{sec:orgee9e057}
+\section{思考の数学的理解}
+\label{sec:org95dfe0c}
 \href{https://github.com/masayuki054/mathematics/tree/main}{GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ}
-
-数学は言葉である \url{./maps/数理のひろがり.xmind} 
+\subsection{数学は言葉である \url{../Maps/数理のひろがり.xmind}}
+\label{sec:org55296a5}
 \begin{itemize}
+\item 数学基礎論
 \item 集合と構造 情報
 \item 集合と関数 手続きと抽象化
 \item 集合と関係 分類と構造
@@ -276,10 +292,10 @@
 \end{itemize}
 \end{itemize}
 \subsection{思考のためのデジタルツール}
-\label{sec:orgfce44a0}
+\label{sec:org3dceb0d}
 考えることをサポートするデジタルツールがある \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/}{メモと思考のためのICTの活用}
 \paragraph{思考の可視化}
-\label{sec:org986b5c1}
+\label{sec:org5424870}
 \begin{itemize}
 \item グラフで考える
 \begin{itemize}
@@ -291,8 +307,8 @@
 \item アウトライン構造 論理的繋り
 \end{itemize}
 \end{itemize}
-\section{数学学ト計算リテラシ}
-\label{sec:orgc9198b7}
+\section{数学と計算リテラシ}
+\label{sec:orgee7ed5b}
 \begin{itemize}
 \item 計算科学と数学ソフトウェア
 \item プログラミングによる計算プロセス管理
@@ -303,21 +319,21 @@
 \end{itemize}
 \end{itemize}
 \subsection{連続な数学を離散的に捉える}
-\label{sec:org1776942}
+\label{sec:org3174261}
 \begin{itemize}
 \item 意味を捉え，コンピュータで計算するために，有限・可算的な捉え方が必要
 \item 計算は代表点一点で行ない，近傍の点は定数または直線近似する
 \item 数値も有限精度，記憶も有限個
 \end{itemize}
 \subsubsection{連続関数を折れ線グラフで考える}
-\label{sec:orgc415fc1}
+\label{sec:org6e9b052}
 
 \url{./docs/} フォルダの中の diff-descrete.pdf に手書きの資料があります。
 \begin{itemize}
 \item 連続関数を折れ線グラフと見做す
 \end{itemize}
 \paragraph{関数の変化}
-\label{sec:org6bf3ac4}
+\label{sec:org8ab1964}
 \begin{itemize}
 \item 関数の変化の図的解釈とインタフェース式
 
@@ -332,7 +348,7 @@
 \item 関数の変化とテイラー展開
 \end{itemize}
 \paragraph{2変数関数の変化}
-\label{sec:org7bfd2bb}
+\label{sec:org6182828}
 \begin{itemize}
 \item 二変数関数の微分の意味とインタフェース式
 \item 二変数関数の二階微分の意味とインタフェース式
@@ -340,13 +356,19 @@
 
 合成関数の描画法・微分の意味，逆関数の微分，関係の微分と微分方程式など
 \subsection{計算科学とは}
-\label{sec:org3d06453}
+\label{sec:orgb818360}
+
+たとえば，\href{topics/宇宙がわかる17の方程式.org}{宇宙がわかる17の方
+程式} で記述される現象を解析する。
 
 \href{https://ja.wikipedia.org/wiki/\%E8\%A8\%88\%E7\%AE\%97\%E7\%A7\%91\%E5\%AD\%A6}{計算科学 - Wikipedia} とは
 
-数学的モデルとその定量的評価により、計算機を用いて問題を解決する
-様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指す。
-
+{[}googling: 計算科学 モデル] 
+\begin{itemize}
+\item 数学的モデルとその定量的評価により、計算機を用いて問題を解決する
+\item 様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指
+す。
+\end{itemize}
 
 数値解析は，数式ではなく，実際の数を対象とし，物理現象など現実の対象をモデル化した
 ものである。
@@ -354,16 +376,16 @@
 対象領域をモデル化したプログラムやアプリケーションソフトウェアを開発し、
 それに様々なパラメータを与えて実行する。
 \subsubsection{数値解析}
-\label{sec:orga762ece}
+\label{sec:org10cd1d8}
 \begin{itemize}
 \item 精度保証付き数値計算
 \item 数値線形代数
 \item 常微分方程式の数値解法、偏微分方程式の数値解法、数値積分
 \end{itemize}
 \subsubsection{数値シミュレーション}
-\label{sec:org55417f3}
+\label{sec:org142935b}
 \paragraph{目的}
-\label{sec:org51d74bc}
+\label{sec:org607009a}
 \begin{itemize}
 \item 既知の事象を再構築して理解する（例えば、地震、津波などの自然災害）。
 \item 既知のシナリオを最適化する（例えば、工学的プロセスや産業プロセス）。
@@ -371,7 +393,7 @@
 \item 気象、飛行機の周辺の気流、自動車衝突時の車体の状況、銀河系の星々の動き、爆発物など
 \end{itemize}
 \paragraph{数値シミュレーションプログラムの実行}
-\label{sec:org266fa0d}
+\label{sec:org46f91ed}
 \begin{itemize}
 \item コンピュータのメモリ内に論理的メッシュ（網目）を形成し、個々の領域が実世界
 のモデルの空間的な一部分を表すようになっている。
@@ -383,11 +405,11 @@
 次々に行っていくのである。
 \end{itemize}
 \subsubsection{科学的方法}
-\label{sec:orgf0da87d}
+\label{sec:org5cd0e5a}
 計算科学は科学の第三の形態で、実験/観測と理論の間を補間するもの、とい
 う主張もある。
-\subsubsection{有限要素法（FEM）}
-\label{sec:orgf989c3e}
+\subsubsection{有限要素法（FEM）[googling: 有限要素法]}
+\label{sec:org56a51b0}
 偏微分方程式ソルバ (PDE)の 最も一般的な数値的解法
 
 \begin{itemize}
@@ -399,9 +421,9 @@
 \item 線形 / 非線形 / 座屈 / 熱 / 動的 / 疲労解析で使用できます。
 \end{itemize}
 \subsection{数学ソフトウェア}
-\label{sec:orgaca8112}
+\label{sec:org4aedcf2}
 \subsubsection{MathLibre  \href{https://www.geogebra.org/m/hShSTr6e}{KNOPPIX/Math->MathLibre}}
-\label{sec:orgedc55e1}
+\label{sec:org1746b0f}
 \begin{itemize}
 \item DVD起動Linuxで，
 \item オープン・ソースで，
@@ -410,7 +432,7 @@
 \href{https://www.geogebra.org/m/hShSTr6e}{数学ソフトウェア紹介 - GeoGebraBook}
 \end{itemize}
 \subsubsection{\href{https://ja.wikipedia.org/wiki/\%E6\%95\%B0\%E5\%AD\%A6\%E3\%82\%BD\%E3\%83\%95\%E3\%83\%88\%E3\%82\%A6\%E3\%82\%A7\%E3\%82\%A2}{数学ソフトウェアとは - Wikipedia}}
-\label{sec:orgeac7b53}
+\label{sec:org1245ea1}
 \begin{enumerate}
 \item ソフトウェア電卓  
 \href{http://ja.numberempire.com/}{数の帝国 - 数学ツール} 数の帝国は、強力な数学ツールと数について
@@ -428,7 +450,7 @@
 \end{itemize}
 \end{enumerate}
 \subsubsection{数式処理システム \href{http://www.sagemath.org}{Sage} とは}
-\label{sec:org72f64c1}
+\label{sec:org7bb5bca}
 \href{http://www.gregorybard.com/Sage.html}{Gregory V. Bard} 曰く
 \begin{itemize}
 \item フリーでオープン・ソースで，
@@ -437,13 +459,13 @@
 \item 「コンピュータ代数」システム
 \end{itemize}
 \paragraph{Sage on the Web(1)}
-\label{sec:org14b233f}
+\label{sec:org3b583cc}
 \begin{itemize}
 \item Webで動く，
 \item ノートやデスクトップPCへのインストールは必要ない。
 \end{itemize}
 \subparagraph{クラウド・サーバ}
-\label{sec:org8ecaf47}
+\label{sec:orgb6a4aaa}
 \href{http://www.cocalc.com/}{CoCalc.com Sage クラウド・サーバ} 
 \begin{itemize}
 \item 長めの問題向き，
@@ -451,7 +473,7 @@
 \item 登録とログインが必要，
 \end{itemize}
 \subparagraph{セル・サーバ}
-\label{sec:org776db14}
+\label{sec:orgce0e059}
 \href{http://sagecell.sagemath.org/}{SageMathCell Server}
 \begin{itemize}
 \item 短かめの問題向き
@@ -459,26 +481,26 @@
 \item \href{http://www.gregorybard.com/videos/Sage\_part2.swf}{因数分解，3次元プロット}
 \end{itemize}
 \subparagraph{例題}
-\label{sec:org516c842}
+\label{sec:org0bf5666}
 \begin{verbatim}
 x,y = var('x y')
 plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 \end{verbatim}
 
 \phantomsection
-\label{org7bd68a6}
+\label{org35ddf5c}
 \begin{verbatim}
 Launched jmol viewer for Graphics3d Object
 \end{verbatim}
 \paragraph{Sagemath アプリ}
-\label{sec:orga5b7eee}
+\label{sec:org5562687}
 数式処理が，スマホで動くなんて，ほんとにビックリ
 \begin{itemize}
 \item \href{https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8}{Sage Mathを App Store で}
 \item \href{https://play.google.com/store/apps/details?id=org.sagemath.droid\&hl=ja}{Sage Math - Google Play の Android アプリ}
 \end{itemize}
 \paragraph{入門}
-\label{sec:orgcffd127}
+\label{sec:org085111d}
 \begin{itemize}
 \item \href{http://doc.sagemath.org/html/ja/tutorial/index.html}{Sageチュートリアル.ja} すぐ後で，実行しながら，説明します
 \item \href{http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf}{Sage tutorial-jp.pdf}
@@ -487,7 +509,7 @@ Launched jmol viewer for Graphics3d Object
 \item \href{http://www.sagemath.org/help-video.html}{series of videos/screencasts}
 \end{itemize}
 \paragraph{例題}
-\label{sec:orgc747490}
+\label{sec:org02910cd}
 \begin{itemize}
 \item \href{http://doc.sagemath.org/html/en/constructions/index.html}{プログラムの制作例}
 \item \href{https://wiki.sagemath.org/interact}{対話的なデモリポジトリ} 
@@ -496,13 +518,13 @@ Launched jmol viewer for Graphics3d Object
 \end{itemize}
 \end{itemize}
 \paragraph{Sagemath に関する本 (フリー)}
-\label{sec:org3f42eee}
+\label{sec:org7f912ef}
 \begin{itemize}
 \item \href{http://www.gregorybard.com/Sage.html}{Sage for undergraduates, free pdf}   このページ内に pdf へのリンクが
 \item \href{http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html}{Welcome to the SDSU Sage Tutorial}
 \end{itemize}
 \paragraph{Sagemath に関するいろいろなページ}
-\label{sec:org538e051}
+\label{sec:org1b2d19d}
 \begin{itemize}
 \item \href{http://sk.sagepub.com/reference}{SAGE Knowledge - Reference} reference の検索
 \item \href{https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118}{Sageに関するリンク集}
@@ -510,22 +532,20 @@ Launched jmol viewer for Graphics3d Object
 \item \url{http://sagemath.org} \url{http://doc.sagemath.org}
 \end{itemize}
 \paragraph{Octave との連携}
-\label{sec:org0e532fe}
+\label{sec:org7691d50}
 \begin{itemize}
 \item \href{http://www.pwv.co.jp/\%7Etake/TakeWiki/index.php?sage\%2FSage\%E3\%81\%A7Octave\%E3\%82\%92\%E4\%BD\%BF\%E3\%81\%86}{sage/SageでOctaveを使う - PukiWiki}
 \item \href{http://www.inaba-lab.org/wiki/index.php/Octave\%E5\%85\%A5\%E9\%96\%80}{Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki}
 \end{itemize}
 \paragraph{\LaTeX{}とSage}
-\label{sec:orga75b932}
+\label{sec:org2598341}
 \begin{itemize}
 \item オンライン\LaTeX{}サービス  \href{https://oku.edu.mie-u.ac.jp/\~okumura/texonweb/}{\TeX{} を使ってみよう}
 \item \href{https://mytexpert.osdn.jp/index.php?LaTeX\%A4\%CB\%A4\%E8\%A4\%EB\%CF\%C0\%CA\%B8\%BA\%EE\%C0\%AE\%A4\%CE\%BC\%EA\%B0\%FA\%A4\%AD}{\LaTeX{}による論文作成の手引き - MyTeXpert}
 \item \href{http://sage.math.gordon.edu/home/pub/51/}{Using \LaTeX{} in Sage -- Sage}
 \end{itemize}
 \subsection{python と sympy による数式計算の例}
-\label{sec:org35550bf}
-
-
+\label{sec:org00b1bed}
 
 \begin{itemize}
 \item Google Colabを使った，
@@ -535,13 +555,13 @@ Launched jmol viewer for Graphics3d Object
 
 \href{https://colab.research.google.com/drive/13-xrzx125aD3L4mzB5BhOHAUyLeV6kCX}{python-calc.ipynb - Colab} 
 \subsection{数式処理アルゴリズム}
-\label{sec:org3fc4773}
+\label{sec:orgd763482}
 \subsubsection{不定積分入門}
-\label{sec:org4c552c2}
+\label{sec:org5cc74f7}
 \href{http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf}{symbolic integration tutorial--issac98.pdf}
 wikipedia の参考文献にあった
 \subsubsection{規則と簡約化と検索のための計算機代数}
-\label{sec:org1c1b0b3}
+\label{sec:orgc5720b7}
 
 高次多変数代数方程式の解法として別途，資料\url{./gbasis/gbasis.org}を配
 布します。
@@ -555,7 +575,7 @@ wikipedia の参考文献にあった
 多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
 の概念と計算に帰着します。見通しと効率が良くなります。
 \section{まとめ}
-\label{sec:org4d395b9}
+\label{sec:orgdb2da44}
 本講では，理工学研究分野での情報計算リテラシとして，
 以下の点についてお話ししたつもりです:
 
@@ -586,29 +606,23 @@ wikipedia の参考文献にあった
 \end{itemize}
 \end{itemize}
 
-\begin{center}
-\includegraphics[width=18cm]{./map-images/01-computer_and_cal.png}
-\end{center}
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=18cm]{./map-images/03-how_to_use_computer_and_internet.png}
-\caption{人とコンピュータとインターネット}
+\includegraphics[width=18cm]{../Figs/usingICT.png}
+\caption{ICTの利用目的}
 \end{figure}
-
 
 \vspace{3cm}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=18cm]{./map-images/04-Web_revolution.png}
+\includegraphics[width=18cm]{../Figs/Web-revolution.png}
 \caption{インターネットが起している変革}
 \end{figure}
 
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=18cm]{./map-images/05-digital_tools_for_thinking.png}
+\includegraphics[width=18cm]{../Figs/ict-tools-for-thinking-and-memo.png}
 \caption{思考とメモと文書のためのデジタル・ツール}
 \end{figure}
 \end{document}

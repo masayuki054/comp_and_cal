@@ -18,19 +18,28 @@
 #+title: 数理情報科学: 数理情報リテラシ
 #+title: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/org/talk- master · masayuki054/comp_and_cal · GitHub]]
 
-* あらすじ -- 数理情報科学研究のための数理情報リテラシ
+* あらすじ -- 数理情報科学研究のための数理情報リテラシー [[file:../Maps/数理情報科学のための情報計算リテラシー.xmind][link]] [[shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind][cmd]]
+#+caption: 数理情報科学研究のための情報計算リテラシー
+#+ATTR_LATEX: :width 18cm 
+[[../Figs/infocalc-literacy-for-mathinfosci.png]]
+# [[../Maps/数理情報科学のための情報計算リテラシー.png]]
 
 数理情報リテラシという言葉で，コンピュータやインターネットを用いた，情
 報，文書，計算，プログラムなどの理解・作成・保存と共有，多大なデータの
 計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
 ます。
 
+情報計算の基盤について概観 (添付の mindmap 図) します。
+[[file:~/COMM/Lects/science_and_computation/comp_and_cal/Maps/ICTの利用目的.xmind]]
+
+
 本講では，理工学研究分野での数理情報リテラシとして，
 大きく次の点についてお話しします。
 
-- 数理情報処理リテラシと思考技術
+[[file:../Maps/数理情報科学のための情報計算リテラシー.xmind]]
+[[shell:xmind :../Maps/数理情報科学のための情報計算リテラシー.xmind]]
 
-  情報計算の基盤について概観 (添付の mindmap 図) します。
+- 数理情報処理リテラシと思考技術
 
   数理情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
   知的な思考技術について紹介し，支援するソフトウェアについて紹介します。
@@ -55,36 +64,52 @@
   なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
   いて概観します。
 
-* 参照資料
-
-
-- [[./maps/わかるとは.xmind]]
-- [[./docs/understanding.org]]
-
-* [[./digital_tools.org][思考とメモと文書のための(デジタル・)ツール]]
-
+* 知的思考の技術
 ** 思考の基本
-- 抽象化 (帰納)
-- 詳細化
+- 抽象化 [googling AIモード 思考 抽象化 帰納]
+  ある関係性で複数の事柄をまとめ，適切な名前を付けること
+  
+- 詳細化 [googling AIモード 思考 詳細化  具体化]
+  抽象化の逆。記号の意味を示すこと。
 
-** 知的思考の7つのステップ
-- [[./docs/thinking-7steps.org]]
-- [[./map-images/知的思考の7段階.xmind][知的思考の7段階.xmind]]
+- 分類 [googling AIモード 思考 分類 抽象化]
+  
+** わかるとは
+[[../Maps/わかるとは.xmind][わかるとは(file)]] または
+[[shell:xmind ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
+参照
+
+** 知的思考の技術の7つのステップ
+思考することについて思考するのが知的思考(メタ思考ともいう)。
+思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
+すると思考プロセスは，思考の対象にすることができる。
+
+[[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] [[shell:xmind ../Maps/知的思考の7段階.xmind][xmind_open]]
 
 1. 目的探索の思考
+   - 妥当か
+   - 適度か
+   - 本質的か
 2. 観察の思考
+   - 関連項目の列挙
 3. 発想の思考
+   - 項目リストから思い付く新たなことの列挙
 4. 分類の思考
+   - 項目間の関係によって分類，グループ化
 5. 構造化の思考
+   - グループ間の関係
+     - 依存関係
+     - 順序関係
 6. 意志決定の思考
+   - 理解は既存の知識に整合するか
 7. 表現の思考
-
-** わかるとは
+   - 理解から知識へ，
+   - 客観的な外化
 
 ** 知識や理解は構造を持った情報
 
-構造を読み書けるソフトウェアが必要
-- アウトライナー
+理解や知識の構造を読み書けるソフトウェアが必要
+- アウトライナー 
 - マインドマップ
 - グラフ的文書作成
 
@@ -97,13 +122,12 @@
 
 プロセス管理手法として
 - GTD Getting Things Done 
-- [[./comp_thinking.org][計算論的思考]]
+- [[./comp_tinking.org][計算論的思考]]
 
 
 文芸的プログラミング
 - プログラムと文書を統合し作成する (google colab)
 - Emacs org-mode
-- 
 
 * 研究のための数理情報リテラシ
 
@@ -112,26 +136,31 @@
 
 - 基本技術は思考法, 文書作成も思考法,プログラミングも思考法
 - 思考は情報処理プロセス
-
-- メタ思考
-- 思考プロセスの見える化
-- 知的思考の技術がある
+- メタ思考が重要 (思考する自分を客観視すること)
+  - 思考プロセスの見える化
+  - 知的思考の *技術* がある
 
 ** 考える，記憶する，理解する，こととは？
 
-- 思考の基本 抽象化と詳細化 , So What, Why so, MECE
+- 思考の基本 抽象化と詳細化, So What, Why so, MECE (mutually
+  exclusive collectively exhaustive)
+  [googling AIモード 思考 So What, Why so] (AIの思考ステップがでてきた)
 - 思考の記録 MECE, 構造化，GTD
+   [googling AIモード 思考 MECE 構造化 GTD]
 
 *** いろいろな思考法がある
-- 論理的思考
-- 批判的思考
-- 発想法
-- 水平思考
-- 計算論的思考
+- 論理的思考  [googling AIモード 思考 論理的思考] へんな回答がかえって
+  きた
+  [googling 思考 論理的思考] 
+- 批判的思考 [googling 思考 批判的思考]
+- 発想法 [googling 思考 発想法]
+- 水平思考 [googling 思考 水平思考]
+- 計算論的思考[googling 思考 計算論的思考]
+
 
 *** 情報リテラシーは思考法
-- 生のデータを意味付けして情報になる
-- 知的情報リテラシーの技術
+- 生のデータに意味付けして情報になる
+- 知的情報リテラシーの技術がある
   - 情報の収集
   - 情報の加工
   - 情報の分析
@@ -141,8 +170,7 @@
 
 *** 理解の記録(外化，メモや文書)
 思考の目的は理解すること
-- わかるとは [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/#outline-container-orgeb1c772][メモと思考のためのICTの活用]] 
-
+- わかるとは [[../Maps/わかるとは.xmind]][わかるとは.xmind]]  [[shell:xmind ../Maps/わかるとは.xmind][xmind-open]]
 
 理解と外化(メモ)  
 - 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
@@ -165,21 +193,19 @@
 - 検索できるようにすること
 - 人と計算機の共同作業の実現，互いに補完と拡張
 
-** 思考の技術
-
-- 発想法，水平思考，放射思考
-- 論理的思考法，批判的思考
-  
 ** プロセス管理法
 - 計算論的思考 [[https://masayuki054.github.io/cloud_and_information_literacy/docs/computational_thinking.html][クラウドと情報リテラシー 計算論的思考]]
-- GTD (Getting Things Done)
+- [GTD (Getting Things Done) プロセス管理法] googling 
+  - Todo リストの作り方と管理方法
   - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%83%95%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AEGTD_imap.pdf][僕にとってのGTD_imap.pdf]]
-- ストレスフリー
+- ストレスフリーなプロセス管理 すべて忘れても思い出せる
+  9のストレス解消法
 
-** 思考の数学的理解
+* 思考の数学的理解
 [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
 
-数学は言葉である [[./maps/数理のひろがり.xmind]] 
+** 数学は言葉である [[../Maps/数理のひろがり.xmind]]
+- 数学基礎論
 - 集合と構造 情報
 - 集合と関数 手続きと抽象化
 - 集合と関係 分類と構造
@@ -237,12 +263,16 @@
 
 ** 計算科学とは
 
+たとえば，[[file:topics/宇宙がわかる17の方程式.org][宇宙がわかる17の方
+程式]] で記述される現象を解析する。
+  
 [[https://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6][計算科学 - Wikipedia]] とは
 
-数学的モデルとその定量的評価により、計算機を用いて問題を解決する
-様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指す。
-
-
+[googling: 計算科学 モデル] 
+- 数学的モデルとその定量的評価により、計算機を用いて問題を解決する
+- 様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指
+  す。
+  
 数値解析は，数式ではなく，実際の数を対象とし，物理現象など現実の対象をモデル化した
 ものである。
 
@@ -275,7 +305,7 @@
 計算科学は科学の第三の形態で、実験/観測と理論の間を補間するもの、とい
 う主張もある。
 
-*** 有限要素法（FEM）
+*** 有限要素法（FEM）[googling: 有限要素法]
 偏微分方程式ソルバ (PDE)の 最も一般的な数値的解法
 
 - 有限要素法 （FEM）とは、偏微分方程式 （PDE）の定義域 （W）の近似解を
@@ -370,8 +400,6 @@ plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 
 ** python と sympy による数式計算の例
 
-
-
 - Google Colabを使った，
 - python プログラミング言語による記号・数式計算
 - 文書作成とプログラミングが同一文書で行なえる (文芸的プログラミング)
@@ -399,6 +427,9 @@ wikipedia の参考文献にあった
 
 
 * まとめ
+:PROPERTIES:
+:ORDERED:  t
+:END:
 本講では，理工学研究分野での情報計算リテラシとして，
 以下の点についてお話ししたつもりです:
 
@@ -425,22 +456,19 @@ wikipedia の参考文献にあった
   - ユークリッドの互除法，ガウスの消去法，グレブナー基底による簡約の間
     に共通な考え方が存在する
 
+#+caption: ICTの利用目的
 #+ATTR_LATEX: :width 18cm 
- [[./map-images/01-computer_and_cal.png]]
-
-#+caption: 人とコンピュータとインターネット
-#+ATTR_LATEX: :width 18cm
- [[./map-images/03-how_to_use_computer_and_internet.png]]
-
+[[../Figs/usingICT.png]]
 
 \vspace{3cm}
 
 #+caption: インターネットが起している変革
 #+ATTR_LATEX: :width 18cm
- [[./map-images/04-Web_revolution.png]]
-
+[[../Figs/Web-revolution.png]]
 
 #+caption: 思考とメモと文書のためのデジタル・ツール
 #+ATTR_LATEX: :width 18cm
-[[./map-images/05-digital_tools_for_thinking.png]]
+[[../Figs/ict-tools-for-thinking-and-memo.png]]
+
+
 

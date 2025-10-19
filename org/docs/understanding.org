@@ -6,7 +6,9 @@
 #+title:
 #+author masayuki
 
-./docs/understanding.org
+- [[[[../../Maps/わかるとは.xmind]]][Map]]
+- [[shell:xmind [[../../Maps/わかるとは.xmind]]][open xmind]]
+
 
 * わかるとは
 [[../maps/わかるとは.xmind]] のアウトライン

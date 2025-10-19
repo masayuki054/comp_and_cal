@@ -1,3 +1,4 @@
+
 #+startup: indent show2levels
 #+title:
 #+author masayuki
@@ -5,9 +6,9 @@
 understandings = ["わかる"，"理解"]
 thinks = ["思考"]
 #+begin_src ruby :tangle documents-index.rb
-topic_dirs = ['topics','maps','map-images','refers']
+topic_dirs = ['docs','topics','../Maps','map-images','refers']
 
-File.open("topics-index.org","w") { |out|
+File.open("00-documents-index.org","w") { |out|
   out.write(
 "#+startup: indent show2levels
 #+title:
@@ -30,4 +31,4 @@ File.open("topics-index.org","w") { |out|
 #+end_src
 
 #+RESULTS:
-| topics | maps | map-images | refers |
+| docs | topics | ../Maps | map-images | refers |
