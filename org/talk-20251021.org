@@ -1,8 +1,8 @@
 #+startup: indent
-#+options: ^:{}
-#+options: toc:nil
 #+setupfile: ../info/index-sos-header.setup
 #+include: ../info/common-header.org
+#+options: ^:{}
+#+options: toc:nil
 
 #+LATEX_CLASS: jarticle
 #+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
@@ -15,29 +15,29 @@
 #+LATEX_HEADER:\setlength{\topmargin}{-2cm}
 #+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-#+title: 数理情報科学: 数理情報リテラシ
-#+title: [[https://github.com/masayuki054/comp_and_cal/tree/master/talk-2024][comp_and_cal/org/talk- master · masayuki054/comp_and_cal · GitHub]]
+#+title: 数理情報科学研究のための数理情報リテラシ
 
-* あらすじ -- 数理情報科学研究のための数理情報リテラシー [[file:../Maps/数理情報科学のための情報計算リテラシー.xmind][link]] [[shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind][cmd]]
-#+caption: 数理情報科学研究のための情報計算リテラシー
+- 講義内容の [[https://github.com/masayuki054/comp_and_cal/][GitHub リポジトリ]] [リンク]
+- 講義内容 [[https://github.com/masayuki054/comp_and_cal/blob/master/org/talk-20251021.org][talk-20251021.org]] [リンク]
+
+* あらすじ -- 数理情報科学研究のための数理情報リテラシー [[file:../Maps/数理情報科学のための情報計算リテラシー.xmind][link]] [[shell:open ../Maps/数理情報科学のための情報計算リテラシー.xmind][cmd]]
+
+[[[../Maps/数理情報科学のための情報計算リテラシー.xmind][Mindmap書類]]][[[shell::open ../Maps/数理情報科学のための情報計算リテラシー.xmind][アプリ]]]
 #+ATTR_LATEX: :width 18cm 
 [[../Figs/infocalc-literacy-for-mathinfosci.png]]
 # [[../Maps/数理情報科学のための情報計算リテラシー.png]]
+#+caption: 数理情報科学研究のための情報計算リテラシー
 
 数理情報リテラシという言葉で，コンピュータやインターネットを用いた，情
 報，文書，計算，プログラムなどの理解・作成・保存と共有，多大なデータの
 計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
 ます。
 
-情報計算の基盤について概観 (添付の mindmap 図) します。
-[[file:~/COMM/Lects/science_and_computation/comp_and_cal/Maps/ICTの利用目的.xmind]]
-
+情報計算の基盤について概観 (添付の mindmap 図) します。[[[../Maps/ICTの利用目的.xmind][Mindmap書類]]][[[shell:open ../Maps/ICTの利用目
+的.xmind][Xmindアプリ]]]
 
 本講では，理工学研究分野での数理情報リテラシとして，
 大きく次の点についてお話しします。
-
-[[file:../Maps/数理情報科学のための情報計算リテラシー.xmind]]
-[[shell:xmind :../Maps/数理情報科学のための情報計算リテラシー.xmind]]
 
 - 数理情報処理リテラシと思考技術
 
@@ -76,7 +76,7 @@
   
 ** わかるとは
 [[../Maps/わかるとは.xmind][わかるとは(file)]] または
-[[shell:xmind ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
+[[shell:open ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
 参照
 
 ** 知的思考の技術の7つのステップ
@@ -84,7 +84,7 @@
 思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
 すると思考プロセスは，思考の対象にすることができる。
 
-[[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] [[shell:xmind ../Maps/知的思考の7段階.xmind][xmind_open]]
+[[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] [[shell:open ../Maps/知的思考の7段階.xmind][xmind_open]]
 
 1. 目的探索の思考
    - 妥当か
@@ -170,7 +170,7 @@
 
 *** 理解の記録(外化，メモや文書)
 思考の目的は理解すること
-- わかるとは [[../Maps/わかるとは.xmind]][わかるとは.xmind]]  [[shell:xmind ../Maps/わかるとは.xmind][xmind-open]]
+- わかるとは [[../Maps/わかるとは.xmind]][わかるとは.xmind]]  [[shell:open ../Maps/わかるとは.xmind][xmind-open]]
 
 理解と外化(メモ)  
 - 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
