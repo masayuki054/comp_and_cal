@@ -20,9 +20,10 @@
 - 講義内容の [[https://github.com/masayuki054/comp_and_cal/][GitHub リポジトリ]] [リンク]
 - 講義内容 [[https://github.com/masayuki054/comp_and_cal/blob/master/org/talk-20251021.org][talk-20251021.org]] [リンク]
 
-* あらすじ -- 数理情報科学研究のための数理情報リテラシー [[file:../Maps/数理情報科学のための情報計算リテラシー.xmind][link]] [[shell:open ../Maps/数理情報科学のための情報計算リテラシー.xmind][cmd]]
+* あらすじ -- 数理情報科学研究のための数理情報リテラシー 
 
-[[[../Maps/数理情報科学のための情報計算リテラシー.xmind][Mindmap書類]]][[[shell::open ../Maps/数理情報科学のための情報計算リテラシー.xmind][アプリ]]]
+[[[../Maps/数理情報科学のための情報計算リテラシー.xmind][Mindmap書類]]][[[shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind][アプリ]]]
+
 #+ATTR_LATEX: :width 18cm 
 [[../Figs/infocalc-literacy-for-mathinfosci.png]]
 # [[../Maps/数理情報科学のための情報計算リテラシー.png]]
@@ -33,8 +34,9 @@
 計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
 ます。
 
-情報計算の基盤について概観 (添付の mindmap 図) します。[[[../Maps/ICTの利用目的.xmind][Mindmap書類]]][[[shell:open ../Maps/ICTの利用目
-的.xmind][Xmindアプリ]]]
+情報計算の基盤について概観 (添付の mindmap 図) します。
+- [[../Maps/ICTの利用目的.xmind][Mindmap書類]]
+- [[shell:xmind ../Maps/ICTの利用目的.xmind][Xmindアプリ]]]
 
 本講では，理工学研究分野での数理情報リテラシとして，
 大きく次の点についてお話しします。
@@ -66,25 +68,35 @@
 
 * 知的思考の技術
 ** 思考の基本
+- 分類 [googling AIモード 思考 分類 抽象化]
+
 - 抽象化 [googling AIモード 思考 抽象化 帰納]
   ある関係性で複数の事柄をまとめ，適切な名前を付けること
   
 - 詳細化 [googling AIモード 思考 詳細化  具体化]
   抽象化の逆。記号の意味を示すこと。
 
-- 分類 [googling AIモード 思考 分類 抽象化]
   
 ** わかるとは
-[[../Maps/わかるとは.xmind][わかるとは(file)]] または
-[[shell:open ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
-参照
+
+[googling: 思考 わかるとは 理解]
+
+[[https://www.chikumashobo.co.jp/product/9784480059390/][『「わかる」とはどういうことか』山鳥 重 | 筑摩書房]]
+の読書ノート参照
+- [[../Maps/わかるとは.xmind][わかるとは (file-open)]] または
+- [[shell:xmind ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
+
 
 ** 知的思考の技術の7つのステップ
+
 思考することについて思考するのが知的思考(メタ思考ともいう)。
 思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
 すると思考プロセスは，思考の対象にすることができる。
 
-[[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] [[shell:open ../Maps/知的思考の7段階.xmind][xmind_open]]
+[[https://www.amazon.co.jp/%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E2%80%95%E8%80%83%E3%81%88%E3%82%8B%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E5%BC%B7%E5%8C%96%E3%81%99%E3%82%8B7%E3%81%A4%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%81%AE%E6%80%9D%E8%80%83%E8%A1%93-SANNO%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E7%94%A3%E6%A5%AD%E8%83%BD%E7%8E%87%E5%A4%A7%E5%AD%A6%E7%B7%8F%E5%90%88%E7%A0%94%E7%A9%B6%E6%89%80%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/dp/4382055784][Amazon.co.jp: 知的思考の技術―考えるフレームを強化する7つのステップの思考術 (SANNOマネジメントコンセプトシリーズ) : 産業能率大学総合研究所知的思考の技術研究プロジェクト: Japanese Books]]
+のまとめ mindmap：
+- [[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] または
+- [[shell:open ../Maps/知的思考の7段階.xmind][xmind_open]]
 
 1. 目的探索の思考
    - 妥当か
@@ -157,7 +169,6 @@
 - 水平思考 [googling 思考 水平思考]
 - 計算論的思考[googling 思考 計算論的思考]
 
-
 *** 情報リテラシーは思考法
 - 生のデータに意味付けして情報になる
 - 知的情報リテラシーの技術がある
@@ -170,7 +181,7 @@
 
 *** 理解の記録(外化，メモや文書)
 思考の目的は理解すること
-- わかるとは [[../Maps/わかるとは.xmind]][わかるとは.xmind]]  [[shell:open ../Maps/わかるとは.xmind][xmind-open]]
+- わかるとは 参照 [[../Maps/わかるとは.xmind][わかるとは.xmind]]|[[shell:xmind  ../Maps/わかるとは.xmind][xmind-open]]
 
 理解と外化(メモ)  
 - 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
@@ -196,15 +207,16 @@
 ** プロセス管理法
 - 計算論的思考 [[https://masayuki054.github.io/cloud_and_information_literacy/docs/computational_thinking.html][クラウドと情報リテラシー 計算論的思考]]
 - [GTD (Getting Things Done) プロセス管理法] googling 
-  - Todo リストの作り方と管理方法
+  - Todo リストの作り方と管理方法 
   - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%83%95%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AEGTD_imap.pdf][僕にとってのGTD_imap.pdf]]
 - ストレスフリーなプロセス管理 すべて忘れても思い出せる
-  9のストレス解消法
+  - [[./topics/9つのストレス対処法.org]]
 
 * 思考の数学的理解
 [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
 
-** 数学は言葉である [[../Maps/数理のひろがり.xmind]]
+** 数学は言葉である
+[[../Maps/数理のひろがり.xmind]] | [[shell:xmind ../Maps/数理のひろがり.xmind]]
 - 数学基礎論
 - 集合と構造 情報
 - 集合と関数 手続きと抽象化
