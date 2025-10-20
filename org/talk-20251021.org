@@ -15,7 +15,7 @@
 #+LATEX_HEADER:\setlength{\topmargin}{-2cm}
 #+LATEX_HEADER:\setlength{\textheight}{26cm}
 
-#+title: 数理情報科学研究のための数理情報リテラシ
+#+title: 数理情報科学研究のための数理情報リテラシー
 
 - 講義内容の [[https://github.com/masayuki054/comp_and_cal/][GitHub リポジトリ]] [リンク]
 - 講義内容 [[https://github.com/masayuki054/comp_and_cal/blob/master/org/talk-20251021.org][talk-20251021.org]] [リンク]
@@ -75,17 +75,15 @@
   
 - 詳細化 [googling AIモード 思考 詳細化  具体化]
   抽象化の逆。記号の意味を示すこと。
-
   
 ** わかるとは
 
 [googling: 思考 わかるとは 理解]
 
-[[https://www.chikumashobo.co.jp/product/9784480059390/][『「わかる」とはどういうことか』山鳥 重 | 筑摩書房]]
+[[https://www.chikumashobo.co.jp/product/9784480059390/][『「わかる」とはどういうことか』山鳥 重 | 筑摩書房 ]]
 の読書ノート参照
 - [[../Maps/わかるとは.xmind][わかるとは (file-open)]] または
 - [[shell:xmind ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
-
 
 ** 知的思考の技術の7つのステップ
 
@@ -132,14 +130,13 @@
 - コストを見積り，
 - 作業全体をデザインしよう
 
-プロセス管理手法として
-- GTD Getting Things Done 
-- [[./comp_tinking.org][計算論的思考]]
+** プロセス管理手法
+- GTD Getting Things Done (後述)
+- [[[[./topics/comp_thinking.org]]][計算論的思考]] (後述)
 
-
-文芸的プログラミング
-- プログラムと文書を統合し作成する (google colab)
-- Emacs org-mode
+- 文芸的プログラミング
+  - プログラムと文書を統合し作成する (google colab)
+  - Emacs org-mode 
 
 * 研究のための数理情報リテラシ
 
@@ -153,17 +150,19 @@
   - 知的思考の *技術* がある
 
 ** 考える，記憶する，理解する，こととは？
-
-- 思考の基本 抽象化と詳細化, So What, Why so, MECE (mutually
+*** 思考の基本 抽象化と詳細化, So What, Why so, MECE (mutually
   exclusive collectively exhaustive)
-  [googling AIモード 思考 So What, Why so] (AIの思考ステップがでてきた)
-- 思考の記録 MECE, 構造化，GTD
-   [googling AIモード 思考 MECE 構造化 GTD]
+  [googling AIモード 思考 So What, Why so]
+  [[elisp:google-this "AIの思考ステップ")]]
+
+*** 思考の記録 MECE, 構造化，GTD
+[googling 思考の記録 構造化 GTD]
 
 *** いろいろな思考法がある
-- 論理的思考  [googling AIモード 思考 論理的思考] へんな回答がかえって
+- 論理的思考  [[elisp:(google-this "思考" "論理的思考")]] へんな回答がかえって
   きた
-  [googling 思考 論理的思考] 
+  [[elisp:(google-this "思考と論理的思考とAI")]]
+  
 - 批判的思考 [googling 思考 批判的思考]
 - 発想法 [googling 思考 発想法]
 - 水平思考 [googling 思考 水平思考]
@@ -181,7 +180,8 @@
 
 *** 理解の記録(外化，メモや文書)
 思考の目的は理解すること
-- わかるとは 参照 [[../Maps/わかるとは.xmind][わかるとは.xmind]]|[[shell:xmind  ../Maps/わかるとは.xmind][xmind-open]]
+- わかるとは.xmindの参照
+  - [[../Maps/わかるとは.xmind][わかるとは.xmind]]|[[shell:xmind  ../Maps/わかるとは.xmind][xmind-open]]
 
 理解と外化(メモ)  
 - 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
@@ -208,9 +208,9 @@
 - 計算論的思考 [[https://masayuki054.github.io/cloud_and_information_literacy/docs/computational_thinking.html][クラウドと情報リテラシー 計算論的思考]]
 - [GTD (Getting Things Done) プロセス管理法] googling 
   - Todo リストの作り方と管理方法 
-  - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%83%95%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AEGTD_imap.pdf][僕にとってのGTD_imap.pdf]]
-- ストレスフリーなプロセス管理 すべて忘れても思い出せる
-  - [[./topics/9つのストレス対処法.org]]
+X  - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%83%95%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AEGTD_imap.pdf][僕にとってのGTD_imap.pdf]]
+  - ストレスフリーなプロセス管理 すべて忘れても思い出せる
+- [[./topics/9つのストレス対処法.org]]
 
 * 思考の数学的理解
 [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
@@ -227,7 +227,7 @@
   - 定義，前提，証明，定理
 - グラフ 構造の可視化
   - [[https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org][mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub]]
-
+    
 ** 思考のためのデジタルツール
 考えることをサポートするデジタルツールがある [[https://masayuki054.github.io/ict_literacy_for_thinking_and_memo/][メモと思考のためのICTの活用]]
 **** 思考の可視化
@@ -249,16 +249,18 @@
 - 計算は代表点一点で行ない，近傍の点は定数または直線近似する
 - 数値も有限精度，記憶も有限個
 
-*** 連続関数を折れ線グラフで考える
+*** 連続関数の変化を折れ線グラフで考える
 
-[[./docs/]] フォルダの中の diff-descrete.pdf に手書きの資料があります。
-- 連続関数を折れ線グラフと見做す
+[[file:./docs/diff-descrete.pdf][2024年度の手書きの資料]]
 
-**** 関数の変化
+
+**** 連続関数を折れ線グラフと見做す
+
+**** 1変数関数の変化
 - 関数の変化の図的解釈とインタフェース式
-  
+
 - 微分の意味(図)とインタフェース式
-  
+
 - 二階微分の図的解釈とインタフェース式
 
 - 多階微分の図的解釈とインタフェース式
@@ -266,6 +268,8 @@
 - 微積分学の基本定理の図的理解
 
 - 関数の変化とテイラー展開
+  - 関数の変化を微分形式で表わし，
+  - [0,x]の区間で積分するとマクローリン展開が得られる
   
 **** 2変数関数の変化
 - 二変数関数の微分の意味とインタフェース式
@@ -275,8 +279,7 @@
 
 ** 計算科学とは
 
-たとえば，[[file:topics/宇宙がわかる17の方程式.org][宇宙がわかる17の方
-程式]] で記述される現象を解析する。
+たとえば，[[./topics/宇宙がわかる17の方程式.org][宇宙がわかる17の方程式]] で記述される現象を解析する。
   
 [[https://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6][計算科学 - Wikipedia]] とは
 
@@ -409,7 +412,6 @@ plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
 - [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
 - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
 
-
 ** python と sympy による数式計算の例
 
 - Google Colabを使った，
@@ -439,9 +441,7 @@ wikipedia の参考文献にあった
 
 
 * まとめ
-:PROPERTIES:
-:ORDERED:  t
-:END:
+
 本講では，理工学研究分野での情報計算リテラシとして，
 以下の点についてお話ししたつもりです:
 

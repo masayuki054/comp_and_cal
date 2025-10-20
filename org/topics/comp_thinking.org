@@ -1,0 +1,11 @@
+* 計算論的思考
+
+   [[https://www.cs.cmu.edu/afs/cs/usr/wing/www/ct-japanese.pdf][計算論的思考]]
+   - [[./computational_thinking.org][論文のまとめ.org]]
+   - [[http://tannomizuki.hatenablog.com/entry/2016/10/18/125818][Computational Thinkingとは何か - 小さなごちそう]]
+     わかりやすい解説です。
+
+   計算論的思考は，情報処理的に考えることとその評価基準です。コンピュー
+   タ科学分野での思考法ですが，対象をコンピュータだけでなく，人やシス
+   テムを含めて考え，子供のときから身につけるべき考え方であるといわれ
+   ています。
