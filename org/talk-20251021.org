@@ -373,11 +373,10 @@ X  - [[https://masayuki054.github.io/cloud_and_information_literacy/i_maps/%E5%8
 ***** 例題
 #+BEGIN_SRC sage
 x,y = var('x y')
-plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
+(x+y)^2
+# plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
  #+END_SRC
 
- #+RESULTS:
- : Launched jmol viewer for Graphics3d Object
 
 **** Sagemath アプリ
 数式処理が，スマホで動くなんて，ほんとにビックリ
