@@ -29,49 +29,46 @@
 - [[./docs/diff-descrete.pdf]]
 - [[./docs/微分の図v3.pdf]]
 
-** 思考を支える数学
-数理のひろがりのマップ [[file:maps/数理のひろがり.xmind]]
-
-** python と sympy による数式計算の例
-- Google Colabを使った，
-- python プログラミング言語による記号・数式計算
-- 文書作成とプログラミングが同一文書で行なえる (文芸的プログラミング)
-[[https://colab.research.google.com/drive/13-xrzx125aD3L4mzB5BhOHAUyLeV6kCX][python-calc.ipynb - Colab]] 
-
 * 数式処理アルゴリズム
-** 不定積分入門
-[[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
-wikipedia の参考文献にあった
-
 ** 規則と簡約化と検索のための計算機代数
+高次多変数代数方程式の解法についての解説: [[./gbasis/gbasis.org]]
 
-高次多変数代数方程式の解法として別途，資料[[./gbasis/gbasis.org]]を配
-布します。
+グレブナー基底に関する用語とブッフバーガー算法については下記を参照します: 
+- [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
 
-グレブナー基底に関する用語とブッフバーガー算法については，[[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
-を参照します。
-
-数学と検索と簡約のつながりについて，考えます。人は理論を考え，コン
-ピュータに検索してもらいましょう。
+数学と検索と簡約のつながりについて，考えます。人は理論を考え，コンピュー
+タに検索してもらいましょう。
 
 多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
 の概念と計算に帰着します。見通しと効率が良くなります。
+*** 解説資料へのリンク:
+- [[./gbasis/reduction_and_matrix.org][グレブナー基底と線形代数(org)]]
+- [[./gbasis/reduction_and_matrix.pdf][グレブナー基底と線形代数(pdf)]]
 
-** 参考
+*** 参考
 [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] の紹介
 - [[http://math.shinshu-u.ac.jp/~hanaki/dvi/gr.pdf][gr.pdf]] 
 - 多項式の連立方程式を扱う魔術 －多項式の連立方程式を扱う魔術
   [[https://www.mathsoc.jp/publication/tushin/0303/maruyama3-3.pdf][maruyama3-3.pdf]]
 
-不定積分入門                              :algorithm:risch:integral:math:
+*** 関連事項
+
+**** 不定積分入門                           :algorithm:risch:integral:math:
 - [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
 
-微分方程式
+**** 微分方程式 -
+微分作用素が作る微分作用素環
 - ./docs/D-加群と計算数学-目次.pdf
 
-* グレブナー基底と線形代数
-** ガウスの消去法による線形方程式の解法
 
+
+* グレブナー基底と高次多変数方程式の解法
+[[./gbasis/presen.org][グレブナー基底と高次多変数方程式の解法(.org)]]
+- [[./gbasis/presen.pdf][グレブナー基底と高次多変数方程式の解法(pdf)]]
+
+* グレブナー基底と線形代数
+- [[./gbasis/reduction_and_matrix.pdf]]
+** ガウスの消去法による線形方程式の解法
 *** 連立一次方程式と行列表現
 連立一次方程式:
 \begin{eqnarray}
@@ -147,8 +144,6 @@ wikipedia の参考文献にあった
    0 & 0 & 1 & 1 & z= 1\\
    \end{array}
 \end{center}   
-
-** 
 
 ** グレブナー基底計算と行列表現とガウスの消去法   
    
