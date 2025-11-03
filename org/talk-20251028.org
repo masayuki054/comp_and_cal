@@ -2,10 +2,10 @@
 #+title:
 #+author masayuki
 #+startup: indent
-#+setupfile: ../info/index-sos-header.setup
-#+include: ../info/common-header.org
 #+options: ^:{}
 #+options: toc:nil
+#+setupfile: ../info/index-ow-header.setup
+#+include: ../info/common-header.org
 
 #+LATEX_CLASS: jarticle
 #+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
@@ -26,14 +26,16 @@
 * 先週話せなかった事
 連続関数の離散化とその変化の捉え方を図示してみました:
 ** 微分の図的理解, テイラー展開と微分積分学の基本定理
-- [[shell:evince ./docs/diff-descrete.pdf][./docs/diff-descrete.pdf)] (昨年度の板書)
-- [[shell:evince ./docs/diagrams_of_diff-v3.pdf][./docs/diagrams_of_diff-v3.pdf]] (2025-補足)
+- [[./docs/diff-descrete.pdf]] (昨年度の板書)
+- [[./docs/微分の図v3.pdf]] (2025 補足)
 
 * 規則と簡約化と検索のための計算機代数
+
 数学と検索と簡約のつながりについて，考えます。人は理論を考え，コンピュー
 タに検索してもらいましょう。
 
-** グレブナー基底
+** グレブナー基底 代数方程式解法の数理
+
 [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] の紹介
 - [[http://math.shinshu-u.ac.jp/~hanaki/dvi/gr.pdf][gr.pdf]] 
 - 多項式の連立方程式を扱う魔術 －多項式の連立方程式を扱う魔術
@@ -43,16 +45,17 @@
 - [[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
 
 ** グレブナー基底と高次多変数方程式の解法
-
+\( c_1 f_1 + c_2 f_2 \cdots c_n f_n \),
+\(c_i , f_1 \in K[x,y,\ldots,z]\)
 [[./gbasis/presen.org][グレブナー基底と高次多変数方程式の解法(.org)]]
-- [[shell:evince ./gbasis/presen.pdf][グレブナー基底と高次多変数方程式の解法(pdf)]]
+- [[./gbasis/presen.pdf][グレブナー基底と高次多変数方程式の解法(pdf)]]
 
 ** グレブナー基底と線形代数
 
 多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
 の概念と計算に帰着します。見通しと効率が良くなります。
 
-- [[shell:evince ./gbasis/reduction_and_matrix.pdf]]
+- [[./gbasis/reduction_and_matrix.pdf]]
 *** ガウスの消去法による線形方程式の解法
 **** 連立一次方程式と行列表現
 **** ガウスの消去法
@@ -63,11 +66,12 @@
 
 ** 関連事項
 
-- 不定積分入門
-  - [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+** 不定積分入門                              :algorithm:risch:integral:math:
+- [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
   
-- 微分方程式 -  微分作用素が作る微分作用素環
-  - [[shell:xdg-open ./refers/D-module_and_comp_math-index.pdf]]
+** 微分方程式 -
+微分作用素が作る微分作用素環
+- [[./refers/D-加群と計算数学-目次.pdf]]
 
 
 
