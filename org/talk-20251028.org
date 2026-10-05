@@ -1,4 +1,4 @@
-#+startup: indent show2levels
+grepgrep #+startup: indent show2levels
 #+title:
 #+author masayuki
 #+startup: indent
