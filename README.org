@@ -1,3 +1,4 @@
+
 #+options: ^:{}
 #+options: toc:nil
 #+setupfile: info/index-sos-header.setup
@@ -21,7 +22,6 @@
 #+end_center
 
 * デジタル技術と協調しよう
-
 
   コンピュータとインターネットと上手に付き合って，
   知り，考え，記憶し，検索し，思い出せるようにしましょう。
