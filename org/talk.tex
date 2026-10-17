@@ -1,0 +1,570 @@
+% Created 2026-10-14 水 11:46
+% Intended LaTeX compiler: pdflatex
+\documentclass[dvipdfmx,11pat]{jarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\setlength{\textwidth}{18cm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+\setlength{\topmargin}{-2cm}
+\setlength{\textheight}{26cm}
+\setcounter{secnumdepth}{6}
+\author{鈴木正幸 suzuki@iwate-u.ac.jp (学修支援担当@図書館)}
+\date{\today}
+\title{ 数理情報科学研究のための数理情報リテラシー}
+\begin{document}
+
+\maketitle
+\#+author masayuki
+\section{講義の目的と変遷}
+\label{sec:org4f70d1d}
+主題: 数理科学研究のための情報計算リテラシ
+
+\begin{itemize}
+\item 当初は，ICT技術をいかに研究の知的な活動に活かすか
+ICT技術との相互補完の立場から，利用法と技術の紹介
+\begin{itemize}
+\item 計算ツール
+\item 思考ツール
+\end{itemize}
+
+\item ICT技術の進歩により，知的活動(思考，計算，表現)のためのツールは変遷
+するので，知的活動(思考，計算，表現)の基本原理原則を紹介することにし
+た。
+
+\item ICT技術をもちいた知的活動(思考，計算，表現)を知的情報リテラシと呼ぶ。
+研究活動に不可欠である。
+\end{itemize}
+\section{話の背景}
+\label{sec:org8494541}
+自己紹介.xmind
+\begin{itemize}
+\item 話の土台になっているのは
+\begin{itemize}
+\item 研究室活動
+\item 研究活動
+\begin{itemize}
+\item 学内ネットワーク構築と管理
+\item 記号・数式処理システム
+\begin{itemize}
+\item 処理系の作製，専用計算機の作製
+\end{itemize}
+\item 数式処理アルゴリズム
+\begin{itemize}
+\item 最大公約多項式の高速計算アルゴリズム
+\item グレブナー基底の高速計算アルゴリズム
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\item \href{https://sites.google.com/iwate-u.ac.jp/lsr/index?authuser=0}{学修支援室}, \href{https://sites.google.com/iwate-u.ac.jp/lsr/staff?authuser=0}{学修支援室 - スタッフ紹介}
+\item 
+\end{itemize}
+\section{関連事項}
+\label{sec:orge6950c6}
+\subsection{深く影響を受けた関連事項}
+\label{sec:org61fdc5f}
+\begin{itemize}
+\item Web進化論，Googleの使命
+\item 知的思考の技術  - アイディアの作りかた
+\item わかるとは，
+\item 図で考える，シンプルになる
+\item 数学は言葉
+\end{itemize}
+\subsection{強く変化を感じた事項}
+\label{sec:orgab148ab}
+\begin{itemize}
+\item 学修支援の相談者数の激減
+\item Google 知の進化論 [link]
+\item 岩手大学 データサイエンス [link]
+\end{itemize}
+\section{あらすじ -- 数理情報科学研究のための数理情報リテラシー}
+\label{sec:org1ddeb49}
+
+{[}\href{../Maps/数理情報科学のための情報計算リテラシー.xmind}{Mindmap書類}][\href{shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind}{アプリ}]
+
+\begin{center}
+\includegraphics[width=18cm]{../Figs/infocalc-literacy-for-mathinfosci.png}
+\end{center}
+
+数理情報リテラシという言葉で，コンピュータやインターネットを用いた，情
+報，文書，計算，プログラムなどの理解・作成・保存と共有，多大なデータの
+計算や表示など，を行なう際の，考え方とツールの使い方を意味することにし
+ます。
+
+情報計算の基盤について概観 (添付の mindmap 図) します。
+\begin{itemize}
+\item \href{../Maps/ICTの利用目的.xmind}{Mindmap書類}
+\item \href{shell:xmind ../Maps/ICTの利用目的.xmind}{Xmindアプリ}
+\end{itemize}
+
+本講では，理工学研究分野での数理情報リテラシとして，
+大きく次の点についてお話しします。
+
+\begin{itemize}
+\item 数理情報処理リテラシと思考技術
+
+数理情報処理は，結局，デジタル・ツールを用いた思考過程であり思考技術です。
+知的な思考技術について紹介し，支援するソフトウェアについて紹介します。
+知的思考技術について，集合，関数，関係，グラフ，数理論理学，など分野
+からその数理を考えてみます。その数理は，思考の方向を定め，迷ったり，
+ゆきづまったりした際の拠り所となると思います。
+
+\item 計算リテラシの原理 (数学的理解とプログラミングのために)
+
+微分を例に，連続関数を離散的に捉え，コンピュータで計算可能にするとと
+もに，直観的・図的に計算を表現することを考えます。
+
+\item 数理科学的な計算道具については，計算科学とは何か，どんなプログラムが
+あるのかについては，昨年度資料を参照してください。
+
+\item 計算，検索，探索，数理とはについて考えるために，数式処理における重要
+なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
+いて概観します。
+\end{itemize}
+\section{知的思考の技術}
+\label{sec:org2eaded2}
+\subsection{思考の基本}
+\label{sec:org4965828}
+\begin{itemize}
+\item 分類 [googling AIモード 思考 分類 抽象化]
+
+\item 抽象化 [googling AIモード 思考 抽象化 帰納]
+ある関係性で複数の事柄をまとめ，適切な名前を付けること
+
+\item 詳細化 [googling AIモード 思考 詳細化  具体化]
+抽象化の逆。記号の意味を示すこと。
+\end{itemize}
+\subsection{わかるとは}
+\label{sec:org623698c}
+{[}googling: 思考 わかるとは 理解] \url{https://share.gemini.google/yzhjHxQhQ8i9}
+
+\href{https://www.chikumashobo.co.jp/product/9784480059390/}{『「わかる」とはどういうことか』山鳥 重 | 筑摩書房 }
+の読書ノート参照
+\begin{itemize}
+\item \href{../Maps/わかるとは.xmind}{わかるとは (file-open)} または
+\item \href{shell:xmind ../Maps/わかるとは.xmind}{わかるとは (xmind-open)}
+\end{itemize}
+\subsection{知的思考の技術の7つのステップ}
+\label{sec:org5b7c3db}
+
+思考することについて思考するのが知的思考(メタ思考ともいう)。
+思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
+すると思考プロセスは，思考の対象にすることができる。
+
+\href{https://www.amazon.co.jp/\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E2\%80\%95\%E8\%80\%83\%E3\%81\%88\%E3\%82\%8B\%E3\%83\%95\%E3\%83\%AC\%E3\%83\%BC\%E3\%83\%A0\%E3\%82\%92\%E5\%BC\%B7\%E5\%8C\%96\%E3\%81\%99\%E3\%82\%8B7\%E3\%81\%A4\%E3\%81\%AE\%E3\%82\%B9\%E3\%83\%86\%E3\%83\%83\%E3\%83\%97\%E3\%81\%AE\%E6\%80\%9D\%E8\%80\%83\%E8\%A1\%93-SANNO\%E3\%83\%9E\%E3\%83\%8D\%E3\%82\%B8\%E3\%83\%A1\%E3\%83\%B3\%E3\%83\%88\%E3\%82\%B3\%E3\%83\%B3\%E3\%82\%BB\%E3\%83\%97\%E3\%83\%88\%E3\%82\%B7\%E3\%83\%AA\%E3\%83\%BC\%E3\%82\%BA-\%E7\%94\%A3\%E6\%A5\%AD\%E8\%83\%BD\%E7\%8E\%87\%E5\%A4\%A7\%E5\%AD\%A6\%E7\%B7\%8F\%E5\%90\%88\%E7\%A0\%94\%E7\%A9\%B6\%E6\%89\%80\%E7\%9F\%A5\%E7\%9A\%84\%E6\%80\%9D\%E8\%80\%83\%E3\%81\%AE\%E6\%8A\%80\%E8\%A1\%93\%E7\%A0\%94\%E7\%A9\%B6\%E3\%83\%97\%E3\%83\%AD\%E3\%82\%B8\%E3\%82\%A7\%E3\%82\%AF\%E3\%83\%88/dp/4382055784}{Amazon.co.jp: 知的思考の技術―考えるフレームを強化する7つのステップの思考術 (SANNOマネジメントコンセプトシリーズ) : 産業能率大学総合研究所知的思考の技術研究プロジェクト: Japanese Books}
+のまとめ mindmap：
+\begin{itemize}
+\item \href{../Maps/知的思考の7段階.xmind}{知的思考の7段階(file)} または
+\item \href{shell:open ../Maps/知的思考の7段階.xmind}{xmind\_open}
+
+\item 目的探索の思考
+\begin{itemize}
+\item 妥当か
+\item 適度か
+\item 本質的か
+\end{itemize}
+\item 観察の思考
+\begin{itemize}
+\item 関連項目の列挙
+\end{itemize}
+\item 発想の思考
+\begin{itemize}
+\item 項目リストから思い付く新たなことの列挙
+\end{itemize}
+\item 分類の思考
+\begin{itemize}
+\item 項目間の関係によって分類，グループ化
+\end{itemize}
+\item 構造化の思考
+\begin{itemize}
+\item グループ間の関係
+\begin{itemize}
+\item 依存関係
+\item 順序関係
+\end{itemize}
+\end{itemize}
+\item 意志決定の思考
+\begin{itemize}
+\item 理解は既存の知識に整合するか
+\end{itemize}
+\item 表現の思考
+\begin{itemize}
+\item 理解から知識へ，
+\item 客観的な外化
+\end{itemize}
+\end{itemize}
+\subsection{知識や理解は構造を持った情報}
+\label{sec:org47139e6}
+
+理解や知識の構造を読み書けるソフトウェアが必要
+\begin{itemize}
+\item アウトライナー
+\item マインドマップ
+\item グラフ的文書作成
+\end{itemize}
+\subsection{知的作業は構造化されたプロセス}
+\label{sec:orgbe9bcf3}
+
+知的作業の
+\begin{itemize}
+\item プロセスを見える化し，
+\item 作業の流れを手続き化し，
+\item コストを見積り，
+\item 作業全体をデザインしよう
+\end{itemize}
+
+gemini: \url{https://share.gemini.google/JmdmLRkbUpdy} 
+\subsection{プロセス管理手法}
+\label{sec:org9203794}
+\begin{itemize}
+\item GTD Getting Things Done (後述)
+\item {[}[\url{./topics/comp\_thinking.org}][計算論的思考]] (後述)
+
+\item 文芸的プログラミング
+\begin{itemize}
+\item プログラムと文書を統合し作成する (google colab)
+\item Emacs org-mode
+\end{itemize}
+
+gemini: \url{https://share.gemini.google/NpSqXOfENNFZ}
+\end{itemize}
+\section{思考の数学的理解}
+\label{sec:orgf6d9f54}
+\href{https://github.com/masayuki054/mathematics/tree/main}{GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ}
+\subsection{数学は言葉である}
+\label{sec:orgd0998db}
+\url{../Maps/数理のひろがり.xmind} | \url{shell:xmind ../Maps/数理のひろがり.xmind}
+\begin{itemize}
+\item 数学基礎論
+\item[{集合と構造}] 情報の収集と関係による構造化
+\item[{集合と関数}] 手続きと抽象化，計算，
+\item[{集合と関係}] 分類と構造化
+\item[{数理論理学}] 文章と論理
+\begin{description}
+\item[{命題 (関数，述語，論理式)}] 
+
+\item[{推論規則}] 正しい表明を導く規則
+\item[{定義，公理}] あらかじめ存在する物と正しい表明
+\item[{定理と証明}] 
+\end{description}
+\item グラフ 構造の可視化
+\begin{itemize}
+\item \href{https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org}{mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub}
+\end{itemize}
+\end{itemize}
+\section{{\bfseries\sffamily Done} 情報と検索の進化の時代}
+\label{sec:org4b4fa7f}
+Google の知の整理.org
+\subsection{世界の知の整理}
+\label{sec:org3986c45}
+\subsection{言葉による検索とまとめ}
+\label{sec:org458326c}
+意味や構造をあつかえる
+\section{{\bfseries\sffamily Done} 研究のための数理情報リテラシ}
+\label{sec:org1cdfd72}
+思考し実験しプログラムし計算し理解し記録し文書を作成するためのコンピュー
+タと情報のリテラシ
+
+\begin{itemize}
+\item 基本技術は思考法, 文書作成も思考法,プログラミングも思考法
+\item 思考は情報処理プロセス
+\item メタ思考が重要 (思考する自分を客観視すること)
+\begin{itemize}
+\item 思考プロセスの見える化
+\item 知的思考の \textbf{技術} がある
+\end{itemize}
+\end{itemize}
+\subsection{考える，記憶する，理解する，こととは？}
+\label{sec:org11bc8bb}
+\subsubsection{思考の基本 抽象化と詳細化, So What, Why so, MECE (mutually}
+\label{sec:org9965ab0}
+exclusive collectively exhaustive)
+{[}googling AIモード 思考 So What, Why so]
+\url{elisp:google-this "AIの思考ステップ")}
+\subsubsection{思考の記録 MECE, 構造化，GTD}
+\label{sec:org342ecd8}
+{[}googling 思考の記録 構造化 GTD]
+\subsubsection{いろいろな思考法がある}
+\label{sec:org9a6c8d1}
+\begin{itemize}
+\item 論理的思考  \url{elisp:(google-this "思考" "論理的思考")} へんな回答がかえって
+きた
+\url{elisp:(google-this "思考と論理的思考とAI")}
+
+\item 批判的思考 [googling 思考 批判的思考]
+\item 発想法 [googling 思考 発想法]
+\item 水平思考 [googling 思考 水平思考]
+\item 計算論的思考[googling 思考 計算論的思考]
+\end{itemize}
+\subsubsection{情報リテラシーは思考法}
+\label{sec:org33fe318}
+\begin{itemize}
+\item 生のデータに意味付けして情報になる
+\item 知的情報リテラシーの技術がある
+\begin{itemize}
+\item 情報の収集
+\item 情報の加工
+\item 情報の分析
+\item 情報の蓄積
+\item 情報の生成
+\end{itemize}
+\item 知的思考技術と対応している
+\end{itemize}
+\subsubsection{理解の記録(外化，メモや文書)}
+\label{sec:orgd43a230}
+思考の目的は \textbf{自分が} 理解すること
+\begin{itemize}
+\item わかるとは.xmindの参照
+\begin{itemize}
+\item \href{../Maps/わかるとは.xmind}{わかるとは.xmind}|\href{shell:xmind  ../Maps/わかるとは.xmind}{xmind-open}
+\href{https://share.gemini.google/Rbj3gEgpBt7q}{{[}山鳥重『「わかる」とはどういうことか』の解説 - Google Gemini}
+\end{itemize}
+\end{itemize}
+{[}[\url{https://gemini.google.com/app/9c9204e0e16766d9}]
+
+理解と外化(メモ)  
+\begin{itemize}
+\item 理解を外化する. 小さな理解のくりかえしを，構造的に記録する
+\item 内化しやすい外化
+\begin{itemize}
+\item 論理的に理解しやすい外化はアウトライン構造
+\item イメージしやすい外化は，マインドマップ構造
+\end{itemize}
+\item 外化の意味付
+\begin{itemize}
+\item 情報を外に出すことは二つの意味がある
+\begin{itemize}
+\item 内的情報を外部記憶に置くこと
+こっちが外化, これがメモ
+\item 自分の情報を他者が理解できる形にすること
+第三者への情報 客観化，文書化
+\end{itemize}
+\end{itemize}
+\item 理解と知識と外化
+\begin{itemize}
+\item 小さな理解と大きな理解，整合性の問題
+\item 理解の再帰性
+\end{itemize}
+\end{itemize}
+\subsubsection{コンピュータとインターネットを用いる意味}
+\label{sec:org0a94f22}
+思考と記憶を補助し，外化を促すこと
+\begin{itemize}
+\item 情報を保存し共有すること
+\item 検索できるようにすること
+\item 人と計算機の共同作業の実現，互いに補完と拡張
+\end{itemize}
+\subsection{プロセス管理法}
+\label{sec:org6df0dbf}
+\begin{itemize}
+\item 計算論的思考 \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/docs/computational\_thinking.html}{クラウドと情報リテラシー 計算論的思考}
+\item {[}GTD (Getting Things Done) プロセス管理法] googling 
+\begin{itemize}
+\item Todo リストの作り方と管理方法
+\item \href{https://masayuki054.github.io/cloud\_and\_information\_literacy/i\_maps/\%E5\%83\%95\%E3\%81\%AB\%E3\%81\%A8\%E3\%81\%A3\%E3\%81\%A6\%E3\%81\%AEGTD\_imap.pdf}{僕にとってのGTD\_imap.pdf}
+\item ストレスフリーなプロセス管理 すべて忘れても思い出せる
+\end{itemize}
+\item \url{./topics/9つのストレス対処法.org}
+\end{itemize}
+\subsection{思考のためのデジタルツール}
+\label{sec:org4fc3a23}
+考えることをサポートするデジタルツールがある \href{https://masayuki054.github.io/ict\_literacy\_for\_thinking\_and\_memo/}{メモと思考のためのICTの活用}
+\paragraph{思考の可視化}
+\label{sec:orgf02ff58}
+\begin{itemize}
+\item グラフで考える
+\begin{itemize}
+\item \href{https://github.com/masayuki054/mathematics/blob/main/think/graph-thinking-2.org}{mathematics/think/graph-thinking-2.org at main · masayuki054/mathematics · GitHub}
+\end{itemize}
+\item マインドマップ
+\begin{itemize}
+\item 放射的思考 発想
+\item アウトライン構造 論理的繋り
+\end{itemize}
+\end{itemize}
+\section{{\bfseries\sffamily Done} 計算リテラシ}
+\label{sec:org0b2f5a8}
+\subsection{計算とAI}
+\label{sec:orgba22676}
+\begin{itemize}
+\item オープンソフトウェアという文化で，プログラムの共有ができるようになっ
+た。これを計算や計算方法や計算結果の共有であると考えている。
+\item LLM と NN を用いて意味的方法的な検索が可能になった。
+\item LLM と NN を用いて検索結果のまとめをしてくれるようになっている。
+\item 計算プログラムと実行結果を作成してもくれる。
+\end{itemize}
+
+どの程度質問者の要求に答えられているのか，質問者が判断する必要がる。
+\subsection{AIと計算リテラシ}
+\label{sec:orgd8f88f6}
+関連: 計算論的思考，AIによる計算機能の検索，知的思考の技術
+
+昨年の講義までは，数学ソフトウェア，数値解析，数値計算ライブラリ，
+数式処理などを紹介し，これら計算プログラムの存在を知り，利用のノウハウ
+を計算リテラシと考えていたが， [昨年までの内容へのリンク]
+
+計算を共有，意味検索できるようになった現在，下記のように考えを変えた:
+\subsubsection{計算や計算機能を検索して利用する  (別紙参照)}
+\label{sec:org615e5e6}
+\begin{itemize}
+\item 数学ソフトウェア，数値解析，数値計算ライブラリ，数式処理などこれまで
+の成果を，AIが探してくれる
+\begin{itemize}
+\item ほぼ公開プログラムでことたりる (?)
+\end{itemize}
+
+\item こんな計算がしたいといえば，計算プログラムを作成してくれる。
+但し，似たような計算プログラムが公開されていれば
+\end{itemize}
+
+AIが提示したものは，説明書の用法の理解，プログラムの解読，を行なうべき。
+実行結果を理解し，評価するため。
+\begin{itemize}
+\item 説明を理解して，変更，再利用できるこ能力
+\item プログラムを理解する能力
+\end{itemize}
+\subsubsection{文芸的プログラミング (vscode, Emacs, google colab など)}
+\label{sec:orgfb56e32}
+「例」 \href{https://qiita.com/kikuchi\_kentaro/items/6c011c1e85f7e9cce910}{VS Code の Jupyter 統合と、データ可視化 \& 探索的プログラミングの可能性\#VSCode - Qiita} 
+
+説明とプログラムと実行と結果を同一文書で管理するやり方
+\begin{itemize}
+\item 理論を記述し，
+\item 支配する数式を記述し，
+\item 計算プログラムを記述し，
+\item データを記述し，
+\item 計算プログラムを実行し，
+\item 計算プログラムを結果を取り込み，
+\item 結果を可視化する
+\end{itemize}
+\subsubsection{データサイエンスとニューラルネットワク (NN)}
+\label{sec:orgc0d2e51}
+
+\begin{itemize}
+\item 最近は，データだけが独立して，共有されることが多い。
+\item NNをもちいて，データの抽象化(統計処理，NN)，構造化(NNによる分類，構
+造化, パターン検出)が計算できる。
+\item 機械学習したNNは，データの検索器として，プログラムから利用できる。
+\end{itemize}
+\subsubsection{方程式の解法}
+\label{sec:org5fb061b}
+\begin{itemize}
+\item 数値的解法
+\begin{itemize}
+\item 線形方程式に帰着， 多変数の場合はガウスの消去法
+\item 方程式解の探索，探す区間を縮小していく
+\end{itemize}
+
+\item 代数的解法
+\begin{itemize}
+\item 線形問題は，数値的解法と同じだが，0判定などのために誤差の無い計算が可能。
+悪条件な問題が解ける(可能性がある)
+
+\item 近似羃級数解(多項式)
+\end{itemize}
+
+\item シミュレーション 
+\begin{itemize}
+\item 境界条件から
+\item 系を支配する状態方程式の変化を追跡
+離散的な微分計算，連立一次方程式の解法
+\end{itemize}
+\end{itemize}
+\subsubsection{計算の悪条件性の存在}
+\label{sec:org89cf1c8}
+\begin{description}
+\item[{計算誤差の蓄積}] 計算機での数値計算は，結局は，四則演算。実数値は，浮動小数で表わされ，
+有限精度となり，誤差が生じる。誤差有り計算は計算の有効精度をさげ，誤
+差を広げる。数理論的にはある値が0か否かで対象の性質が決定的に違う場
+合があるが，誤差を含む計算下では，判定できない。
+
+\item[{問題の持つ悪条件性}] \begin{itemize}
+\item 相転移など系全体が一つの連続関数で記述できない場合など
+\item 方程式の解性質の判別
+\item 線形独立性の判定，
+\item 連立一次方程式のランク計算
+\end{itemize}
+\end{description}
+\subsection{計算リテラシの数理}
+\label{sec:orgc6072a6}
+\subsubsection{帰納関数，数学的帰納法}
+\label{sec:org05b81b6}
+\subsubsection{剰余と準同型}
+\label{sec:orgf4756d6}
+\subsubsection{線形代数とガウスの消去法}
+\label{sec:org13b1019}
+
+\subsubsection{多変数とベクトル, 多変数関数と多値}
+\label{sec:orgad383a9}
+\subsubsection{連続関数と微分}
+\label{sec:orge67c2ab}
+\begin{itemize}
+\item 連続関数を離散的にとらえる
+\begin{itemize}
+\item 可算個の区間
+\item 可算個の区間に対する計算
+\end{itemize}
+\item 連続関数の変化を差分としてとらえる
+\end{itemize}
+\subsubsection{ニュートン法と縮小写像}
+\label{sec:orgee235e5}
+
+\subsubsection{偏微分方程式の数値解法 多変数関数の微分}
+\label{sec:org8fbd61a}
+
+\subsubsection{代数的アルゴリズム}
+\label{sec:org1e6bc56}
+
+\paragraph{最大公約多項式}
+\label{sec:org342dfc5}
+
+\paragraph{多項式の因数分解}
+\label{sec:orgf41a8c3}
+
+\paragraph{不定積分}
+\label{sec:orgde9f3a1}
+
+\paragraph{微分方程式と微分作用素環}
+\label{sec:org003fee6}
+
+\paragraph{高次代数方程式の解法とグレブナー基底}
+\label{sec:org2902160}
+
+\paragraph{代数的Newton法}
+\label{sec:org337c32d}
+\subsection{計算リテラシが試される例}
+\label{sec:org9537151}
+\subsubsection{自動微分 new math idea prog diff func}
+\label{sec:orgb802414}
+
+\textbf{プログラムで定義される計算の微分プログラムを求めるプログラムを作る}
+
+\href{https://qiita.com/lotz/items/fd6c1c695fda6779585f}{自動微分と区間演算で非線形関数の根を全て探索するアルゴリズム \#Haskell - Qiita} 
+
+自動微分は，プログラムで定義される計算式の (関数値，微分係数) を計算す
+るプログラムを生成する。
+
+区間演算，Haskel intervals(自動微分と区間演算)，精度保証付数値計算，区
+間縮小写像と不動点定理， krawczyk法，などがキーワード
+\subsubsection{非線形関数の根を全て探索するアルゴリズムのサイト}
+\label{sec:org3a4b434}
+\begin{itemize}
+\item \href{https://verifiedby.me/kv/allsol/}{All Solution Algorithm for Nonlinear Equation}
+\end{itemize}
+\subsection{geminiとの計算リテラシの数理に関する会話}
+\label{sec:org5ad1876}
+
+\url{https://share.gemini.google/h5cdtGP6mcfX}
+\section{\href{orgs/conclusion-2025.org}{まとめ 2025}}
+\label{sec:orgd83b033}
+\end{document}

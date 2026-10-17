@@ -1,0 +1,77 @@
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
+#+TITLE: コンピュータと数式処理
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
+
+#+begin_center
+\large{\tt URL: https://github.com/masayuki054/comp\_and\_cal}
+#+end_center
+
+* デジタル技術と協調しよう
+
+  コンピュータとインターネットと上手に付き合って，
+  知り，考え，記憶し，検索し，思い出せるようにしましょう。
+
+   - [[./org/digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
+     - 知識は構造
+     - アウトライナー
+     - マインドマップ
+     - 文芸的プログラミング
+
+   - [[./org/web.org][Web進化論]]
+     - 集合知
+     - 知識の構造化
+
+   - [[./org/comp_thinking.org][計算論的思考]]
+     - computer科学者のように考え，問題に取り組み，システムをデザイン
+       しよう
+
+   - [[./org/math-soft.org][数学ソフトウェア]]
+     - フリーソフトウェアを利用しよう
+     - 数式処理システムと計算機代数アルゴリズム
+
+* 規則と簡約化と検索のための計算機代数
+
+   数学と検索と簡約のつながりについて，考えます。人は理論を考え，コン
+   ピュータに検索してもらいましょう。
+
+   多くの変数の高い次数の方程式の解法を，
+   線形代数の概念に翻訳し，
+   線形空間の概念と計算に帰着します。見通しと効率が良くなります。
+
+   - [[./org/groebner.org][グレブナー基底]] 計算機代数アルゴリズムの紹介 
+
+#+caption: 概要
+#+ATTR_LATEX: :width 18cm 
+ [[./map-images/01-computer_and_cal.png]]
+
+#+caption: 人とコンピュータとインターネット
+#+ATTR_LATEX: :width 18cm
+ [[./map-images/03-how_to_use_computer_and_internet.png]]
+
+
+\vspace{3cm}
+
+#+caption: インターネットが起している変革
+#+ATTR_LATEX: :width 18cm
+ [[./map-images/04-Web_revolution.png]]
+
+\vspace{3cm}
+
+#+caption: 思考とメモと文書のためのデジタル・ツール
+#+ATTR_LATEX: :width 18cm
+[[./map-images/05-digital_tools_for_thinking.png]]
+

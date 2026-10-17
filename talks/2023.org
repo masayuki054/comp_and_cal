@@ -1,0 +1,59 @@
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
+#+TITLE: index コンピュータと数式処理
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
+
+* URL: http://wiki.cis.iwate-u.ac.jp/~suzuki/comp_and_cal
+
+* [[./org/sheet-2021.org][配布資料]]
+
+* [[./org/digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
+
+     - 知識は構造, 知的作業は構造化されたプロセス
+       - アウトライナー
+       - マインドマップ
+
+     - [[./org/comp_thinking.org][計算論的思考]]
+       - GTD Getting Things Done
+       - 文芸的プログラミング
+       - 知的作業を見える化し，
+       - 作業の流れを手続き化し，
+       - コストを見積り，
+       - 作業全体をデザインしよう
+ 
+     - [[./org/web.org][Web進化論]]
+       - 集合知
+       - 知識の構造化
+
+* [[./org/math-soft.org][数学ソフトウェア]]
+
+     - フリーソフトウェアを利用しよう
+     - 数式処理システムと計算機代数アルゴリズム
+
+* 規則と簡約化と検索のための計算機代数
+
+   - [[./org/groebner.org][グレブナー基底]] 計算機代数アルゴリズムの紹介 
+
+* 2020 のまとめ
+
+  - [[./org/resume-2020.org][2020 のまとめ]]
+
+
+
+
+   
+   
+

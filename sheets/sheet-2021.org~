@@ -1,0 +1,168 @@
+#+options: ^:{}
+#+options: toc:nil
+#+setupfile: info/index-lbigblow-header.setup
+#+include: info/common-header.org
+#+TITLE: コンピュータと数式処理
+#+AUTHOR: 鈴木正幸，岩手大学・非常勤講師
+
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pat]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{18cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-2cm}
+#+LATEX_HEADER:\setlength{\textheight}{26cm}
+
+#+begin_center
+\large{\tt URL: https://github.com/masayuki054/comp\_and\_cal}
+#+end_center
+
+* デジタル技術と協調しよう
+
+  コンピュータとインターネットと上手に付き合って，
+  
+  上手に，知り，考え，記憶し，検索し，思い出せるようにしよう。
+
+  知的作業を，外化して，共有しよう。
+
+   - [[./org/digital_tools.org][思考とメモと文書のためのデジタル・ツール]]
+
+     - 知識は構造
+     - アウトライナー
+     - マインドマップ
+     - 文芸的プログラミング
+
+   - [[./org/web.org][Web進化論]]
+
+     - 集合知
+     - 知識の構造化
+
+   - [[./org/comp_thinking.org][計算論的思考]]
+
+     - 知的作業を見える化し，
+     - 作業の流れを手続き化し，
+     - コストを見積り，
+     - 作業全体をデザインしよう
+
+   - [[./org/math-soft.org][数学ソフトウェア]]
+
+     - フリーソフトウェアを利用しよう
+     - 数式処理システムと計算機代数アルゴリズム
+
+* 規則と簡約化と検索のための計算機代数
+
+   数学と検索と簡約のつながりについて，考えます。人は理論を考え，コン
+   ピュータに検索してもらいましょう。
+
+   多くの変数の高い次数の方程式の解法を，
+   線形代数の概念に翻訳し，
+   線形空間の概念と計算に帰着します。見通しと効率が良くなります。
+
+   - [[./org/groebner.org][グレブナー基底]] 計算機代数アルゴリズムの紹介 
+
+#+caption: 概要
+#+ATTR_LATEX: :width 18cm 
+ [[./map-images/01-computer_and_cal.png]]
+
+#+caption: 人とコンピュータとインターネット
+#+ATTR_LATEX: :width 18cm
+ [[./map-images/03-how_to_use_computer_and_internet.png]]
+
+
+\vspace{3cm}
+
+#+caption: インターネットが起している変革
+#+ATTR_LATEX: :width 18cm
+ [[./map-images/04-Web_revolution.png]]
+
+
+#+caption: 思考とメモと文書のためのデジタル・ツール
+#+ATTR_LATEX: :width 18cm
+[[./map-images/05-digital_tools_for_thinking.png]]
+
+
+* 2020年度のまとめ
+  
+** Doing コンピュータと数式処理
+   SCHEDULED: <2020-11-01 日>
+
+   - 考えることをサポートするデジタルツールがある
+
+*** 考える，記憶する，こととは？
+
+     - 思考の基本 抽象化と詳細化 , So What, Why so, MECE
+     - 思考の記録 MECE, 構造化，GTD
+
+**** いろいろな思考法
+     - 論理的思考
+     - 批判的思考
+     - 発想法
+     - 水平思考
+     - 計算論的思考
+    
+**** 知的思考の技術
+     - 思考の見える化
+       目的探索，観察，発想，分類，構造化，意志決定，表現
+
+*** 情報リテラシー
+     - 情報は 意味付けされたデータ
+
+**** 知的情報リテラシーの技術
+
+     - 情報の収集，加工，分析，蓄積，生成
+
+*** コンピュータとインターネットによる思考の支援
+
+   - アウトライナー
+   - マインドマップ
+
+** Doing メモと思考とdigital技術のまとめ
+   SCHEDULED: <2018-12-22 土>
+
+*** 理解を外化するためにコンピュータとインターネットを使おう
+
+    小さな理解のくりかえしを，構造的に記録する
+
+*** 内化しやすい外化
+
+**** 理解しやすい外化
+
+     outline 
+
+**** イメージしやすい外化
+
+     mindmap
+
+*** 外化の意味付
+
+    - 情報を外に出すことは二つの意味がある
+
+      - 内的情報を外部記憶に置くこと
+
+        こっちが外化, これがメモ
+
+      - 自分の情報を他者が理解できる形にすること
+
+        第三者への情報 客観化，文書化
+
+**** 理解と知識と外化
+      
+     - 小さな理解と大きな理解，整合性の問題
+     - 理解の再帰性
+     
+*** コンピュータとインターネットの意味
+
+    - 情報を保存し共有すること
+    - 検索できるようにすること
+    - 人と計算機の共同作業の実現，互いに補完と拡張
+
+
+
+
+
+   
+   
+

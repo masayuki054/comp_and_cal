@@ -1,0 +1,215 @@
+# -*- mode: org -*-
+#+startup: indent show2levels
+#+title: 
+#+author masayuki
+
+#+property: where: /nas/home/masayuki/dots/emacs.d-dev/
+#+property: header-args :mkdirp yes :dir
+[[elisp:(org-indent-mode)]]
+
+
+* 数学と計算リテラシ (~2025)
+- 計算科学と数学ソフトウェア
+- プログラミングによる計算プロセス管理
+- 計算のための数学
+  - 微分から差分へ
+  - 方程式の解法，連立一次方程式
+
+** 連続な数学を離散的に捉える
+- 意味を捉え，コンピュータで計算するために，有限・可算的な捉え方が必要
+- 計算は代表点一点で行ない，近傍の点は定数または直線近似する
+- 数値も有限精度，記憶も有限個
+
+*** 連続関数の変化を折れ線グラフで考える
+
+[[file:./docs/diff-descrete.pdf][2024年度の手書きの資料]]
+
+
+**** 連続関数を折れ線グラフと見做す
+
+**** 1変数関数の変化
+- 関数の変化の図的解釈とインタフェース式
+
+- 微分の意味(図)とインタフェース式
+
+- 二階微分の図的解釈とインタフェース式
+
+- 多階微分の図的解釈とインタフェース式
+
+- 微積分学の基本定理の図的理解
+
+- 関数の変化とテイラー展開
+  - 関数の変化を微分形式で表わし，
+  - [0,x]の区間で積分するとマクローリン展開が得られる
+  
+**** 2変数関数の変化
+- 二変数関数の微分の意味とインタフェース式
+- 二変数関数の二階微分の意味とインタフェース式
+
+合成関数の描画法・微分の意味，逆関数の微分，関係の微分と微分方程式など
+
+** 計算科学とは
+
+たとえば，[[./topics/宇宙がわかる17の方程式.org][宇宙がわかる17の方程式]] で記述される現象を解析する。
+  
+[[https://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6][計算科学 - Wikipedia]] とは
+
+[googling: 計算科学 モデル] 
+- 数学的モデルとその定量的評価により、計算機を用いて問題を解決する
+- 様々な問題の計算機によるシミュレーションやその他の計算手法の適用を指
+  す。
+  
+数値解析は，数式ではなく，実際の数を対象とし，物理現象など現実の対象をモデル化した
+ものである。
+
+対象領域をモデル化したプログラムやアプリケーションソフトウェアを開発し、
+それに様々なパラメータを与えて実行する。
+
+*** 数値解析
+- 精度保証付き数値計算
+- 数値線形代数
+- 常微分方程式の数値解法、偏微分方程式の数値解法、数値積分
+
+*** 数値シミュレーション
+**** 目的
+- 既知の事象を再構築して理解する（例えば、地震、津波などの自然災害）。
+- 既知のシナリオを最適化する（例えば、工学的プロセスや産業プロセス）。
+- 未来または未知の状況を予測する（例えば、気象、原子レベル以下の粒子の振る舞い）。
+- 気象、飛行機の周辺の気流、自動車衝突時の車体の状況、銀河系の星々の動き、爆発物など
+
+**** 数値シミュレーションプログラムの実行
+- コンピュータのメモリ内に論理的メッシュ（網目）を形成し、個々の領域が実世界
+  のモデルの空間的な一部分を表すようになっている。
+- 気象の場合、ひとつの点が数キロ平方の領域に対応し、その下の地
+  理状態、風向き、湿度、温度、気圧といったパラメータが与えられる。
+- プログラムはシミュレートする時間間隔に従って、現在の状態を基に次の状
+  態を計算する。
+- この計算はモデル化された方程式を解くことで行われる。そのような計算を
+  次々に行っていくのである。
+
+*** 科学的方法
+計算科学は科学の第三の形態で、実験/観測と理論の間を補間するもの、とい
+う主張もある。
+
+*** 有限要素法（FEM）[googling: 有限要素法]
+偏微分方程式ソルバ (PDE)の 最も一般的な数値的解法
+
+- 有限要素法 （FEM）とは、偏微分方程式 （PDE）の定義域 （W）の近似解を
+  求めるときに使用する数値的解法です。PDEを解くときの最大の難関は、解
+  を近似的に表す基底関数を作る工程です。基底関数の作り方は数多くありま
+  すが、どれを使用するかは選択した定式化によって決まります。
+  
+- 線形 / 非線形 / 座屈 / 熱 / 動的 / 疲労解析で使用できます。
+
+** 数学ソフトウェア
+*** MathLibre  [[https://www.geogebra.org/m/hShSTr6e][KNOPPIX/Math->MathLibre]] 
+- DVD起動Linuxで，
+- オープン・ソースで，
+- フリーな数学ソフトウェアを収録 
+
+  [[https://www.geogebra.org/m/hShSTr6e][数学ソフトウェア紹介 - GeoGebraBook]]
+
+*** [[https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2][数学ソフトウェアとは - Wikipedia]] 
+1) ソフトウェア電卓  
+     [[http://ja.numberempire.com/][数の帝国 - 数学ツール]] 数の帝国は、強力な数学ツールと数について
+     の知識のコレクションです。
+2) 数式処理システム
+     - [[https://ja.wikipedia.org/wiki/Sage_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)][Sage (数式処理システム) - Wikipedia]]
+     - [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+6) 数値解析
+     - [[https://matome.naver.jp/odai/2136163231573327601][MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ]]
+     - [[http://signalprocessor.blogspot.jp/2016/][信号処理のお仕事メモ: 2016]] (Octave)
+     - [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+*** 数式処理システム [[http://www.sagemath.org][Sage]] とは
+  [[http://www.gregorybard.com/Sage.html][Gregory V. Bard]] 曰く
+  - フリーでオープン・ソースで，
+  - Maple, Mathematica, Magma, and Matlab に並らぶ，
+  - 数学科の学生に最適な
+  - 「コンピュータ代数」システム
+
+**** Sage on the Web(1)
+  - Webで動く，
+  - ノートやデスクトップPCへのインストールは必要ない。
+***** クラウド・サーバ
+[[http://www.cocalc.com/][CoCalc.com Sage クラウド・サーバ]] 
+- 長めの問題向き，
+- プログラムの保存ができる
+- 登録とログインが必要，
+***** セル・サーバ
+[[http://sagecell.sagemath.org/][SageMathCell Server]]
+- 短かめの問題向き
+- [[http://www.gregorybard.com/videos/Sage_part1.swf][関数，微分，積分，2次元プロット]] の例題動画
+- [[http://www.gregorybard.com/videos/Sage_part2.swf][因数分解，3次元プロット]]
+***** 例題
+#+BEGIN_SRC sage
+x,y = var('x y')
+(x+y)^2
+# plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
+ #+END_SRC
+
+
+**** Sagemath アプリ
+数式処理が，スマホで動くなんて，ほんとにビックリ
+- [[https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8][Sage Mathを App Store で]]
+- [[https://play.google.com/store/apps/details?id=org.sagemath.droid&hl=ja][Sage Math - Google Play の Android アプリ]]
+
+**** 入門
+- [[http://doc.sagemath.org/html/ja/tutorial/index.html][Sageチュートリアル.ja]] すぐ後で，実行しながら，説明します
+- [[http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf][Sage tutorial-jp.pdf]]
+- [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B][sage/sageの紹介 - PukiWiki]] たけもとさん
+- [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2F%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86][sage/計算してみよう - PukiWiki]]
+- [[http://www.sagemath.org/help-video.html][series of videos/screencasts]] 
+**** 例題
+  - [[http://doc.sagemath.org/html/en/constructions/index.html][プログラムの制作例]]
+  - [[https://wiki.sagemath.org/interact][対話的なデモリポジトリ]] 
+    - interact / calculus / Taylor  を見てみよう
+**** Sagemath に関する本 (フリー)
+- [[http://www.gregorybard.com/Sage.html][Sage for undergraduates, free pdf]]   このページ内に pdf へのリンクが
+- [[http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html][Welcome to the SDSU Sage Tutorial]]
+**** Sagemath に関するいろいろなページ
+- [[http://sk.sagepub.com/reference][SAGE Knowledge - Reference]] reference の検索
+- [[https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118][Sageに関するリンク集]]
+- [[http://wiki.sagemath.org/quickref][large collection of quick-reference cards]] 
+- [[http://sagemath.org]] http://doc.sagemath.org 
+
+**** Octave との連携
+- [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2FSage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86][sage/SageでOctaveを使う - PukiWiki]] 
+- [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+**** LaTeXとSage
+- オンラインLaTeXサービス  [[https://oku.edu.mie-u.ac.jp/~okumura/texonweb/][TeX を使ってみよう]] 
+- [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
+- [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
+
+** python と sympy による数式計算の例
+
+- Google Colabを使った，
+- python プログラミング言語による記号・数式計算
+- 文書作成とプログラミングが同一文書で行なえる (文芸的プログラミング)
+
+[[https://colab.research.google.com/drive/13-xrzx125aD3L4mzB5BhOHAUyLeV6kCX][python-calc.ipynb - Colab]] 
+
+** 数式処理アルゴリズム
+*** 不定積分入門
+[[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+wikipedia の参考文献にあった
+
+*** 規則と簡約化と検索のための計算機代数
+
+高次多変数代数方程式の解法として別途，資料[[./gbasis/gbasis.org]]を配
+布します。
+
+グレブナー基底に関する用語とブッフバーガー算法については，[[https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%96%E3%83%8A%E3%83%BC%E5%9F%BA%E5%BA%95][グレブナー基底 - Wikipedia]] 
+を参照します。
+
+数学と検索と簡約のつながりについて，考えます。人は理論を考え，コン
+ピュータに検索してもらいましょう。
+
+多くの変数の高い次数の方程式の解法を，線形代数の概念に翻訳し，線形空間
+の概念と計算に帰着します。見通しと効率が良くなります。
+
+
+
+
+

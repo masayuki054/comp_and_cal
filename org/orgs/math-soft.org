@@ -1,0 +1,160 @@
+#+setupfile: info/index-sos-header.setup
+#+include: info/common-header.org
+#+TITLE: 数学ソフトウェアの紹介
+#+author: suzuki@iwate-u.ac.jp
+#+OPTIONS: H:3 toc:nil num:t ^:nil
+#+LATEX_CLASS: jarticle
+#+LATEX_CLASS_OPTIONS: [dvipdfmx,11pt]
+
+#+BIND: org-latex-image-default-width 0.8\linewidth
+
+#+LATEX_HEADER:\setlength{\textwidth}{20cm}
+#+LATEX_HEADER:\setlength{\oddsidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\evensidemargin}{-1cm}
+#+LATEX_HEADER:\setlength{\topmargin}{-3cm}
+#+LATEX_HEADER:\setlength{\textheight}{28cm}
+
+* MathLibre 
+
+  [[https://www.geogebra.org/m/hShSTr6e][KNOPPIX/Math->MathLibre]] 
+    
+  - DVD起動Linuxで，
+
+  - オープン・ソースで，
+
+  - フリーな数学ソフトウェアを収録 
+
+  [[https://www.geogebra.org/m/hShSTr6e][数学ソフトウェア紹介 - GeoGebraBook]]
+
+* [[https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2][数学ソフトウェアとは - Wikipedia]] 
+
+1) ソフトウェア電卓  
+
+     [[http://ja.numberempire.com/][数の帝国 - 数学ツール]] 数の帝国は、強力な数学ツールと数について
+     の知識のコレクションです。
+       
+2) 数式処理システム
+
+     - [[https://ja.wikipedia.org/wiki/Sage_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)][Sage (数式処理システム) - Wikipedia]]
+
+     - [[https://www.math.nagoya-u.ac.jp/~naito/lecture/2012_SS.calc/software-1.pdf][数学ソフトウェアの使い方]] 名古屋大学医学部 数学通論I 
+
+       - mathematic, sage の概要
+
+     - [[http://www.wolframalpha.com/][Wolfram|Alpha: Computational Knowledge Engine]]
+
+6) 数値解析
+
+     - [[https://matome.naver.jp/odai/2136163231573327601][MATLABの代わりに使えるソフトウェアまとめ- NAVER まとめ]]
+
+     - [[http://signalprocessor.blogspot.jp/2016/][信号処理のお仕事メモ: 2016]] (Octave)
+
+     - [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+* [[http://www.sagemath.org][Sage]] とは
+
+  [[http://www.gregorybard.com/Sage.html][Gregory V. Bard]] 曰く
+
+  - フリーでオープン・ソースで，
+  - Maple, Mathematica, Magma, and Matlab に並らぶ，
+  - 数学科の学生に最適な
+  - 「コンピュータ代数」システム
+
+** Sage on the Web(1)
+
+  - Webで動く，
+  - ノートやデスクトップPCへのインストールは必要ない。
+
+*** クラウド・サーバ
+
+   [[http://www.cocalc.com/][CoCalc.com Sage クラウド・サーバ]] 
+
+   - 長めの問題向き，
+   - プログラムの保存ができる
+   - 登録とログインが必要，
+
+*** セル・サーバ
+
+   [[http://sagecell.sagemath.org/][SageMathCell Server]]
+    
+   - 短かめの問題向き
+
+   - [[http://www.gregorybard.com/videos/Sage_part1.swf][関数，微分，積分，2次元プロット]] の例題動画
+
+   - [[http://www.gregorybard.com/videos/Sage_part2.swf][因数分解，3次元プロット]]
+
+*** 例題
+#+BEGIN_SRC sage
+x,y = var('x y')
+plot3d(sin(x+y), [x,-pi,pi], [y, -pi, pi])
+ #+END_SRC
+
+ #+RESULTS:
+ : Launched jmol viewer for Graphics3d Object
+
+
+** Sagemath アプリ
+
+    数式処理が，スマホで動くなんて，ほんとにビックリ
+
+    - [[https://itunes.apple.com/jp/app/sage-math/id496492945?mt=8][Sage Mathを App Store で]]
+
+    - [[https://play.google.com/store/apps/details?id=org.sagemath.droid&hl=ja][Sage Math - Google Play の Android アプリ]]
+
+** 入門
+
+    - [[http://doc.sagemath.org/html/ja/tutorial/index.html][Sageチュートリアル.ja]] すぐ後で，実行しながら，説明します
+
+    - [[http://doc.sagemath.org/pdf/ja/tutorial/tutorial-jp.pdf][Sage tutorial-jp.pdf]]
+
+    - [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2Fsage%E3%81%AE%E7%B4%B9%E4%BB%8B][sage/sageの紹介 - PukiWiki]] たけもとさん
+
+      - [[http://www.pwv.co.jp/~take/TakeWiki/index.php?sage%2F%E8%A8%88%E7%AE%97%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86][sage/計算してみよう - PukiWiki]]
+
+    - [[http://www.sagemath.org/help-video.html][series of videos/screencasts]] 
+   
+** 例題
+
+  - [[http://doc.sagemath.org/html/en/constructions/index.html][プログラムの制作例]]
+    - いろいろな例題と解答
+
+  - [[https://wiki.sagemath.org/interact][対話的なデモリポジトリ]] 
+    - interact / calculus / Taylor  を見てみよう
+
+** Sagemath に関する本 (フリー)
+
+   - [[http://www.gregorybard.com/Sage.html][Sage for undergraduates, free pdf]]   このページ内に pdf へのリンクが
+
+   - [[http://mosullivan.sdsu.edu/Teaching/sdsu-sage-tutorial/index.html][Welcome to the SDSU Sage Tutorial]]
+
+** Sagemath に関するいろいろなページ
+
+   [[http://sk.sagepub.com/reference][SAGE Knowledge - Reference]] reference の検索
+
+   [[https://qiita.com/HirofumiYashima/items/6bb5770961a3b7d33118][Sageに関するリンク集]]
+
+   [[http://wiki.sagemath.org/quickref][large collection of quick-reference cards]] 
+
+   [[http://sagemath.org]] http://doc.sagemath.org 
+
+** Octave との連携
+
+   [[http://www.pwv.co.jp/%7Etake/TakeWiki/index.php?sage%2FSage%E3%81%A7Octave%E3%82%92%E4%BD%BF%E3%81%86][sage/SageでOctaveを使う - PukiWiki]] 
+
+   [[http://www.inaba-lab.org/wiki/index.php/Octave%E5%85%A5%E9%96%80][Octave入門 - 東海大学 コンピュータ応用工学科 稲葉研究室Wiki]]
+
+** LaTeXとSage
+    
+   - オンラインLaTeXサービス  [[https://oku.edu.mie-u.ac.jp/~okumura/texonweb/][TeX を使ってみよう]] 
+
+   - [[https://mytexpert.osdn.jp/index.php?LaTeX%A4%CB%A4%E8%A4%EB%CF%C0%CA%B8%BA%EE%C0%AE%A4%CE%BC%EA%B0%FA%A4%AD][LaTeXによる論文作成の手引き - MyTeXpert]]
+
+   - [[http://sage.math.gordon.edu/home/pub/51/][Using LaTeX in Sage -- Sage]]
+
+** 数式処理アルゴリズム
+
+*** 不定積分入門			      :algorithm:risch:integral:math:
+    [[http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac98.pdf][symbolic integration tutorial--issac98.pdf]]
+
+    wikipedia の参考文献にあった
+
