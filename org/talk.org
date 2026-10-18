@@ -1,4 +1,4 @@
-n# -*- mode: org -*-
+# -*- mode: org -*-
 #+startup: indent
 #+setupfile: ../info/index-sos-header.setup
 #+include: ../info/common-header.org
@@ -51,22 +51,30 @@ n# -*- mode: org -*-
       - グレブナー基底の高速計算アルゴリズム
 - [[https://sites.google.com/iwate-u.ac.jp/lsr/index?authuser=0][学修支援室]], [[https://sites.google.com/iwate-u.ac.jp/lsr/staff?authuser=0][学修支援室 - スタッフ紹介]]
   
-** 関連事項
 ** 深く影響を受けた関連事項
   - Web進化論 [mm]，Googleの使命 [org]
+    https://docs.google.com/document/d/1IY-lGnbxojTuCi1IL4KnJDG9Is77-NCjKCpOZw7KhhE/edit?usp=sharing
   - 知的思考の技術 [book] [figs]
-    - アイディアの作りかた [book]
-  - わかるとは， [book][org][]
+    https://docs.google.com/document/d/1078oA3cwToIOglXuQ41riwcZtrOgL4Gw_sdB6_abdM0/edit?usp=sharing
+  - アイディアの作りかた [book]
+    https://docs.google.com/document/d/1isEM7JYj29GgGslHZg8rRxptT31MTJIKjRv3jLoKXCQ/edit?usp=sharing
+  - わかるとはどういうことか [book][org][]
+    https://docs.google.com/document/d/1Vu6uXO9wCWgftgUc2BuGPT73vPdOUlHNXQZlPtw7vWY/edit?usp=sharing
   - 図で考える，シンプルになる [book][] [figs]
+    https://docs.google.com/document/d/10FdKGHasM4YLp7UwD1b6MBqmRTS_qx38OsiVFjKh76c/edit?usp=sharing
   - 数学は言葉 [book]
-
+    https://docs.google.com/document/d/1Gk3pEaGXzMqqeQvlU0nyr2t3gIVpIqHHpRWdTXcR_4g/edit?usp=sharing
+    
 ** 強く変化を感じた事項
-- 学修支援の相談者数の激減 
-- Google 知の進化論 [org] common_knowledge
-- 岩手大学 データサイエンス [org:data_science]
-
-** あらすじ -- 数理情報科学研究のための数理情報リテラシー 
-
+- 学修支援の相談者数の激減
+- Google mission 知の共有化 ((gemini_doc))
+  https://docs.google.com/document/d/1fQpe6kXkqlZLTf8BLXznQmAqhIrSMzjwoRJNOkNFWk4/edit?usp=sharing
+- Google 知の進化論
+  https://docs.google.com/document/d/1S1ZKZUhu8yI1l8sEDKIdPDJ1GF9jZgamQbZVL_k2XR4/edit?usp=sharing
+- 岩手大学 データサイエンス 講義 [org:data_science]
+  https://docs.google.com/document/d/1E5sh6E4HS97vTvF-SAEHWDU7J7Z2j5QXgugwAP4kUlU/edit?usp=sharing
+  
+* あらすじ -- 数理情報科学研究のための数理情報リテラシー 
 [[[../Maps/数理情報科学のための情報計算リテラシー.xmind][Mindmap書類]]][[[shell:xmind ../Maps/数理情報科学のための情報計算リテラシー.xmind][アプリ]]]
 
 #+ATTR_LATEX: :width 18cm 
@@ -109,23 +117,36 @@ n# -*- mode: org -*-
   なアルゴリズムである，グレブナー基底計算と多変数代数方程式の解法につ
   いて概観します。(二週目の講義内容になります。)
 
-* 知的思考の技術
-** 思考の基本
-- 分類 [googling AIモード 思考 分類 抽象化]
+- 今年度初出の項目なので，まだまとまっておらず，現段階で重要と思われる
+  項目とできるものは簡単な説明を添えました。興味を持った項目に関して，
+  AI検索して考えてみてください。
 
-- 抽象化 [googling AIモード 思考 抽象化 帰納]
+* 知的思考の技術
+数理科学研究の研究リテラシの根本技術と考えます。
+
+** 思考の基本
+- 分類 :: テーマに関することがらをあつめ，関係するものにわける
+- 抽象化 :: [googling AIモード 思考 抽象化 帰納]
   ある関係性で複数の事柄をまとめ，適切な名前を付けること
-  
-- 詳細化 [googling AIモード 思考 詳細化  具体化]
+- 詳細化 [googling AIモード 思考 詳細化  具体化
   抽象化の逆。記号の意味を示すこと。
   
-** わかるとは
-[googling: 思考 わかるとは 理解] https://share.gemini.google/yzhjHxQhQ8i9
+** わかるとは (脳のはたらきとして)
 
-[[https://www.chikumashobo.co.jp/product/9784480059390/][『「わかる」とはどういうことか』山鳥 重 | 筑摩書房 ]]
-の読書ノート参照
-- [[../Maps/わかるとは.xmind][わかるとは (file-open)]] または
-- [[shell:xmind ../Maps/わかるとは.xmind][わかるとは (xmind-open)]]
+*** [[https://share.gemini.google/yzhjHxQhQ8i9][gemini: 思考 わかるとは 理解]]
+
+「わかる」とは、「外部から入ってきた情報が、自分の持っている記憶・身体
+感覚・感情のネットワークと統合され、自分なりの意味を持つ状態になること
+
+*** わかるとは::読書ノート (mindmap open: [[../Maps/わかるとは.xmind][mac]] [[shell:xmind ../Maps/わかるとは.xmind][linux]])
+[[./orgs/understanding.org][わかるとは.org]] (筆者の理解)
+  
+思考の目的の成果物:
+- 事柄間の構造をネットワークに分類し(理解)，
+- 脳内ネットワークに記憶し，
+- 事柄からその構造を思いだせる
+
+問題に対し，自分で判断し，行動できるようにすること。
 
 ** 知的思考の技術の7つのステップ
 
@@ -133,10 +154,9 @@ n# -*- mode: org -*-
 思考はプロセスで，プロセスをサブプロセスに分解し，名前と意味を付ける。
 すると思考プロセスは，思考の対象にすることができる。
 
-[[https://www.amazon.co.jp/%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E2%80%95%E8%80%83%E3%81%88%E3%82%8B%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E5%BC%B7%E5%8C%96%E3%81%99%E3%82%8B7%E3%81%A4%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%81%AE%E6%80%9D%E8%80%83%E8%A1%93-SANNO%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E7%94%A3%E6%A5%AD%E8%83%BD%E7%8E%87%E5%A4%A7%E5%AD%A6%E7%B7%8F%E5%90%88%E7%A0%94%E7%A9%B6%E6%89%80%E7%9F%A5%E7%9A%84%E6%80%9D%E8%80%83%E3%81%AE%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/dp/4382055784][Amazon.co.jp: 知的思考の技術―考えるフレームを強化する7つのステップの思考術 (SANNOマネジメントコンセプトシリーズ) : 産業能率大学総合研究所知的思考の技術研究プロジェクト: Japanese Books]]
-のまとめ mindmap：
-- [[../Maps/知的思考の7段階.xmind][知的思考の7段階(file)]] または
-- [[shell:open ../Maps/知的思考の7段階.xmind][xmind_open]]
+
+[[./books.org::知的思考の技術]][知的思考の技術]]
+のまとめ mindmap：[[../Maps/知的思考の7段階.xmind][map]] or [[shell:open ../Maps/知的思考の7段階.xmind][open]]
 
 1. 目的探索の思考
    - 妥当か
@@ -159,11 +179,15 @@ n# -*- mode: org -*-
    - 客観的な外化
 
 ** 知識や理解は構造を持った情報
+[[https://share.gemini.google/kg0fvEMv0dMA][gemini:ナレッジグラフ，知識ネットワーク]]
 
-理解や知識の構造を読み書けるソフトウェアが必要
+理解や知識の構造を読み書けるソフトウェアがあると便利。
 - アウトライナー 
 - マインドマップ
 - グラフ的文書作成
+
+理解や知識の構造を, 外化，客観化, 永続化，共有化，できる。
+思考過程を段階的に保存できる。
 
 ** 知的作業は構造化されたプロセス
 
@@ -188,15 +212,17 @@ gemini: https://share.gemini.google/JmdmLRkbUpdy
   - Emacs org-mode
 
 * 思考の数学的理解
-[[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
+数理のひろがり [[../Maps/数理のひろがり.xmind][map]][[shell:xmind ../Maps/数理のひろがり.xmind&][linux]]
+- 数学的表明を書き，証明するための数学 
+- 計算プロセスを書き，実行するための数学 (プログラムの基礎)
 
-** 数学は言葉である
-[[../Maps/数理のひろがり.xmind]] | [[shell:xmind ../Maps/数理のひろがり.xmind]]
-- 数学基礎論 
-- 集合と構造 :: 情報の収集と関係による構造化
+数学は言葉だ  
+
+- 集合論 (部分集合，集合族) :: 情報の収集と関係による構造化
 - 集合と関数 :: 手続きと抽象化，計算，
 - 集合と関係 :: 分類と構造化
-- 数理論理学 :: 文章と論理
+- 数理論理学 :: 表明と論理
+  [[https://docs.google.com/document/d/1XureTt1cgMyYK2jTIPCakmdKLwiSVxjzZZOZrfl4pF0/edit?usp=sharing][gemini:思考と数理論理学]]
   - 定義，公理 :: あらかじめ存在する物と正しい表明
   - 命題 (関数，述語，論理式) :: 
   - 推論規則 :: 正しい表明を導く規則
@@ -208,6 +234,7 @@ gemini: https://share.gemini.google/JmdmLRkbUpdy
 Google の知の整理.org[[file:orgs/common_knowledge-summary.org]]
 ** 世界の知の整理
 ** 言葉による検索とまとめ
+大規模言語モデル ()
 意味や構造をあつかえる
 ** 数学的解釈
 - 複数のキーワードの組が意味を表わす。(ベクトル，テンソル化)
@@ -220,7 +247,7 @@ Google の知の整理.org[[file:orgs/common_knowledge-summary.org]]
 思考し実験しプログラムし計算し理解し記録し文書を作成するためのコンピュー
 タと情報のリテラシ
 
-- 基本技術は思考法, 文書作成も思考法,プログラミングも思考法
+- 基本技術は思考法, 読書も文書作成も思考法,プログラミングも思考法
 - 思考は情報処理プロセス
 - メタ思考が重要 (思考する自分を客観視すること)
   - 思考プロセスの見える化
@@ -232,17 +259,32 @@ Google の知の整理.org[[file:orgs/common_knowledge-summary.org]]
   [googling AIモード 思考 So What, Why so]
   [[elisp:google-this "AIの思考ステップ")]]
 
-*** 思考の記録 MECE, 構造化，GTD
-[googling 思考の記録 構造化 GTD]
+*** 思考の記録
+[googling::思考過程の記録 思考過程の管理 構造化 項目リスト]
+
+思考は，プロセス。
+- 関連する未整理な項目を集め，
+- 小さな理解をくりかえし，
+- 項目全体の，納得できる，構造化を得る
+
+思考過程の生成物::理解の状態 (知識グラフ)
+- 段階的な理解を外化記録し，
+- 全体の何処にあるのかを記録し，
+- 思考を一旦中止しても，再開継続できるようにする
+
+思考過程の管理 (GTD)
+- 理解の状態から項目間の依存関係をもとに，
+- 関心項目，次にやるべき項目を選ぶ
 
 *** いろいろな思考法がある
+局所的，大局的な思考の方向
 - 論理的思考 
 - 批判的思考 
 - 発想法 
 - 水平思考
 - 計算論的思考
 
-*** 情報リテラシーは思考法
+*** ICT情報リテラシーは思考法
 - 生のデータに意味付けして情報になる
 - 知的情報リテラシーの技術がある
   - 情報の収集
@@ -301,7 +343,7 @@ CLOSED: [2026-10-13 火 22:57]
 ** 計算とAI
 - オープンソフトウェアという文化で，プログラムの共有ができるようになっ
   た。これを計算や計算方法や計算結果の共有であると考えている。
-- LLM と NN を用いて意味的方法的な検索が可能になった。
+- LLM と NN を用いて意味的‥・方法的な検索が可能になった。
 - LLM と NN を用いて検索結果のまとめをしてくれるようになっている。
 - 計算プログラムと実行結果を作成してもくれる。
   
@@ -319,10 +361,10 @@ CLOSED: [2026-10-13 火 22:57]
 *** 計算や計算機能を検索して利用する  (別紙参照)
 - 数学ソフトウェア，数値解析，数値計算ライブラリ，数式処理などこれまで
   の成果を，AIが探してくれる
-  - ほぼ公開プログラムでことたりる (?)
     
-- こんな計算がしたいといえば，計算プログラムを作成してくれる。
-  但し，似たような計算プログラムが公開されていれば
+- こんな計算がしたいといえば，計算プログラムを作成してくれる。但し，似
+  たような計算プログラムが公開されていれば。但し，自分で計算するときに
+  は，計算プログラムを理解できなければならない。
 
 AIが提示したものは，説明書の用法の理解，プログラムの解読，を行なうべき。
 実行結果を理解し，評価するため。
@@ -341,10 +383,10 @@ AIが提示したものは，説明書の用法の理解，プログラムの解
  - 計算プログラムを結果を取り込み，
  - 結果を可視化する
 
-*** データサイエンスとニューラルネットワク (NN)
+*** データサイエンスとニューラルネットワク (NN) 岩大データサイエンス講義
 
 - 最近は，データだけが独立して，共有されることが多い。
-- NNをもちいて，データの抽象化(統計処理，NN)，構造化(NNによる分類，構
+- NNをもちいて，データの抽象化(統計処理)，構造化(分類，構
   造化, パターン検出)が計算できる。
 - 機械学習したNNは，データの検索器として，プログラムから利用できる。
 

@@ -2,7 +2,7 @@
 
   - [[http://wiki.cis.iwate-u.ac.jp/~suzuki/][講義情報]] (~2016)
   - [[https://github.com/masayuki054/comp_and_cal/][講義資料のサイト]]
-
+    
 * 関連する数学の講義など
 - 数理のひろがり [[https://github.com/masayuki054/mathematics/tree/main][GitHub - masayuki054/mathematics: 岩手大学講義 数理のひろがりのためのリポジトリ]]
   - [[./maps/数理のひろがり.xmind]]

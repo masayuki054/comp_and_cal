@@ -1,4 +1,3 @@
-
 #+options: ^:{}
 #+options: toc:nil
 #+setupfile: info/index-sos-header.setup
